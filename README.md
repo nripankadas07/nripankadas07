@@ -2,57 +2,59 @@
 
 # Dr. Nripanka Das
 
-**AI Builder | Product Engineer | Agent Systems Architect**
+**AI-driven digital transformation leader | Enterprise AI product builder | Agentic systems architect**
 
-Building intelligent systems that ship. From multi-agent orchestration to full-stack SaaS â I design, build, and deploy AI-native products end to end.
+I build AI-native products that move from idea to usable system: agent workflows, RAG pipelines, developer tools, SaaS dashboards, and automation infrastructure.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dr-nripanka-das/)
-[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/DasNripanka)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/nripankadas/)
 
 </div>
 
 ---
 
-### What I Build
+### Current Focus
 
-I work at the intersection of AI engineering and product. My focus is on systems that are useful in production â not demos, not proofs of concept. Agents that run autonomously, pipelines that scale, tools that people actually use.
+I work at the intersection of product strategy, AI engineering, and enterprise transformation. My public GitHub is a lab for compact, practical systems: tools with clear APIs, readable docs, and implementation choices that can survive outside a notebook.
 
-**Current obsession**: Multi-agent architectures â designing fleets of specialized AI agents that coordinate, self-monitor, and produce real output without human babysitting.
+- Building agentic systems with planning loops, memory, tools, and evaluation
+- Designing retrieval pipelines that can be measured, tuned, and shipped
+- Turning product metrics, operations, and governance problems into usable software
+- Keeping projects small enough to understand and strong enough to extend
 
 ---
 
-### Tech I Work With
+### Selected Repositories
 
+| Area | Repositories | Why They Matter |
+|------|--------------|-----------------|
+| Agentic AI | [agent-framework](https://github.com/nripankadas07/agent-framework), [rag-pipeline](https://github.com/nripankadas07/rag-pipeline), [prompt-eval](https://github.com/nripankadas07/prompt-eval) | Core building blocks for agents, retrieval, prompt evaluation, and production-grade AI workflows |
+| AI tooling | [ai-toolkit](https://github.com/nripankadas07/ai-toolkit), [token-counter](https://github.com/nripankadas07/token-counter), [schema-gen](https://github.com/nripankadas07/schema-gen) | Practical CLI and library tools for prompt work, token budgeting, model output comparison, and structured data generation |
+| Product systems | [startup-dashboard](https://github.com/nripankadas07/startup-dashboard), [feature-flags](https://github.com/nripankadas07/feature-flags), [config-loader](https://github.com/nripankadas07/config-loader) | SaaS analytics, runtime configuration, and feature-control foundations for product teams |
+| Infrastructure utilities | [task-queue](https://github.com/nripankadas07/task-queue), [rate-limiter](https://github.com/nripankadas07/rate-limiter), [dep-audit](https://github.com/nripankadas07/dep-audit) | Queueing, throughput control, and dependency risk checks for resilient services |
+| Developer tools | [markdownlint](https://github.com/nripankadas07/markdownlint), [hexdump](https://github.com/nripankadas07/hexdump), [crontab-lite](https://github.com/nripankadas07/crontab-lite), [json-differ](https://github.com/nripankadas07/json-differ) | Small, well-scoped utilities for everyday engineering work |
+
+---
+
+### Technical Range
+
+```text
+AI/ML          Python | RAG | embeddings | vector search | prompt evaluation | agent workflows
+Backend        FastAPI | Node.js | Express | PostgreSQL | Redis | WebSockets
+Frontend       Next.js | React | TypeScript | Tailwind CSS | Recharts
+Infrastructure Docker | GitHub Actions | Vercel | Linux | shell automation
+Product        SaaS metrics | feature flags | developer experience | enterprise AI adoption
 ```
-AI/ML          Python Â· PyTorch Â· LangChain Â· RAG Â· Vector DBs Â· Fine-tuning Â· Embeddings
-Backend        FastAPI Â· Node.js Â· Express Â· PostgreSQL Â· Redis Â· WebSockets
-Frontend       Next.js Â· React Â· TypeScript Â· Tailwind
-Infrastructure Docker Â· GitHub Actions Â· Vercel Â· Linux Â· Shell scripting
-Agent Systems  Multi-agent orchestration Â· Cron scheduling Â· Memory systems Â· Tool use
-```
 
 ---
 
-### Featured Projects
+### How I Build
 
-| Project | What It Does | Stack |
-|---------|-------------|-------|
-| [**rag-pipeline**](https://github.com/nripankadas07/rag-pipeline) | Production RAG system with chunking strategies, vector store abstraction, and retrieval evaluation | Python Â· FAISS Â· FastAPI |
-| [**agent-framework**](https://github.com/nripankadas07/agent-framework) | Lightweight agent orchestration library with tool registration, memory, and planning loops | Python |
-| [**ai-toolkit**](https://github.com/nripankadas07/ai-toolkit) | CLI for everyday AI/ML tasks â embeddings comparison, token counting, model output diffing | Python Â· Click |
-| [**startup-dashboard**](https://github.com/nripankadas07/startup-dashboard) | SaaS metrics dashboard tracking MRR, churn, LTV, CAC with real-time charts | Next.js Â· TypeScript Â· Recharts |
-| [**prompt-eval**](https://github.com/nripankadas07/prompt-eval) | Prompt engineering toolkit â version control, A/B testing, and performance tracking for prompts | Python Â· FastAPI |
-
----
-
-### How I Think About Building
-
-I don't believe in building things that only work in a notebook. Every project I ship has a CLI or an API, handles errors gracefully, includes tests, and comes with documentation that assumes the reader's time is valuable. I care about code that runs at 2 AM without waking anyone up.
+I prefer software that proves itself in use: clear interfaces, direct documentation, small testable modules, and graceful failure paths. The goal is not just to make AI demos impressive; it is to turn intelligence into dependable product behavior.
 
 ---
 
 <div align="center">
 
-*Open to collaborations on AI tooling, agent systems, and developer infrastructure.*
+**Open to collaborations on AI tooling, agent systems, product infrastructure, and enterprise AI transformation.**
 
 </div>
