@@ -2,7 +2,7 @@
 
 I build small, sharp, dependency-free libraries — the kind of thing you reach for when you don't want to pull in a 200-package transitive tree to do one obvious job.
 
-This profile is the home of a 60-night portfolio sprint: **two new open-source projects every night**, each shipped with rigorous tests, full type coverage, and a real README. So far: **52 / 112 projects**, all built to the same bar.
+This profile is the home of a 60-night portfolio sprint: **two new open-source projects every night**, each shipped with rigorous tests, full type coverage, and a real README. So far: **60 / 112 projects**, all built to the same bar.
 
 ---
 
