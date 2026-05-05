@@ -2,7 +2,7 @@
 
 I build small, sharp, dependency-free libraries — the kind of thing you reach for when you don't want to pull in a 200-package transitive tree to do one obvious job.
 
-This profile is the home of a 60-night portfolio sprint: **two new open-source projects every night**, each shipped with rigorous tests, full type coverage, and a real README. So far: **52 / 120 projects**, all built to the same bar.
+This profile is the home of a 60-night portfolio sprint: **two new open-source projects every night**, each shipped with rigorous tests, full type coverage, and a real README. So far: **52 / 112 projects**, all built to the same bar.
 
 ---
 
@@ -147,8 +147,7 @@ If you're a recruiter or a maintainer evaluating my work: open [`tomlmini`](http
 
 ## What's next
 
-Nights 31–60 of the sprint will fill out the remaining 68 projects: argv-strict (a stricter parseopts), emitter-ts (typed event emitter), bencode's TS sibling, phone-number normalization, color-difference metrics (CIE76/94/2000), a few more parsers, and a flagship — `microbpe
-, a from-scratch tokenizer trainer with byte-pair-encoding semantics.
+Nights 31–60 of the sprint will fill out the remaining 60 projects: argv-strict (a stricter parseopts), emitter-ts (typed event emitter), bencode's TS sibling, phone-number normalization, color-difference metrics (CIE76/94/2000), a few more parsers, and a flagship — `microbpe`, a from-scratch tokenizer trainer with byte-pair-encoding semantics.
 
 Build log lives in `forge-builds/` (private). State files (`SOUL.md`, `MEMORY.md`, `BUILD-LOG.md`, `CHRONICLE.md`) track every commit night-by-night.
 
