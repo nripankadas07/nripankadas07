@@ -61,6 +61,11 @@ Upgraded projects so far:
   conformance checks, 100% line and branch coverage, wheel/sdist build and
   wheel smoke tests, a green dependency graph run, and zero open Dependabot or
   secret-scanning alerts.
+- [`jsonptr`](https://github.com/nripankadas07/jsonptr): green on Python 3.9,
+  3.10, 3.11, and 3.12 with blocking ruff, `mypy --strict`, RFC 6901 pointer
+  and URI-fragment conformance checks, 100% line and branch coverage,
+  wheel/sdist build and wheel smoke tests, a green dependency graph run, and
+  zero open Dependabot or secret-scanning alerts.
 
 ## What's in here
 
@@ -93,9 +98,9 @@ stdlib decode hooks immediately after that scan.
 
 [`jsonptr`](https://github.com/nripankadas07/jsonptr) is a clean
 RFC 6901 JSON Pointer implementation. Parse, format, escape,
-resolve, get, has, set, remove — all on nested dicts and lists,
-with a tidy error tree that tells you exactly where resolution
-failed.
+format URI fragments, resolve, get, has, set, remove — all on
+nested dicts and lists, with a tidy error tree that tells you
+exactly where resolution failed.
 
 [`iso8601`](https://github.com/nripankadas07/iso8601) is a strict
 ISO-8601 parser covering dates, times, datetimes, durations, and
