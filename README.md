@@ -10,9 +10,10 @@ So far: **99 of 120 done.**
 ## How I work
 
 I write tests before code. Every project here lives or dies by its
-test suite, and after Night 27 I started enforcing 100% line and
-branch coverage as the bar. If a branch can't be reached, I delete
-it. No "this won't happen in practice" exceptions.
+test suite. Coverage gates are explicit, branch-aware where the
+tooling supports it, and enforced in CI instead of left as a local
+promise. If a branch can't be reached, I either test it, simplify it,
+or delete it.
 
 Python projects pass `mypy --strict`. TypeScript projects pass
 `tsc --strict --noEmit` with the full strictness panel turned on
@@ -28,6 +29,20 @@ fundamentals, not to glue other people's code together.
 Every repo has an MIT license, a real README with install
 instructions, a quick-start example, an API reference, and a
 section explaining how to run the tests yourself.
+
+## Current quality audit
+
+On May 24, 2026, I started a deeper hardening pass across the public
+portfolio. Each upgraded repo has to clear a stricter gate before I
+mark it done: current GitHub Actions majors, blocking lint/type checks,
+coverage enforcement, package build and smoke tests, security-alert
+review, and remote GitHub CI verification.
+
+First upgraded project: [`tomlmini`](https://github.com/nripankadas07/tomlmini).
+It is green on Python 3.10, 3.11, and 3.12 with blocking ruff,
+`mypy --strict`, TOML conformance tests, a coverage floor, a clean
+package build, a green dependency graph run, and zero open Dependabot
+or secret-scanning alerts.
 
 ## What's in here
 
