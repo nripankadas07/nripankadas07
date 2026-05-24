@@ -15,16 +15,16 @@ six are the front door.
 
 | Project | Technical Thesis | First Demo |
 |---|---|---|
-| [`patchgym`](https://github.com/nripankadas07/patchgym) | Repo-specific coding-agent evaluation: mine real Git history into hidden-test tasks and grade whether agents actually fixed the code. | `bash scripts/demo.sh` |
+| [`PatchGym`](https://github.com/nripankadas07/patchgym) | Repo-specific coding-agent evaluation: mine real Git history into hidden-test tasks and grade whether agents actually fixed the code. | `bash scripts/demo.sh` |
 | [`agent-framework`](https://github.com/nripankadas07/agent-framework) | Agents from scratch, but actually usable: a tiny inspectable runtime with tools, memory, traces, and safe no-key examples. | `python examples/no_api_key_agent.py` |
 | [`rag-pipeline`](https://github.com/nripankadas07/rag-pipeline) | RAG from first principles: chunking, retrieval, citations, evaluation, and reports without hiding the retrieval loop. | `python examples/local_rag_demo.py` |
 | [`prompt-eval`](https://github.com/nripankadas07/prompt-eval) | Unit tests for prompts: regression checks that can run in CI without API keys. | `python examples/no_api_key_regression.py` |
 | [`safejson`](https://github.com/nripankadas07/safejson) | JSON parsing as a security boundary: duplicate-key detection, size/depth limits, and adversarial tests. | `python examples/security_boundary.py` |
 | [`decimal-ts`](https://github.com/nripankadas07/decimal-ts) | Exact decimal arithmetic for money-style calculations in TypeScript, backed by `BigInt` instead of floats. | `npm install && npm run demo` |
 
-### patchgym
+### PatchGym
 
-[patchgym](https://github.com/nripankadas07/patchgym) turns any Git repository into a local SWE-bench-style coding-agent benchmark.
+[PatchGym](https://github.com/nripankadas07/patchgym) turns any Git repository into a local SWE-bench-style coding-agent benchmark.
 
 PatchGym mines real Git history, extracts hidden tests, verifies tasks, runs coding agents in local workspaces, and reports whether their patches actually pass.
 
@@ -40,21 +40,13 @@ bash scripts/demo.sh
 
 Why it matters: public benchmarks are useful, but serious teams need to know whether agents can fix their own codebases.
 
+Manual note: GitHub profile pins still need to be updated from the profile UI. PatchGym should be pinned first once the pin order is changed manually.
+
 ## Start Here
 
 Each flagship is meant to be useful even if you only read it, and runnable in
-less than five minutes from a clean checkout.
-
-```bash
-git clone https://github.com/nripankadas07/patchgym
-cd patchgym
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
-bash scripts/demo.sh
-python -m pytest -q
-```
+less than five minutes from a clean checkout. PatchGym is the recommended first
+run; the exact commands are in the card above.
 
 ```bash
 git clone https://github.com/nripankadas07/decimal-ts
@@ -71,7 +63,7 @@ the limitations before using the library as a dependency.
 
 ### AI, Evaluation, And Local-First Tooling
 
-[`patchgym`](https://github.com/nripankadas07/patchgym),
+[`PatchGym`](https://github.com/nripankadas07/patchgym),
 [`agent-framework`](https://github.com/nripankadas07/agent-framework),
 [`rag-pipeline`](https://github.com/nripankadas07/rag-pipeline),
 [`prompt-eval`](https://github.com/nripankadas07/prompt-eval),

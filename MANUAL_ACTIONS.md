@@ -1,10 +1,8 @@
-# Manual Actions
+# Manual GitHub Actions
 
-## GitHub profile pinning
+## Profile Pins
 
-GitHub profile pins must be updated manually from the profile UI.
-
-Recommended pinned order:
+Pin these repositories in this order:
 
 1. patchgym
 2. agent-framework
@@ -13,17 +11,9 @@ Recommended pinned order:
 5. safejson
 6. decimal-ts
 
-Reason:
-PatchGym is the research-grade flagship. The remaining five show agent systems, RAG, prompt evaluation, security/correctness, and TypeScript financial arithmetic.
+PatchGym should be first because it is the research-grade flagship project.
 
-Manual steps:
+These pins must be changed manually from the GitHub profile UI unless an
+authenticated API method is available.
 
-1. Open the GitHub profile.
-2. Click "Customize your pins."
-3. Search for `patchgym`.
-4. Add it.
-5. Remove the lowest-priority old pin if six are already used.
-6. Drag `patchgym` to position 1.
-7. Save pins.
-
-Do not claim that Codex has pinned the repo unless it actually did through an authenticated API or UI action. Profile pins usually need manual confirmation.
+Do not break links in the profile README.
