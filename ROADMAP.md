@@ -4,6 +4,8 @@
 
 ## Near Term
 
+- Keep PatchGym as the top research-grade flagship while it remains honest,
+  runnable from source, and locally verifiable.
 - Keep the README specific: audience, thesis, quick demo, limitations, and
   source-checkout install instructions.
 - Keep edge-case tests near the code they protect.

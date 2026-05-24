@@ -22,6 +22,24 @@ six are the front door.
 | [`safejson`](https://github.com/nripankadas07/safejson) | JSON parsing as a security boundary: duplicate-key detection, size/depth limits, and adversarial tests. | `python examples/security_boundary.py` |
 | [`decimal-ts`](https://github.com/nripankadas07/decimal-ts) | Exact decimal arithmetic for money-style calculations in TypeScript, backed by `BigInt` instead of floats. | `npm install && npm run demo` |
 
+### patchgym
+
+[patchgym](https://github.com/nripankadas07/patchgym) turns any Git repository into a local SWE-bench-style coding-agent benchmark.
+
+PatchGym mines real Git history, extracts hidden tests, verifies tasks, runs coding agents in local workspaces, and reports whether their patches actually pass.
+
+```bash
+git clone https://github.com/nripankadas07/patchgym
+cd patchgym
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev]"
+bash scripts/demo.sh
+```
+
+Why it matters: public benchmarks are useful, but serious teams need to know whether agents can fix their own codebases.
+
 ## Start Here
 
 Each flagship is meant to be useful even if you only read it, and runnable in
@@ -34,7 +52,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
-patchgym demo
+bash scripts/demo.sh
 python -m pytest -q
 ```
 
