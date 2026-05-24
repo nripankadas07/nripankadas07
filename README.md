@@ -8,7 +8,7 @@ the main technical ideas, plus a catalog of small parser, systems, AI, DevEx,
 and TypeScript libraries. The bias is toward source you can read in one sitting,
 examples that run from a fresh clone, and documentation that explains the tradeoffs.
 
-## Six Flagships To Pin
+## Six Flagships
 
 GitHub only gives the first impression room for a handful of repositories. These
 six are the front door.
@@ -40,8 +40,6 @@ bash scripts/demo.sh
 
 Why it matters: public benchmarks are useful, but serious teams need to know whether agents can fix their own codebases.
 
-Manual note: GitHub profile pins still need to be updated from the profile UI. PatchGym should be pinned first once the pin order is changed manually.
-
 ## Start Here
 
 Each flagship is meant to be useful even if you only read it, and runnable in
@@ -49,11 +47,13 @@ less than five minutes from a clean checkout. PatchGym is the recommended first
 run; the exact commands are in the card above.
 
 ```bash
-git clone https://github.com/nripankadas07/decimal-ts
-cd decimal-ts
-npm install
-npm run demo
-npm test
+git clone https://github.com/nripankadas07/patchgym
+cd patchgym
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev]"
+bash scripts/demo.sh
 ```
 
 The same pattern holds across the lab: clone, run the demo, run the tests, read
