@@ -5,7 +5,7 @@ night, every night. The kind of libraries you wish existed when you
 just want one focused job done without dragging in a hundred
 transitive dependencies.
 
-So far: **78 of 120 done.**
+So far: **99 of 120 done.**
 
 ## How I work
 
@@ -160,6 +160,10 @@ don't.
 
 ### Data structures
 
+[`path-trie`](https://github.com/nripankadas07/path-trie),
+[`path-trie`](https://github.com/nripankadas07/path-trie),
+[`path-trie`](https://github.com/nripankadas07/path-trie),
+[`path-trie`](https://github.com/nripankadas07/path-trie),
 [`bitvec`](https://github.com/nripankadas07/bitvec),
 [`trie`](https://github.com/nripankadas07/trie),
 [`trie-ts`](https://github.com/nripankadas07/trie-ts),
@@ -207,6 +211,28 @@ spooky retroactive event.
 [`decoder-ts`](https://github.com/nripankadas07/decoder-ts),
 [`emitter-ts`](https://github.com/nripankadas07/emitter-ts).
 
+### AI, product, and operations tools
+
+[`agent-framework`](https://github.com/nripankadas07/agent-framework),
+[`ai-toolkit`](https://github.com/nripankadas07/ai-toolkit),
+[`api-mocker`](https://github.com/nripankadas07/api-mocker),
+[`cli-timer`](https://github.com/nripankadas07/cli-timer),
+[`config-loader`](https://github.com/nripankadas07/config-loader),
+[`csv-explorer`](https://github.com/nripankadas07/csv-explorer),
+[`dep-audit`](https://github.com/nripankadas07/dep-audit),
+[`env-vault`](https://github.com/nripankadas07/env-vault),
+[`feature-flags`](https://github.com/nripankadas07/feature-flags),
+[`json-differ`](https://github.com/nripankadas07/json-differ),
+[`log-parser`](https://github.com/nripankadas07/log-parser),
+[`prompt-eval`](https://github.com/nripankadas07/prompt-eval),
+[`rag-pipeline`](https://github.com/nripankadas07/rag-pipeline),
+[`rate-limiter`](https://github.com/nripankadas07/rate-limiter),
+[`retry-lib`](https://github.com/nripankadas07/retry-lib),
+[`schema-gen`](https://github.com/nripankadas07/schema-gen),
+[`startup-dashboard`](https://github.com/nripankadas07/startup-dashboard),
+[`task-queue`](https://github.com/nripankadas07/task-queue),
+[`token-counter`](https://github.com/nripankadas07/token-counter).
+
 ## How to read these repos
 
 Open any of them. The first sentence tells you what it does. The
@@ -229,7 +255,7 @@ for a parser with teeth.
 
 ## What's left
 
-Forty-two more projects. The remaining nights of the sprint are
+Twenty-one more projects. The remaining nights of the sprint are
 spoken for in the queue file. Build log lives in the private
 `forge-builds/` repo; the state files (`SOUL.md`, `MEMORY.md`,
 `BUILD-LOG.md`, `CHRONICLE.md`) track every commit.
