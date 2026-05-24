@@ -1,45 +1,81 @@
 # Nripanka Das
 
-**The No-Dependency AI + Systems Lab.** Small, readable, tested AI and
-systems tools for developers who want code they can understand, run, audit, and
-extend.
+**The No-Dependency AI + Systems Lab:** small, readable, tested AI and systems
+tools for developers who want code they can run, understand, audit, and extend.
 
-I am building a focused portfolio of compact Python and TypeScript libraries:
-parsers, codecs, data structures, CLI tools, developer utilities, and a few AI
-experiments. The bias is toward source you can read in one sitting, tests you
-can run locally, and APIs that do one job without pulling in a dependency tree.
+This profile is organized as a compact lab: a few flagship projects that carry
+the main technical ideas, plus a catalog of small parser, systems, AI, DevEx,
+and TypeScript libraries. The bias is toward source you can read in one sitting,
+examples that run from a fresh clone, and documentation that explains the tradeoffs.
 
-## Current Surface
+## Six Flagships To Pin
 
-- **100 public repositories inspected** on 2026-05-24.
-- **99 project repositories** plus this profile repository.
-- **98 runnable project repos passed local install + lint/type/test/build
-  checks** in the audit environment.
-- **2 docs-only repos**: this profile and `mlproject`, a public scratchpad that
-  should stay public only if it is meant to be a transparent lab notebook.
-- **No PyPI/npm publication is claimed here.** Install instructions are written
-  for source checkouts until a package is intentionally published.
+GitHub only gives the first impression room for a handful of repositories. These
+six are the front door.
 
-## Flagship Projects
+| Project | Technical Thesis | First Demo |
+|---|---|---|
+| [`agent-framework`](https://github.com/nripankadas07/agent-framework) | Agents from scratch, but actually usable: a tiny inspectable runtime with tools, memory, traces, and safe no-key examples. | `python examples/no_api_key_agent.py` |
+| [`rag-pipeline`](https://github.com/nripankadas07/rag-pipeline) | RAG from first principles: chunking, retrieval, citations, evaluation, and reports without hiding the retrieval loop. | `python examples/local_rag_demo.py` |
+| [`prompt-eval`](https://github.com/nripankadas07/prompt-eval) | Unit tests for prompts: regression checks that can run in CI without API keys. | `python examples/no_api_key_regression.py` |
+| [`safejson`](https://github.com/nripankadas07/safejson) | JSON parsing as a security boundary: duplicate-key detection, size/depth limits, and adversarial tests. | `python examples/security_boundary.py` |
+| [`decimal-ts`](https://github.com/nripankadas07/decimal-ts) | Exact decimal arithmetic for money-style calculations in TypeScript, backed by `BigInt` instead of floats. | `npm install && npm run demo` |
+| [`tomlmini`](https://github.com/nripankadas07/tomlmini) | A beautiful small reference implementation: a strict, no-dependency TOML common-subset parser with conformance checks. | `python examples/parse_config.py` |
 
-| Project | Why It Matters |
-|---|---|
-| [`safejson`](https://github.com/nripankadas07/safejson) | Hardened JSON parsing with depth/size limits, duplicate-key detection, NaN/Infinity rejection, and type policy controls. |
-| [`tomlmini`](https://github.com/nripankadas07/tomlmini) | Zero-dependency TOML common-subset parser with explicit edge-case behavior instead of silent guessing. |
-| [`bencode`](https://github.com/nripankadas07/bencode) | Strict BitTorrent-style bencode encoder/decoder that rejects non-canonical encodings. |
-| [`jsonptr`](https://github.com/nripankadas07/jsonptr) | RFC 6901 JSON Pointer parse/format/resolve/mutate library with typed errors. |
-| [`globmatch`](https://github.com/nripankadas07/globmatch) | Glob matcher with extglob, POSIX classes, globstar support, and an AST-backed interpreter. |
-| [`decimal-ts`](https://github.com/nripankadas07/decimal-ts) | BigInt-backed fixed-point decimal arithmetic for exact money-style calculations. |
-| [`agent-framework`](https://github.com/nripankadas07/agent-framework) | Lightweight agent orchestration with tools, memory, and ReAct-style loops. |
-| [`dep-audit`](https://github.com/nripankadas07/dep-audit) | Python dependency vulnerability scanner built around OSV.dev. |
+## Start Here
 
-## Library Index
+Each flagship is meant to be useful even if you only read it, and runnable in
+less than five minutes from a clean checkout.
 
-### Parsers, Codecs, and Formats
+```bash
+git clone https://github.com/nripankadas07/safejson
+cd safejson
+python examples/security_boundary.py
+python -m pytest -q
+```
+
+```bash
+git clone https://github.com/nripankadas07/decimal-ts
+cd decimal-ts
+npm install
+npm run demo
+npm test
+```
+
+The same pattern holds across the lab: clone, run the demo, run the tests, read
+the limitations before using the library as a dependency.
+
+## The Lab Catalog
+
+### AI, Evaluation, And Local-First Tooling
+
+[`agent-framework`](https://github.com/nripankadas07/agent-framework),
+[`rag-pipeline`](https://github.com/nripankadas07/rag-pipeline),
+[`prompt-eval`](https://github.com/nripankadas07/prompt-eval),
+[`ai-toolkit`](https://github.com/nripankadas07/ai-toolkit),
+[`token-counter`](https://github.com/nripankadas07/token-counter),
+[`schema-gen`](https://github.com/nripankadas07/schema-gen).
+
+### Security, Configuration, And Operational Tools
+
+[`safejson`](https://github.com/nripankadas07/safejson),
+[`dep-audit`](https://github.com/nripankadas07/dep-audit),
+[`digestlite`](https://github.com/nripankadas07/digestlite),
+[`env-vault`](https://github.com/nripankadas07/env-vault),
+[`envdiff`](https://github.com/nripankadas07/envdiff),
+[`config-loader`](https://github.com/nripankadas07/config-loader),
+[`feature-flags`](https://github.com/nripankadas07/feature-flags),
+[`rate-limiter`](https://github.com/nripankadas07/rate-limiter),
+[`retryback`](https://github.com/nripankadas07/retryback),
+[`retry-lib`](https://github.com/nripankadas07/retry-lib),
+[`task-queue`](https://github.com/nripankadas07/task-queue),
+[`api-mocker`](https://github.com/nripankadas07/api-mocker),
+[`log-parser`](https://github.com/nripankadas07/log-parser).
+
+### Parsers, Codecs, And Data Formats
 
 [`tomlmini`](https://github.com/nripankadas07/tomlmini),
 [`bencode`](https://github.com/nripankadas07/bencode),
-[`safejson`](https://github.com/nripankadas07/safejson),
 [`jsonptr`](https://github.com/nripankadas07/jsonptr),
 [`jsonpatch-lite`](https://github.com/nripankadas07/jsonpatch-lite),
 [`iso8601`](https://github.com/nripankadas07/iso8601),
@@ -59,23 +95,7 @@ can run locally, and APIs that do one job without pulling in a dependency tree.
 [`morse`](https://github.com/nripankadas07/morse),
 [`pigeon`](https://github.com/nripankadas07/pigeon).
 
-### Data Structures, Algorithms, and Math
-
-[`decimal-ts`](https://github.com/nripankadas07/decimal-ts),
-[`bitvec`](https://github.com/nripankadas07/bitvec),
-[`trie`](https://github.com/nripankadas07/trie),
-[`trie-ts`](https://github.com/nripankadas07/trie-ts),
-[`path-trie`](https://github.com/nripankadas07/path-trie),
-[`ringbuf`](https://github.com/nripankadas07/ringbuf),
-[`rangeset`](https://github.com/nripankadas07/rangeset),
-[`randpick`](https://github.com/nripankadas07/randpick),
-[`numbertheory`](https://github.com/nripankadas07/numbertheory),
-[`chunkby`](https://github.com/nripankadas07/chunkby),
-[`flatdict`](https://github.com/nripankadas07/flatdict),
-[`dotpath`](https://github.com/nripankadas07/dotpath),
-[`levendist`](https://github.com/nripankadas07/levendist).
-
-### Text, URLs, Shells, and Identifiers
+### Matching, Text, URLs, And Shell Semantics
 
 [`globmatch`](https://github.com/nripankadas07/globmatch),
 [`wordwrap`](https://github.com/nripankadas07/wordwrap),
@@ -93,7 +113,24 @@ can run locally, and APIs that do one job without pulling in a dependency tree.
 [`uuidgen`](https://github.com/nripankadas07/uuidgen),
 [`base62-ts`](https://github.com/nripankadas07/base62-ts).
 
-### Time, Numbers, Units, and Color
+### Data Structures, Algorithms, And Math
+
+[`decimal-ts`](https://github.com/nripankadas07/decimal-ts),
+[`bitvec`](https://github.com/nripankadas07/bitvec),
+[`trie`](https://github.com/nripankadas07/trie),
+[`trie-ts`](https://github.com/nripankadas07/trie-ts),
+[`path-trie`](https://github.com/nripankadas07/path-trie),
+[`ringbuf`](https://github.com/nripankadas07/ringbuf),
+[`rangeset`](https://github.com/nripankadas07/rangeset),
+[`tinycache`](https://github.com/nripankadas07/tinycache),
+[`randpick`](https://github.com/nripankadas07/randpick),
+[`numbertheory`](https://github.com/nripankadas07/numbertheory),
+[`chunkby`](https://github.com/nripankadas07/chunkby),
+[`flatdict`](https://github.com/nripankadas07/flatdict),
+[`dotpath`](https://github.com/nripankadas07/dotpath),
+[`levendist`](https://github.com/nripankadas07/levendist).
+
+### Time, Numbers, Units, And Color
 
 [`chronoparse`](https://github.com/nripankadas07/chronoparse),
 [`crontab-lite`](https://github.com/nripankadas07/crontab-lite),
@@ -122,43 +159,59 @@ can run locally, and APIs that do one job without pulling in a dependency tree.
 [`emitter-ts`](https://github.com/nripankadas07/emitter-ts),
 [`tokenring-ts`](https://github.com/nripankadas07/tokenring-ts).
 
-### AI, DevEx, Security, and Product Tools
+### Product, CLI, And Lab Notes
 
-[`agent-framework`](https://github.com/nripankadas07/agent-framework),
-[`ai-toolkit`](https://github.com/nripankadas07/ai-toolkit),
-[`prompt-eval`](https://github.com/nripankadas07/prompt-eval),
-[`rag-pipeline`](https://github.com/nripankadas07/rag-pipeline),
-[`token-counter`](https://github.com/nripankadas07/token-counter),
-[`schema-gen`](https://github.com/nripankadas07/schema-gen),
-[`dep-audit`](https://github.com/nripankadas07/dep-audit),
-[`env-vault`](https://github.com/nripankadas07/env-vault),
-[`envdiff`](https://github.com/nripankadas07/envdiff),
-[`diffstat`](https://github.com/nripankadas07/diffstat),
 [`markdownlint`](https://github.com/nripankadas07/markdownlint),
-[`log-parser`](https://github.com/nripankadas07/log-parser),
-[`api-mocker`](https://github.com/nripankadas07/api-mocker),
-[`config-loader`](https://github.com/nripankadas07/config-loader),
-[`feature-flags`](https://github.com/nripankadas07/feature-flags),
-[`rate-limiter`](https://github.com/nripankadas07/rate-limiter),
-[`retryback`](https://github.com/nripankadas07/retryback),
-[`retry-lib`](https://github.com/nripankadas07/retry-lib),
-[`task-queue`](https://github.com/nripankadas07/task-queue),
+[`diffstat`](https://github.com/nripankadas07/diffstat),
+[`strtable`](https://github.com/nripankadas07/strtable),
 [`startup-dashboard`](https://github.com/nripankadas07/startup-dashboard),
 [`csv-explorer`](https://github.com/nripankadas07/csv-explorer),
 [`cli-timer`](https://github.com/nripankadas07/cli-timer),
 [`json-differ`](https://github.com/nripankadas07/json-differ),
-[`mlproject`](https://github.com/nripankadas07/mlproject).
+[`mlproject`](https://github.com/nripankadas07/mlproject),
+[`nripankadas07`](https://github.com/nripankadas07/nripankadas07).
 
-## Engineering Bar
+## Quality Bar
 
-Every serious project here should be easy to audit:
+Every active repository is expected to have:
 
-- A README that says what the library does and what it deliberately does not do.
-- MIT license, security policy, contributing guide, and quality notes.
-- Local test/build instructions that do not imply PyPI/npm availability.
-- Zero runtime dependencies by default unless the domain genuinely needs them.
-- CI and local checks for the package surface that exists today.
+- A specific README that says why the project exists and where it stops.
+- MIT license, security policy, contribution guide, code of conduct, changelog,
+  roadmap, and quality notes.
+- Tests or an honest docs-only status.
+- Source-checkout installation instructions until package publication is real.
+- CI where a build or test surface exists.
+- Issue templates and a pull request template.
+- No fake package badges, fake benchmark numbers, or fake social proof.
 
-The best place to start is `safejson` for hostile input, `tomlmini` for format
-edge cases, `decimal-ts` for exact arithmetic, or `globmatch` for parser-heavy
-systems code.
+For parsers and evaluators, correctness means adversarial inputs, conformance
+checks where possible, explicit limits, and typed failure modes. For TypeScript
+packages, correctness means typechecking, tests, build output, and package
+metadata that matches what is actually shipped.
+
+## Technical Essays
+
+The flagship repositories include launch-ready technical notes:
+
+- [`agent-framework/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/agent-framework/blob/main/docs/TECHNICAL_ARTICLE.md)
+- [`rag-pipeline/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/rag-pipeline/blob/main/docs/TECHNICAL_ARTICLE.md)
+- [`prompt-eval/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/prompt-eval/blob/main/docs/TECHNICAL_ARTICLE.md)
+- [`safejson/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/safejson/blob/main/docs/TECHNICAL_ARTICLE.md)
+- [`decimal-ts/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/decimal-ts/blob/main/docs/TECHNICAL_ARTICLE.md)
+- [`tomlmini/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/tomlmini/blob/main/docs/TECHNICAL_ARTICLE.md)
+
+## Roadmap
+
+1. Keep the six flagships pinned and release-ready.
+2. Promote 15-25 core libraries with stronger examples, conformance tests, and
+   packaging metadata.
+3. Consolidate redundant utilities instead of growing the repo count for its own
+   sake.
+4. Mark weak or unclear projects as `Needs Repair` or `Archive Candidate` before
+   deciding whether to keep them public.
+
+## Contact
+
+Open an issue on the relevant repository for bugs, design questions, or focused
+collaboration. For profile-level context, use
+[`nripankadas07/nripankadas07`](https://github.com/nripankadas07/nripankadas07).
