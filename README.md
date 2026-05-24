@@ -38,6 +38,14 @@ mark it done: current GitHub Actions majors, blocking lint/type checks,
 coverage enforcement, package build and smoke tests, security-alert
 review, and remote GitHub CI verification.
 
+Baseline portfolio sweep: **100 of 100 public repos checked**. The
+current default branches have no recent failing GitHub Actions runs,
+zero open Dependabot alerts, and zero open secret-scanning alerts. The
+shared baseline now includes modern GitHub Actions majors, no soft-fail
+lint/test steps, repo-level `SECURITY.md`, `CONTRIBUTING.md`, and
+`QUALITY.md`, clean Python ruff checks, and TypeScript packages with a
+standard `npm run typecheck` gate.
+
 Upgraded projects so far:
 
 - [`tomlmini`](https://github.com/nripankadas07/tomlmini): green on Python
