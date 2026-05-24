@@ -15,12 +15,12 @@ six are the front door.
 
 | Project | Technical Thesis | First Demo |
 |---|---|---|
+| [`patchgym`](https://github.com/nripankadas07/patchgym) | Repo-specific coding-agent evaluation: mine real Git history into hidden-test tasks and grade whether agents actually fixed the code. | `patchgym demo` |
 | [`agent-framework`](https://github.com/nripankadas07/agent-framework) | Agents from scratch, but actually usable: a tiny inspectable runtime with tools, memory, traces, and safe no-key examples. | `python examples/no_api_key_agent.py` |
 | [`rag-pipeline`](https://github.com/nripankadas07/rag-pipeline) | RAG from first principles: chunking, retrieval, citations, evaluation, and reports without hiding the retrieval loop. | `python examples/local_rag_demo.py` |
 | [`prompt-eval`](https://github.com/nripankadas07/prompt-eval) | Unit tests for prompts: regression checks that can run in CI without API keys. | `python examples/no_api_key_regression.py` |
 | [`safejson`](https://github.com/nripankadas07/safejson) | JSON parsing as a security boundary: duplicate-key detection, size/depth limits, and adversarial tests. | `python examples/security_boundary.py` |
 | [`decimal-ts`](https://github.com/nripankadas07/decimal-ts) | Exact decimal arithmetic for money-style calculations in TypeScript, backed by `BigInt` instead of floats. | `npm install && npm run demo` |
-| [`tomlmini`](https://github.com/nripankadas07/tomlmini) | A beautiful small reference implementation: a strict, no-dependency TOML common-subset parser with conformance checks. | `python examples/parse_config.py` |
 
 ## Start Here
 
@@ -28,9 +28,13 @@ Each flagship is meant to be useful even if you only read it, and runnable in
 less than five minutes from a clean checkout.
 
 ```bash
-git clone https://github.com/nripankadas07/safejson
-cd safejson
-python examples/security_boundary.py
+git clone https://github.com/nripankadas07/patchgym
+cd patchgym
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev]"
+patchgym demo
 python -m pytest -q
 ```
 
@@ -49,6 +53,7 @@ the limitations before using the library as a dependency.
 
 ### AI, Evaluation, And Local-First Tooling
 
+[`patchgym`](https://github.com/nripankadas07/patchgym),
 [`agent-framework`](https://github.com/nripankadas07/agent-framework),
 [`rag-pipeline`](https://github.com/nripankadas07/rag-pipeline),
 [`prompt-eval`](https://github.com/nripankadas07/prompt-eval),
@@ -194,11 +199,11 @@ metadata that matches what is actually shipped.
 The flagship repositories include launch-ready technical notes:
 
 - [`agent-framework/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/agent-framework/blob/main/docs/TECHNICAL_ARTICLE.md)
+- [`patchgym/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/patchgym/blob/main/docs/TECHNICAL_ARTICLE.md)
 - [`rag-pipeline/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/rag-pipeline/blob/main/docs/TECHNICAL_ARTICLE.md)
 - [`prompt-eval/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/prompt-eval/blob/main/docs/TECHNICAL_ARTICLE.md)
 - [`safejson/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/safejson/blob/main/docs/TECHNICAL_ARTICLE.md)
 - [`decimal-ts/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/decimal-ts/blob/main/docs/TECHNICAL_ARTICLE.md)
-- [`tomlmini/docs/TECHNICAL_ARTICLE.md`](https://github.com/nripankadas07/tomlmini/blob/main/docs/TECHNICAL_ARTICLE.md)
 
 ## Roadmap
 
