@@ -15,7 +15,7 @@ six are the front door.
 
 | Project | Technical Thesis | First Demo |
 |---|---|---|
-| [`patchgym`](https://github.com/nripankadas07/patchgym) | Repo-specific coding-agent evaluation: mine real Git history into hidden-test tasks and grade whether agents actually fixed the code. | `patchgym demo` |
+| [`patchgym`](https://github.com/nripankadas07/patchgym) | Repo-specific coding-agent evaluation: mine real Git history into hidden-test tasks and grade whether agents actually fixed the code. | `bash scripts/demo.sh` |
 | [`agent-framework`](https://github.com/nripankadas07/agent-framework) | Agents from scratch, but actually usable: a tiny inspectable runtime with tools, memory, traces, and safe no-key examples. | `python examples/no_api_key_agent.py` |
 | [`rag-pipeline`](https://github.com/nripankadas07/rag-pipeline) | RAG from first principles: chunking, retrieval, citations, evaluation, and reports without hiding the retrieval loop. | `python examples/local_rag_demo.py` |
 | [`prompt-eval`](https://github.com/nripankadas07/prompt-eval) | Unit tests for prompts: regression checks that can run in CI without API keys. | `python examples/no_api_key_regression.py` |
