@@ -38,11 +38,16 @@ mark it done: current GitHub Actions majors, blocking lint/type checks,
 coverage enforcement, package build and smoke tests, security-alert
 review, and remote GitHub CI verification.
 
-First upgraded project: [`tomlmini`](https://github.com/nripankadas07/tomlmini).
-It is green on Python 3.10, 3.11, and 3.12 with blocking ruff,
-`mypy --strict`, TOML conformance tests, a coverage floor, a clean
-package build, a green dependency graph run, and zero open Dependabot
-or secret-scanning alerts.
+Upgraded projects so far:
+
+- [`tomlmini`](https://github.com/nripankadas07/tomlmini): green on Python
+  3.10, 3.11, and 3.12 with blocking ruff, `mypy --strict`, TOML conformance
+  tests, a coverage floor, a clean package build, a green dependency graph run,
+  and zero open Dependabot or secret-scanning alerts.
+- [`bencode`](https://github.com/nripankadas07/bencode): green on Python 3.10,
+  3.11, and 3.12 with blocking ruff, `mypy --strict`, BEP 3 canonical-format
+  checks, 100% line and branch coverage, a clean package build, a green
+  dependency graph run, and zero open Dependabot or secret-scanning alerts.
 
 ## What's in here
 
