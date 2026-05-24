@@ -56,6 +56,11 @@ Upgraded projects so far:
   3.11, and 3.12 with blocking ruff, `mypy --strict`, BEP 3 canonical-format
   checks, 100% line and branch coverage, a clean package build, a green
   dependency graph run, and zero open Dependabot or secret-scanning alerts.
+- [`safejson`](https://github.com/nripankadas07/safejson): green on Python 3.9,
+  3.10, 3.11, and 3.12 with blocking ruff, `mypy --strict`, RFC 8259
+  conformance checks, 100% line and branch coverage, wheel/sdist build and
+  wheel smoke tests, a green dependency graph run, and zero open Dependabot or
+  secret-scanning alerts.
 
 ## What's in here
 
@@ -81,9 +86,10 @@ of it fails fast.
 wish the standard library shipped. It's a hardened JSON parser
 with configurable depth limits, string-length caps, duplicate-key
 detection, NaN/Infinity rejection, and type whitelisting. There's
-a streaming pre-scan that catches resource-exhaustion attacks
-before any Python objects get allocated, which means it survives
-the recursion bombs that crash `json.loads` outright.
+a streaming pre-scan that catches syntax errors, non-JSON numeric
+constants, and resource-exhaustion attacks before `json.loads`
+builds containers; duplicate-key and type policies run through
+stdlib decode hooks immediately after that scan.
 
 [`jsonptr`](https://github.com/nripankadas07/jsonptr) is a clean
 RFC 6901 JSON Pointer implementation. Parse, format, escape,
