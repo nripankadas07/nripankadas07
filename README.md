@@ -46,6 +46,10 @@ They represent the profile's strongest public surface.
 | TypeScript primitives | [decimal-ts](https://github.com/nripankadas07/decimal-ts), [argv-zod](https://github.com/nripankadas07/argv-zod), [argv-strict](https://github.com/nripankadas07/argv-strict) |
 | Terminal and text tooling | [wordwrap](https://github.com/nripankadas07/wordwrap) |
 
+The release-track repositories have GitHub releases with build artifacts
+attached: Python wheels/source distributions for Python projects and npm
+tarballs for TypeScript projects.
+
 Everything else is either a focused utility, a lab note, or an archive candidate.
 The goal is depth, not repo-count theater.
 
