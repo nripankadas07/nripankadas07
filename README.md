@@ -14,6 +14,23 @@ The newest benchmark set is an **Internet Ownership Kit**: 10 compact,
 self-hosted/local-first reference projects inspired by the kind of GitHub repos
 that replace everyday big-tech services.
 
+## Live Audit Snapshot
+
+Last audited on **May 25, 2026** across the public GitHub profile.
+
+| Signal | Current State |
+|---|---|
+| Public repositories | 111 total: 110 active, 1 archived scratchpad |
+| Active repo hygiene | 110/110 have README, license metadata, license file, CI, issue templates, and PR templates |
+| CI state | 110/110 active repos have a latest completed GitHub Actions run passing |
+| Flagships | 6 pinned repositories, all unarchived, release-tracked, and green |
+| Release track | 25 repositories with `v0.1.0` GitHub releases and build artifacts |
+| Internet Ownership Kit | 10/10 projects shipped with CLI, tests, CI, docs, releases, and contribution templates |
+| Open issue load | 0 open issues across active repositories at audit time |
+
+The detailed audit note is in
+[docs/PORTFOLIO_AUDIT.md](docs/PORTFOLIO_AUDIT.md).
+
 ## Start Here
 
 | Project | Why It Matters | First Demo |

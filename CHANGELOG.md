@@ -7,6 +7,9 @@ download, or adoption claim is added unless it has been verified.
 
 ## Unreleased
 
+- Added a dated live audit snapshot to the profile README.
+- Added `docs/PORTFOLIO_AUDIT.md` to summarize repository hygiene, CI,
+  releases, curation layers, and remaining non-automatable signals.
 - Added the shared lab maintainer surface: code of conduct, changelog, roadmap,
   issue templates, and pull request template.
 - Clarified source-checkout installation guidance where package-registry
