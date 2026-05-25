@@ -30,14 +30,16 @@ claims, or hidden local context.
 
 ## Curation Model
 
-The profile is intentionally organized into three layers:
+The profile is intentionally organized around one public identity: agentic AI
+infrastructure. The repositories are grouped into three layers:
 
 1. **Pinned flagships:** six repositories that should represent the strongest
    public surface: PatchGym, agent-framework, rag-pipeline, prompt-eval,
    safejson, and decimal-ts.
-2. **Release track:** 25 repositories that have CI, documentation, releases, and
-   build artifacts. These are the projects meant to stay close to
-   publication-ready.
+2. **Supporting release track:** 25 repositories that have CI, documentation,
+   releases, and build artifacts. These projects support the agentic AI
+   infrastructure story through evaluation, parsing, security, data handling,
+   and developer-tooling primitives.
 3. **Focused utilities and labs:** smaller repositories that remain active but
    are de-emphasized unless they become part of a stronger track.
 
