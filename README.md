@@ -10,6 +10,10 @@ typed TypeScript primitives, and zero-dependency Python utilities. The profile i
 curated around a few flagship projects first, then a smaller set of release-track
 libraries.
 
+The newest benchmark set is an **Internet Ownership Kit**: 10 compact,
+self-hosted/local-first reference projects inspired by the kind of GitHub repos
+that replace everyday big-tech services.
+
 ## Start Here
 
 | Project | Why It Matters | First Demo |
@@ -53,6 +57,27 @@ tarballs for TypeScript projects.
 Everything else is either a focused utility, a lab note, or an archive candidate.
 The goal is depth, not repo-count theater.
 
+## Internet Ownership Kit
+
+Ten small projects for owning more of the internet workflows people usually rent
+from platforms.
+
+| Project | Inspired By | Job |
+|---|---|---|
+| [lanbeam](https://github.com/nripankadas07/lanbeam) | LocalSend | Local network file drops with one-time share tokens. |
+| [rssdeck](https://github.com/nripankadas07/rssdeck) | FreeTube | No-account RSS and YouTube feed dashboard generator. |
+| [passhouse](https://github.com/nripankadas07/passhouse) | Vaultwarden | Small encrypted local secrets vault with explicit safety notes. |
+| [syncplan](https://github.com/nripankadas07/syncplan) | Syncthing | Directory snapshot and sync-plan engine before copying bytes. |
+| [readmine](https://github.com/nripankadas07/readmine) | Ladder | Ethical offline reader for public pages you can access. |
+| [photoflow](https://github.com/nripankadas07/photoflow) | Immich | Local photo inventory, duplicate detection, and album planning. |
+| [dnswarden](https://github.com/nripankadas07/dnswarden) | AdGuard Home | Compile hosts-style blocklists into clean DNS sinkhole rules. |
+| [medialoom](https://github.com/nripankadas07/medialoom) | Jellyfin | Static local media catalog for movies, shows, music, and audiobooks. |
+| [chatmux](https://github.com/nripankadas07/chatmux) | LibreChat | Provider-neutral chat transcript hub with no-key local mocks. |
+| [uptimelog](https://github.com/nripankadas07/uptimelog) | Uptime Kuma | Tiny uptime monitor with JSON logs and static status pages. |
+
+Each project has a README, CLI, tests, CI, quality docs, and a `v0.1.0` GitHub
+release with wheel/source artifacts.
+
 ## Technical Essays
 
 - [PatchGym: Local Coding-Agent Benchmarks From Real Git History](essays/patchgym-local-benchmarks.md)
@@ -83,7 +108,7 @@ build output, and package metadata that matches what is actually shipped.
 ## Current Focus
 
 1. Keep the six flagships pinned and release-ready.
-2. Maintain 10-15 core libraries with stronger examples, conformance tests, and
+2. Maintain the release-track libraries with stronger examples, conformance tests, and
    publication-ready packaging.
 3. Consolidate or archive scratchpads and unclear experiments instead of letting
    them dilute the profile.
