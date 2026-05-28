@@ -125,6 +125,8 @@ Last audited on **May 28, 2026** across the public GitHub profile.
 
 The detailed audit note is in
 [docs/PORTFOLIO_AUDIT.md](docs/PORTFOLIO_AUDIT.md).
+The latest deep audit is in
+[docs/DEEP_AUDIT_2026-05-28.md](docs/DEEP_AUDIT_2026-05-28.md).
 
 ## Quality Bar
 

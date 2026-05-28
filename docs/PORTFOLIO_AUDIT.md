@@ -25,6 +25,8 @@ claims, or hidden local context.
 | Active repos with issue and PR templates | 115/115 |
 | Active repos with latest completed CI passing | 115/115 |
 | May 28 research launch repos | 5/5 public, documented, tested, and green |
+| Active repos with docs or examples surface | 115/115 |
+| Project briefs added during deep audit | 106 |
 | Release-track repos with GitHub releases | 25/25 |
 | Release-track repos with attached build artifacts | 25/25 |
 | Open issues across active repos | 0 |
@@ -41,7 +43,9 @@ infrastructure. The repositories are grouped into three layers:
    infrastructure story through evaluation, parsing, security, data handling,
    and developer-tooling primitives.
 3. **Focused utilities and labs:** smaller repositories that remain active but
-   are de-emphasized unless they become part of a stronger track.
+   are de-emphasized unless they become part of a stronger track. Each active
+   repo now has a `docs/PROJECT_BRIEF.md` or an equivalent docs/examples
+   surface that states its role, current gates, and upgrade path.
 
 The archived scratchpad exists to keep older experiments visible without
 pretending they belong in the maintained surface area.
