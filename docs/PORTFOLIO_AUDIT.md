@@ -1,6 +1,6 @@
 # Portfolio Audit Snapshot
 
-Last audited: May 25, 2026, from the live public GitHub profile.
+Last audited: May 28, 2026, from the live public GitHub profile.
 
 ## Scope
 
@@ -13,17 +13,18 @@ claims, or hidden local context.
 
 | Signal | Result |
 |---|---|
-| Public repositories | 111 |
-| Active repositories | 110 |
+| Public repositories | 116 |
+| Active repositories | 115 |
 | Archived repositories | 1 |
-| Pinned flagships | 6 |
+| Current profile flagships | PatchGym plus the May 28 agent/eval launch stack |
 | Release-track repositories | 25 |
 | Internet Ownership Kit repositories | 10 |
-| Active repos with README | 110/110 |
-| Active repos with license metadata and license file | 110/110 |
-| Active repos with CI | 110/110 |
-| Active repos with issue and PR templates | 110/110 |
-| Active repos with latest completed CI passing | 110/110 |
+| Active repos with README | 115/115 |
+| Active repos with license metadata and license file | 115/115 |
+| Active repos with CI | 115/115 |
+| Active repos with issue and PR templates | 115/115 |
+| Active repos with latest completed CI passing | 115/115 |
+| May 28 research launch repos | 5/5 public, documented, tested, and green |
 | Release-track repos with GitHub releases | 25/25 |
 | Release-track repos with attached build artifacts | 25/25 |
 | Open issues across active repos | 0 |
@@ -33,9 +34,8 @@ claims, or hidden local context.
 The profile is intentionally organized around one public identity: agentic AI
 infrastructure. The repositories are grouped into three layers:
 
-1. **Pinned flagships:** six repositories that should represent the strongest
-   public surface: PatchGym, agent-framework, rag-pipeline, prompt-eval,
-   safejson, and decimal-ts.
+1. **Profile flagships:** PatchGym plus the May 28 agent/eval launch stack:
+   TraceWeave, RAGNeedle, Context Crucible, SandboxLedger, and SpecMutate.
 2. **Supporting release track:** 25 repositories that have CI, documentation,
    releases, and build artifacts. These projects support the agentic AI
    infrastructure story through evaluation, parsing, security, data handling,
@@ -61,8 +61,9 @@ Active repositories should keep:
 
 ## Remaining Non-Automatable Signals
 
-The profile now has strong hygiene, curation, releases, and green CI. The next
-signals that would make it stronger are external rather than mechanical:
+The profile now has strong hygiene, curation, releases, green CI, and a fresh
+five-project research launch. The next signals that would make it stronger are
+external rather than mechanical:
 
 - real users, stars, forks, and issue discussions;
 - package registry publication after names and credentials are intentionally

@@ -1,8 +1,8 @@
 # Nripanka Das
 
-**Agentic AI Infrastructure:** local coding-agent benchmarks, visible eval
-loops, RAG harnesses, and safety boundaries for tools that can be inspected from
-a fresh source checkout.
+**Agentic AI Infrastructure:** local coding-agent benchmarks, trace forensics,
+RAG stress tests, context engineering, reproducibility ledgers, and safety
+boundaries for tools that can be inspected from a fresh source checkout.
 
 I build small infrastructure around agentic systems: benchmark generation, agent
 runtimes, prompt regression testing, retrieval pipelines, hardened parsers, and
@@ -14,11 +14,11 @@ utility libraries are the disciplined substrate underneath them.
 | Project | Why It Matters | First Demo |
 |---|---|---|
 | [PatchGym](https://github.com/nripankadas07/patchgym) | Mine real Git history into local SWE-bench-style coding-agent tasks with hidden tests and auditable oracle patches. | `bash scripts/demo.sh` |
-| [agent-framework](https://github.com/nripankadas07/agent-framework) | A tiny visible agent runtime: plan, act, observe, remember, finish, with readable traces. | `python examples/no_api_key_agent.py` |
-| [rag-pipeline](https://github.com/nripankadas07/rag-pipeline) | RAG from first principles: chunking, retrieval, citations, evaluation, and reports without hosted services. | `python examples/local_rag_demo.py` |
-| [prompt-eval](https://github.com/nripankadas07/prompt-eval) | Prompt regression tests that can run in CI without secrets or hidden service calls. | `python examples/no_api_key_regression.py` |
-| [safejson](https://github.com/nripankadas07/safejson) | JSON parsing treated as a security boundary with duplicate-key rejection, typed errors, and resource limits. | `python examples/security_boundary.py` |
-| [decimal-ts](https://github.com/nripankadas07/decimal-ts) | Exact fixed-point decimal arithmetic for TypeScript, backed by `BigInt` instead of floating point. | `npm install && npm run demo` |
+| [TraceWeave](https://github.com/nripankadas07/traceweave) | Agent trajectory forensics: loop detection, causal edges, context drift, and risk reports from local JSONL traces. | `traceweave analyze examples/trace.jsonl` |
+| [RAGNeedle](https://github.com/nripankadas07/ragneedle) | Adversarial RAG needle benchmark generation with deterministic retrieval metrics and distractor pressure. | `ragneedle demo --json` |
+| [Context Crucible](https://github.com/nripankadas07/context-crucible) | Budgeted repository context packing for coding agents with salience scoring and leakage guards. | `context-crucible pack . --task "fix parser"` |
+| [SandboxLedger](https://github.com/nripankadas07/sandboxledger) | Content-addressed run ledgers for reproducible agent and benchmark evaluations. | `sandboxledger verify ledger.jsonl` |
+| [SpecMutate](https://github.com/nripankadas07/specmutate) | Metamorphic test-vector generation for parsers, CLIs, normalizers, and developer tools. | `specmutate demo --json` |
 
 PatchGym is the flagship and the best first run:
 
@@ -31,6 +31,21 @@ python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
 bash scripts/demo.sh
 ```
+
+## May 28, 2026 Research Launch
+
+The newest five projects are designed as a coherent evaluation stack around
+PatchGym:
+
+- TraceWeave explains failed or wasteful agent trajectories.
+- RAGNeedle stress-tests retrieval under adversarial evidence placement.
+- Context Crucible decides what code context an agent should see.
+- SandboxLedger records run integrity with hash chains and Merkle roots.
+- SpecMutate generates deterministic metamorphic tests for the small tools
+  agents often modify.
+
+They are intentionally source-checkout runnable, dependency-light, and honest
+about being research prototypes rather than adoption-inflated frameworks.
 
 ## How This Is Built
 
@@ -52,7 +67,8 @@ make agent workflows easier to test, parse, package, and reason about.
 
 | Area | Projects |
 |---|---|
-| AI and evaluation | [PatchGym](https://github.com/nripankadas07/patchgym), [agent-framework](https://github.com/nripankadas07/agent-framework), [rag-pipeline](https://github.com/nripankadas07/rag-pipeline), [prompt-eval](https://github.com/nripankadas07/prompt-eval), [token-counter](https://github.com/nripankadas07/token-counter) |
+| AI and evaluation | [PatchGym](https://github.com/nripankadas07/patchgym), [TraceWeave](https://github.com/nripankadas07/traceweave), [RAGNeedle](https://github.com/nripankadas07/ragneedle), [SandboxLedger](https://github.com/nripankadas07/sandboxledger), [SpecMutate](https://github.com/nripankadas07/specmutate), [agent-framework](https://github.com/nripankadas07/agent-framework), [rag-pipeline](https://github.com/nripankadas07/rag-pipeline), [prompt-eval](https://github.com/nripankadas07/prompt-eval), [token-counter](https://github.com/nripankadas07/token-counter) |
+| Context engineering | [Context Crucible](https://github.com/nripankadas07/context-crucible), [PatchGym](https://github.com/nripankadas07/patchgym), [rag-pipeline](https://github.com/nripankadas07/rag-pipeline) |
 | Security and operations | [safejson](https://github.com/nripankadas07/safejson), [dep-audit](https://github.com/nripankadas07/dep-audit) |
 | Parsers and data formats | [tomlmini](https://github.com/nripankadas07/tomlmini), [bencode](https://github.com/nripankadas07/bencode), [csvinfer](https://github.com/nripankadas07/csvinfer), [urlnorm](https://github.com/nripankadas07/urlnorm) |
 | TypeScript primitives | [decimal-ts](https://github.com/nripankadas07/decimal-ts), [argv-zod](https://github.com/nripankadas07/argv-zod), [argv-strict](https://github.com/nripankadas07/argv-strict) |
@@ -90,19 +106,19 @@ and a `v0.1.0` GitHub release with wheel/source artifacts.
 - [Visible Agent Evaluation: Testing The Loop, Not The Demo](essays/visible-agent-evaluation.md)
 - [Safe Local-First AI Tooling: Small Systems With Hard Boundaries](essays/local-first-ai-safety.md)
 
-The six flagship repositories also include architecture notes, release notes,
-limitations, and runnable examples.
+The flagship repositories include architecture notes, release notes,
+limitations, quality notes, and runnable examples.
 
 ## Live Audit Snapshot
 
-Last audited on **May 25, 2026** across the public GitHub profile.
+Last audited on **May 28, 2026** across the public GitHub profile.
 
 | Signal | Current State |
 |---|---|
-| Public repositories | 111 total: 110 active, 1 archived scratchpad |
-| Active repo hygiene | 110/110 have README, license metadata, license file, CI, issue templates, and PR templates |
-| CI state | 110/110 active repos have a latest completed GitHub Actions run passing |
-| Flagships | 6 pinned repositories, all unarchived, release-tracked, and green |
+| Public repositories | 116 total: 115 active, 1 archived scratchpad |
+| Active repo hygiene | 115/115 have README, license metadata, license file, CI, issue templates, and PR templates |
+| CI state | 115/115 active repos have a latest completed GitHub Actions run passing |
+| Research launch | 5 new local-first agent/eval projects shipped on May 28, 2026, all public and green |
 | Release track | 25 repositories with `v0.1.0` GitHub releases and build artifacts |
 | Internet Ownership Kit | 10/10 projects shipped with CLI, tests, CI, docs, releases, and contribution templates |
 | Open issue load | 0 open issues across active repositories at audit time |
@@ -143,8 +159,7 @@ collaboration. For profile-level context, use
 - [PatchGym](https://github.com/nripankadas07/patchgym): the flagship, because
   it turns real Git history into coding-agent tasks with hidden tests and oracle
   patches.
+- [TraceWeave](https://github.com/nripankadas07/traceweave): the quickest way
+  to see the new failure-forensics direction.
 - [Visible Agent Evaluation](essays/visible-agent-evaluation.md): the testing
   thesis behind the profile, focused on evaluating the loop instead of the demo.
-- [agent-framework](https://github.com/nripankadas07/agent-framework): the
-  smallest readable runtime for plans, tool calls, memory, traces, and no-key
-  agent examples.
