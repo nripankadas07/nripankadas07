@@ -1,150 +1,146 @@
 # Nripanka Das
 
-**Agentic AI Infrastructure:** local coding-agent benchmarks, trace forensics,
-RAG stress tests, context engineering, reproducibility ledgers, and safety
-boundaries for tools that can be inspected from a fresh source checkout.
+**I build local-first evaluation infrastructure for coding agents.**
 
-I build small infrastructure around agentic systems: benchmark generation, agent
-runtimes, prompt regression testing, retrieval pipelines, hardened parsers, and
-local-first developer tools. The pinned repositories are the main story; the
-utility libraries are the disciplined substrate underneath them.
+Most AI coding demos answer a soft question: *can the agent produce something
+that looks plausible?* My work asks the harder engineering question:
 
-## Start Here
+> Can an agent solve a real task mined from Git history, under hidden tests,
+> with a trace we can inspect and a run ledger we can verify later?
 
-| Project | Why It Matters | First Demo |
+That is the center of this GitHub profile: small, inspectable systems for
+agentic AI evaluation, RAG stress testing, reproducibility, context engineering,
+and correctness-focused developer tools.
+
+## The Flagship Stack
+
+```mermaid
+flowchart LR
+  A["Git history"] --> B["PatchGym<br/>mine real coding-agent tasks"]
+  B --> C["Hidden tests<br/>oracle patches<br/>validation command"]
+  C --> D["Agent run"]
+  D --> E["manifest.json<br/>trace.jsonl<br/>report.json"]
+  E --> F["TraceWeave<br/>failure forensics"]
+  E --> G["SandboxLedger<br/>tamper-evident ledger"]
+  H["Context Crucible"] --> D
+  I["SpecMutate"] --> C
+  J["RAGNeedle"] --> K["retrieval stress tests"]
+```
+
+| System | Role | Why It Is Worth Reading |
 |---|---|---|
-| [PatchGym](https://github.com/nripankadas07/patchgym) | Mine real Git history into local SWE-bench-style coding-agent tasks with hidden tests and auditable oracle patches. | `bash scripts/demo.sh` |
-| [TraceWeave](https://github.com/nripankadas07/traceweave) | Agent trajectory forensics: loop detection, causal edges, context drift, and risk reports from local JSONL traces. | `traceweave analyze examples/trace.jsonl` |
-| [RAGNeedle](https://github.com/nripankadas07/ragneedle) | Adversarial RAG needle benchmark generation with deterministic retrieval metrics and distractor pressure. | `ragneedle demo --json` |
-| [Context Crucible](https://github.com/nripankadas07/context-crucible) | Budgeted repository context packing for coding agents with salience scoring and leakage guards. | `context-crucible pack . --task "fix parser"` |
-| [SandboxLedger](https://github.com/nripankadas07/sandboxledger) | Content-addressed run ledgers for reproducible agent and benchmark evaluations. | `sandboxledger verify ledger.jsonl` |
-| [SpecMutate](https://github.com/nripankadas07/specmutate) | Metamorphic test-vector generation for parsers, CLIs, normalizers, and developer tools. | `specmutate demo --json` |
+| [PatchGym](https://github.com/nripankadas07/patchgym) | Local SWE-bench-style task miner and runner | Mines real Git history into hidden-test coding-agent tasks with auditable oracle patches. |
+| [TraceWeave](https://github.com/nripankadas07/traceweave) | Agent trajectory forensics | Reads local traces and finds loops, tool churn, context drift, causal handoffs, and risk signals. |
+| [SandboxLedger](https://github.com/nripankadas07/sandboxledger) | Reproducibility ledger | Hashes PatchGym run artifacts into an append-only ledger with previous-hash chaining and a Merkle root. |
+| [Context Crucible](https://github.com/nripankadas07/context-crucible) | Coding-agent context packer | Scores repository files, budgets context, and guards against hidden-test or oracle leakage. |
+| [RAGNeedle](https://github.com/nripankadas07/ragneedle) | Adversarial RAG benchmark generator | Creates deterministic needle-in-corpus retrieval tasks with distractor pressure and citation metrics. |
+| [SpecMutate](https://github.com/nripankadas07/specmutate) | Metamorphic test generator | Turns behavior specs into deterministic test vectors for parsers, CLIs, normalizers, and small tools. |
 
-PatchGym is the flagship and the best first run:
+## One Run, Three Proof Layers
 
 ```bash
 git clone https://github.com/nripankadas07/patchgym
 cd patchgym
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
 python -m pip install -e ".[dev]"
-bash scripts/demo.sh
+python -m pip install git+https://github.com/nripankadas07/traceweave
+python -m pip install git+https://github.com/nripankadas07/sandboxledger
+patchgym demo --keep-dir /tmp/patchgym-proof
+traceweave patchgym /tmp/patchgym-proof/runs/oracle --json
+sandboxledger ingest-patchgym /tmp/patchgym-proof-ledger.jsonl /tmp/patchgym-proof/runs/oracle
+sandboxledger verify /tmp/patchgym-proof-ledger.jsonl
 ```
 
-## May 28, 2026 Research Launch
+That flow produces:
 
-The newest five projects are designed as a coherent evaluation stack around
-PatchGym:
+- a real mined coding-agent task;
+- hidden-test validation;
+- `manifest.json` with commit ids, patch hashes, artifact hashes, return codes,
+  changed files, and totals;
+- `trace.jsonl` for forensic analysis;
+- a verifiable SandboxLedger record for the run.
 
-- TraceWeave explains failed or wasteful agent trajectories.
-- RAGNeedle stress-tests retrieval under adversarial evidence placement.
-- Context Crucible decides what code context an agent should see.
-- SandboxLedger records run integrity with hash chains and Merkle roots.
-- SpecMutate generates deterministic metamorphic tests for the small tools
-  agents often modify.
+This is the profile thesis in executable form: **agent evaluation should leave
+evidence, not just screenshots.**
 
-They are intentionally source-checkout runnable, dependency-light, and honest
-about being research prototypes rather than adoption-inflated frameworks.
+## What To Inspect First
 
-## How This Is Built
+| Time | Read / Run |
+|---|---|
+| 2 minutes | [PatchGym README](https://github.com/nripankadas07/patchgym) and `bash scripts/demo.sh` |
+| 5 minutes | [PatchGym reproducible runs](https://github.com/nripankadas07/patchgym/blob/main/docs/reproducible-runs.md) |
+| 7 minutes | [TraceWeave PatchGym traces](https://github.com/nripankadas07/traceweave/blob/main/docs/patchgym-traces.md) |
+| 10 minutes | [SandboxLedger PatchGym ingestion](https://github.com/nripankadas07/sandboxledger/blob/main/docs/patchgym-ingest.md) |
+| 15 minutes | [Visible Agent Evaluation](essays/visible-agent-evaluation.md) |
 
-I use AI heavily for scaffolding, test generation, edge-case brainstorming, and
-first-pass documentation. The design direction, architecture choices, project
-boundaries, quality bar, and final review are mine.
+## Why This Portfolio Exists
 
-My workflow is simple: AI-assisted output has to survive source-checkout setup,
-local tests, CI, release packaging, security notes, limitations notes, and
-manual review before it becomes part of the public portfolio. That is why the
-profile emphasizes reproducible demos and auditable artifacts instead of vague
-claims.
+I use AI heavily, but I do not want AI-assisted software to be judged by vibes.
+The systems here are built around harder boundaries:
 
-## Supporting Infrastructure
+- hidden tests instead of self-reported success;
+- traces instead of opaque agent transcripts;
+- manifests instead of loose claims;
+- hash ledgers instead of mutable screenshots;
+- local-first demos instead of hosted black boxes;
+- small parsers and utilities with adversarial tests instead of broad,
+  untestable abstractions.
 
-These release-track projects support the agentic AI infrastructure theme. They
-are not competing with the flagships for attention; they are the pieces that
-make agent workflows easier to test, parse, package, and reason about.
+The result is a portfolio with one technical identity:
+
+> local-first infrastructure for evaluating, debugging, and hardening coding
+> agents.
+
+## Supporting Systems
+
+These repositories support the flagship stack without competing with it.
 
 | Area | Projects |
 |---|---|
-| AI and evaluation | [PatchGym](https://github.com/nripankadas07/patchgym), [TraceWeave](https://github.com/nripankadas07/traceweave), [RAGNeedle](https://github.com/nripankadas07/ragneedle), [SandboxLedger](https://github.com/nripankadas07/sandboxledger), [SpecMutate](https://github.com/nripankadas07/specmutate), [agent-framework](https://github.com/nripankadas07/agent-framework), [rag-pipeline](https://github.com/nripankadas07/rag-pipeline), [prompt-eval](https://github.com/nripankadas07/prompt-eval), [token-counter](https://github.com/nripankadas07/token-counter) |
-| Context engineering | [Context Crucible](https://github.com/nripankadas07/context-crucible), [PatchGym](https://github.com/nripankadas07/patchgym), [rag-pipeline](https://github.com/nripankadas07/rag-pipeline) |
-| Security and operations | [safejson](https://github.com/nripankadas07/safejson), [dep-audit](https://github.com/nripankadas07/dep-audit) |
-| Parsers and data formats | [tomlmini](https://github.com/nripankadas07/tomlmini), [bencode](https://github.com/nripankadas07/bencode), [csvinfer](https://github.com/nripankadas07/csvinfer), [urlnorm](https://github.com/nripankadas07/urlnorm) |
-| TypeScript primitives | [decimal-ts](https://github.com/nripankadas07/decimal-ts), [argv-zod](https://github.com/nripankadas07/argv-zod), [argv-strict](https://github.com/nripankadas07/argv-strict) |
-| Terminal and text tooling | [wordwrap](https://github.com/nripankadas07/wordwrap) |
+| Agent and eval infrastructure | [agent-framework](https://github.com/nripankadas07/agent-framework), [rag-pipeline](https://github.com/nripankadas07/rag-pipeline), [prompt-eval](https://github.com/nripankadas07/prompt-eval), [token-counter](https://github.com/nripankadas07/token-counter), [ai-toolkit](https://github.com/nripankadas07/ai-toolkit) |
+| Correctness substrate | [safejson](https://github.com/nripankadas07/safejson), [tomlmini](https://github.com/nripankadas07/tomlmini), [bencode](https://github.com/nripankadas07/bencode), [csvinfer](https://github.com/nripankadas07/csvinfer), [urlnorm](https://github.com/nripankadas07/urlnorm), [jsonptr](https://github.com/nripankadas07/jsonptr), [jsonpatch-lite](https://github.com/nripankadas07/jsonpatch-lite) |
+| TypeScript systems primitives | [decimal-ts](https://github.com/nripankadas07/decimal-ts), [lru-ts](https://github.com/nripankadas07/lru-ts), [task-queue](https://github.com/nripankadas07/task-queue), [tokenring-ts](https://github.com/nripankadas07/tokenring-ts), [eventbus-ts](https://github.com/nripankadas07/eventbus-ts), [decoder-ts](https://github.com/nripankadas07/decoder-ts) |
+| Local-first product labs | [lanbeam](https://github.com/nripankadas07/lanbeam), [rssdeck](https://github.com/nripankadas07/rssdeck), [passhouse](https://github.com/nripankadas07/passhouse), [syncplan](https://github.com/nripankadas07/syncplan), [readmine](https://github.com/nripankadas07/readmine), [photoflow](https://github.com/nripankadas07/photoflow), [dnswarden](https://github.com/nripankadas07/dnswarden), [medialoom](https://github.com/nripankadas07/medialoom), [chatmux](https://github.com/nripankadas07/chatmux), [uptimelog](https://github.com/nripankadas07/uptimelog) |
 
-The release-track repositories have GitHub releases with build artifacts:
-Python wheels/source distributions for Python projects and npm tarballs for
-TypeScript projects.
+Every active repository is expected to have tests, CI, license metadata, issue
+templates, a pull request template, security notes, contribution notes, and a
+clear docs or examples surface.
 
-## Internet Ownership Kit
+## Public Audit
 
-Ten compact projects for owning more of the internet workflows people usually
-rent from platforms. They sit beside the AI work as local-first infrastructure
-practice.
-
-| Project | Inspired By | Job |
-|---|---|---|
-| [lanbeam](https://github.com/nripankadas07/lanbeam) | LocalSend | Local network file drops with one-time share tokens. |
-| [rssdeck](https://github.com/nripankadas07/rssdeck) | FreeTube | No-account RSS and YouTube feed dashboard generator. |
-| [passhouse](https://github.com/nripankadas07/passhouse) | Vaultwarden | Small encrypted local secrets vault with explicit safety notes. |
-| [syncplan](https://github.com/nripankadas07/syncplan) | Syncthing | Directory snapshot and sync-plan engine before copying bytes. |
-| [readmine](https://github.com/nripankadas07/readmine) | Ladder | Ethical offline reader for public pages you can access. |
-| [photoflow](https://github.com/nripankadas07/photoflow) | Immich | Local photo inventory, duplicate detection, and album planning. |
-| [dnswarden](https://github.com/nripankadas07/dnswarden) | AdGuard Home | Compile hosts-style blocklists into clean DNS sinkhole rules. |
-| [medialoom](https://github.com/nripankadas07/medialoom) | Jellyfin | Static local media catalog for movies, shows, music, and audiobooks. |
-| [chatmux](https://github.com/nripankadas07/chatmux) | LibreChat | Provider-neutral chat transcript hub with no-key local mocks. |
-| [uptimelog](https://github.com/nripankadas07/uptimelog) | Uptime Kuma | Tiny uptime monitor with JSON logs and static status pages. |
-
-Each project has a README, CLI, tests, CI, quality docs, contribution templates,
-and a `v0.1.0` GitHub release with wheel/source artifacts.
-
-## Technical Essays
-
-- [PatchGym: Local Coding-Agent Benchmarks From Real Git History](essays/patchgym-local-benchmarks.md)
-- [Visible Agent Evaluation: Testing The Loop, Not The Demo](essays/visible-agent-evaluation.md)
-- [Safe Local-First AI Tooling: Small Systems With Hard Boundaries](essays/local-first-ai-safety.md)
-
-The flagship repositories include architecture notes, release notes,
-limitations, quality notes, and runnable examples.
-
-## Live Audit Snapshot
-
-Last audited on **May 28, 2026** across the public GitHub profile.
+Last audited on **May 28, 2026** across the live public GitHub profile.
 
 | Signal | Current State |
 |---|---|
 | Public repositories | 116 total: 115 active, 1 archived scratchpad |
 | Active repo hygiene | 115/115 have README, license metadata, license file, CI, issue templates, and PR templates |
-| CI state | 115/115 active repos have a latest completed GitHub Actions run passing |
-| Research launch | 5 new local-first agent/eval projects shipped on May 28, 2026, all public and green |
-| Release track | 25 repositories with `v0.1.0` GitHub releases and build artifacts |
-| Internet Ownership Kit | 10/10 projects shipped with CLI, tests, CI, docs, releases, and contribution templates |
+| Latest completed CI | 115/115 active repos passing at audit time |
+| Docs/examples surface | 115/115 active repos |
+| Research launch | 5 new local-first agent/eval projects shipped on May 28, 2026 |
+| Flagship integration | PatchGym emits run manifests and traces; TraceWeave analyzes them; SandboxLedger records them |
 | Open issue load | 0 open issues across active repositories at audit time |
 
-The detailed audit note is in
-[docs/PORTFOLIO_AUDIT.md](docs/PORTFOLIO_AUDIT.md).
-The latest deep audit is in
-[docs/DEEP_AUDIT_2026-05-28.md](docs/DEEP_AUDIT_2026-05-28.md).
+Audit notes:
 
-## Quality Bar
+- [Portfolio audit](docs/PORTFOLIO_AUDIT.md)
+- [Deep audit, May 28 2026](docs/DEEP_AUDIT_2026-05-28.md)
 
-Every active repository is expected to have:
+## How I Work
 
-- a specific README that says why the project exists and where it stops;
-- a license, security policy, contribution guide, code of conduct, changelog,
-  roadmap, and quality notes;
-- tests or an honest docs-only status;
-- source-checkout installation instructions until registry publication is real;
-- CI where a build or test surface exists;
-- issue templates and a pull request template;
-- no fake package badges, fake benchmark numbers, or fake social proof.
+I use AI for scaffolding, test generation, edge-case brainstorming, and
+first-pass documentation. The architecture, project boundaries, quality bar,
+final review, and public positioning are mine.
 
-For parsers and evaluators, correctness means adversarial inputs, conformance
-checks where possible, explicit limits, typed failure modes, and repeatable
-local tests. For TypeScript packages, correctness means strict typechecking,
-tests, build output, and package metadata that matches what is actually shipped.
+AI-assisted output has to survive source-checkout setup, local tests, CI,
+security notes, limitation notes, and manual review before it becomes part of
+the public portfolio. That is why the profile emphasizes reproducible demos and
+auditable artifacts instead of fake adoption badges or inflated benchmark
+claims.
+
+## Essays
+
+- [PatchGym: Local Coding-Agent Benchmarks From Real Git History](essays/patchgym-local-benchmarks.md)
+- [Visible Agent Evaluation: Testing The Loop, Not The Demo](essays/visible-agent-evaluation.md)
+- [Safe Local-First AI Tooling: Small Systems With Hard Boundaries](essays/local-first-ai-safety.md)
 
 ## Professional Context
 
@@ -152,16 +148,6 @@ This GitHub profile is intentionally code-first. Career credentials, product
 leadership context, and publication context live on
 [LinkedIn](https://www.linkedin.com/in/nripankadas/).
 
-Open an issue on the relevant repository for bugs, design questions, or focused
-collaboration. For profile-level context, use
+For bugs, design questions, or focused collaboration, open an issue on the
+relevant repository. For profile-level context, use
 [nripankadas07/nripankadas07](https://github.com/nripankadas07/nripankadas07).
-
-## What To Read First
-
-- [PatchGym](https://github.com/nripankadas07/patchgym): the flagship, because
-  it turns real Git history into coding-agent tasks with hidden tests and oracle
-  patches.
-- [TraceWeave](https://github.com/nripankadas07/traceweave): the quickest way
-  to see the new failure-forensics direction.
-- [Visible Agent Evaluation](essays/visible-agent-evaluation.md): the testing
-  thesis behind the profile, focused on evaluating the loop instead of the demo.
