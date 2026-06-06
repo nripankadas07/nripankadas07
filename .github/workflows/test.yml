@@ -18,3 +18,5 @@ jobs:
         run: |
           test -s README.md
           test -s LICENSE
+      - name: Check local markdown links
+        run: python scripts/check_links.py

@@ -22,6 +22,8 @@ flowchart LR
   D --> E["manifest.json<br/>trace.jsonl<br/>report.json"]
   E --> F["TraceWeave<br/>failure forensics"]
   E --> G["SandboxLedger<br/>tamper-evident ledger"]
+  F --> L["ProofDeck<br/>static evidence deck"]
+  G --> L
   H["Context Crucible"] --> D
   I["SpecMutate"] --> C
   J["RAGNeedle"] --> K["retrieval stress tests"]
@@ -32,11 +34,12 @@ flowchart LR
 | [PatchGym](https://github.com/nripankadas07/patchgym) | Local SWE-bench-style task miner and runner | Mines real Git history into hidden-test coding-agent tasks with auditable oracle patches. |
 | [TraceWeave](https://github.com/nripankadas07/traceweave) | Agent trajectory forensics | Reads local traces and finds loops, tool churn, context drift, causal handoffs, and risk signals. |
 | [SandboxLedger](https://github.com/nripankadas07/sandboxledger) | Reproducibility ledger | Hashes PatchGym run artifacts into an append-only ledger with previous-hash chaining and a Merkle root. |
+| [ProofDeck](https://github.com/nripankadas07/proofdeck) | Static evidence deck | Packages PatchGym, TraceWeave, and SandboxLedger artifacts into a verifiable HTML, JSON, and attestation bundle. |
 | [Context Crucible](https://github.com/nripankadas07/context-crucible) | Coding-agent context packer | Scores repository files, budgets context, and guards against hidden-test or oracle leakage. |
 | [RAGNeedle](https://github.com/nripankadas07/ragneedle) | Adversarial RAG benchmark generator | Creates deterministic needle-in-corpus retrieval tasks with distractor pressure and citation metrics. |
 | [SpecMutate](https://github.com/nripankadas07/specmutate) | Metamorphic test generator | Turns behavior specs into deterministic test vectors for parsers, CLIs, normalizers, and small tools. |
 
-## One Run, Three Proof Layers
+## One Run, Four Proof Layers
 
 ```bash
 git clone https://github.com/nripankadas07/patchgym
@@ -44,10 +47,13 @@ cd patchgym
 python -m pip install -e ".[dev]"
 python -m pip install git+https://github.com/nripankadas07/traceweave
 python -m pip install git+https://github.com/nripankadas07/sandboxledger
+python -m pip install git+https://github.com/nripankadas07/proofdeck
 patchgym demo --keep-dir /tmp/patchgym-proof
 traceweave patchgym /tmp/patchgym-proof/runs/oracle --json
 sandboxledger ingest-patchgym /tmp/patchgym-proof-ledger.jsonl /tmp/patchgym-proof/runs/oracle
 sandboxledger verify /tmp/patchgym-proof-ledger.jsonl
+proofdeck build /tmp/patchgym-proof/runs/oracle --ledger /tmp/patchgym-proof-ledger.jsonl --out /tmp/proofdeck-site
+proofdeck verify /tmp/proofdeck-site/bundle.json
 ```
 
 That flow produces:
@@ -57,7 +63,9 @@ That flow produces:
 - `manifest.json` with commit ids, patch hashes, artifact hashes, return codes,
   changed files, and totals;
 - `trace.jsonl` for forensic analysis;
-- a verifiable SandboxLedger record for the run.
+- a verifiable SandboxLedger record for the run;
+- a static ProofDeck site with a canonical bundle, audit scorecard,
+  attestation file, and artifact Merkle root.
 
 This is the profile thesis in executable form: **agent evaluation should leave
 evidence, not just screenshots.**
@@ -70,6 +78,7 @@ evidence, not just screenshots.**
 | 5 minutes | [PatchGym reproducible runs](https://github.com/nripankadas07/patchgym/blob/main/docs/reproducible-runs.md) |
 | 7 minutes | [TraceWeave PatchGym traces](https://github.com/nripankadas07/traceweave/blob/main/docs/patchgym-traces.md) |
 | 10 minutes | [SandboxLedger PatchGym ingestion](https://github.com/nripankadas07/sandboxledger/blob/main/docs/patchgym-ingest.md) |
+| 12 minutes | [ProofDeck](https://github.com/nripankadas07/proofdeck) and `proofdeck demo --out /tmp/proofdeck-demo` |
 | 15 minutes | [Visible Agent Evaluation](essays/visible-agent-evaluation.md) |
 
 ## Why This Portfolio Exists
@@ -107,21 +116,23 @@ clear docs or examples surface.
 
 ## Public Audit
 
-Last audited on **May 28, 2026** across the live public GitHub profile.
+Last audited on **June 6, 2026** across the live public GitHub profile.
 
 | Signal | Current State |
 |---|---|
-| Public repositories | 116 total: 115 active, 1 archived scratchpad |
-| Active repo hygiene | 115/115 have README, license metadata, license file, CI, issue templates, and PR templates |
-| Latest completed CI | 115/115 active repos passing at audit time |
-| Docs/examples surface | 115/115 active repos |
+| Public repositories | 117 total: 116 active, 1 archived scratchpad |
+| Active repo hygiene | 116/116 have README, license metadata, license file, CI, issue templates, and PR templates |
+| Latest completed CI | 116/116 active repos passing at audit time |
+| Docs/examples surface | 116/116 active repos |
 | Research launch | 5 new local-first agent/eval projects shipped on May 28, 2026 |
-| Flagship integration | PatchGym emits run manifests and traces; TraceWeave analyzes them; SandboxLedger records them |
+| Evidence launch | ProofDeck shipped on June 6, 2026 as the static review layer for the flagship stack |
+| Flagship integration | PatchGym emits run manifests and traces; TraceWeave analyzes them; SandboxLedger records them; ProofDeck packages them |
 | Open issue load | 0 open issues across active repositories at audit time |
 
 Audit notes:
 
 - [Portfolio audit](docs/PORTFOLIO_AUDIT.md)
+- [Deep audit, June 6 2026](docs/DEEP_AUDIT_2026-06-06.md)
 - [Deep audit, May 28 2026](docs/DEEP_AUDIT_2026-05-28.md)
 
 ## How I Work

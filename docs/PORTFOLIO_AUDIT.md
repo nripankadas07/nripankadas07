@@ -1,6 +1,6 @@
 # Portfolio Audit Snapshot
 
-Last audited: May 28, 2026, from the live public GitHub profile.
+Last audited: June 6, 2026, from the live public GitHub profile.
 
 ## Scope
 
@@ -13,19 +13,20 @@ claims, or hidden local context.
 
 | Signal | Result |
 |---|---|
-| Public repositories | 116 |
-| Active repositories | 115 |
+| Public repositories | 117 |
+| Active repositories | 116 |
 | Archived repositories | 1 |
-| Current profile flagships | PatchGym plus the May 28 agent/eval launch stack |
+| Current profile flagships | PatchGym, TraceWeave, SandboxLedger, ProofDeck, and the supporting agent/eval stack |
 | Release-track repositories | 25 |
 | Internet Ownership Kit repositories | 10 |
-| Active repos with README | 115/115 |
-| Active repos with license metadata and license file | 115/115 |
-| Active repos with CI | 115/115 |
-| Active repos with issue and PR templates | 115/115 |
-| Active repos with latest completed CI passing | 115/115 |
+| Active repos with README | 116/116 |
+| Active repos with license metadata and license file | 116/116 |
+| Active repos with CI | 116/116 |
+| Active repos with issue and PR templates | 116/116 |
+| Active repos with latest completed CI passing | 116/116 |
 | May 28 research launch repos | 5/5 public, documented, tested, and green |
-| Active repos with docs or examples surface | 115/115 |
+| June 6 evidence launch | ProofDeck public, documented, tested, and green |
+| Active repos with docs or examples surface | 116/116 |
 | Project briefs added during deep audit | 106 |
 | Release-track repos with GitHub releases | 25/25 |
 | Release-track repos with attached build artifacts | 25/25 |
@@ -36,8 +37,9 @@ claims, or hidden local context.
 The profile is intentionally organized around one public identity: agentic AI
 infrastructure. The repositories are grouped into three layers:
 
-1. **Profile flagships:** PatchGym plus the May 28 agent/eval launch stack:
-   TraceWeave, RAGNeedle, Context Crucible, SandboxLedger, and SpecMutate.
+1. **Profile flagships:** PatchGym, TraceWeave, SandboxLedger, ProofDeck, and
+   the May 28 agent/eval launch stack: RAGNeedle, Context Crucible, and
+   SpecMutate.
 2. **Supporting release track:** 25 repositories that have CI, documentation,
    releases, and build artifacts. These projects support the agentic AI
    infrastructure story through evaluation, parsing, security, data handling,
@@ -65,8 +67,9 @@ Active repositories should keep:
 
 ## Remaining Non-Automatable Signals
 
-The profile now has strong hygiene, curation, releases, green CI, and a fresh
-five-project research launch. The next signals that would make it stronger are
+The profile now has strong hygiene, curation, releases, green CI, a five-project
+research launch, and a static evidence-deck layer for the flagship stack. The
+next signals that would make it stronger are
 external rather than mechanical:
 
 - real users, stars, forks, and issue discussions;
