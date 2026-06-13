@@ -10,7 +10,7 @@ that looks plausible?* My work asks the harder engineering question:
 
 That is the center of this GitHub profile: small, inspectable systems for
 agentic AI evaluation, RAG stress testing, reproducibility, context engineering,
-and correctness-focused developer tools.
+spec-driven workflow design, and correctness-focused developer tools.
 
 ## The Flagship Stack
 
@@ -27,6 +27,8 @@ flowchart LR
   H["Context Crucible"] --> D
   I["SpecMutate"] --> C
   J["RAGNeedle"] --> K["retrieval stress tests"]
+  M["SpecForge<br/>trend evidence to spec workflow"] --> N["profile-grade project blueprint"]
+  M --> H
 ```
 
 | System | Role | Why It Is Worth Reading |
@@ -35,6 +37,7 @@ flowchart LR
 | [TraceWeave](https://github.com/nripankadas07/traceweave) | Agent trajectory forensics | Reads local traces and finds loops, tool churn, context drift, causal handoffs, and risk signals. |
 | [SandboxLedger](https://github.com/nripankadas07/sandboxledger) | Reproducibility ledger | Hashes PatchGym run artifacts into an append-only ledger with previous-hash chaining and a Merkle root. |
 | [ProofDeck](https://github.com/nripankadas07/proofdeck) | Static evidence deck | Packages PatchGym, TraceWeave, and SandboxLedger artifacts into a verifiable HTML, JSON, and attestation bundle. |
+| [SpecForge](https://github.com/nripankadas07/specforge) | Spec-driven workflow studio | Ranks high-star GitHub/project signals, simulates guarded build workflows, and exports README-ready project blueprints. |
 | [Context Crucible](https://github.com/nripankadas07/context-crucible) | Coding-agent context packer | Scores repository files, budgets context, and guards against hidden-test or oracle leakage. |
 | [RAGNeedle](https://github.com/nripankadas07/ragneedle) | Adversarial RAG benchmark generator | Creates deterministic needle-in-corpus retrieval tasks with distractor pressure and citation metrics. |
 | [SpecMutate](https://github.com/nripankadas07/specmutate) | Metamorphic test generator | Turns behavior specs into deterministic test vectors for parsers, CLIs, normalizers, and small tools. |
@@ -75,6 +78,7 @@ evidence, not just screenshots.**
 | Time | Read / Run |
 |---|---|
 | 2 minutes | [PatchGym README](https://github.com/nripankadas07/patchgym) and `bash scripts/demo.sh` |
+| 3 minutes | [SpecForge live demo](https://nripankadas07.github.io/specforge/) and [source](https://github.com/nripankadas07/specforge) |
 | 5 minutes | [PatchGym reproducible runs](https://github.com/nripankadas07/patchgym/blob/main/docs/reproducible-runs.md) |
 | 7 minutes | [TraceWeave PatchGym traces](https://github.com/nripankadas07/traceweave/blob/main/docs/patchgym-traces.md) |
 | 10 minutes | [SandboxLedger PatchGym ingestion](https://github.com/nripankadas07/sandboxledger/blob/main/docs/patchgym-ingest.md) |
@@ -108,7 +112,7 @@ These repositories support the flagship stack without competing with it.
 | Agent and eval infrastructure | [agent-framework](https://github.com/nripankadas07/agent-framework), [rag-pipeline](https://github.com/nripankadas07/rag-pipeline), [prompt-eval](https://github.com/nripankadas07/prompt-eval), [token-counter](https://github.com/nripankadas07/token-counter), [ai-toolkit](https://github.com/nripankadas07/ai-toolkit) |
 | Correctness substrate | [safejson](https://github.com/nripankadas07/safejson), [tomlmini](https://github.com/nripankadas07/tomlmini), [bencode](https://github.com/nripankadas07/bencode), [csvinfer](https://github.com/nripankadas07/csvinfer), [urlnorm](https://github.com/nripankadas07/urlnorm), [jsonptr](https://github.com/nripankadas07/jsonptr), [jsonpatch-lite](https://github.com/nripankadas07/jsonpatch-lite) |
 | TypeScript systems primitives | [decimal-ts](https://github.com/nripankadas07/decimal-ts), [lru-ts](https://github.com/nripankadas07/lru-ts), [task-queue](https://github.com/nripankadas07/task-queue), [tokenring-ts](https://github.com/nripankadas07/tokenring-ts), [eventbus-ts](https://github.com/nripankadas07/eventbus-ts), [decoder-ts](https://github.com/nripankadas07/decoder-ts) |
-| Local-first product labs | [lanbeam](https://github.com/nripankadas07/lanbeam), [rssdeck](https://github.com/nripankadas07/rssdeck), [passhouse](https://github.com/nripankadas07/passhouse), [syncplan](https://github.com/nripankadas07/syncplan), [readmine](https://github.com/nripankadas07/readmine), [photoflow](https://github.com/nripankadas07/photoflow), [dnswarden](https://github.com/nripankadas07/dnswarden), [medialoom](https://github.com/nripankadas07/medialoom), [chatmux](https://github.com/nripankadas07/chatmux), [uptimelog](https://github.com/nripankadas07/uptimelog) |
+| Local-first product labs | [SpecForge](https://github.com/nripankadas07/specforge), [lanbeam](https://github.com/nripankadas07/lanbeam), [rssdeck](https://github.com/nripankadas07/rssdeck), [passhouse](https://github.com/nripankadas07/passhouse), [syncplan](https://github.com/nripankadas07/syncplan), [readmine](https://github.com/nripankadas07/readmine), [photoflow](https://github.com/nripankadas07/photoflow), [dnswarden](https://github.com/nripankadas07/dnswarden), [medialoom](https://github.com/nripankadas07/medialoom), [chatmux](https://github.com/nripankadas07/chatmux), [uptimelog](https://github.com/nripankadas07/uptimelog) |
 
 Every active repository is expected to have tests, CI, license metadata, issue
 templates, a pull request template, security notes, contribution notes, and a
@@ -116,16 +120,17 @@ clear docs or examples surface.
 
 ## Public Audit
 
-Last audited on **June 6, 2026** across the live public GitHub profile.
+Last audited on **June 13, 2026** across the live public GitHub profile.
 
 | Signal | Current State |
 |---|---|
-| Public repositories | 117 total: 116 active, 1 archived scratchpad |
-| Active repo hygiene | 116/116 have README, license metadata, license file, CI, issue templates, and PR templates |
-| Latest completed CI | 116/116 active repos passing at audit time |
-| Docs/examples surface | 116/116 active repos |
+| Public repositories | 118 total: 117 active, 1 archived scratchpad |
+| Active repo hygiene | 117/117 have README, license metadata, license file, CI, issue templates, and PR templates |
+| Latest completed CI | 117/117 active repos passing or queued at audit time |
+| Docs/examples surface | 117/117 active repos |
 | Research launch | 5 new local-first agent/eval projects shipped on May 28, 2026 |
 | Evidence launch | ProofDeck shipped on June 6, 2026 as the static review layer for the flagship stack |
+| Spec workflow launch | SpecForge shipped on June 13, 2026 as the profile-grade project selection and workflow studio |
 | Flagship integration | PatchGym emits run manifests and traces; TraceWeave analyzes them; SandboxLedger records them; ProofDeck packages them |
 | Open issue load | 0 open issues across active repositories at audit time |
 
