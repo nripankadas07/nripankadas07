@@ -1,6 +1,6 @@
 # Portfolio Audit Snapshot
 
-Last audited: June 6, 2026, from the live public GitHub profile.
+Last audited: June 13, 2026, from the live public GitHub profile.
 
 ## Scope
 
@@ -13,20 +13,21 @@ claims, or hidden local context.
 
 | Signal | Result |
 |---|---|
-| Public repositories | 117 |
-| Active repositories | 116 |
+| Public repositories | 118 |
+| Active repositories | 117 |
 | Archived repositories | 1 |
-| Current profile flagships | PatchGym, TraceWeave, SandboxLedger, ProofDeck, and the supporting agent/eval stack |
+| Current profile flagships | PatchGym, TraceWeave, SandboxLedger, ProofDeck, SpecForge, and the supporting agent/eval stack |
 | Release-track repositories | 25 |
 | Internet Ownership Kit repositories | 10 |
-| Active repos with README | 116/116 |
-| Active repos with license metadata and license file | 116/116 |
-| Active repos with CI | 116/116 |
-| Active repos with issue and PR templates | 116/116 |
-| Active repos with latest completed CI passing | 116/116 |
+| Active repos with README | 117/117 |
+| Active repos with license metadata and license file | 117/117 |
+| Active repos with CI | 117/117 |
+| Active repos with issue and PR templates | 117/117 |
+| Active repos with latest completed CI passing or queued | 117/117 |
 | May 28 research launch repos | 5/5 public, documented, tested, and green |
 | June 6 evidence launch | ProofDeck public, documented, tested, and green |
-| Active repos with docs or examples surface | 116/116 |
+| June 13 spec workflow launch | SpecForge public, documented, tested, deployed to GitHub Pages, and green |
+| Active repos with docs or examples surface | 117/117 |
 | Project briefs added during deep audit | 106 |
 | Release-track repos with GitHub releases | 25/25 |
 | Release-track repos with attached build artifacts | 25/25 |
@@ -37,7 +38,8 @@ claims, or hidden local context.
 The profile is intentionally organized around one public identity: agentic AI
 infrastructure. The repositories are grouped into three layers:
 
-1. **Profile flagships:** PatchGym, TraceWeave, SandboxLedger, ProofDeck, and
+1. **Profile flagships:** PatchGym, TraceWeave, SandboxLedger, ProofDeck,
+   SpecForge, and
    the May 28 agent/eval launch stack: RAGNeedle, Context Crucible, and
    SpecMutate.
 2. **Supporting release track:** 25 repositories that have CI, documentation,
@@ -68,8 +70,8 @@ Active repositories should keep:
 ## Remaining Non-Automatable Signals
 
 The profile now has strong hygiene, curation, releases, green CI, a five-project
-research launch, and a static evidence-deck layer for the flagship stack. The
-next signals that would make it stronger are
+research launch, a static evidence-deck layer, and a spec-workflow studio for
+the flagship stack. The next signals that would make it stronger are
 external rather than mechanical:
 
 - real users, stars, forks, and issue discussions;

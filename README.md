@@ -137,6 +137,7 @@ Last audited on **June 13, 2026** across the live public GitHub profile.
 Audit notes:
 
 - [Portfolio audit](docs/PORTFOLIO_AUDIT.md)
+- [Deep audit, June 13 2026](docs/DEEP_AUDIT_2026-06-13.md)
 - [Deep audit, June 6 2026](docs/DEEP_AUDIT_2026-06-06.md)
 - [Deep audit, May 28 2026](docs/DEEP_AUDIT_2026-05-28.md)
 
