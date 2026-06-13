@@ -21,6 +21,21 @@ spec-driven workflow design, and correctness-focused developer tools.
 | Verifiable run evidence | [ProofDeck](https://github.com/nripankadas07/proofdeck) | Static evidence bundles, audit scorecards, attestations, and Merkle roots. |
 | Agent trace debugging | [TraceWeave](https://github.com/nripankadas07/traceweave) | Loop detection, causal edges, context drift, and failure-risk reports. |
 
+## Best Projects To Star
+
+If one of these solves a real problem for you, starring that repository helps
+other developers find the work. Each one is built to stand alone, with local
+setup, tests, CI, docs, and a clear inspection path.
+
+| Repository | Star It If You Care About... | Best First Action |
+|---|---|---|
+| [PatchGym](https://github.com/nripankadas07/patchgym) | Local coding-agent benchmarks from real Git history | Run the demo task and inspect the generated manifest. |
+| [SpecForge](https://github.com/nripankadas07/specforge) | Turning high-signal project research into spec-driven build workflows | Open the live demo, select inspirations, and export a blueprint. |
+| [ProofDeck](https://github.com/nripankadas07/proofdeck) | Static, reviewable evidence bundles for agent runs | Build the demo deck and verify the bundle. |
+| [TraceWeave](https://github.com/nripankadas07/traceweave) | Debugging agent traces, loops, tool churn, and context drift | Run it on a PatchGym trace and read the risk report. |
+| [SandboxLedger](https://github.com/nripankadas07/sandboxledger) | Tamper-evident local run ledgers | Ingest a PatchGym run and verify the previous-hash chain. |
+| [RAGNeedle](https://github.com/nripankadas07/ragneedle) | Deterministic RAG retrieval stress tests | Generate a needle corpus and compare citation quality. |
+
 ## The Flagship Stack
 
 ```mermaid
@@ -138,6 +153,8 @@ evaluation ideas, benchmark comparisons, and integration notes:
 - [TraceWeave discussions](https://github.com/nripankadas07/traceweave/discussions)
 
 Issues are kept for reproducible bugs, docs gaps, and scoped feature requests.
+For launch planning, copy, channel strategy, and star-growth operating notes,
+see the [star growth playbook](docs/STAR_GROWTH_PLAYBOOK.md).
 
 ## Public Audit
 
