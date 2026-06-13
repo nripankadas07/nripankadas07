@@ -12,6 +12,15 @@ That is the center of this GitHub profile: small, inspectable systems for
 agentic AI evaluation, RAG stress testing, reproducibility, context engineering,
 spec-driven workflow design, and correctness-focused developer tools.
 
+## Start Here
+
+| If you want to see... | Open this first | What to look for |
+|---|---|---|
+| A real coding-agent benchmark | [PatchGym](https://github.com/nripankadas07/patchgym) | Git-history task mining, hidden tests, oracle patches, reproducible runs. |
+| A visual project demo | [SpecForge live](https://nripankadas07.github.io/specforge/) / [source](https://github.com/nripankadas07/specforge) | Trend evidence, spec workflow graph, guardrails, and blueprint export. |
+| Verifiable run evidence | [ProofDeck](https://github.com/nripankadas07/proofdeck) | Static evidence bundles, audit scorecards, attestations, and Merkle roots. |
+| Agent trace debugging | [TraceWeave](https://github.com/nripankadas07/traceweave) | Loop detection, causal edges, context drift, and failure-risk reports. |
+
 ## The Flagship Stack
 
 ```mermaid
@@ -73,7 +82,7 @@ That flow produces:
 This is the profile thesis in executable form: **agent evaluation should leave
 evidence, not just screenshots.**
 
-## What To Inspect First
+## Deep Inspection Path
 
 | Time | Read / Run |
 |---|---|
@@ -117,6 +126,18 @@ These repositories support the flagship stack without competing with it.
 Every active repository is expected to have tests, CI, license metadata, issue
 templates, a pull request template, security notes, contribution notes, and a
 clear docs or examples surface.
+
+## Community Surface
+
+The flagship repositories have Discussions enabled for design questions,
+evaluation ideas, benchmark comparisons, and integration notes:
+
+- [PatchGym discussions](https://github.com/nripankadas07/patchgym/discussions)
+- [ProofDeck discussions](https://github.com/nripankadas07/proofdeck/discussions)
+- [SpecForge discussions](https://github.com/nripankadas07/specforge/discussions)
+- [TraceWeave discussions](https://github.com/nripankadas07/traceweave/discussions)
+
+Issues are kept for reproducible bugs, docs gaps, and scoped feature requests.
 
 ## Public Audit
 
