@@ -7,6 +7,12 @@ download, or adoption claim is added unless it has been verified.
 
 ## Unreleased
 
+- Rebuilt the profile landing page around three immediately runnable proofs,
+  one compact reliability stack, and evidence-first calls to action.
+- Removed mobile-hostile project tables and tiny architecture diagrams so
+  pinned repositories and contribution history appear substantially earlier.
+- Aligned the profile bio, repository description, topics, and flagship
+  metadata with the reliable-AI, energy, climate, replay, and product story.
 - Published the dated post-release stress and security audit for the ten-project
   reliable-AI program.
 - Updated the release standard to include the checksum-published `v0.1.1`
