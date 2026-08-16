@@ -7,6 +7,13 @@ download, or adoption claim is added unless it has been verified.
 
 ## Unreleased
 
+- Published the dated post-release stress and security audit for the ten-project
+  reliable-AI program.
+- Updated the release standard to include the checksum-published `v0.1.1`
+  adversarial-hardening gate and extended CodeQL review.
+- Pinned the profile CI checkout action to an immutable commit.
+- Clarified that the ten new systems are complementary; adapters and integration
+  tests remain the boundary for interoperability claims.
 - Reframed the profile around one identity: agentic AI infrastructure.
 - Added an explicit AI-assisted build workflow note.
 - Replaced the roadmap-style ending with a "What To Read First" section.

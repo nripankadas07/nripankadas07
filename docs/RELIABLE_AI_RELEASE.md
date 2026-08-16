@@ -54,6 +54,10 @@ adapter and integration test exist.
 - JSON plus a human-readable static report;
 - malformed-input, boundary, determinism, and safety tests;
 - CI, security notes, limitations, contribution workflow, and MIT license;
-- `v0.1.0` release with honest alpha/reference status;
+- `v0.1.0` public alpha followed by a checksum-published `v0.1.1`
+  adversarial-hardening release;
+- dual-runtime source, extracted-source-distribution, and clean-package gates;
+- extended CodeQL with remote-and-local threat modeling, Dependabot, and
+  secret-scanning review;
 - no employer or private data;
 - AI-assistance disclosure and no fabricated adoption claims.

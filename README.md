@@ -49,7 +49,7 @@ flowchart TB
   W --> V["Value Density Lab<br/>outcome / user cost + guardrails"]
 ```
 
-## Ten interoperable proof systems
+## Ten complementary proof systems
 
 Released as one coherent reliability program—not ten generic wrappers.
 
@@ -100,6 +100,7 @@ Supporting projects:
 
 ## Research and audit trail
 
+- [Post-release stress and security audit — August 16, 2026](docs/POST_RELEASE_STRESS_AUDIT_2026-08-16.md)
 - [Deep profile and landscape audit — August 16, 2026](docs/DEEP_AUDIT_2026-08-16.md)
 - [Reliable AI release architecture](docs/RELIABLE_AI_RELEASE.md)
 - [Launch and adoption playbook](docs/LAUNCH_PLAYBOOK_2026-08.md)
