@@ -15,7 +15,7 @@ employer data, or silent telemetry is required.
 ## One reliability stack
 
 - **Specify and test** — [SpecSpan](https://github.com/nripankadas07/specspan) links requirements to code and tests; [ToolDrill](https://github.com/nripankadas07/tooldrill) attacks tool-contract boundaries.
-- **Inventory and control** — [Agent SBOM](https://github.com/nripankadas07/agent-sbom) surfaces capabilities; [Trustline MCP](https://github.com/nripankadas07/trustline-mcp) enforces policy, approval, quota, and audit rules.
+- **Inventory and simulate policy** — [Agent SBOM](https://github.com/nripankadas07/agent-sbom) surfaces capabilities; [Trustline MCP](https://github.com/nripankadas07/trustline-mcp) evaluates policy, approval, quota, and audit rules against supplied transcripts. It does not intercept or execute an upstream server's tool calls.
 - **Replay and govern** — [RunMirror](https://github.com/nripankadas07/runmirror) records deterministic cassettes; [Memory Gauntlet](https://github.com/nripankadas07/memory-gauntlet) tests correction, deletion, expiry, and role isolation.
 - **Exercise real decision shapes** — [Grid Ops Arena](https://github.com/nripankadas07/grid-ops-arena), [Carbon Risk Lab](https://github.com/nripankadas07/carbon-risk-lab), [Climate Evidence Bench](https://github.com/nripankadas07/climate-evidence-bench), and [Value Density Lab](https://github.com/nripankadas07/value-density-lab).
 - **Leave reviewable evidence** — [TraceWeave](https://github.com/nripankadas07/traceweave), [SandboxLedger](https://github.com/nripankadas07/sandboxledger), and [ProofDeck](https://github.com/nripankadas07/proofdeck) turn runs into inspectable records.
@@ -27,6 +27,11 @@ employer data, or silent telemetry is required.
 - **[ProofDeck](https://github.com/nripankadas07/proofdeck)** creates static evidence bundles whose contents and Merkle root can be independently checked.
 
 ## Evidence, not theatre
+
+Trustline MCP is an experimental policy lab. Its runnable examples and
+transport tests demonstrate local simulation and audit verification, not a
+production policy proxy. The release audit below is a dated snapshot; it does
+not establish the current security status of every repository or open PR.
 
 The August 16, 2026 release gate verified **10 public v0.1.1 releases, 1,020
 source and extracted-package test executions, 26 live release assets, three
