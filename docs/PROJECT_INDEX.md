@@ -1,11 +1,14 @@
 # Project index
 
-This index lists the 128 public repositories observed on 4 October 2026.
+This index lists the 133 public repositories observed on 4 October 2026.
 Dates are repository creation dates in UTC, not verified launch dates.
-Current default-branch Actions results were inspected for every repository.
+The initial 128 repository heads were inspected earlier in this occurrence;
+the five new launch heads were independently verified. A later account-wide
+refresh was incomplete due to public API rate limits.
 Installation and optional configurations were not revalidated across the portfolio.
 
-The dependency advisory in startup-dashboard remains unresolved. See the
+The startup-dashboard advisory is resolved by tested PR 11. Five new projects
+are LIVE with [commit and CI receipts](LAUNCHES_2026-10-04.md). See the
 [health review](HEALTH_REVIEW_2026-10-04.md) for exact coverage and blockers.
 
 | Created UTC | Project | Scope | Observed status |
@@ -15,7 +18,7 @@ The dependency advisory in startup-dashboard remains unresolved. See the
 | 2026-03-29 | [ai-toolkit](https://github.com/nripankadas07/ai-toolkit) | CLI toolkit for everyday AI/ML tasks — embeddings comparison, token counting, model output diffing, and prompt benchmarking | Head CI passing; install not revalidated |
 | 2026-03-29 | [rag-pipeline](https://github.com/nripankadas07/rag-pipeline) | Local-first RAG pipeline with chunking, retrieval, evaluation, and reports. | Head CI passing; install not revalidated |
 | 2026-03-29 | [agent-framework](https://github.com/nripankadas07/agent-framework) | Tiny inspectable agent runtime with tools, memory, tracing, and safe no-key examples. | Head CI passing; install not revalidated |
-| 2026-03-29 | [startup-dashboard](https://github.com/nripankadas07/startup-dashboard) | SaaS metrics dashboard tracking MRR, churn, LTV, CAC with interactive charts | CI passing; dependency advisory unresolved |
+| 2026-03-29 | [startup-dashboard](https://github.com/nripankadas07/startup-dashboard) | SaaS metrics dashboard tracking MRR, churn, LTV, CAC with interactive charts | Repair verified; full audit, lint, typecheck, tests and build passed |
 | 2026-03-29 | [prompt-eval](https://github.com/nripankadas07/prompt-eval) | Prompt regression testing for CI with deterministic judges and no-key demos. | Head CI passing; install not revalidated |
 | 2026-03-29 | [feature-flags](https://github.com/nripankadas07/feature-flags) | Lightweight, type-safe feature flag SDK for TypeScript — local rules, percentage rollouts, user targeting, and real-time updates | Head CI passing; install not revalidated |
 | 2026-03-29 | [cli-timer](https://github.com/nripankadas07/cli-timer) | Pomodoro CLI timer with rich terminal UI — configurable work/break cycles, session tracking, and colorful output | Head CI passing; install not revalidated |
@@ -138,3 +141,8 @@ The dependency advisory in startup-dashboard remains unresolved. See the
 | 2026-08-16 | [carbon-risk-lab](https://github.com/nripankadas07/carbon-risk-lab) | Seeded Monte Carlo risk engine for carbon-credit issuance, reversal, price, delay, counterparty, and policy risk. | Head CI passing; install not revalidated |
 | 2026-08-16 | [climate-evidence-bench](https://github.com/nripankadas07/climate-evidence-bench) | Offline evaluator for numerical, unit, temporal, geographic, provenance, and citation accuracy in climate answers. | Head CI passing; install not revalidated |
 | 2026-08-16 | [value-density-lab](https://github.com/nripankadas07/value-density-lab) | Executable product analytics for user outcomes per unit cost, with regret, harm, and privacy guardrails. | Head CI passing; install not revalidated |
+| 2026-10-04 | [wheel-sentinel](https://github.com/nripankadas07/wheel-sentinel) | Streaming wheel RECORD hash/size and archive-path validation without extraction. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-04.md) |
+| 2026-10-04 | [plan-regression](https://github.com/nripankadas07/plan-regression) | PostgreSQL plan identity changes and configurable metric-regression gates. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-04.md) |
+| 2026-10-04 | [portable-tree](https://github.com/nripankadas07/portable-tree) | Read-only sibling case/Unicode collision and filename portability audit. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-04.md) |
+| 2026-10-04 | [table-reconcile](https://github.com/nripankadas07/table-reconcile) | Keyed CSV reconciliation with exact decimal tolerances and duplicate-key errors. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-04.md) |
+| 2026-10-04 | [sqlite-rehearsal](https://github.com/nripankadas07/sqlite-rehearsal) | Trusted migration rehearsal on an in-memory SQLite backup with source preservation. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-04.md) |

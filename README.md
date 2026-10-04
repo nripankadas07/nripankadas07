@@ -20,6 +20,8 @@ repositories and the [4 October health review](docs/HEALTH_REVIEW_2026-10-04.md)
 for current audit coverage and unresolved findings. Passing CI alone does not
 establish installation reliability or a clean security-alert inventory.
 
+Latest: [five verified developer tools published on 4 October 2026](docs/LAUNCHES_2026-10-04.md), with install checks, limitations and commit-linked CI receipts.
+
 ## Evidence, not theatre
 
 Trustline MCP is an experimental policy lab. Its runnable examples and

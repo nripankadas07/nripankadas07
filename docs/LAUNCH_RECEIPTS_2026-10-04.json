@@ -1,0 +1,125 @@
+{
+  "occurrence": "GH-20261004",
+  "observed_utc": "2026-10-04T13:45:29.037047+00:00",
+  "projects": [
+    {
+      "name": "wheel-sentinel",
+      "observed_utc": "2026-10-04T13:31:37.838436+00:00",
+      "url": "https://github.com/nripankadas07/wheel-sentinel",
+      "public": true,
+      "owner": "nripankadas07",
+      "default_branch": "main",
+      "created_at": "2026-10-04T13:09:04Z",
+      "sha": "4a633281d17c8f200d4f4f2ca3c515c5e3413bc3",
+      "prepared_commit": "98fb532241af665bacb6875ff3a5c2151be1f77b",
+      "source_files": 12,
+      "source_errors": [],
+      "runs": [
+        {
+          "id": 37204760152,
+          "head_sha": "4a633281d17c8f200d4f4f2ca3c515c5e3413bc3",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/nripankadas07/wheel-sentinel/actions/runs/37204760152"
+        }
+      ],
+      "state": "LIVE"
+    },
+    {
+      "name": "plan-regression",
+      "observed_utc": "2026-10-04T13:31:37.839137+00:00",
+      "url": "https://github.com/nripankadas07/plan-regression",
+      "public": true,
+      "owner": "nripankadas07",
+      "default_branch": "main",
+      "created_at": "2026-10-04T13:12:57Z",
+      "sha": "039e9cc83d7edc02bb73577981792d1107ec9481",
+      "prepared_commit": "9745f4b2103f30402ab2e5115b7dd55527b7792f",
+      "source_files": 12,
+      "source_errors": [],
+      "runs": [
+        {
+          "id": 37205001822,
+          "head_sha": "039e9cc83d7edc02bb73577981792d1107ec9481",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/nripankadas07/plan-regression/actions/runs/37205001822"
+        }
+      ],
+      "state": "LIVE"
+    },
+    {
+      "name": "portable-tree",
+      "observed_utc": "2026-10-04T13:31:37.839649+00:00",
+      "url": "https://github.com/nripankadas07/portable-tree",
+      "public": true,
+      "owner": "nripankadas07",
+      "default_branch": "main",
+      "created_at": "2026-10-04T13:16:32Z",
+      "sha": "43453e4d6892aacdaa1e17b056204ea3774288a8",
+      "prepared_commit": "caa0aa181eb55d39ee1f0ca58c8eafadecb394de",
+      "source_files": 12,
+      "source_errors": [],
+      "runs": [
+        {
+          "id": 37205186589,
+          "head_sha": "43453e4d6892aacdaa1e17b056204ea3774288a8",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/nripankadas07/portable-tree/actions/runs/37205186589"
+        }
+      ],
+      "state": "LIVE"
+    },
+    {
+      "name": "table-reconcile",
+      "observed_utc": "2026-10-04T13:31:37.840080+00:00",
+      "url": "https://github.com/nripankadas07/table-reconcile",
+      "public": true,
+      "owner": "nripankadas07",
+      "default_branch": "main",
+      "created_at": "2026-10-04T13:19:52Z",
+      "sha": "32f08aa8dd36896b0c3e14d46f500dab671e1f77",
+      "prepared_commit": "56a14736588bc8a252c16d0ec0b3bf82933f9b06",
+      "source_files": 12,
+      "source_errors": [],
+      "runs": [
+        {
+          "id": 37205502350,
+          "head_sha": "32f08aa8dd36896b0c3e14d46f500dab671e1f77",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/nripankadas07/table-reconcile/actions/runs/37205502350"
+        }
+      ],
+      "state": "LIVE"
+    },
+    {
+      "name": "sqlite-rehearsal",
+      "observed_utc": "2026-10-04T13:31:37.840601+00:00",
+      "url": "https://github.com/nripankadas07/sqlite-rehearsal",
+      "public": true,
+      "owner": "nripankadas07",
+      "default_branch": "main",
+      "created_at": "2026-10-04T13:24:57Z",
+      "sha": "233a65d19b1db84c7c217e11473edf81fde1e382",
+      "prepared_commit": "44bcb9b3384522879393cb478a04dcaa189878a5",
+      "source_files": 12,
+      "source_errors": [],
+      "runs": [
+        {
+          "id": 37206466844,
+          "head_sha": "233a65d19b1db84c7c217e11473edf81fde1e382",
+          "status": "completed",
+          "conclusion": "success",
+          "html_url": "https://github.com/nripankadas07/sqlite-rehearsal/actions/runs/37206466844"
+        }
+      ],
+      "state": "LIVE",
+      "repair_pr": "https://github.com/nripankadas07/sqlite-rehearsal/pull/1"
+    }
+  ],
+  "install": "All five public clone installs and installed standalone demos passed; SQLite repeated at repaired final head.",
+  "runtime_dependencies": "none",
+  "os_coverage": "Linux; other OS unverified"
+}
