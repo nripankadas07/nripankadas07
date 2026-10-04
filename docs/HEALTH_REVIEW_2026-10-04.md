@@ -1,135 +1,104 @@
 # Portfolio health review on 4 October 2026
 
-The public inventory contains 128 repositories, including one archived repository.
-All 128 current default-branch heads have completed successful GitHub Actions
-runs. This is workflow evidence, not an account-wide security or installation
-certification. A high-severity development dependency advisory remains unresolved
-in startup-dashboard. No new project was launched and no repair was published.
-
-The signed-in browser lists 128 repositories across all five inventory pages and
-zero private repositories. Its profile badge says 130; the two additional entries
-are not exposed by the inventory or connector search, so that discrepancy remains
-unknown rather than being treated as audited.
+**Latest outcome: five distinct projects LIVE; two confirmed published errors fixed.**
+The dashboard dependency repair and SQLite Python 3.10 repair are verified on their
+final default branches. The profile retains six concise highlights and links to
+[the five launches](LAUNCHES_2026-10-04.md) and [chronological index](PROJECT_INDEX.md).
+No account-wide security or installation certification is claimed.
 
 ## Coverage and limits
 
 | Area | Observed result |
 | --- | --- |
-| Identity | Connected login nripankadas07; account ID 168971204 |
-| Git author email | Current Trustline merge author is linked to this account and uses nripankadas@gmail.com |
-| Public inventory | 128 repositories; 127 active, one archived mlproject |
-| Current-head Actions | 128/128 inspected; 218 observed runs completed successfully |
-| Open issues and pull requests | Public owner-scoped searches returned zero open issues and zero open PRs |
-| npm published lockfiles | 24 audited; 23 returned zero findings, startup-dashboard returned five high-severity affected package entries from one advisory |
-| npm without lockfiles | tsparser, tokenring-ts, and path-trie audited using newly generated, uncommitted local resolver lockfiles; zero findings |
-| Python manifests | 100 inspected; 87 declare no runtime dependencies |
-| Python vulnerability audit | pip-audit 2.10.1 audited 55 packages resolved from the union of declared runtime, build, and dev requirements; zero known findings |
-| Python reproducibility limits | No pinned Python lockfiles discovered; union resolution is not every allowed version or each repository's independent environment |
-| Optional Python configurations | ai-toolkit embeddings and rag-pipeline faiss/api/all extras were not independently resolved or exercised |
-| Archived repository | mlproject has no dependency manifest; ecosystem audit not applicable |
-| Security alert feeds | Unknown; connector rejects the code-scanning endpoint, browser alert inventory is pending; Dependabot and secret-scanning inventories not yet completed |
-| Other checks and deployments | Non-Actions check providers and complete deployment inventories not independently audited |
-| Install and demo behavior | Portfolio-wide clean installs and interactive demo behavior not revalidated |
-| Profile links | Local Markdown links passed the reviewed checker; four public demo entry URLs returned HTTP 200, which does not establish interactive behavior |
-| Write access | Issue creation and profile branch creation both returned HTTP 403, Resource not accessible by integration |
+| Identity | nripankadas07, account ID 168971204; Git author email verified as account-linked |
+| Inventory | 133 public repositories discovered after five launches; 132 active, one archived mlproject |
+| Initial workflow audit | All 128 pre-existing default heads inspected earlier on 4 October; 218 observed Actions runs successful |
+| New launches | Five final intended public heads verified; three-version CI, public clone installation and standalone demos passed |
+| Later health refresh | 48 heads retrieved; 36 Actions inventories retrieved; 22 complete Actions/check-run/status reads. 111 endpoint sequences incomplete due to HTTP 403 rate-limit responses. Initial evidence is retained; incomplete refresh is UNKNOWN, not a verified current success |
+| npm published locks | 24 audited. Dashboard initially had one advisory with five high affected entries; tested replacement now produces full audit zero. Other 23 audits were clean at observation |
+| npm missing locks | tsparser, tokenring-ts and path-trie audited with temporary uncommitted resolver locks; zero known findings |
+| Python manifests | 100 earlier manifests plus five new manifests inspected. 92 declare no runtime dependencies; build backend requirements remain distinct |
+| Python vulnerability audit | pip-audit 2.10.1 checked a 55-package union of runtime/build/dev resolutions; zero known findings. This does not cover every allowed version, independent environment or optional extras |
+| Optional configurations | ai-toolkit embeddings and rag-pipeline faiss/api/all extras not independently exercised |
+| Security alert feeds | Browser inspected Trustline and dashboard: 2/133, remaining 131 unknown. Trustline had zero open CodeQL/Dependabot/secrets; four CodeQL closed as fixed. Dashboard zero open Dependabot/secrets; code scanning not enabled. Feed state does not replace dependency audits |
+| Install/demo coverage | All five new public installs/demos verified; dashboard clean install, lint, actual typecheck, 29 application tests, two glob regressions and production build passed. Remaining portfolio installs and interactive demos not fully revalidated |
+| Other checks/deployments | Partial commit-check/status refresh above; complete deployment and external-check inventory remains unknown |
+| Access | Integration writes denied; user-authorized signed-in cloud browser writes succeeded. No credentials or protections changed |
+| Profile links | Reviewed local Markdown checker passed; public demo entry HTTP 200 checks establish reachability only, not complete app behavior |
 
-## Repair queue
+The earlier UI inventory exposed 128 repositories while its badge showed 130.
+That two-entry discrepancy was unresolved; the later public API inventory exposes
+133 after five creations. Private or otherwise unexposed entries are not treated
+as audited. No unsupported zero-alert or account-wide all-checks-green claim is made.
 
-### Startup dashboard dependency advisory
+## Resolved repair queue
 
-State: BLOCKED. Commit eb6124f1a459a9459bd2a4255770061834fcb9f0.
+### Dashboard dependency advisory — RESOLVED
 
-The affected development dependency chain is eslint-config-next 16.3.8,
-@next/eslint-plugin-next 16.3.8, fast-glob 3.3.1, micromatch 4.0.8, and braces 3.0.3.
-The five affected npm package entries arise from one advisory:
-[GHSA-vfj7-8cjw-p6xm](https://github.com/advisories/GHSA-vfj7-8cjw-p6xm),
-CVE-2026-93687. Published 18 September 2026; updated 2 October 2026.
-The advisory lists braces through 3.0.3 as affected and no patched release.
-Fresh registry reads returned braces 3.0.3 and eslint-config-next 16.3.8 as latest.
+[Issue 10](https://github.com/nripankadas07/startup-dashboard/issues/10) closed after
+[PR 11](https://github.com/nripankadas07/startup-dashboard/pull/11) merged.
+Main 19abe98446e915cfcf036a2e544924cce6ad38c8 has
+[passing Node 20/22 CI](https://github.com/nripankadas07/startup-dashboard/actions/runs/37204443549).
+The vulnerable braces/micromatch development chain was replaced with a narrow,
+reviewed directory-glob adapter. Its source and reproducible package are committed.
+Full npm audit is zero, alongside lint, actual TypeScript, tests and build.
 
-The dashboard's HTTP-route exploitability has not been established. On Node
-24.19.0, default-stack compile/expand probes up to 4,900 nested braces completed.
-With an explicitly reduced stack, the advisory class reproduces:
+Historical advisory: GHSA-vfj7-8cjw-p6xm / CVE-2026-93687, published 18 September
+and updated 2 October 2026. At the old head eb6124f1a459a9459bd2a4255770061834fcb9f0,
+a 3000-level brace pattern reproduced stack exhaustion only with reduced Node stack.
+HTTP-route exploitability was not established. Future Next lint-plugin API changes
+need compatibility review; the adapter deliberately supports only its pinned call
+contract. No advisory was dismissed, check disabled or lint rule weakened.
 
-```sh
-node --stack_size=256 - <<'JS'
-const braces = require('braces');
-const depth = 3000;
-const pattern = '{'.repeat(depth) + 'x,y' + '}'.repeat(depth);
-braces.compile(pattern);
-JS
-```
+### SQLite Python 3.10 validation — RESOLVED
 
-The 6,003-character pattern raises RangeError: Maximum call stack size exceeded.
-The reduced stack is an explicit reproduction condition. No claim of a default
-configuration denial of service is made from this probe.
+The initial main a1656bba21d80f7f3275366c1d32d7c57d9423ea
+[failed on Python 3.10](https://github.com/nripankadas07/sqlite-rehearsal/actions/runs/37205711586).
+The cause was unsupported set_authorizer(None), whose disabling support began
+in Python 3.11. [PR 1](https://github.com/nripankadas07/sqlite-rehearsal/pull/1)
+uses a callable for the post-migration internal validation phase while retaining
+the restrictive callback during user SQL. The original source-preservation and
+ATTACH/PRAGMA rejection tests remain unchanged. The final main and passing checks
+are in [launch receipts](LAUNCH_RECEIPTS_2026-10-04.json); the old failure remains history.
 
-No downgrade, package removal, audit exclusion, alert dismissal, or workflow
-disablement was applied. npm's proposed downgrade to eslint-config-next 14.2.35
-does not establish an equivalent supported Next 16 lint configuration.
-The attempted repair-queue issue creation was rejected by GitHub; no issue was
-created. Required next step: use
-a supported patched dependency path or review a compatibility-preserving parser
-replacement. Re-run audit, lint, actual TypeScript compilation, metrics tests,
-production build, and applicable remote checks before closing this item.
+### Concrete outstanding coverage blockers
 
-### Access and coverage gaps
+Integration write permissions and security-feed reads remain incomplete. Public
+API rate limiting interrupted the later refresh. Repository-independent Python
+resolutions, optional extras, other operating systems, deployment inventories and
+portfolio-wide install/demo checks remain unverified. These are audit gaps rather
+than confirmed new code defects. Future audits must retain and resume this queue.
 
-State: BLOCKED. The connected GitHub identity can read public repository
-resources, but repository issue and branch writes are denied by the integration.
-User-level admin metadata is not proof of integration write permission.
-Cloud browser sign-in was restored during the same occurrence. Restore the connector's authorized
-contents/issues permissions and security-alert read access; repository creation has no exposed connector operation. Browser publication of the profile documentation is being validated separately; no new project was launched.
+## Profile and history reconciliation
 
-An optional profile package-install check was rejected by automatic approval
-review because installing the cloned project would execute its build code and
-fetch dependencies. It was not retried indirectly. The inspected Markdown link
-checker ran successfully instead; package installation remains unverified.
+[Profile PR 4](https://github.com/nripankadas07/nripankadas07/pull/4) merged the
+accuracy correction, six highlights and initial index. Personal bio, homepage,
+LinkedIn content and accessible pins were preserved. This daily follow-up adds
+verified launch receipts and corrects the earlier dashboard status. The index
+labels creation dates separately from LIVE verification.
 
-## Profile review
-
-The public README now accurately calls Trustline an experimental simulator and
-limits its August security statement to the dated release audit. That earlier
-correction was retained. The public profile renders and shows six pins:
-Trustline MCP, Grid Ops Arena, PatchGym, Climate Evidence Bench, RunMirror, and
-Value Density Lab. Bio, employer/location, LinkedIn link, and personal prose were
-left unchanged. A historical MANUAL_ACTIONS.md pin list differs from these pins.
-
-A six-highlight README revision, chronological public repository index, and
-historical pin-note correction were prepared. The connector profile branch write was rejected; browser publication is being validated separately. Existing healthy claims were not silently replaced
-with a draft. The chronological index uses creation dates, not launch dates.
-
-The public entry URLs for Trustline, Grid Ops Arena, Value Density Lab, and
-SpecForge returned HTTP 200. Complete app asset, release artifact, benchmark,
-and supported-install verification remains incomplete.
-
-## Prior repair reconciliation
-
-[Trustline PR 11](https://github.com/nripankadas07/trustline-mcp/pull/11) was
-merged before this review. Main commit b5ba1d6a7420893f96647c015306f97f641cd0c1
-has successful [CI](https://github.com/nripankadas07/trustline-mcp/actions/runs/37178056189)
-and the second observed main workflow. [Issue 10](https://github.com/nripankadas07/trustline-mcp/issues/10)
-is closed as completed. These actions were not replayed. The reported three
-CodeQL alert fixes remain historical receipts; their current feed state could
-not be independently inspected through this connection.
+[Trustline PR 11](https://github.com/nripankadas07/trustline-mcp/pull/11) and issue
+10 were already completed and were not replayed. Browser alert observations are
+recorded above. [The earlier health snapshot](https://github.com/nripankadas07/nripankadas07/blob/d334edc13ad23966973b7464440b8e331c2fa0ca/docs/HEALTH_REVIEW_2026-10-04.md)
+retains previous blocked/unknown states and reproduction evidence.
 
 ## Weekly review
 
-No public repository was created between 27 September and 4 October 2026.
-This does not prove that no existing repository changed or establish launch
-history. Earlier launch receipts are not available in this chat. Accessible
-public inventory totals are one star and zero forks on 4 October, with no
-historical baseline or private traffic metrics. These are dated observations,
-not evidence that a project lacks value. No organic-growth claim is made.
+The initial inventory had no newly created repository between 27 September and
+4 October before this run. Creation dates do not establish launch receipts or
+prove no maintenance occurred. Initial public baseline on 4 October was one star
+and zero forks; historical traffic/conversion baselines were unavailable. Genuine
+feedback and prior-week install reliability could not be recovered fully. No
+adoption or growth claim follows from the absence of stars or feedback.
 
-The concrete maintenance finding favors reproducible dependency audit coverage
-and restoring write/alert access before adding five more products. Future briefs
-should account for unpinned Python requirements, npm projects without published
-lockfiles, and maintenance cost. No missed-day catch-up repositories were made.
+The observed repairs favor explicit version matrices, exact input-boundary tests,
+independent dependency audits and small standard-library MVPs. All five candidate
+briefs label demand as inferred, document mature alternatives and maintenance
+limits, and avoid unsupported benchmark claims. No missed-day catch-up projects
+were created.
 
 ## Outcome
 
-Launched 0/5. Published repairs 0. Unresolved: one dependency advisory,
-integration write denial, unavailable alert inventories, and incomplete install,
-optional-configuration, external-check, and deployment coverage. Profile public
-claims were inspected; the curation publication is tracked in the associated pull request.
+Launched 5/5. Dashboard and SQLite confirmed errors fixed and verified. Profile
+accuracy corrected and launch receipts added. Account-wide audit coverage remains
+partial for the reasons above; the five-launch result is independently verified.
