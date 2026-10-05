@@ -1,15 +1,8 @@
 # Project index
 
-This index lists the 133 public repositories observed on 4 October 2026.
-Dates are repository creation dates in UTC, not verified launch dates.
-The initial 128 repository heads were inspected earlier in this occurrence;
-the five new launch heads were independently verified. A later account-wide
-refresh was incomplete due to public API rate limits.
-Installation and optional configurations were not revalidated across the portfolio.
+This index lists 138 public owned repositories observed on 5 October 2026. Dates are repository creation dates in UTC, not verified launch dates. Current default-head Actions/check/status and open issue/PR inventories were inspected for all 133 pre-existing repositories; all five new public launch heads were independently verified. Portfolio-wide installations, optional configurations and complete deployment/security-alert inventories remain unverified.
 
-The startup-dashboard advisory is resolved by tested PR 11. Five new projects
-are LIVE with [commit and CI receipts](LAUNCHES_2026-10-04.md). See the
-[health review](HEALTH_REVIEW_2026-10-04.md) for exact coverage and blockers.
+Five new projects are LIVE with [5 October commit and CI receipts](LAUNCHES_2026-10-05.md). [4 October launches](LAUNCHES_2026-10-04.md) and resolved repairs remain history. See the [current health review](HEALTH_REVIEW_2026-10-05.md) for coverage and blockers.
 
 | Created UTC | Project | Scope | Observed status |
 | --- | --- | --- | --- |
@@ -146,3 +139,8 @@ are LIVE with [commit and CI receipts](LAUNCHES_2026-10-04.md). See the
 | 2026-10-04 | [portable-tree](https://github.com/nripankadas07/portable-tree) | Read-only sibling case/Unicode collision and filename portability audit. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-04.md) |
 | 2026-10-04 | [table-reconcile](https://github.com/nripankadas07/table-reconcile) | Keyed CSV reconciliation with exact decimal tolerances and duplicate-key errors. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-04.md) |
 | 2026-10-04 | [sqlite-rehearsal](https://github.com/nripankadas07/sqlite-rehearsal) | Trusted migration rehearsal on an in-memory SQLite backup with source preservation. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-04.md) |
+| 2026-10-05 | [notebook-state-check](https://github.com/nripankadas07/notebook-state-check) | Find suspicious saved notebook execution counts and outputs without executing cells. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-05.md) |
+| 2026-10-05 | [redirect-graph](https://github.com/nripankadas07/redirect-graph) | Find cycles, excessive chains and missing declared terminals in exact-path redirect rules offline. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-05.md) |
+| 2026-10-05 | [lfs-handoff](https://github.com/nripankadas07/lfs-handoff) | Check exported basic v1 LFS pointers against local object hashes and sizes before handoff. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-05.md) |
+| 2026-10-05 | [jsonl-seek](https://github.com/nripankadas07/jsonl-seek) | Build strict JSONL offset indexes and reject stale or altered indexes before record lookup. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-05.md) |
+| 2026-10-05 | [sourcemap-trace](https://github.com/nripankadas07/sourcemap-trace) | Trace a flat v3 source map offline with explicit unmapped spans and bounded VLQ decoding. | LIVE; three-version CI, public install and demo verified; [receipt](LAUNCHES_2026-10-05.md) |
