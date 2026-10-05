@@ -1,0 +1,282 @@
+{
+  "date": "2026-10-05",
+  "state": "LIVE",
+  "count": 5,
+  "projects": [
+    {
+      "name": "notebook-state-check",
+      "sha": "cabb6a64d65e1f8d26d656c28e25e713a34c585b",
+      "ci": "https://github.com/nripankadas07/notebook-state-check/actions/runs/37272858748",
+      "conclusion": "success",
+      "state": "LIVE",
+      "metadata": {
+        "name": "notebook-state-check",
+        "public": true,
+        "branch": "main",
+        "owner": "nripankadas07",
+        "created_at": "2026-10-05T06:23:46Z",
+        "topics": [
+          "jupyter-notebook",
+          "notebook-validation",
+          "python"
+        ],
+        "url": "https://github.com/nripankadas07/notebook-state-check",
+        "description": "Read-only notebook execution-state diagnostics with precise cell evidence."
+      },
+      "prepared": {
+        "name": "notebook-state-check",
+        "state": "VALIDATED",
+        "observed": "2026-10-05T06:20:18.589559+00:00",
+        "test_count": 8,
+        "branch": "build/gh-20261005-notebook-state-check",
+        "prepared_commit": "773f5a4e281606c881586efde76933285e28fd59",
+        "files": [
+          ".github/workflows/ci.yml",
+          ".gitignore",
+          "LICENSE",
+          "README.md",
+          "RESEARCH.md",
+          "SUPPORT.md",
+          "VALIDATION.md",
+          "demo.py",
+          "notebook_state_check.py",
+          "pyproject.toml",
+          "research-evidence.json",
+          "test_notebook_state_check.py"
+        ],
+        "installed_missing_input": {
+          "exit": 2,
+          "json_error": true
+        },
+        "validation_summary": "41 total meaningful tests, compilation, wheel build, clean wheel install, CLI help, installed standalone demo and missing-input JSON exit 2 passed before publication."
+      },
+      "public_validation": {
+        "name": "notebook-state-check",
+        "sha": "cabb6a64d65e1f8d26d656c28e25e713a34c585b",
+        "observed": "2026-10-05T06:35:28.595001+00:00",
+        "source_matches_prepared": true,
+        "checks": "Fresh public clone: reviewed 12-file byte match, isolated pip install, installed CLI help, standalone demo and unmodified unit tests passed on Linux/Python 3.12.14."
+      }
+    },
+    {
+      "name": "redirect-graph",
+      "sha": "e94fe7b75d10233686f28f89ad5c9685b97a88e1",
+      "ci": "https://github.com/nripankadas07/redirect-graph/actions/runs/37273270890",
+      "conclusion": "success",
+      "state": "LIVE",
+      "metadata": {
+        "name": "redirect-graph",
+        "public": true,
+        "branch": "main",
+        "owner": "nripankadas07",
+        "created_at": "2026-10-05T06:33:04Z",
+        "topics": [
+          "python",
+          "redirects",
+          "static-site"
+        ],
+        "url": "https://github.com/nripankadas07/redirect-graph",
+        "description": "Offline exact-path redirect graph diagnostics for cycles, chains and missing terminals."
+      },
+      "prepared": {
+        "name": "redirect-graph",
+        "state": "VALIDATED",
+        "observed": "2026-10-05T06:20:31.468422+00:00",
+        "test_count": 7,
+        "branch": "build/gh-20261005-redirect-graph",
+        "prepared_commit": "d247e8606d6e311749e8a6f49adaa3c8feb9f107",
+        "files": [
+          ".github/workflows/ci.yml",
+          ".gitignore",
+          "LICENSE",
+          "README.md",
+          "RESEARCH.md",
+          "SUPPORT.md",
+          "VALIDATION.md",
+          "demo.py",
+          "pyproject.toml",
+          "redirect_graph.py",
+          "research-evidence.json",
+          "test_redirect_graph.py"
+        ],
+        "installed_missing_input": {
+          "exit": 2,
+          "json_error": true
+        },
+        "validation_summary": "41 total meaningful tests, compilation, wheel build, clean wheel install, CLI help, installed standalone demo and missing-input JSON exit 2 passed before publication."
+      },
+      "public_validation": {
+        "name": "redirect-graph",
+        "sha": "e94fe7b75d10233686f28f89ad5c9685b97a88e1",
+        "observed": "2026-10-05T06:37:09.803447+00:00",
+        "source_matches_prepared": true,
+        "checks": "Fresh public clone: reviewed 12-file byte match, isolated pip install, installed CLI help, standalone demo and unmodified unit tests passed on Linux/Python 3.12.14."
+      }
+    },
+    {
+      "name": "lfs-handoff",
+      "sha": "16b73aca656133dac75336ad8b1fd350d30051cd",
+      "ci": "https://github.com/nripankadas07/lfs-handoff/actions/runs/37273614543",
+      "conclusion": "success",
+      "state": "LIVE",
+      "metadata": {
+        "name": "lfs-handoff",
+        "public": true,
+        "branch": "main",
+        "owner": "nripankadas07",
+        "created_at": "2026-10-05T06:37:54Z",
+        "topics": [
+          "data-integrity",
+          "git-lfs",
+          "python"
+        ],
+        "url": "https://github.com/nripankadas07/lfs-handoff",
+        "description": "Verify exported Git LFS pointers against a local SHA-256 object store before handoff."
+      },
+      "prepared": {
+        "name": "lfs-handoff",
+        "state": "VALIDATED",
+        "observed": "2026-10-05T06:20:41.167393+00:00",
+        "test_count": 8,
+        "branch": "build/gh-20261005-lfs-handoff",
+        "prepared_commit": "7793a6f2f1de54083196fdafa2038f978ceadf2e",
+        "files": [
+          ".github/workflows/ci.yml",
+          ".gitignore",
+          "LICENSE",
+          "README.md",
+          "RESEARCH.md",
+          "SUPPORT.md",
+          "VALIDATION.md",
+          "demo.py",
+          "lfs_handoff.py",
+          "pyproject.toml",
+          "research-evidence.json",
+          "test_lfs_handoff.py"
+        ],
+        "installed_missing_input": {
+          "exit": 2,
+          "json_error": true
+        },
+        "validation_summary": "41 total meaningful tests, compilation, wheel build, clean wheel install, CLI help, installed standalone demo and missing-input JSON exit 2 passed before publication."
+      },
+      "public_validation": {
+        "name": "lfs-handoff",
+        "sha": "16b73aca656133dac75336ad8b1fd350d30051cd",
+        "observed": "2026-10-05T06:41:09.833944+00:00",
+        "source_matches_prepared": true,
+        "checks": "Fresh public clone: reviewed 12-file byte match, isolated pip install, installed CLI help, standalone demo and unmodified unit tests passed on Linux/Python 3.12.14."
+      }
+    },
+    {
+      "name": "jsonl-seek",
+      "sha": "faa22faa9bd3719b9a8f4e32db7567775647d359",
+      "ci": "https://github.com/nripankadas07/jsonl-seek/actions/runs/37273968473",
+      "conclusion": "success",
+      "state": "LIVE",
+      "metadata": {
+        "name": "jsonl-seek",
+        "public": true,
+        "branch": "main",
+        "owner": "nripankadas07",
+        "created_at": "2026-10-05T06:41:59Z",
+        "topics": [
+          "data-validation",
+          "jsonl",
+          "python"
+        ],
+        "url": "https://github.com/nripankadas07/jsonl-seek",
+        "description": "Strict JSONL offset indexes with full digest and offset revalidation before record lookup."
+      },
+      "prepared": {
+        "name": "jsonl-seek",
+        "state": "VALIDATED",
+        "observed": "2026-10-05T06:20:50.990332+00:00",
+        "test_count": 7,
+        "branch": "build/gh-20261005-jsonl-seek",
+        "prepared_commit": "feef3dd23bcc93bf4eff97f1e32733669dfe25d7",
+        "files": [
+          ".github/workflows/ci.yml",
+          ".gitignore",
+          "LICENSE",
+          "README.md",
+          "RESEARCH.md",
+          "SUPPORT.md",
+          "VALIDATION.md",
+          "demo.py",
+          "jsonl_seek.py",
+          "pyproject.toml",
+          "research-evidence.json",
+          "test_jsonl_seek.py"
+        ],
+        "installed_missing_input": {
+          "exit": 2,
+          "json_error": true
+        },
+        "validation_summary": "41 total meaningful tests, compilation, wheel build, clean wheel install, CLI help, installed standalone demo and missing-input JSON exit 2 passed before publication."
+      },
+      "public_validation": {
+        "name": "jsonl-seek",
+        "sha": "faa22faa9bd3719b9a8f4e32db7567775647d359",
+        "observed": "2026-10-05T06:45:23.757570+00:00",
+        "source_matches_prepared": true,
+        "checks": "Fresh public clone: reviewed 12-file byte match, isolated pip install, installed CLI help, standalone demo and unmodified unit tests passed on Linux/Python 3.12.14."
+      }
+    },
+    {
+      "name": "sourcemap-trace",
+      "sha": "ce2897423f96563f3e3dfe3a97ec2d4c6e1c5989",
+      "ci": "https://github.com/nripankadas07/sourcemap-trace/actions/runs/37274416578",
+      "conclusion": "success",
+      "state": "LIVE",
+      "metadata": {
+        "name": "sourcemap-trace",
+        "public": true,
+        "branch": "main",
+        "owner": "nripankadas07",
+        "created_at": "2026-10-05T06:46:32Z",
+        "topics": [
+          "debugging",
+          "python",
+          "source-map"
+        ],
+        "url": "https://github.com/nripankadas07/sourcemap-trace",
+        "description": "Offline flat v3 source-map tracing with explicit unmapped spans and bounded VLQ validation."
+      },
+      "prepared": {
+        "name": "sourcemap-trace",
+        "state": "VALIDATED",
+        "observed": "2026-10-05T06:21:00.881876+00:00",
+        "test_count": 11,
+        "branch": "build/gh-20261005-sourcemap-trace",
+        "prepared_commit": "8c5fb758f6d8ce9e80afc864abcda241fd307707",
+        "files": [
+          ".github/workflows/ci.yml",
+          ".gitignore",
+          "LICENSE",
+          "README.md",
+          "RESEARCH.md",
+          "SUPPORT.md",
+          "VALIDATION.md",
+          "demo.py",
+          "pyproject.toml",
+          "research-evidence.json",
+          "sourcemap_trace.py",
+          "test_sourcemap_trace.py"
+        ],
+        "installed_missing_input": {
+          "exit": 2,
+          "json_error": true
+        },
+        "validation_summary": "41 total meaningful tests, compilation, wheel build, clean wheel install, CLI help, installed standalone demo and missing-input JSON exit 2 passed before publication."
+      },
+      "public_validation": {
+        "name": "sourcemap-trace",
+        "sha": "ce2897423f96563f3e3dfe3a97ec2d4c6e1c5989",
+        "observed": "2026-10-05T06:50:34.504497+00:00",
+        "source_matches_prepared": true,
+        "checks": "Fresh public clone: reviewed 12-file byte match, isolated pip install, installed CLI help, standalone demo and unmodified unit tests passed on Linux/Python 3.12.14."
+      }
+    }
+  ]
+}
