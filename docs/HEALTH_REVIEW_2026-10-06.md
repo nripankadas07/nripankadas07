@@ -20,7 +20,7 @@ The account-wide audit snapshot precedes this report's own publication. This doc
 ## Verified repairs
 
 - High source-map-js GHSA-68fv-2mgg-jv7q: upgrade 1.2.1 to 1.2.2 in SpecForge and Startup Dashboard, with bounded hostile-offset regressions.
-- Moderate sprintf-js GHSA-hp3w-g68c-fv3c: remove the Jest/NYC transitive vulnerable package from 20 repositories using the compatible argparse 2 override, preserving YAML parsing and legacy CLI behavior with regression checks. SpecForge also shares this advisory, so the unique repaired dependency repository count is 21.
+- Moderate sprintf-js GHSA-hp3w-g68c-fv3c: remove the Jest/NYC transitive vulnerable package from 20 repositories using the compatible argparse 2 override, preserving YAML parsing and legacy CLI behavior with regression checks. The advisory scopes overlap, so the unique repaired dependency repository count is 21.
 - [Profile packaging PR #8](https://github.com/nripankadas07/nripankadas07/pull/8), default [7bc284a](https://github.com/nripankadas07/nripankadas07/commit/7bc284a06a16cd17a9eebd034658cf75cca1944d): explicit scripts package, initializer and installed-command valid/missing-link regression. Both validate and update-pip-graph checks passed. Personal README remained intact.
 
 All fixes used isolated branches, reviewed source bytes, normal repository protections and passing relevant local/preparation plus remote CI checks. No workflow, test, threshold, security scan or protection was disabled. [New-project CI bootstrap repair](LAUNCHES_2026-10-06.md) is counted within its project launch, not as another existing-repository fix.

@@ -144,10 +144,8 @@ Five new projects are LIVE with [6 October commit and CI receipts](LAUNCHES_2026
 | 2026-10-05 | [lfs-handoff](https://github.com/nripankadas07/lfs-handoff) | Check exported basic v1 LFS pointers against local object hashes and sizes before handoff. | Head CI passing; default wheel install verified; broader workflows/extras unverified |
 | 2026-10-05 | [jsonl-seek](https://github.com/nripankadas07/jsonl-seek) | Build strict JSONL offset indexes and reject stale or altered indexes before record lookup. | Head CI passing; default wheel install verified; broader workflows/extras unverified |
 | 2026-10-05 | [sourcemap-trace](https://github.com/nripankadas07/sourcemap-trace) | Trace a flat v3 source map offline with explicit unmapped spans and bounded VLQ decoding. | Head CI passing; default wheel install verified; broader workflows/extras unverified |
-
 | 2026-10-06 | [har-budget](https://github.com/nripankadas07/har-budget) | Offline HAR 1.2 request, wire-byte and p95 budgets with normalized origins and explicit unknown-size handling. | LIVE; clean wheel install and main CI verified |
 | 2026-10-06 | [junit-delta](https://github.com/nripankadas07/junit-delta) | Compares JUnit runs by nested suite/class/test identity and gates new failures, skips, removals and timing increases. | LIVE; clean wheel install and main CI verified |
 | 2026-10-06 | [ical-conflict](https://github.com/nripankadas07/ical-conflict) | Offline overlap reports for explicit iCalendar events, with UTC/IANA zones, DST ambiguity rejection and half-open interval boundaries. | LIVE; clean wheel install and main CI verified |
 | 2026-10-06 | [doc-anchor-audit](https://github.com/nripankadas07/doc-anchor-audit) | Offline bounded Markdown link and anchor audit with duplicate-heading fragments, reference links and explicit parser-coverage warnings. | LIVE; clean wheel install and main CI verified |
 | 2026-10-06 | [gettext-contract](https://github.com/nripankadas07/gettext-contract) | Checks declared Python percent/brace contracts, plural shapes, fuzzy and untranslated entries. | LIVE; clean wheel install and main CI verified |
-
