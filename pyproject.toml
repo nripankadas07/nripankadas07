@@ -13,3 +13,6 @@ authors = [{name = "Dr. Nripanka Das"}]
 
 [project.scripts]
 profile-check-links = "scripts.check_links:main"
+
+[tool.setuptools]
+packages = ["scripts"]
