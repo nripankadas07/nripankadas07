@@ -20,3 +20,9 @@ jobs:
           test -s LICENSE
       - name: Check local markdown links
         run: python scripts/check_links.py
+      - name: Check installed console command outside the source tree
+        run: |
+          python -m pip wheel --no-deps --wheel-dir /tmp/profile-wheel .
+          python -m venv /tmp/profile-package-check
+          /tmp/profile-package-check/bin/python -m pip install /tmp/profile-wheel/*.whl
+          PATH="/tmp/profile-package-check/bin:$PATH" /tmp/profile-package-check/bin/python test_installed_cli.py
