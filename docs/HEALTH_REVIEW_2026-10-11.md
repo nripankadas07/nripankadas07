@@ -10,7 +10,7 @@ All six profile highlights and personal content preserved. README and chronologi
 
 ## Security feeds
 
-All 163 security overviews and 282 enabled alert feeds inspected: 109 Dependabot, 10 code-scanning and 163 secret-scanning; no open alert returned. 54 Dependabot feeds are disabled and 153 repositories need CodeQL setup. Disabled/unconfigured scans are not counted as clean enabled scans. No security, credentials or protection settings changed.
+All 163 security overviews and 282 enabled alert feeds inspected: 109 Dependabot, 10 code-scanning and 163 secret-scanning; no open alert returned. 54 Dependabot feeds are unavailable (53 disabled, one archived repository); 153 code-scanning feeds are unavailable (152 have no analysis, one is disabled). Disabled/unconfigured scans are not counted as clean enabled scans. No security, credentials or protection settings changed.
 
 ## Independent package audit
 
@@ -21,9 +21,17 @@ The 187-input run at f58e73acc54a9ce9b2d65030015748d9acd88af3 passed. Artifact 1
 ## Installation and explicit unknowns
 
 - All 30 prior-week launches passed fresh Linux/Python 3.11 wheel/installed example rechecks; [Sunday review](WEEKLY_REVIEW_2026-10-11.md). Today’s five have wheel and documented build-isolated source install coverage on Linux/Python 3.10/3.12/3.14. Older pre-week repositories and every supported configuration were not all reinstalled today.
-- Deployment inventory remains UNKNOWN: connected service does not support the needed endpoint. Three showcased report URLs are directly rendered, not every deployment or release artifact.
+- Follow-up authenticated REST inventory covered all 163 repositories: four repositories have recorded GitHub Pages deployments, all latest environment statuses successful; 159 have no GitHub deployment records. All four site URLs rendered in a browser. External deployments not registered in GitHub and every release artifact remain outside coverage. Trustline’s newer implementation commits leave its committed static demo artifact unchanged; the other three deployed SHAs match their current default heads. See the [follow-up receipt](TASK_RECONCILIATION_2026-10-11.json).
 - Separate optional dependency combinations, non-Linux platform markers and VCS/editable/configuration-specific resolutions are not exhaustively audited. Temporary npm resolutions are not committed locks.
-- 54 disabled Dependabot feeds and 153 missing CodeQL configurations are coverage gaps. No claim of account-wide security cleanliness or complete all-config install coverage.
+- 54 unavailable Dependabot feeds (53 disabled, one archived) and 153 unavailable code-scanning feeds are coverage gaps. No claim of account-wide security cleanliness or complete all-config install coverage.
 - Traffic, downloads, unique installs and support response are unavailable/unmeasured. Dated stars/forks and genuine issue observations are in the weekly baseline; no growth claim.
 
 Follow-up priority remains newly confirmed actionable errors, truthful profile status and the documented audit gaps. Five useful projects reached LIVE; maintenance and historical launches were not counted as launches.
+
+## User-requested completion reconciliation
+
+Fresh authenticated follow-up on 11 October 2026 at 21:36 Dubai time independently verified all 163 current default heads: 628 successful check records, five skipped, no failed/pending checks, no open issues or pull requests, and no queued/in-progress Actions runs. These are current GraphQL rollup contexts; the earlier raw check-record snapshot above includes different historical/duplicate records and is retained with its original scope. All 282 enabled alert feeds returned no open alerts. [Exact repository heads, check URLs, scan coverage and deployment receipts](TASK_RECONCILIATION_2026-10-11.json).
+
+Today’s five launch heads and all 15 verification jobs match their published receipts. Profile PR #13 is merged at d27c87fa90c212b1a08a31cd73cc48df0ac6ade9 with passing main CI. The earlier startup-dashboard repair PR #13 is merged at 5c830103b1dff1299c54debe3d5002c34edadcc2; its current head and independent same-day npm audit pass. The dependency receipt’s 187 inputs match current repository heads except the profile’s subsequent documentation changes; no dependency input changed there. No completed launch or repair was replayed. Public profile, six pins and all four recorded Pages URLs were read directly in a browser.
+
+No unresolved GitHub issue, pull request, current failed check, enabled-feed alert or running workflow was found in this follow-up. The explicit installation, alternate dependency and disabled/unconfigured scan coverage limits above remain. Scheduling administration is handled in the separate active scheduling chat; it is not a repository completion claim. This documentation-only follow-up is checked and merged through a normal PR, with final main CI verified separately from the pre-change snapshot.
