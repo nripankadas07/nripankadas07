@@ -1,0 +1,885 @@
+{
+  "observed_date": "2026-10-11",
+  "review_period": [
+    "2026-10-04",
+    "2026-10-10"
+  ],
+  "repositories": [
+    {
+      "date": "2026-10-04",
+      "name": "wheel-sentinel",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-04T13:11:53Z",
+      "head": "4a633281d17c8f200d4f4f2ca3c515c5e3413bc3"
+    },
+    {
+      "date": "2026-10-04",
+      "name": "plan-regression",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-04T13:15:54Z",
+      "head": "039e9cc83d7edc02bb73577981792d1107ec9481"
+    },
+    {
+      "date": "2026-10-04",
+      "name": "portable-tree",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-04T13:18:58Z",
+      "head": "43453e4d6892aacdaa1e17b056204ea3774288a8"
+    },
+    {
+      "date": "2026-10-04",
+      "name": "table-reconcile",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-04T13:24:17Z",
+      "head": "32f08aa8dd36896b0c3e14d46f500dab671e1f77"
+    },
+    {
+      "date": "2026-10-04",
+      "name": "sqlite-rehearsal",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-04T13:40:36Z",
+      "head": "233a65d19b1db84c7c217e11473edf81fde1e382"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "notebook-state-check",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-05T06:31:22Z",
+      "head": "cabb6a64d65e1f8d26d656c28e25e713a34c585b"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "redirect-graph",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-05T06:36:17Z",
+      "head": "e94fe7b75d10233686f28f89ad5c9685b97a88e1"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "lfs-handoff",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-05T06:40:24Z",
+      "head": "16b73aca656133dac75336ad8b1fd350d30051cd"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "jsonl-seek",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-05T06:44:38Z",
+      "head": "faa22faa9bd3719b9a8f4e32db7567775647d359"
+    },
+    {
+      "date": "2026-10-05",
+      "name": "sourcemap-trace",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-05T06:49:49Z",
+      "head": "ce2897423f96563f3e3dfe3a97ec2d4c6e1c5989"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "har-budget",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-06T07:48:20Z",
+      "head": "8bf12d6fd73218f428f72a2db9383ab7881f2e4d"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "junit-delta",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-06T07:47:00Z",
+      "head": "d4fe2aaf0f8170a15f5fd3d3be1444bd15045dd1"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "ical-conflict",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-06T07:51:02Z",
+      "head": "f54f28ad75fea857c7444376eccd1ed4e7ddaf2b"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "doc-anchor-audit",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-06T07:51:03Z",
+      "head": "760496d025c6f4b3522bb4da65949b5d71fe0d34"
+    },
+    {
+      "date": "2026-10-06",
+      "name": "gettext-contract",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-06T07:46:17Z",
+      "head": "0a86298c5dc6f445f4e35a77eeb4d53e8be04e51"
+    },
+    {
+      "date": "2026-10-08",
+      "name": "geojson-delivery-contract",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-08T06:32:04Z",
+      "head": "989bd64a980d3d77a80e8bee6ae99142f6b3e523"
+    },
+    {
+      "date": "2026-10-08",
+      "name": "cache-header-contract",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-08T06:33:18Z",
+      "head": "a2df8c0b9bda7b60db9c73adbbf418433291751e"
+    },
+    {
+      "date": "2026-10-08",
+      "name": "csp-fallback-diff",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-08T06:33:20Z",
+      "head": "6fc2423dc8303fd4c0975d30d07106c955098fbc"
+    },
+    {
+      "date": "2026-10-08",
+      "name": "robots-route-contract",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-08T06:33:20Z",
+      "head": "7fc8f5cdf6f6989768a0896c4f91df0abbe0f288"
+    },
+    {
+      "date": "2026-10-08",
+      "name": "masklink-audit",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-08T06:33:21Z",
+      "head": "479961442d7912a09f5d0ab10e966803f3a81bc4"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "subtitle-timing-audit",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-09T06:54:19Z",
+      "head": "58b53483c0dd49dfbcbc4d9c782039cfbb9e79af"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "mail-dns-topology",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-09T06:54:19Z",
+      "head": "d7134b936072266581d56b0680389c7367402c92"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "webhook-window-guard",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-09T06:54:19Z",
+      "head": "d44ff9f9cf9252071df731369e2f16427f53ef41"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "xml-namespace-contract",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-09T06:54:19Z",
+      "head": "470315b538e69a62a7ba804626727083a0e35a23"
+    },
+    {
+      "date": "2026-10-09",
+      "name": "release-asset-matrix",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-09T06:54:18Z",
+      "head": "38aa3760c851a300bff7e0e4345a279440b9608e"
+    },
+    {
+      "date": "2026-10-10",
+      "name": "hls-window-audit",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-10T06:42:07Z",
+      "head": "c12359a676b05870b9db3c7a20dba548ecc78e44"
+    },
+    {
+      "date": "2026-10-10",
+      "name": "mbox-thread-graph",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-10T06:42:35Z",
+      "head": "d8c19387cc91257b9ba9572555b37d4c8eee6a12"
+    },
+    {
+      "date": "2026-10-10",
+      "name": "sqlite-plan-witness",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-10T06:44:30Z",
+      "head": "f949eabedcbc920dc738161d5daa11186db5ec8d"
+    },
+    {
+      "date": "2026-10-10",
+      "name": "png-metadata-scrub",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-10T06:42:42Z",
+      "head": "18083a6c71cbdb065838b517ca5f0982087ef373"
+    },
+    {
+      "date": "2026-10-10",
+      "name": "posix-acl-explain",
+      "stars": 0,
+      "forks": 0,
+      "open_issues": 0,
+      "pushed_at": "2026-10-10T06:42:46Z",
+      "head": "ea2ca74ca934da6b859aab85cecf1e84f00d06c5"
+    }
+  ],
+  "installation_checks": [
+    {
+      "name": "plan-regression",
+      "head": "039e9cc83d7edc02bb73577981792d1107ec9481",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "doc-anchor-audit",
+      "head": "760496d025c6f4b3522bb4da65949b5d71fe0d34",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "wheel-sentinel",
+      "head": "4a633281d17c8f200d4f4f2ca3c515c5e3413bc3",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "portable-tree",
+      "head": "43453e4d6892aacdaa1e17b056204ea3774288a8",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "table-reconcile",
+      "head": "32f08aa8dd36896b0c3e14d46f500dab671e1f77",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "sqlite-rehearsal",
+      "head": "233a65d19b1db84c7c217e11473edf81fde1e382",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "notebook-state-check",
+      "head": "cabb6a64d65e1f8d26d656c28e25e713a34c585b",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "redirect-graph",
+      "head": "e94fe7b75d10233686f28f89ad5c9685b97a88e1",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "lfs-handoff",
+      "head": "16b73aca656133dac75336ad8b1fd350d30051cd",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "jsonl-seek",
+      "head": "faa22faa9bd3719b9a8f4e32db7567775647d359",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "sourcemap-trace",
+      "head": "ce2897423f96563f3e3dfe3a97ec2d4c6e1c5989",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "har-budget",
+      "head": "8bf12d6fd73218f428f72a2db9383ab7881f2e4d",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "junit-delta",
+      "head": "d4fe2aaf0f8170a15f5fd3d3be1444bd15045dd1",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "ical-conflict",
+      "head": "f54f28ad75fea857c7444376eccd1ed4e7ddaf2b",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "gettext-contract",
+      "head": "0a86298c5dc6f445f4e35a77eeb4d53e8be04e51",
+      "state": "PASS",
+      "checks": "current hash-matched core tests, synthetic installed example, offline wheel install, installed command success/missing-argument cases outside source; Linux Python 3.11"
+    },
+    {
+      "name": "geojson-delivery-contract",
+      "head": "989bd64a980d3d77a80e8bee6ae99142f6b3e523",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "cache-header-contract",
+      "head": "a2df8c0b9bda7b60db9c73adbbf418433291751e",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "csp-fallback-diff",
+      "head": "6fc2423dc8303fd4c0975d30d07106c955098fbc",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "robots-route-contract",
+      "head": "7fc8f5cdf6f6989768a0896c4f91df0abbe0f288",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "masklink-audit",
+      "head": "479961442d7912a09f5d0ab10e966803f3a81bc4",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "subtitle-timing-audit",
+      "head": "58b53483c0dd49dfbcbc4d9c782039cfbb9e79af",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "mail-dns-topology",
+      "head": "d7134b936072266581d56b0680389c7367402c92",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "webhook-window-guard",
+      "head": "d44ff9f9cf9252071df731369e2f16427f53ef41",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "xml-namespace-contract",
+      "head": "470315b538e69a62a7ba804626727083a0e35a23",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "release-asset-matrix",
+      "head": "38aa3760c851a300bff7e0e4345a279440b9608e",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "hls-window-audit",
+      "head": "c12359a676b05870b9db3c7a20dba548ecc78e44",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "mbox-thread-graph",
+      "head": "d8c19387cc91257b9ba9572555b37d4c8eee6a12",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "sqlite-plan-witness",
+      "head": "f949eabedcbc920dc738161d5daa11186db5ec8d",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "png-metadata-scrub",
+      "head": "18083a6c71cbdb065838b517ca5f0982087ef373",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    },
+    {
+      "name": "posix-acl-explain",
+      "head": "ea2ca74ca934da6b859aab85cecf1e84f00d06c5",
+      "state": "PASS",
+      "checks": "hash-matched source core tests, demo, wheel build, fresh offline install and installed CLI cases"
+    }
+  ],
+  "feedback": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "wheel-sentinel",
+        "issues": []
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "plan-regression",
+        "issues": []
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "portable-tree",
+        "issues": []
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "table-reconcile",
+        "issues": []
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "sqlite-rehearsal",
+        "issues": [
+          {
+            "number": 1,
+            "title": "fix: Python 3.10 authorizer transition after restricted migration",
+            "url": "https://github.com/nripankadas07/sqlite-rehearsal/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-04T13:37:25Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "notebook-state-check",
+        "issues": []
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "redirect-graph",
+        "issues": []
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "lfs-handoff",
+        "issues": []
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "jsonl-seek",
+        "issues": []
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "sourcemap-trace",
+        "issues": []
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "har-budget",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Launch offline HAR budget gate",
+            "url": "https://github.com/nripankadas07/har-budget/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-06T07:41:37Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "junit-delta",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Launch offline JUnit regression comparison",
+            "url": "https://github.com/nripankadas07/junit-delta/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-06T07:35:14Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "ical-conflict",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Launch explicit iCalendar conflict detector",
+            "url": "https://github.com/nripankadas07/ical-conflict/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-06T07:42:50Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "doc-anchor-audit",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Launch bounded offline Markdown anchor audit",
+            "url": "https://github.com/nripankadas07/doc-anchor-audit/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-06T07:44:31Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "gettext-contract",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Launch offline gettext placeholder contract checker",
+            "url": "https://github.com/nripankadas07/gettext-contract/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-06T07:21:00Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "geojson-delivery-contract",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate launch on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/geojson-delivery-contract/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-08T06:30:09Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "cache-header-contract",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate launch on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/cache-header-contract/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-08T06:31:11Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "csp-fallback-diff",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate launch on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/csp-fallback-diff/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-08T06:31:14Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "robots-route-contract",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate launch on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/robots-route-contract/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-08T06:31:17Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "masklink-audit",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate launch on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/masklink-audit/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-08T06:31:20Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "subtitle-timing-audit",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate package and contract on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/subtitle-timing-audit/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-09T06:48:45Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "mail-dns-topology",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate package and contract on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/mail-dns-topology/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-09T06:48:45Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "webhook-window-guard",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate package and contract on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/webhook-window-guard/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-09T06:48:45Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "xml-namespace-contract",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate package and contract on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/xml-namespace-contract/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-09T06:48:45Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "release-asset-matrix",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Validate package and contract on Python 3.10, 3.12 and 3.14",
+            "url": "https://github.com/nripankadas07/release-asset-matrix/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-09T06:48:45Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "hls-window-audit",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Verify launch across three Python versions",
+            "url": "https://github.com/nripankadas07/hls-window-audit/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-10T06:40:16Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "mbox-thread-graph",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Verify launch across three Python versions",
+            "url": "https://github.com/nripankadas07/mbox-thread-graph/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-10T06:40:56Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "sqlite-plan-witness",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Verify launch across three Python versions",
+            "url": "https://github.com/nripankadas07/sqlite-plan-witness/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-10T06:40:58Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "png-metadata-scrub",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Verify launch across three Python versions",
+            "url": "https://github.com/nripankadas07/png-metadata-scrub/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-10T06:40:59Z"
+          }
+        ]
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "posix-acl-explain",
+        "issues": [
+          {
+            "number": 1,
+            "title": "Verify launch across three Python versions",
+            "url": "https://github.com/nripankadas07/posix-acl-explain/pull/1",
+            "state": "closed",
+            "author": "nripankadas07",
+            "pr": true,
+            "created_at": "2026-10-10T06:41:02Z"
+          }
+        ]
+      }
+    }
+  ],
+  "traffic_download_metrics": "UNAVAILABLE",
+  "trend": "No earlier comparable baseline; no inferred week-over-week delta or growth claim."
+}

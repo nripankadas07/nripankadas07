@@ -1,0 +1,586 @@
+{
+  "observation_date": "2026-10-11",
+  "observation_window_utc": "2026-10-11T05:59:56Z to 2026-10-11T06:39:08Z",
+  "method": "Live GitHub star-sorted queries, relevance screening, direct comparable metadata, current docs/representative code and recent issue/PR reads. Highest-star relevant found is bounded by query coverage, not a global ranking.",
+  "briefs": [
+    {
+      "repo": "cookie-scope-witness",
+      "user": "Web developers debugging which cookie reaches a route",
+      "pain": "Same cookie names at several domains and paths obscure why a request sees different state.",
+      "capability": "Explain host-only/domain, slash-boundary path and secure eligibility for each supplied cookie and request.",
+      "alternatives": "Browser DevTools, Requests cookie jars, curl and Tough Cookie",
+      "limits": "Only already-normalized cookie records: no Set-Cookie parsing, public suffix list, SameSite, expiry, partitioning, prefix acceptance, IDNA or browser conformance. IDs must not contain cookie values. URLs and domains remain visible in local output.",
+      "fixture": {
+        "cookies": [
+          {
+            "id": "session",
+            "domain": "example.com",
+            "path": "/app",
+            "host_only": false,
+            "secure": true
+          },
+          {
+            "id": "local",
+            "domain": "example.com",
+            "path": "/",
+            "host_only": true,
+            "secure": false
+          }
+        ],
+        "requests": [
+          "https://api.example.com/app/item",
+          "http://example.com/apple"
+        ]
+      },
+      "expected": {},
+      "function": "explain",
+      "args": [
+        "example.json"
+      ]
+    },
+    {
+      "repo": "dns-serial-quorum",
+      "user": "DNS operators reviewing a zone rollout across authoritative servers",
+      "pain": "Ordinary numeric comparison mishandles SOA serial rollover, while a partial rollout can look complete.",
+      "capability": "Classify equal, ahead, behind, half-range ambiguous and unavailable observations; calculate an explicit equality quorum.",
+      "alternatives": "BIND utilities, dnspython serial arithmetic, checkzoneserial",
+      "limits": "No live DNS queries, DNSSEC verification, TTL or propagation-time inference. Input is a single manually supplied authoritative-server snapshot. Server labels are asserted unique, not verified identities. RFC 1982 half-range ordering is undefined; ahead does not count as expected equality.",
+      "fixture": {
+        "expected": 0,
+        "required": 2,
+        "observations": [
+          {
+            "server": "ns1",
+            "serial": 0
+          },
+          {
+            "server": "ns2",
+            "serial": 4294967295
+          },
+          {
+            "server": "ns3",
+            "serial": 0
+          },
+          {
+            "server": "ns4",
+            "serial": null
+          }
+        ]
+      },
+      "expected": {
+        "quorum_met": true,
+        "all_equal": false
+      },
+      "function": "evaluate",
+      "args": [
+        "example.json"
+      ]
+    },
+    {
+      "repo": "spdx-expression-paths",
+      "user": "Package maintainers inspecting alternatives in a license expression",
+      "pain": "Nested AND/OR expressions make the syntactic alternatives difficult to review without expanding them manually.",
+      "capability": "Enumerate bounded conjunction alternatives, applying AND precedence, parentheses and atomic WITH exceptions.",
+      "alternatives": "license-expression, Embark SPDX and go-spdx",
+      "limits": "SPDX-style syntax, not a validated SPDX license registry. Unknown identifiers are retained; case is preserved; deprecated IDs are not normalized. No legal interpretation, compatibility, compliance, policy selection or license-text detection. Enumeration is bounded and deliberately fails when expansion exceeds limits.",
+      "fixture": null,
+      "expected": {
+        "count": 2
+      },
+      "function": "choices",
+      "args": [
+        "(MIT OR Apache-2.0) AND Zlib"
+      ]
+    },
+    {
+      "repo": "systemd-order-audit",
+      "user": "Linux service authors reviewing an explicit startup transaction offline",
+      "pain": "Requires/Wants pull in units but do not order them; After/Before order units but do not pull them in.",
+      "capability": "Expand explicit pull-ins from roots, separately construct ordering edges and return one concrete cycle or deterministic topological order.",
+      "alternatives": "systemd-analyze verify/dot, systemd-graph and SystemdGenie",
+      "limits": "Normalized JSON snapshot, not a unit-file parser or replacement for systemd-analyze verify. No default/implicit dependencies, drop-ins, generators, aliases, conditions, failure propagation, stop ordering or live system operations. Missing pull-ins make complete false; inactive ordering targets are explicit. Blocked includes descendants of cycles, not just cycle members.",
+      "fixture": {
+        "roots": [
+          "app.service"
+        ],
+        "units": {
+          "app.service": {
+            "after": [
+              "db.service"
+            ],
+            "before": [],
+            "requires": [
+              "db.service"
+            ],
+            "wants": []
+          },
+          "db.service": {
+            "after": [],
+            "before": [],
+            "requires": [],
+            "wants": []
+          }
+        }
+      },
+      "expected": {
+        "acyclic": true,
+        "order": [
+          "db.service",
+          "app.service"
+        ],
+        "complete": true
+      },
+      "function": "audit",
+      "args": [
+        "example.json"
+      ]
+    },
+    {
+      "repo": "pcap-flow-ledger",
+      "user": "Network support engineers needing a small offline capture accounting receipt",
+      "pain": "A traffic trace contains payloads and many protocols when the immediate task is per-direction captured-byte totals.",
+      "capability": "Read bounded classic Ethernet/IPv4 TCP pcaps and summarize directional packet, payload, wire-byte and SYN/FIN/RST counts without outputting payload bytes.",
+      "alternatives": "Sniffnet, Scapy, Wireshark and captcp",
+      "limits": "Classic pcap 2.4 only, Ethernet linktype 1, complete IPv4 TCP records. Non-IPv4, non-TCP and fragmented records are explicitly counted as skipped. No pcapng, VLAN dissection, reassembly, checksum validation, retransmission deduplication, timing performance analysis or splitting reused four-tuples into connections. Retransmissions count again. Output includes IPs and ports and is not anonymous. No live capture.",
+      "fixture": null,
+      "expected": {
+        "packets": 2
+      },
+      "function": "ledger",
+      "args": [
+        "example.pcap"
+      ]
+    }
+  ],
+  "queries": {
+    "cookie-scope-witness": [
+      "cookie scope language:Python sort:stars",
+      "cookies sort:stars"
+    ],
+    "dns-serial-quorum": [
+      "DNS serial sort:stars",
+      "DNS library sort:stars",
+      "DNS zone serial sort:stars"
+    ],
+    "spdx-expression-paths": [
+      "SPDX expression sort:stars"
+    ],
+    "systemd-order-audit": [
+      "systemd dependencies sort:stars",
+      "systemd sort:stars",
+      "systemd graph sort:stars"
+    ],
+    "pcap-flow-ledger": [
+      "pcap TCP analysis sort:stars",
+      "pcap sort:stars"
+    ]
+  },
+  "comparables": [
+    {
+      "project": "cookie-scope-witness",
+      "repo": "psf/requests",
+      "stars": 54563,
+      "pushed_at": "2026-09-28T16:55:48Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "description": "A simple, yet elegant, HTTP library.",
+      "branch": "main",
+      "url": "https://github.com/psf/requests",
+      "workflow_comparison": "Python HTTP client with cookie jars integrated into requests; broad request workflow and extensive docs/examples. Requires installed Python package and its dependencies.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/psf/requests"
+    },
+    {
+      "project": "cookie-scope-witness",
+      "repo": "curl/curl",
+      "stars": 43151,
+      "pushed_at": "2026-10-10T22:10:45Z",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "description": "A command line tool and library for transferring data with URL syntax, supporting DICT, FILE, FTP, FTPS, GOPHER, GOPHERS, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, MQTTS, POP3, POP3S, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET, TFTP, WS and WSS. libcurl offers a myriad of powerful features",
+      "branch": "master",
+      "url": "https://github.com/curl/curl",
+      "workflow_comparison": "CLI and library HTTP transfers with cookie storage options; OS packages/binaries or source builds. Broad protocol support and manuals; our tool instead accepts normalized local records.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/curl/curl"
+    },
+    {
+      "project": "cookie-scope-witness",
+      "repo": "salesforce/tough-cookie",
+      "stars": 1064,
+      "pushed_at": "2026-10-09T18:02:05Z",
+      "license": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause",
+        "node_id": "MDc6TGljZW5zZTU="
+      },
+      "description": "RFC6265 Cookies and CookieJar for Node.js",
+      "branch": "master",
+      "url": "https://github.com/salesforce/tough-cookie",
+      "workflow_comparison": "Node cookie parsing/storage/domain/path machinery and browser-related rules; npm library API with examples. More complete cookie-state machinery than this bounded explainer.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/salesforce/tough-cookie"
+    },
+    {
+      "project": "dns-serial-quorum",
+      "repo": "isc-projects/bind9",
+      "stars": 780,
+      "pushed_at": "2026-10-09T13:18:49Z",
+      "license": {
+        "key": "mpl-2.0",
+        "name": "Mozilla Public License 2.0",
+        "spdx_id": "MPL-2.0",
+        "url": "https://api.github.com/licenses/mpl-2.0",
+        "node_id": "MDc6TGljZW5zZTE0"
+      },
+      "description": "Archived mirror of https://gitlab.isc.org/isc-projects/bind9, please submit issues and PR/MRs in the GitLab.",
+      "branch": "main",
+      "url": "https://github.com/isc-projects/bind9",
+      "workflow_comparison": "Authoritative/resolver server and DNS operational tooling with mature configuration/documentation; system package or substantial source build, beyond a normalized snapshot calculator.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/isc-projects/bind9"
+    },
+    {
+      "project": "dns-serial-quorum",
+      "repo": "rthalley/dnspython",
+      "stars": 2681,
+      "pushed_at": "2026-10-10T19:56:30Z",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "description": "a powerful DNS toolkit for python",
+      "branch": "main",
+      "url": "https://github.com/rthalley/dnspython",
+      "workflow_comparison": "Python DNS query/record library with dedicated serial arithmetic implementation. Broader protocol toolkit; our explicit captured-observation quorum is an application policy.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/rthalley/dnspython"
+    },
+    {
+      "project": "dns-serial-quorum",
+      "repo": "shuque/checkzoneserial",
+      "stars": 6,
+      "pushed_at": "2026-09-02T01:26:54Z",
+      "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      },
+      "description": "Check zone serial numbers across DNS servers",
+      "branch": "master",
+      "url": "https://github.com/shuque/checkzoneserial",
+      "workflow_comparison": "Focused SOA serial checking script; small comparable with six stars, included for workflow relevance rather than establishment or ranking.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/shuque/checkzoneserial"
+    },
+    {
+      "project": "spdx-expression-paths",
+      "repo": "aboutcode-org/license-expression",
+      "stars": 74,
+      "pushed_at": "2026-05-26T03:13:13Z",
+      "license": {
+        "key": "other",
+        "name": "Other",
+        "spdx_id": "NOASSERTION",
+        "url": null,
+        "node_id": "MDc6TGljZW5zZTA="
+      },
+      "description": "Utility library  to parse, normalize and compare License expressions for Python using a boolean logic engine. For expressions using SPDX or any other license id scheme.",
+      "branch": "main",
+      "url": "https://github.com/aboutcode-org/license-expression",
+      "workflow_comparison": "Python expression parsing, normalization and license-symbol handling; established library workflow. Our tool focuses on bounded conjunction alternatives and does not validate a license registry.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/aboutcode-org/license-expression"
+    },
+    {
+      "project": "spdx-expression-paths",
+      "repo": "EmbarkStudios/spdx",
+      "stars": 58,
+      "pushed_at": "2026-10-02T10:02:15Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "description": "\ud83c\udd94 Helper crate for SPDX expressions. \ud83e\udd80",
+      "branch": "main",
+      "url": "https://github.com/EmbarkStudios/spdx",
+      "workflow_comparison": "Rust SPDX expression/identifier library; Cargo/programming API. Broader standards and identifier support than the deliberately SPDX-style syntax subset here.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/EmbarkStudios/spdx"
+    },
+    {
+      "project": "spdx-expression-paths",
+      "repo": "github/go-spdx",
+      "stars": 55,
+      "pushed_at": "2026-10-09T18:20:37Z",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "description": "Golang implementation of a checker for determining if an SPDX ID satisfies an SPDX Expression.",
+      "branch": "main",
+      "url": "https://github.com/github/go-spdx",
+      "workflow_comparison": "Go SPDX expression tooling; Go library integration. Different language workflow; no installation timing or complete behavior comparison performed.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/github/go-spdx"
+    },
+    {
+      "project": "systemd-order-audit",
+      "repo": "systemd/systemd",
+      "stars": 16815,
+      "pushed_at": "2026-10-11T05:44:23Z",
+      "license": {
+        "key": "gpl-2.0",
+        "name": "GNU General Public License v2.0",
+        "spdx_id": "GPL-2.0",
+        "url": "https://api.github.com/licenses/gpl-2.0",
+        "node_id": "MDc6TGljZW5zZTg="
+      },
+      "description": "The systemd System and Service Manager ",
+      "branch": "main",
+      "url": "https://github.com/systemd/systemd",
+      "workflow_comparison": "Actual service manager, unit documentation and native verification/graph tooling; distribution/system installation. It models real unit behavior our normalized snapshot deliberately excludes.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/systemd/systemd"
+    },
+    {
+      "project": "systemd-order-audit",
+      "repo": "icholy/systemd-graph",
+      "stars": 11,
+      "pushed_at": "2026-09-10T23:59:14Z",
+      "license": null,
+      "description": "A web ui for a live view the SystemD unit dependency graph",
+      "branch": "master",
+      "url": "https://github.com/icholy/systemd-graph",
+      "workflow_comparison": "Dependency graph visualization workflow; focused smaller comparable. Our output separates root pull-ins from ordering and provides bounded deterministic cycle/order analysis.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/icholy/systemd-graph"
+    },
+    {
+      "project": "pcap-flow-ledger",
+      "repo": "secdev/scapy",
+      "stars": 12599,
+      "pushed_at": "2026-10-11T00:35:34Z",
+      "license": {
+        "key": "gpl-2.0",
+        "name": "GNU General Public License v2.0",
+        "spdx_id": "GPL-2.0",
+        "url": "https://api.github.com/licenses/gpl-2.0",
+        "node_id": "MDc6TGljZW5zZTg="
+      },
+      "description": "Scapy: the Python-based interactive packet manipulation program & library.",
+      "branch": "master",
+      "url": "https://github.com/secdev/scapy",
+      "workflow_comparison": "Python packet manipulation and protocol analysis toolkit with extensive examples. Flexible programming workflow and broad protocol support; this tool emits a fixed bounded JSON summary.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/secdev/scapy"
+    },
+    {
+      "project": "pcap-flow-ledger",
+      "repo": "wireshark/wireshark",
+      "stars": 9982,
+      "pushed_at": "2026-10-11T03:47:33Z",
+      "license": {
+        "key": "gpl-2.0",
+        "name": "GNU General Public License v2.0",
+        "spdx_id": "GPL-2.0",
+        "url": "https://api.github.com/licenses/gpl-2.0",
+        "node_id": "MDc6TGljZW5zZTg="
+      },
+      "description": "Read-only mirror of Wireshark's Git repository at https://gitlab.com/wireshark/wireshark. You're welcome to submit pull requests there.",
+      "branch": "master",
+      "url": "https://github.com/wireshark/wireshark",
+      "workflow_comparison": "Full packet-analysis GUI/CLI ecosystem, capture formats and deep protocol support. Our limited parser is a narrow synthetic/offline accounting aid, not a replacement.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/wireshark/wireshark"
+    },
+    {
+      "project": "pcap-flow-ledger",
+      "repo": "hgn/captcp",
+      "stars": 115,
+      "pushed_at": "2018-09-02T14:59:52Z",
+      "license": {
+        "key": "gpl-3.0",
+        "name": "GNU General Public License v3.0",
+        "spdx_id": "GPL-3.0",
+        "url": "https://api.github.com/licenses/gpl-3.0",
+        "node_id": "MDc6TGljZW5zZTk="
+      },
+      "description": "A open source program for TCP analysis of PCAP files",
+      "branch": "master",
+      "url": "https://github.com/hgn/captcp",
+      "workflow_comparison": "Focused TCP capture analysis tool; source inspected. Last observed push in 2018 and Python 2-era implementation impose maintenance/install caveats, without proving current breakage.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/hgn/captcp"
+    },
+    {
+      "project": "pcap-flow-ledger",
+      "repo": "GyulyVGC/sniffnet",
+      "stars": 41413,
+      "pushed_at": "2026-10-10T03:14:16Z",
+      "license": {
+        "key": "apache-2.0",
+        "name": "Apache License 2.0",
+        "spdx_id": "Apache-2.0",
+        "url": "https://api.github.com/licenses/apache-2.0",
+        "node_id": "MDc6TGljZW5zZTI="
+      },
+      "description": "Comfortably monitor your network traffic \ud83d\udd75\ufe0f\u200d\u2642\ufe0f",
+      "branch": "main",
+      "url": "https://github.com/GyulyVGC/sniffnet",
+      "workflow_comparison": "Interactive network monitoring GUI with established user/install documentation. Live network workflow differs from offline classic-pcap accounting; no rival workload measurement.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/GyulyVGC/sniffnet"
+    },
+    {
+      "project": "systemd-order-audit",
+      "repo": "KDE/systemdgenie",
+      "stars": 84,
+      "pushed_at": "2026-10-11T02:33:22Z",
+      "license": null,
+      "description": "Systemd managment utility",
+      "branch": "master",
+      "url": "https://github.com/KDE/systemdgenie",
+      "workflow_comparison": "Graphical systemd management through KDE/system integration. Metadata verified; additional README rendering was limited, so detailed capability absence remains unverified.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/KDE/systemdgenie"
+    },
+    {
+      "project": "dns-serial-quorum",
+      "repo": "NLnetLabs/ldns",
+      "stars": 362,
+      "pushed_at": "2026-10-06T18:11:11Z",
+      "license": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause",
+        "node_id": "MDc6TGljZW5zZTU="
+      },
+      "description": "LDNS is a DNS library that facilitates DNS tool programming",
+      "branch": "develop",
+      "url": "https://github.com/NLnetLabs/ldns",
+      "workflow_comparison": "C DNS library and command tools; broader record/query work. Metadata checked; additional README rendering coverage was limited, so no detailed feature absence is claimed.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/NLnetLabs/ldns"
+    },
+    {
+      "project": "dns-serial-quorum",
+      "repo": "miekg/dns",
+      "stars": 8777,
+      "pushed_at": "2026-10-01T17:37:07Z",
+      "license": {
+        "key": "bsd-3-clause",
+        "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+        "spdx_id": "BSD-3-Clause",
+        "url": "https://api.github.com/licenses/bsd-3-clause",
+        "node_id": "MDc6TGljZW5zZTU="
+      },
+      "description": "DNS library in Go",
+      "branch": "master",
+      "url": "https://github.com/miekg/dns",
+      "workflow_comparison": "Go DNS client/server library with zone parsing and protocol support including serial arithmetic. Requires a Go program for the application workflow; linked examples documented.",
+      "support_and_reliability": "Push time is activity evidence only. Support response, installation reliability and equivalent technical performance were not measured.",
+      "repository_docs_url": "https://github.com/miekg/dns"
+    }
+  ],
+  "representative_code_documents": [
+    {
+      "project": "cookie-scope-witness",
+      "url": "https://raw.githubusercontent.com/salesforce/tough-cookie/master/lib/cookie/cookieJar.ts"
+    },
+    {
+      "project": "dns-serial-quorum",
+      "url": "https://raw.githubusercontent.com/rthalley/dnspython/main/dns/serial.py"
+    },
+    {
+      "project": "spdx-expression-paths",
+      "url": "https://raw.githubusercontent.com/aboutcode-org/license-expression/main/src/license_expression/__init__.py"
+    },
+    {
+      "project": "systemd-order-audit",
+      "url": "https://raw.githubusercontent.com/systemd/systemd/main/man/systemd.unit.xml"
+    },
+    {
+      "project": "pcap-flow-ledger",
+      "url": "https://raw.githubusercontent.com/hgn/captcp/master/captcp.py"
+    }
+  ],
+  "recent_issue_urls": [
+    {
+      "project": "cookie-scope-witness",
+      "repo": "psf/requests",
+      "urls": [
+        "https://github.com/psf/requests/issues/7632",
+        "https://github.com/psf/requests/issues/7631",
+        "https://github.com/psf/requests/issues/7630"
+      ]
+    },
+    {
+      "project": "dns-serial-quorum",
+      "repo": "isc-projects/bind9",
+      "urls": []
+    },
+    {
+      "project": "spdx-expression-paths",
+      "repo": "aboutcode-org/license-expression",
+      "urls": [
+        "https://github.com/aboutcode-org/license-expression/pull/141",
+        "https://github.com/aboutcode-org/license-expression/pull/140",
+        "https://github.com/aboutcode-org/license-expression/pull/139"
+      ]
+    },
+    {
+      "project": "systemd-order-audit",
+      "repo": "systemd/systemd",
+      "urls": [
+        "https://github.com/systemd/systemd/pull/44130",
+        "https://github.com/systemd/systemd/pull/44129",
+        "https://github.com/systemd/systemd/pull/44128"
+      ]
+    },
+    {
+      "project": "pcap-flow-ledger",
+      "repo": "secdev/scapy",
+      "urls": [
+        "https://github.com/secdev/scapy/pull/5225",
+        "https://github.com/secdev/scapy/pull/5223",
+        "https://github.com/secdev/scapy/pull/5222"
+      ]
+    }
+  ],
+  "demand": "Inferred; these recent issues are context only and are not requests for the new MVPs.",
+  "fairness": {
+    "install": "Our normal source and offline wheel install demonstrated; competitor installs not independently timed or run.",
+    "time_to_first_result": "Our one-command synthetic demos work; no measured cross-product timing.",
+    "capabilities": "Original qualitative workflow comparisons above; no absence claim based solely on our example.",
+    "reliability": "Our 80 core tests and three Python-version jobs pass; comparative stress/reliability unmeasured.",
+    "docs_and_examples": "Our synthetic schema/demo, quickstart, limits, support and building pages public. Current competitor docs/code were read for primary comparables; additional README coverage limits explicitly noted.",
+    "licensing": "Metadata licenses recorded. Original MIT implementations, no competitor code or prose reused.",
+    "support": "Our support best-effort GitHub reports, no SLA. Competitor response times unmeasured.",
+    "technical_performance": "No fair equivalent benchmark was run; no superiority or speed claim."
+  }
+}
