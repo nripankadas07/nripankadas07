@@ -1,0 +1,24 @@
+{
+  "captured_at": "2026-10-11T18:02:50.225401+00:00",
+  "scope": "public issue history; not complete user/adoption measurement",
+  "projects": [
+    {
+      "repository": "trustline-mcp",
+      "public_issue_count": 4,
+      "non_owner_non_bot_issues": [],
+      "adoption_baseline": "unmeasured; public issues alone cannot establish all usage"
+    },
+    {
+      "repository": "grid-ops-arena",
+      "public_issue_count": 0,
+      "non_owner_non_bot_issues": [],
+      "adoption_baseline": "unmeasured; public issues alone cannot establish all usage"
+    },
+    {
+      "repository": "value-density-lab",
+      "public_issue_count": 0,
+      "non_owner_non_bot_issues": [],
+      "adoption_baseline": "unmeasured; public issues alone cannot establish all usage"
+    }
+  ]
+}
