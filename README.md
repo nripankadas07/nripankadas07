@@ -12,6 +12,9 @@ These independent projects show the problem, the design choices, and the proof.
 Their demos use synthetic inputs; the results below demonstrate software
 behavior, not customer adoption or production impact.
 
+**Help shape the next release:** [try a short task and give feedback](docs/USER_PILOT.md).
+Critical reviews and blocked attempts are welcome.
+
 ### Trustline MCP · Make agent tool decisions inspectable
 
 **Problem:** a successful agent demo does not explain which tool calls should
