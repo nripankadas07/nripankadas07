@@ -1,0 +1,143 @@
+{
+  "date": "2026-10-12",
+  "projects": [
+    {
+      "name": "oci-whiteout-plan",
+      "head": "0b0dc8442b6b88531b2fc1dc5e36bdfb37519cf1",
+      "tree": "554526cf6f6183a7c03f966f06e7dbf6bb09aa42",
+      "protected": false,
+      "checks": [
+        {
+          "name": "verify (3.10)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/oci-whiteout-plan/actions/runs/38223039014/job/114723687168"
+        },
+        {
+          "name": "verify (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/oci-whiteout-plan/actions/runs/38223039014/job/114723687120"
+        },
+        {
+          "name": "verify (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/oci-whiteout-plan/actions/runs/38223039014/job/114723687014"
+        }
+      ]
+    },
+    {
+      "name": "prom-label-budget",
+      "head": "9ffc56b0b79332be980ab68330137d4143b86bc0",
+      "tree": "074cfe27585cdac406567f157b3ecd3b00ad168e",
+      "protected": false,
+      "checks": [
+        {
+          "name": "verify (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/prom-label-budget/actions/runs/38222610862/job/114722263899"
+        },
+        {
+          "name": "verify (3.10)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/prom-label-budget/actions/runs/38222610862/job/114722263744"
+        },
+        {
+          "name": "verify (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/prom-label-budget/actions/runs/38222610862/job/114722263453"
+        }
+      ]
+    },
+    {
+      "name": "http-range-witness",
+      "head": "36fbb1da74db1dc338f4baf56213caaab20a4e38",
+      "tree": "ff1463bff3afe26e4d544331a1ece542ca50c1e8",
+      "protected": false,
+      "checks": [
+        {
+          "name": "verify (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/http-range-witness/actions/runs/38234588177/job/114762030826"
+        },
+        {
+          "name": "verify (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/http-range-witness/actions/runs/38234588177/job/114762030630"
+        },
+        {
+          "name": "verify (3.10)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/http-range-witness/actions/runs/38234588177/job/114762030491"
+        }
+      ]
+    },
+    {
+      "name": "ssh-option-witness",
+      "head": "1609713c44acfd8844dd21bcba204545864c4213",
+      "tree": "8dc52b758a5eb80f2ed2db1727a7f6a1f7b6dc24",
+      "protected": false,
+      "checks": [
+        {
+          "name": "verify (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/ssh-option-witness/actions/runs/38222791313/job/114722865599"
+        },
+        {
+          "name": "verify (3.10)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/ssh-option-witness/actions/runs/38222791313/job/114722865594"
+        },
+        {
+          "name": "verify (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/ssh-option-witness/actions/runs/38222791313/job/114722865387"
+        }
+      ]
+    },
+    {
+      "name": "clock-quorum-window",
+      "head": "35552da4863cc420666f3226336eb1af6c60bed6",
+      "tree": "aa938b77d906a05a5e38eabbc236edbb06be1c10",
+      "protected": false,
+      "checks": [
+        {
+          "name": "verify (3.14)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/clock-quorum-window/actions/runs/38222919363/job/114723296538"
+        },
+        {
+          "name": "verify (3.10)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/clock-quorum-window/actions/runs/38222919363/job/114723296517"
+        },
+        {
+          "name": "verify (3.12)",
+          "status": "completed",
+          "conclusion": "success",
+          "url": "https://github.com/nripankadas07/clock-quorum-window/actions/runs/38222919363/job/114723296360"
+        }
+      ]
+    }
+  ],
+  "repair": {
+    "repo": "http-range-witness",
+    "pr": "https://github.com/nripankadas07/http-range-witness/pull/2",
+    "before": "536cd1d5f7393e5ad131b6303eb9b9437aa7c5aa",
+    "after": "36fbb1da74db1dc338f4baf56213caaab20a4e38",
+    "tests": 15,
+    "standard": "https://www.rfc-editor.org/rfc/rfc9110.html#section-14.1"
+  }
+}
