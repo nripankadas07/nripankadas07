@@ -1,0 +1,307 @@
+{
+  "comparables": [
+    {
+      "repo": "planetlabs/draino",
+      "stars": 689,
+      "pushed": "2024-03-26T15:33:02Z",
+      "archived": false,
+      "branch": "master",
+      "license": "Apache-2.0",
+      "description": "Automatically cordon and drain Kubernetes nodes based on node conditions",
+      "observed": "2026-10-13T06:34:28.949Z",
+      "readme": [
+        {
+          "sha": "b60dd82dc9ead4b78d7679733459dfcd2f19459f",
+          "url": "https://github.com/planetlabs/draino/blob/master/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "atlassian/escalator",
+      "stars": 688,
+      "pushed": "2026-09-11T07:08:02Z",
+      "archived": false,
+      "branch": "master",
+      "license": "Apache-2.0",
+      "description": "Escalator is a batch or job optimized horizontal autoscaler for Kubernetes",
+      "observed": "2026-10-13T06:34:29.079Z",
+      "readme": [
+        {
+          "sha": "cf4510e1111805d79305aa935e52caa1fd91541c",
+          "url": "https://github.com/atlassian/escalator/blob/master/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "strimzi/drain-cleaner",
+      "stars": 66,
+      "pushed": "2026-10-10T23:14:31Z",
+      "archived": false,
+      "branch": "main",
+      "license": "Apache-2.0",
+      "description": "Utility to help with draining nodes running Strimzi-managed Apache Kafka\u00ae or ZooKeeper\u00ae pods",
+      "observed": "2026-10-13T06:34:29.502Z",
+      "readme": [
+        {
+          "sha": "1c5d0ded00b4afc19105dd12adf416edeecc29d2",
+          "url": "https://github.com/strimzi/drain-cleaner/blob/main/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "robfig/cron",
+      "stars": 14193,
+      "pushed": "2024-07-08T01:21:14Z",
+      "archived": false,
+      "branch": "master",
+      "license": "MIT",
+      "description": "a cron library for go",
+      "observed": "2026-10-13T06:34:29.953Z",
+      "readme": [
+        {
+          "sha": "38c4d8a032c23b63ff9b7292f7cc31821f9e5afe",
+          "url": "https://github.com/robfig/cron/blob/master/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "kelektiv/node-cron",
+      "stars": 8950,
+      "pushed": "2026-10-13T02:37:57Z",
+      "archived": false,
+      "branch": "main",
+      "license": "MIT",
+      "description": "Cron for NodeJS.",
+      "observed": "2026-10-13T06:34:29.905Z",
+      "readme": [
+        {
+          "sha": "b4a879595ee7044e4865d483707a8b234d0b32b9",
+          "url": "https://github.com/kelektiv/node-cron/blob/main/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "pallets-eco/croniter",
+      "stars": 563,
+      "pushed": "2026-10-02T09:34:28Z",
+      "archived": false,
+      "branch": "main",
+      "license": "MIT",
+      "description": "Parses cron schedules to iterate over datetime objects.",
+      "observed": "2026-10-13T06:34:30.040Z",
+      "readme": [
+        {
+          "sha": null,
+          "url": null,
+          "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}"
+        }
+      ]
+    },
+    {
+      "repo": "peazip/PeaZip",
+      "stars": 7961,
+      "pushed": "2026-10-07T14:06:49Z",
+      "archived": false,
+      "branch": "sources",
+      "license": "LGPL-3.0",
+      "description": "Free Zip / Unzip software and Rar file extractor. Cross-platform file and archive manager. Features volume spanning, compression, authenticated encryption. Supports 7Z, 7-Zip sfx, ACE, ARJ, Brotli, BZ2, CAB, CHM, CPIO, DEB, GZ, ISO, JAR, LHA/LZH, NSIS, OOo, PAQ/LPAQ, PEA, QUAD, RAR, RPM, split, TAR, Z, ZIP, ZIPX, Zstandard.",
+      "observed": "2026-10-13T06:34:30.448Z",
+      "readme": [
+        {
+          "sha": "51513055da98a58347ef62ab12db9cea2da63910",
+          "url": "https://github.com/peazip/PeaZip/blob/sources/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "mholt/archiver",
+      "stars": 4374,
+      "pushed": "2024-11-19T16:52:17Z",
+      "archived": true,
+      "branch": "master",
+      "license": "MIT",
+      "description": "DEPRECATED. Please use mholt/archives instead.",
+      "observed": "2026-10-13T06:34:30.332Z",
+      "readme": [
+        {
+          "sha": "8d1acd233ec2dc4cbce8ce06f9401390e2781209",
+          "url": "https://github.com/mholt/archiver/blob/master/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "libarchive/libarchive",
+      "stars": 3636,
+      "pushed": "2026-10-13T02:02:39Z",
+      "archived": false,
+      "branch": "master",
+      "license": "NOASSERTION",
+      "description": "Multi-format archive and compression library",
+      "observed": "2026-10-13T06:34:30.680Z",
+      "readme": [
+        {
+          "sha": "3009e1b54d184df9abe42641892d2ce699c23a77",
+          "url": "https://github.com/libarchive/libarchive/blob/master/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "FiloSottile/mkcert",
+      "stars": 59737,
+      "pushed": "2024-08-13T13:37:46Z",
+      "archived": false,
+      "branch": "master",
+      "license": "BSD-3-Clause",
+      "description": "A simple zero-config tool to make locally trusted development certificates with any names you'd like.",
+      "observed": "2026-10-13T06:34:32.074Z",
+      "readme": [
+        {
+          "sha": "4430cc039c019c408b940e8cd5aadf276c1767e2",
+          "url": "https://github.com/FiloSottile/mkcert/blob/master/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "certbot/certbot",
+      "stars": 33268,
+      "pushed": "2026-10-10T02:14:52Z",
+      "archived": false,
+      "branch": "main",
+      "license": "NOASSERTION",
+      "description": "Certbot is EFF's tool to obtain certs from Let's Encrypt and (optionally) auto-enable HTTPS on your server.  It can also act as a client for any other CA that uses the ACME protocol.",
+      "observed": "2026-10-13T06:34:31.051Z",
+      "readme": [
+        {
+          "sha": null,
+          "url": null,
+          "error": "GitHub API error 404: {\"message\":\"Not Found\",\"documentation_url\":\"https://docs.github.com/rest/repos/contents#get-repository-content\",\"status\":\"404\"}"
+        }
+      ]
+    },
+    {
+      "repo": "go-acme/lego",
+      "stars": 9931,
+      "pushed": "2026-10-11T11:56:39Z",
+      "archived": false,
+      "branch": "main",
+      "license": "MIT",
+      "description": "Let's Encrypt/ACME client and library written in Go",
+      "observed": "2026-10-13T06:34:31.161Z",
+      "readme": [
+        {
+          "sha": "7413aa7af93a4c9cccb44465e9ef8cacf2074eb8",
+          "url": "https://github.com/go-acme/lego/blob/main/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "github/git-sizer",
+      "stars": 4081,
+      "pushed": "2026-10-06T02:50:39Z",
+      "archived": false,
+      "branch": "master",
+      "license": "MIT",
+      "description": "Compute various size metrics for a Git repository, flagging those that might cause problems",
+      "observed": "2026-10-13T06:34:32.533Z",
+      "readme": [
+        {
+          "sha": "ea06895d0cf67c5ab5ff62079955864d6b8bd167",
+          "url": "https://github.com/github/git-sizer/blob/master/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "newren/git-filter-repo",
+      "stars": 13384,
+      "pushed": "2026-07-09T22:09:49Z",
+      "archived": false,
+      "branch": "main",
+      "license": "NOASSERTION",
+      "description": "Quickly rewrite git repository history (filter-branch replacement)",
+      "observed": "2026-10-13T06:34:32.387Z",
+      "readme": [
+        {
+          "sha": "e06fa6c31cf5c0c7743fa290787017feabb32172",
+          "url": "https://github.com/newren/git-filter-repo/blob/main/README.md",
+          "error": null
+        }
+      ]
+    },
+    {
+      "repo": "rtyley/bfg-repo-cleaner",
+      "stars": 12199,
+      "pushed": "2025-01-19T18:52:14Z",
+      "archived": false,
+      "branch": "main",
+      "license": "GPL-3.0",
+      "description": "Removes large or troublesome blobs like git-filter-branch does, but faster. And written in Scala",
+      "observed": "2026-10-13T06:34:32.416Z",
+      "readme": [
+        {
+          "sha": "2a404442aa5660abaa2d475b6e1b0ddb3cf60984",
+          "url": "https://github.com/rtyley/bfg-repo-cleaner/blob/main/README.md",
+          "error": null
+        }
+      ]
+    }
+  ],
+  "source_evidence": [
+    {
+      "repo": "planetlabs/draino",
+      "path": "internal/kubernetes/evictor.go",
+      "sha": null,
+      "url": null
+    },
+    {
+      "repo": "robfig/cron",
+      "path": "spec.go",
+      "sha": "fa1e241e5fb57f12fcb3be7e50628aaa26319998",
+      "url": "https://github.com/robfig/cron/blob/master/spec.go"
+    },
+    {
+      "repo": "libarchive/libarchive",
+      "path": "libarchive/archive_write_disk_posix.c",
+      "sha": "2923086e7c5666f4eef31c45bc97e257d2aa7ec6",
+      "url": "https://github.com/libarchive/libarchive/blob/master/libarchive/archive_write_disk_posix.c"
+    },
+    {
+      "repo": "FiloSottile/mkcert",
+      "path": "cert.go",
+      "sha": "4ce36ccf9ced0f80ee2fbce71dfb4f1055982e49",
+      "url": "https://github.com/FiloSottile/mkcert/blob/master/cert.go"
+    },
+    {
+      "repo": "github/git-sizer",
+      "path": "git/git.go",
+      "sha": "ef3cbc632fad5fea025a8681c0c7ecb99ae5ca20",
+      "url": "https://github.com/github/git-sizer/blob/master/git/git.go"
+    },
+    {
+      "repo": "pallets-eco/croniter",
+      "path": "README.rst",
+      "sha": "026b233859e428213895decbb67cb8ad7f231fcc",
+      "url": "https://github.com/pallets-eco/croniter/blob/main/README.rst"
+    },
+    {
+      "repo": "certbot/certbot",
+      "path": "README.rst",
+      "sha": "645fd4c78f630ab72d7c6d4efae5dd36b6e1a078",
+      "url": "https://github.com/certbot/certbot/blob/main/README.rst"
+    }
+  ],
+  "draino_source": {
+    "sha": "938641423df55b59170b5f67682792fe48292bb6",
+    "url": "https://github.com/planetlabs/draino/blob/master/internal/kubernetes/drainer.go"
+  }
+}
