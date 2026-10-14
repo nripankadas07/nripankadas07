@@ -73,7 +73,7 @@ records and replays agent behavior;
 checks quantitative climate answers.
 
 [Browse the project index](docs/PROJECT_INDEX.md) ·
-[Current health review](docs/HEALTH_REVIEW_2026-10-13.md) ·
+[Current health review](docs/HEALTH_REVIEW_2026-10-14.md) ·
 [Release and validation history](docs/RELIABLE_AI_RELEASE.md)
 
 ## About
@@ -88,4 +88,5 @@ expose the components of a score, and state the limits of a benchmark.
 [Professional context and writing on LinkedIn](https://www.linkedin.com/in/nripankadas/).
 For a reproducible bug or a useful integration, open an issue in the relevant
 repository.
+
 
