@@ -25,8 +25,12 @@ jobs:
               p=ROOT/x["repo"]/x["path"];p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data)
           with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:list(ex.map(fetch,items))
           def run(cmd,cwd=None):
-              r=subprocess.run(cmd,cwd=cwd,text=True,capture_output=True,timeout=180)
-              return {"exit":r.returncode,"stdout":r.stdout,"stderr":r.stderr}
+              try:
+                  r=subprocess.run(cmd,cwd=cwd,text=True,capture_output=True,timeout=180)
+                  return {"exit":r.returncode,"stdout":r.stdout,"stderr":r.stderr}
+              except subprocess.TimeoutExpired as e:
+                  def text(v):return v.decode("utf-8",errors="replace") if isinstance(v,bytes) else (v or "")
+                  return {"exit":124,"stdout":text(e.stdout),"stderr":text(e.stderr),"timed_out":True,"timeout_seconds":180}
           def npm(p):
               results=[]
               if not (p/"package-lock.json").exists():results.append(run(["npm","install","--package-lock-only","--ignore-scripts","--no-fund","--no-audit"],p))
