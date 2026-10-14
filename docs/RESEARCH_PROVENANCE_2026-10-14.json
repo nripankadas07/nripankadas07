@@ -1,0 +1,677 @@
+{
+  "queries": [
+    {
+      "query": "postgres monitoring",
+      "url": "https://github.com/search?q=postgres%20monitoring&type=repositories&s=stars&o=desc",
+      "observed_at": "2026-10-14T06:09:01.323Z"
+    },
+    {
+      "query": "package exports",
+      "url": "https://github.com/search?q=package%20exports&type=repositories&s=stars&o=desc",
+      "observed_at": "2026-10-14T06:09:02.781Z"
+    },
+    {
+      "query": "terraform",
+      "url": "https://github.com/search?q=terraform&type=repositories&s=stars&o=desc",
+      "observed_at": "2026-10-14T06:09:04.081Z"
+    },
+    {
+      "query": "content negotiation",
+      "url": "https://github.com/search?q=content%20negotiation&type=repositories&s=stars&o=desc",
+      "observed_at": "2026-10-14T06:09:05.169Z"
+    },
+    {
+      "query": "s3 lifecycle",
+      "url": "https://github.com/search?q=s3%20lifecycle&type=repositories&s=stars&o=desc",
+      "observed_at": "2026-10-14T06:09:06.265Z"
+    },
+    {
+      "query": "conditional exports",
+      "url": "https://github.com/search?q=conditional%20exports&type=repositories&s=stars&o=desc",
+      "observed_at": "2026-10-14T06:11:17.222Z"
+    },
+    {
+      "query": "s3",
+      "url": "https://github.com/search?q=s3&type=repositories&s=stars&o=desc",
+      "observed_at": "2026-10-14T06:11:18.656Z"
+    }
+  ],
+  "comparables": [
+    {
+      "project": "pg-lock-witness",
+      "repo": "pgsty/pigsty",
+      "url": "https://github.com/pgsty/pigsty",
+      "stars": 5808,
+      "pushed_at": "2026-09-28T01:07:59Z",
+      "license": "Apache-2.0",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:36.807Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "ec1d8ca750ad6f4a9097ca59d4bdb63a61183068"
+      },
+      "issues": [
+        {
+          "number": 790,
+          "title": "dnsmasq on the infra node forwards queries to itself: resolv.conf lists admin_ip first and dnsmasq.conf has no no-resolv",
+          "url": "https://github.com/pgsty/pigsty/issues/790"
+        },
+        {
+          "number": 789,
+          "title": "chore(deps): bump debian from 13.6 to 13.7 in /docker",
+          "url": "https://github.com/pgsty/pigsty/pull/789"
+        },
+        {
+          "number": 788,
+          "title": "pgbouncer: expose server_reset_query_always as an inventory parameter (hardcoded to 0 in pgbouncer.ini template)",
+          "url": "https://github.com/pgsty/pigsty/issues/788"
+        },
+        {
+          "number": 787,
+          "title": "chore(deps): bump the github-actions group across 1 directory with 5 updates",
+          "url": "https://github.com/pgsty/pigsty/pull/787"
+        },
+        {
+          "number": 784,
+          "title": "apt: remote repositories are written with [trusted=yes], disabling GPG verification on network sources",
+          "url": "https://github.com/pgsty/pigsty/issues/784"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "pg-lock-witness",
+      "repo": "dalibo/pg_activity",
+      "url": "https://github.com/dalibo/pg_activity",
+      "stars": 3051,
+      "pushed_at": "2026-09-21T08:42:30Z",
+      "license": "PostgreSQL",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:37.014Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "07fafd1067deff07418408f4340f290185eb2640"
+      },
+      "issues": [
+        {
+          "number": 469,
+          "title": "Document installation with Homebrew on macOS",
+          "url": "https://github.com/dalibo/pg_activity/pull/469"
+        },
+        {
+          "number": 468,
+          "title": "Add pg_activity/py.typed",
+          "url": "https://github.com/dalibo/pg_activity/pull/468"
+        },
+        {
+          "number": 467,
+          "title": "Include `py.typed` file in package",
+          "url": "https://github.com/dalibo/pg_activity/issues/467"
+        },
+        {
+          "number": 465,
+          "title": "Bump actions/setup-python from 6 to 7",
+          "url": "https://github.com/dalibo/pg_activity/pull/465"
+        },
+        {
+          "number": 464,
+          "title": "Bump actions/checkout from 6 to 7",
+          "url": "https://github.com/dalibo/pg_activity/pull/464"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "pg-lock-witness",
+      "repo": "rapidloop/pgmetrics",
+      "url": "https://github.com/rapidloop/pgmetrics",
+      "stars": 1112,
+      "pushed_at": "2026-09-09T04:29:12Z",
+      "license": "Apache-2.0",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:35.837Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "c09a33ddb5c27a5cb845e64747a724d7fda99843"
+      },
+      "issues": [
+        {
+          "number": 78,
+          "title": "ERROR invalid command '-- ping', use SHOW HELP;",
+          "url": "https://github.com/rapidloop/pgmetrics/issues/78"
+        },
+        {
+          "number": 77,
+          "title": "pgmetrics: warning: failed to collect from AWS RDS: MissingRegion: could not find region configuration",
+          "url": "https://github.com/rapidloop/pgmetrics/issues/77"
+        },
+        {
+          "number": 74,
+          "title": "Simple protocol queries must be run with standard_conforming_strings=on",
+          "url": "https://github.com/rapidloop/pgmetrics/issues/74"
+        },
+        {
+          "number": 64,
+          "title": "how to collect system info with pgmetrics",
+          "url": "https://github.com/rapidloop/pgmetrics/issues/64"
+        },
+        {
+          "number": 57,
+          "title": " Break up the Postgres shared memory is not available in pgmetrics/pgDash currently.",
+          "url": "https://github.com/rapidloop/pgmetrics/issues/57"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "npm-export-witness",
+      "repo": "privatenumber/pkgroll",
+      "url": "https://github.com/privatenumber/pkgroll",
+      "stars": 1564,
+      "pushed_at": "2026-10-05T19:42:05Z",
+      "license": "NOASSERTION",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:38.340Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "87e4c59a5d3d9067a66697121815120cc1205088"
+      },
+      "issues": [
+        {
+          "number": 173,
+          "title": "fix: clarify @types externalization warning for non-TypeScript consumers",
+          "url": "https://github.com/privatenumber/pkgroll/pull/173"
+        },
+        {
+          "number": 171,
+          "title": "ci(github-actions): update pnpm/action-setup action to v6",
+          "url": "https://github.com/privatenumber/pkgroll/pull/171"
+        },
+        {
+          "number": 164,
+          "title": "fix(deps): update patch-updates (patch)",
+          "url": "https://github.com/privatenumber/pkgroll/pull/164"
+        },
+        {
+          "number": 163,
+          "title": "ci(github-actions): update github-actions",
+          "url": "https://github.com/privatenumber/pkgroll/pull/163"
+        },
+        {
+          "number": 162,
+          "title": "ci(github-actions): update pnpm/action-setup action to v5",
+          "url": "https://github.com/privatenumber/pkgroll/pull/162"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "npm-export-witness",
+      "repo": "publint/publint",
+      "url": "https://github.com/publint/publint",
+      "stars": 1308,
+      "pushed_at": "2026-10-01T18:00:55Z",
+      "license": "MIT",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:38.332Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "0bfa8bdf0566dd4a952b15bb9017f748e2995d33"
+      },
+      "issues": [
+        {
+          "number": 268,
+          "title": "Fix npm packing when dry-run is configured",
+          "url": "https://github.com/publint/publint/pull/268"
+        },
+        {
+          "number": 267,
+          "title": "Warn when `bin` paths start with `./`",
+          "url": "https://github.com/publint/publint/issues/267"
+        },
+        {
+          "number": 263,
+          "title": "fix(pack): read long paths from ustar prefix and PAX headers",
+          "url": "https://github.com/publint/publint/pull/263"
+        },
+        {
+          "number": 259,
+          "title": "Detect missing types across exports",
+          "url": "https://github.com/publint/publint/pull/259"
+        },
+        {
+          "number": 258,
+          "title": "Warn when an exports entrypoint can only be imported and not required",
+          "url": "https://github.com/publint/publint/pull/258"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "npm-export-witness",
+      "repo": "lukeed/resolve.exports",
+      "url": "https://github.com/lukeed/resolve.exports",
+      "stars": 402,
+      "pushed_at": "2026-10-12T22:33:09Z",
+      "license": "MIT",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:38.284Z",
+      "readme": {
+        "path": "readme.md",
+        "sha": "e263af87925bcbad92ec437ad552ca3358f2a011"
+      },
+      "issues": [
+        {
+          "number": 45,
+          "title": "fix: escape regular expression characters in pattern keys",
+          "url": "https://github.com/lukeed/resolve.exports/pull/45"
+        },
+        {
+          "number": 41,
+          "title": "Cannot resolve wildcards correctly",
+          "url": "https://github.com/lukeed/resolve.exports/issues/41"
+        },
+        {
+          "number": 40,
+          "title": "Can't resolve a nested file named `js.js`",
+          "url": "https://github.com/lukeed/resolve.exports/issues/40"
+        },
+        {
+          "number": 38,
+          "title": "Susceptibility to regexp syntax characters",
+          "url": "https://github.com/lukeed/resolve.exports/issues/38"
+        },
+        {
+          "number": 36,
+          "title": "fix: handle multiple nested condition objects in exports field",
+          "url": "https://github.com/lukeed/resolve.exports/pull/36"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "tf-move-witness",
+      "repo": "hashicorp/terraform",
+      "url": "https://github.com/hashicorp/terraform",
+      "stars": 49909,
+      "pushed_at": "2026-10-13T16:57:47Z",
+      "license": "NOASSERTION",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:39.634Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "ab40c4ef409feaf4e25fc1473f00f896717cc667"
+      },
+      "issues": [
+        {
+          "number": 39385,
+          "title": "refactor: Update `workspace select` command to use views",
+          "url": "https://github.com/hashicorp/terraform/pull/39385"
+        },
+        {
+          "number": 39384,
+          "title": "terraform test -help does not list -run-parallelism",
+          "url": "https://github.com/hashicorp/terraform/issues/39384"
+        },
+        {
+          "number": 39372,
+          "title": "chore: Separate PSS-related `init` tests into a new tests file.",
+          "url": "https://github.com/hashicorp/terraform/pull/39372"
+        },
+        {
+          "number": 39365,
+          "title": "terraform test panics (\"value has marks\") when a failed assertion references a whole object that has deprecated attributes",
+          "url": "https://github.com/hashicorp/terraform/issues/39365"
+        },
+        {
+          "number": 39364,
+          "title": "Check for provider changes before applying a plan",
+          "url": "https://github.com/hashicorp/terraform/pull/39364"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "tf-move-witness",
+      "repo": "opentofu/opentofu",
+      "url": "https://github.com/opentofu/opentofu",
+      "stars": 30486,
+      "pushed_at": "2026-10-13T22:07:35Z",
+      "license": "MPL-2.0",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:40.148Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "67c0a8093e64cc36a7d096c9fdb7a1027d0f4d96"
+      },
+      "issues": [
+        {
+          "number": 4705,
+          "title": "Use golangci-lint v2.14.0",
+          "url": "https://github.com/opentofu/opentofu/pull/4705"
+        },
+        {
+          "number": 4704,
+          "title": "Use golangci-lint v2.14.0 [v1.13 backport]",
+          "url": "https://github.com/opentofu/opentofu/pull/4704"
+        },
+        {
+          "number": 4700,
+          "title": "go.mod: Upgrade to Go 1.26.9 [v1.12 backport]",
+          "url": "https://github.com/opentofu/opentofu/pull/4700"
+        },
+        {
+          "number": 4699,
+          "title": ".github/workflows: Use preinstalled Go",
+          "url": "https://github.com/opentofu/opentofu/pull/4699"
+        },
+        {
+          "number": 4698,
+          "title": "Factorize the managed resource instance planning code more",
+          "url": "https://github.com/opentofu/opentofu/issues/4698"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "tf-move-witness",
+      "repo": "minamijoyo/tfmigrate",
+      "url": "https://github.com/minamijoyo/tfmigrate",
+      "stars": 1279,
+      "pushed_at": "2026-09-26T03:58:05Z",
+      "license": "MIT",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:39.693Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "f01e0697e7642b386e462abec8cabf9e41266371"
+      },
+      "issues": [
+        {
+          "number": 231,
+          "title": "Anchor xmv source regex so module-scoped resources are not matched by root patterns",
+          "url": "https://github.com/minamijoyo/tfmigrate/pull/231"
+        },
+        {
+          "number": 221,
+          "title": "Question: Why does tfmigrate gate on terraform plan -detailed-exitcode for diffs (including output-only), and can output-only changes be treated as no-op?",
+          "url": "https://github.com/minamijoyo/tfmigrate/issues/221"
+        },
+        {
+          "number": 220,
+          "title": "Allow to mark migrations as applied",
+          "url": "https://github.com/minamijoyo/tfmigrate/issues/220"
+        },
+        {
+          "number": 218,
+          "title": "Update README.md with tfmigrate logo",
+          "url": "https://github.com/minamijoyo/tfmigrate/pull/218"
+        },
+        {
+          "number": 217,
+          "title": "[Feature Request] Multiple migrations per file",
+          "url": "https://github.com/minamijoyo/tfmigrate/issues/217"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "accept-media-witness",
+      "repo": "willdurand/Negotiation",
+      "url": "https://github.com/willdurand/Negotiation",
+      "stars": 1421,
+      "pushed_at": "2023-08-03T17:52:44Z",
+      "license": "MIT",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:41.665Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "b483322983c304ae427cb4414ed87af37d5424fb"
+      },
+      "issues": [
+        {
+          "number": 124,
+          "title": "LanguageNegotiator::getBest() returns a language when all matching ranges have q=0",
+          "url": "https://github.com/willdurand/Negotiation/issues/124"
+        },
+        {
+          "number": 123,
+          "title": "feat: add testruns for PHP > 8.1",
+          "url": "https://github.com/willdurand/Negotiation/pull/123"
+        },
+        {
+          "number": 122,
+          "title": "Add method annotation to the interface",
+          "url": "https://github.com/willdurand/Negotiation/pull/122"
+        },
+        {
+          "number": 121,
+          "title": "AcceptHeader interface is empty",
+          "url": "https://github.com/willdurand/Negotiation/issues/121"
+        },
+        {
+          "number": 120,
+          "title": "Add PHP 8.2 to GitHub Actions",
+          "url": "https://github.com/willdurand/Negotiation/pull/120"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "accept-media-witness",
+      "repo": "jshttp/accepts",
+      "url": "https://github.com/jshttp/accepts",
+      "stars": 266,
+      "pushed_at": "2026-04-02T16:03:36Z",
+      "license": "MIT",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:41.679Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "f3f10c4a4c36bb690ab2f2f8565a95f400ab153c"
+      },
+      "issues": [
+        {
+          "number": 83,
+          "title": "fix: accept the first encoding when no Accept-Encoding is present",
+          "url": "https://github.com/jshttp/accepts/pull/83"
+        },
+        {
+          "number": 82,
+          "title": "No `Accept-Encoding` defaults to only `'identity'`",
+          "url": "https://github.com/jshttp/accepts/issues/82"
+        },
+        {
+          "number": 73,
+          "title": "refactor: extract helper for argument normalization",
+          "url": "https://github.com/jshttp/accepts/pull/73"
+        },
+        {
+          "number": 64,
+          "title": "Performance optimization opportunities for content negotiation",
+          "url": "https://github.com/jshttp/accepts/issues/64"
+        },
+        {
+          "number": 60,
+          "title": "Update JSDoc",
+          "url": "https://github.com/jshttp/accepts/pull/60"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "accept-media-witness",
+      "repo": "jshttp/negotiator",
+      "url": "https://github.com/jshttp/negotiator",
+      "stars": 384,
+      "pushed_at": "2026-08-20T16:44:00Z",
+      "license": "MIT",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:41.365Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "6fb7f2db31e670a487e3aa21a99fdc9c3978e6be"
+      },
+      "issues": [
+        {
+          "number": 112,
+          "title": "Match application/json when Accept includes charset",
+          "url": "https://github.com/jshttp/negotiator/pull/112"
+        },
+        {
+          "number": 111,
+          "title": "build(deps-dev): bump vitest from 3.2.4 to 3.2.6 in the npm_and_yarn group across 1 directory",
+          "url": "https://github.com/jshttp/negotiator/pull/111"
+        },
+        {
+          "number": 104,
+          "title": "fix: match a language range against a longer tag at a subtag boundary",
+          "url": "https://github.com/jshttp/negotiator/pull/104"
+        },
+        {
+          "number": 73,
+          "title": "replace `mocha` and `nyc` with native node test runner and `c8`",
+          "url": "https://github.com/jshttp/negotiator/pull/73"
+        },
+        {
+          "number": 71,
+          "title": "Export ECMAScript modules (ESM)",
+          "url": "https://github.com/jshttp/negotiator/issues/71"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "s3-expiry-witness",
+      "repo": "minio/minio",
+      "url": "https://github.com/minio/minio",
+      "stars": 61324,
+      "pushed_at": "2026-04-24T17:54:39Z",
+      "license": "AGPL-3.0",
+      "archived": true,
+      "observed_at": "2026-10-14T06:09:44.017Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "84e49277432b54d5e84de2a5be59c75950746d37"
+      },
+      "issues": [
+        {
+          "number": 21751,
+          "title": "build(deps): bump go.opentelemetry.io/otel/sdk from 1.35.0 to 1.43.0",
+          "url": "https://github.com/minio/minio/pull/21751"
+        },
+        {
+          "number": 21750,
+          "title": "build(deps): bump github.com/nats-io/nats-server/v2 from 2.11.1 to 2.11.15",
+          "url": "https://github.com/minio/minio/pull/21750"
+        },
+        {
+          "number": 21749,
+          "title": "build(deps): bump github.com/go-jose/go-jose/v4 from 4.1.0 to 4.1.4",
+          "url": "https://github.com/minio/minio/pull/21749"
+        },
+        {
+          "number": 21748,
+          "title": "build(deps): bump github.com/Azure/go-ntlmssp from 0.0.0-20221128193559-754e69321358 to 0.1.1",
+          "url": "https://github.com/minio/minio/pull/21748"
+        },
+        {
+          "number": 21745,
+          "title": "Last docker Minio add breaking change in older docker versions",
+          "url": "https://github.com/minio/minio/issues/21745"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "s3-expiry-witness",
+      "repo": "cloud-custodian/cloud-custodian",
+      "url": "https://github.com/cloud-custodian/cloud-custodian",
+      "stars": 6085,
+      "pushed_at": "2026-10-13T17:34:59Z",
+      "license": "Apache-2.0",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:43.329Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "1eddc93647ff55bcc6a4a31dfaa00c491325b60e"
+      },
+      "issues": [
+        {
+          "number": 11204,
+          "title": "Add set-capacity action for azure.cognitiveservice-deployment (PTU scale-in)",
+          "url": "https://github.com/cloud-custodian/cloud-custodian/issues/11204"
+        },
+        {
+          "number": 11203,
+          "title": ":seedling: Bump werkzeug from 3.1.8 to 3.1.9",
+          "url": "https://github.com/cloud-custodian/cloud-custodian/pull/11203"
+        },
+        {
+          "number": 11202,
+          "title": "azure - add effective-access filter",
+          "url": "https://github.com/cloud-custodian/cloud-custodian/pull/11202"
+        },
+        {
+          "number": 11201,
+          "title": "gcp - bucket - add set-lifecycle-rule action",
+          "url": "https://github.com/cloud-custodian/cloud-custodian/pull/11201"
+        },
+        {
+          "number": 11200,
+          "title": "aws - vpc-endpoint - skip service-details filter on endpoints without ServiceName",
+          "url": "https://github.com/cloud-custodian/cloud-custodian/pull/11200"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    },
+    {
+      "project": "s3-expiry-witness",
+      "repo": "aws/aws-cli",
+      "url": "https://github.com/aws/aws-cli",
+      "stars": 17309,
+      "pushed_at": "2026-10-14T04:36:12Z",
+      "license": "NOASSERTION",
+      "archived": false,
+      "observed_at": "2026-10-14T06:09:43.049Z",
+      "readme": {
+        "path": "README.rst",
+        "sha": "5841bce41983b164d3e296fe06f05e0f523cf72e"
+      },
+      "issues": [
+        {
+          "number": 10754,
+          "title": "fix(agent-toolkit): handle MCP configuration errors per agent (#10732)",
+          "url": "https://github.com/aws/aws-cli/pull/10754"
+        },
+        {
+          "number": 10752,
+          "title": "`aws agent-toolkit update-skill --all` continues updating the remaining skills when one skill fails to update",
+          "url": "https://github.com/aws/aws-cli/pull/10752"
+        },
+        {
+          "number": 10747,
+          "title": "Add non-labeled issue workflow",
+          "url": "https://github.com/aws/aws-cli/pull/10747"
+        },
+        {
+          "number": 10745,
+          "title": "Fix s3 cp/mv/sync silently exiting 0 when _is_precondition_failed raises AttributeError",
+          "url": "https://github.com/aws/aws-cli/pull/10745"
+        },
+        {
+          "number": 10743,
+          "title": "s3 cp exits 0 when an upload fails with ReadTimeoutError (regression since 2.33.0)",
+          "url": "https://github.com/aws/aws-cli/issues/10743"
+        }
+      ],
+      "demand": "inferred, not a verified request"
+    }
+  ],
+  "limits": [
+    "Visible first result pages and relevant established comparables only; no exhaustive worldwide ranking",
+    "Competitor installs and performance not measured",
+    "Readme and accessible issue evidence does not prove absence of a feature"
+  ],
+  "demand": "inferred; no verified requests"
+}
