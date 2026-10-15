@@ -21,7 +21,7 @@ Evidence: [workflow snapshot](WORKFLOW_AUDIT_2026-10-15.json), [dependency input
 
 No current default-branch CI defect or actionable open security alert was confirmed in the reviewed scopes. The historical Trustline PR#11 merge, issue#10 closure and three CodeQL resolutions were verified as completed history and were not replayed.
 
-Invoice README formula rendering: multiplication symbols were consumed as Markdown emphasis. A minimal code-span correction is being validated on an isolated branch; final repair receipt will replace this pending line before merge of this review. No test or security check was disabled.
+RESOLVED — Invoice README formula rendering: multiplication symbols were consumed as Markdown emphasis. [PR#2](https://github.com/nripankadas07/invoice-rounding-ledger/pull/2) made the exact one-file code-span correction; final default commit `e2abf8c90a77b894ba6c33da0b22789e89db27ce` and all three default CI jobs passed. One documentation defect fixed; no current CI/security defect was confirmed. No test or security check was disabled.
 
 Access/recovery: GitHub connector reads worked; its write attempt returned an integration permission error, so all publication used the authorized cloud GitHub website. Shared-file upload path and transient browser/upload failures were reconciled against exact remote outcomes before retrying. No credentials, security settings or protections were altered.
 
