@@ -1,0 +1,878 @@
+{
+  "observed_date": "2026-10-16",
+  "queries": [
+    {
+      "query": "bill of materials",
+      "url": "https://github.com/search?q=bill+of+materials&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-16T06:09:31.393Z"
+    },
+    {
+      "query": "database subsetting",
+      "url": "https://github.com/search?q=database+subsetting&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-16T06:10:29.061Z"
+    },
+    {
+      "query": "font coverage",
+      "url": "https://github.com/search?q=font%20coverage&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-16T06:13:16.051Z"
+    },
+    {
+      "query": "GPX",
+      "url": "https://github.com/search?q=GPX&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-16T06:13:16.885Z"
+    },
+    {
+      "query": "maximum flow",
+      "url": "https://github.com/search?q=maximum%20flow&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-16T06:13:18.234Z"
+    },
+    {
+      "query": "inventory management in:description",
+      "url": "https://github.com/search?q=inventory%20management%20in%3Adescription&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-16T06:13:58.104Z"
+    },
+    {
+      "query": "font editor in:description",
+      "url": "https://github.com/search?q=font%20editor%20in%3Adescription&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-16T06:13:59.221Z"
+    },
+    {
+      "query": "networkx in:name",
+      "url": "https://github.com/search?q=networkx%20in%3Aname&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-16T06:14:00.467Z"
+    },
+    {
+      "query": "GPX analyzer in:description",
+      "url": "https://github.com/search?q=GPX%20analyzer%20in%3Adescription&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-16T06:14:01.525Z"
+    }
+  ],
+  "projects": [
+    {
+      "repo": "bom-rollup-ledger",
+      "user": "Manufacturing and procurement engineers reviewing a multilevel BOM export before a material estimate.",
+      "pain": "Shared subassemblies and decimal quantities make spreadsheet multiplication easy to undercount; a missing leaf price should not silently look like a complete estimate.",
+      "capability": "Propagate exact demand through a multilevel CSV BOM, combine shared paths once at each part, and show leaf costs plus an edge-by-edge quantity ledger.",
+      "acceptance": "Shared diamond propagation yields 4.6 leaf units and an exact 11.5 subtotal for the synthetic two-unit root; missing prices withhold the total; cycles fail; deep chains do not require Python recursion.",
+      "comparables": [
+        "inventree/InvenTree",
+        "INTI-CMNB/KiBot",
+        "hildogjr/KiCost"
+      ],
+      "leader": "inventree/InvenTree",
+      "query": "inventory management in:description",
+      "overlap": "table-reconcile compares captured keyed tables; invoice-rounding-ledger allocates invoice/tax rounding; backup-chain-audit follows preservation ancestry. This project performs multilevel bill-of-material quantities and material cost aggregation from CSV.",
+      "alternatives": "InvenTree for managed inventory/BOM pricing; KiCost for electronics supplier-cost spreadsheets; KiBot for reproducible KiCad outputs; a hand-maintained spreadsheet for a small one-off estimate.",
+      "notes": "InvenTree already documents BOM pricing, cost ranges and broader stock/pricing workflows. KiCost already builds quantity-adjusted supplier/cost spreadsheets, including handmade CSVs. KiBot automates KiCad outputs. Our narrower user path is an explicit two-CSV material rollup without a server or supplier lookup, not a claimed missing competitor capability."
+    },
+    {
+      "repo": "sqlite-fixture-closure",
+      "user": "Developers reducing a local SQLite bug reproduction to selected rows and their required parents.",
+      "pain": "Copying a few tables or rows naively can lose required parents, while exporting the whole source shares unrelated data and makes reproduction cumbersome.",
+      "capability": "Open a SQLite source read-only, follow declared parent primary-key foreign keys to a fixed point, and emit deterministic INSERTs with per-row inclusion evidence.",
+      "acceptance": "Selecting synthetic invoice100 includes exactly invoice100 and account1, excludes unrelated rows, and restores into an empty matching schema with no foreign-key violations. Composite keys, SQLite parent collation, cycles and BLOB/NUL-text round trips are tested; source bytes remain unchanged.",
+      "comparables": [
+        "Wisser/Jailer",
+        "TonicAI/condenser",
+        "18F/rdbms-subsetter"
+      ],
+      "leader": "Wisser/Jailer",
+      "query": "database subsetting",
+      "overlap": "sqlite-rehearsal rehearses migrations and sqlite-plan-witness explains query plans. This extracts row-level parent closure and executable INSERT fixtures from a real SQLite file.",
+      "alternatives": "Jailer for broad relational browsing/subsetting; Condenser for Postgres/MySQL; archived rdbms-subsetter as historical Python precedent. msg555/subsetter and DBSubsetter were also inspected as low-star alternatives and are not presented as widely adopted.",
+      "notes": "Jailer already supports referentially intact subsetting and multiple export formats across JDBC databases, including SQLite. Condenser is a config-driven Postgres/MySQL tool, not a SQLite adapter. 18F rdbms-subsetter is archived (last push2017), so its maintenance is historical. Our fixed local SQLite primary-key closure is deliberately smaller, not a feature-absence or reliability-superiority claim."
+    },
+    {
+      "repo": "font-coverage-plan",
+      "user": "Localization engineers checking a text corpus against locally available OpenType/TrueType fonts before packaging a fallback set.",
+      "pain": "A font family name does not prove nominal coverage for a corpus, and coverage union can conceal missing code points or inconsistent cmap choice.",
+      "capability": "Parse real standalone SFNT cmap format4/12 mappings, report per-font corpus gaps and choose a deterministic greedy fallback order with code-point evidence.",
+      "acceptance": "Synthetic Latin/accent fonts cover AB\u00e9\ud83d\ude42 in a stable two-step plan; missing characters are explicit. Format4 delta/array and format12 non-BMP mappings, offsets, malformed tables and preferred unsupported encodings are tested. Two installed real TTF/OTF files match FontTools4.61.1 on65617 queried code points each.",
+      "comparables": [
+        "fontforge/fontforge",
+        "fonttools/fonttools",
+        "fonttools/fontbakery"
+      ],
+      "leader": "fontforge/fontforge",
+      "query": "font editor in:description",
+      "overlap": "colortool/colourdist deal with colors, and no existing owned project inspected handles SFNT character maps or font-set corpus coverage.",
+      "alternatives": "FontForge for interactive font editing; FontTools for full font manipulation and scripting; FontBakery for extensive QA. These provide much broader format and validation support.",
+      "notes": "FontForge is a full font editor and converter. FontTools already manipulates cmap mappings and exposes a preferred Unicode cmap. FontBakery offers broad font QA checks, with Fontspector as a related Rust port. Our bounded corpus-and-fallback report is an explicit standalone workflow; it does not prove these tools lack an equivalent script or check."
+    },
+    {
+      "repo": "gpx-dwell-report",
+      "user": "Outdoor-track analysts reviewing apparent stops and capture gaps before summarizing a GPX activity.",
+      "pain": "A long interval between nearby points can be a sampling gap rather than a recorded stop, and slow GPS drift or jumps can distort moving/stopped summaries.",
+      "capability": "Read actual GPX1.1 track segments and emit fixed-anchor dwell windows, separate gap/speed-jump evidence and raw versus accepted pair totals.",
+      "acceptance": "Synthetic three-point stationary run yields120 seconds, then ends before a moving point. Segments, gaps and speed jumps cannot manufacture a joined stop. Slow drift, dateline crossing, prefixes, timezone equivalence and malformed XML/times/coordinates are tested.",
+      "comparables": [
+        "tumic0/GPXSee",
+        "gpxstudio/gpx.studio",
+        "tkrajina/gpxpy"
+      ],
+      "leader": "tumic0/GPXSee",
+      "query": "GPX analyzer in:description",
+      "overlap": "geojson-delivery-contract validates geospatial delivery geometry and subtitle-timing-audit handles media timing. This parses GPX track segmentation and spatial/time dwell evidence.",
+      "alternatives": "GPXSee for desktop inspection, gpx.studio for interactive editing and gpxpy for Python GPX analysis. Broad GPX search also returned hardware firmware, galleries and activity homepages; those were outside the selected offline dwell-report workflow.",
+      "notes": "GPXSee is a broad GPS viewer/analyzer, gpx.studio edits GPX in the browser, and gpxpy already offers moving/stopped data methods. Current gpxpy issue/PR discussions include zero stopped-speed thresholds, stationary intervals and prefixed namespaces; our tests explicitly cover these edges without claiming a new feature competitors lack. A gpx.studio issue asks for summary data, but it is adjacent interest rather than a verified request for our tool."
+    },
+    {
+      "repo": "capacity-cut-report",
+      "user": "Operations engineers checking aggregate pool-to-task capacity compatibility in a single planning period.",
+      "pain": "Total capacity can equal total demand while eligibility restrictions still leave demand unmet; an allocation alone does not explain the unavoidable bottleneck.",
+      "capability": "Compute integer max flow for explicit pool/task links, report idle and unfilled units, and expose cut edges whose capacity certifies the achieved maximum.",
+      "acceptance": "Synthetic capacity8/demand8 with restricted compatibility fulfills6, leaves2 idle and2 unmet, and a cut of capacity6. Reverse residual rerouting and100 seeded two-pool/two-task networks match independently enumerated cut minima.",
+      "comparables": [
+        "networkx/networkx",
+        "google/or-tools",
+        "Pyomo/pyomo"
+      ],
+      "leader": "networkx/networkx",
+      "query": "networkx in:name",
+      "overlap": "task-queue is a queue implementation, grid-ops-arena simulates energy dispatch and value-density-lab scores product outcomes. This is a static aggregate bipartite capacity-allocation/cut certificate tool.",
+      "alternatives": "NetworkX for graph modeling, OR-Tools for combinatorial optimization and Pyomo for algebraic models/solver integration. A hand calculation can handle a tiny matrix but does not scale to all compatibility cuts.",
+      "notes": "NetworkX already provides flow/cut algorithms; OR-Tools includes max flow, assignment and richer optimization; Pyomo models broad optimization problems with solvers. Our original small implementation packages a specific inspectable pool/task workflow without runtime packages. It does not claim algorithmic novelty, faster performance or missing functionality in those systems."
+    }
+  ],
+  "comparables": [
+    {
+      "full": "18F/rdbms-subsetter",
+      "url": "https://github.com/18F/rdbms-subsetter",
+      "stars": 310,
+      "default_branch": "master",
+      "pushed_at": "2017-12-13T16:25:28Z",
+      "updated_at": "2026-08-17T15:36:31Z",
+      "archived": true,
+      "license": "CC0-1.0",
+      "description": "Generates a subset of a relational database that respects foreign key constraints",
+      "observed": "2026-10-16T06:07:57.902Z",
+      "readme": {
+        "path": "README.rst",
+        "sha": "a3b8090a93fb0de95181939b1d53a3e122c4dead"
+      },
+      "issues": [
+        {
+          "number": 46,
+          "title": "Is there a way to adapt this to work with dbs that have postgis/geometry data?",
+          "url": "https://github.com/18F/rdbms-subsetter/issues/46",
+          "pull_request": false
+        },
+        {
+          "number": 45,
+          "title": "is this project alive?",
+          "url": "https://github.com/18F/rdbms-subsetter/issues/45",
+          "pull_request": false
+        },
+        {
+          "number": 44,
+          "title": "Please make a new release",
+          "url": "https://github.com/18F/rdbms-subsetter/issues/44",
+          "pull_request": false
+        },
+        {
+          "number": 40,
+          "title": "ImportError while running rdbms-subsetter",
+          "url": "https://github.com/18F/rdbms-subsetter/issues/40",
+          "pull_request": false
+        },
+        {
+          "number": 36,
+          "title": "refac branch bug",
+          "url": "https://github.com/18F/rdbms-subsetter/issues/36",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "INTI-CMNB/KiBot",
+      "url": "https://github.com/INTI-CMNB/KiBot",
+      "stars": 753,
+      "default_branch": "master",
+      "pushed_at": "2026-10-15T16:20:14Z",
+      "updated_at": "2026-10-12T23:57:28Z",
+      "archived": false,
+      "license": "AGPL-3.0",
+      "description": "KiCad automation utility",
+      "observed": "2026-10-16T06:08:19.503Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "f9f15ac3b7eece5ff28e6282e0416668cfc4da03"
+      },
+      "issues": [
+        {
+          "number": 956,
+          "title": "[BUG] blender_export: transparent_background removes the environment light (metals render black) and directional light positions are silently ignored",
+          "url": "https://github.com/INTI-CMNB/KiBot/issues/956",
+          "pull_request": false
+        },
+        {
+          "number": 925,
+          "title": "[FEATURE][KiCAD/KiBOT] Update of KiBOT v2_k9@latest image to KiCAD 9.0.9 release",
+          "url": "https://github.com/INTI-CMNB/KiBot/issues/925",
+          "pull_request": false
+        },
+        {
+          "number": 917,
+          "title": "[FEATURE] Hugo-based project documentation site integrating KiBot outputs",
+          "url": "https://github.com/INTI-CMNB/KiBot/issues/917",
+          "pull_request": false
+        },
+        {
+          "number": 882,
+          "title": "[FEATURE] KiRi with svn",
+          "url": "https://github.com/INTI-CMNB/KiBot/issues/882",
+          "pull_request": false
+        },
+        {
+          "number": 874,
+          "title": "[HOW] Best practice to avoid DRC/ERC errors due to different KiCAD versions",
+          "url": "https://github.com/INTI-CMNB/KiBot/issues/874",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "Pyomo/pyomo",
+      "url": "https://github.com/Pyomo/pyomo",
+      "stars": 2544,
+      "default_branch": "main",
+      "pushed_at": "2026-10-13T18:37:56Z",
+      "updated_at": "2026-10-15T03:10:43Z",
+      "archived": false,
+      "license": "NOASSERTION",
+      "description": "An object-oriented algebraic modeling language in Python for structured optimization problems.",
+      "observed": "2026-10-16T06:07:58.284Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "3981e09ce4584de13d9790699f24b266fbe86932"
+      },
+      "issues": [
+        {
+          "number": 4054,
+          "title": "Add support/testing for Python 3.15",
+          "url": "https://github.com/Pyomo/pyomo/pull/4054",
+          "pull_request": true
+        },
+        {
+          "number": 4052,
+          "title": "References to DerivativeVar",
+          "url": "https://github.com/Pyomo/pyomo/issues/4052",
+          "pull_request": false
+        },
+        {
+          "number": 4051,
+          "title": "Unexpected lack of input validation for Pyomo slices",
+          "url": "https://github.com/Pyomo/pyomo/issues/4051",
+          "pull_request": false
+        },
+        {
+          "number": 4048,
+          "title": "Resolve dynamic initialization of Param values",
+          "url": "https://github.com/Pyomo/pyomo/pull/4048",
+          "pull_request": true
+        },
+        {
+          "number": 4047,
+          "title": "Contrib HiGHS: support partial MIP warm starts",
+          "url": "https://github.com/Pyomo/pyomo/pull/4047",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "TonicAI/condenser",
+      "url": "https://github.com/TonicAI/condenser",
+      "stars": 337,
+      "default_branch": "master",
+      "pushed_at": "2025-07-28T13:29:47Z",
+      "updated_at": "2026-08-06T08:51:26Z",
+      "archived": false,
+      "license": "MIT",
+      "description": "Condenser is a database subsetting tool",
+      "observed": "2026-10-16T06:08:19.823Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "7793186b8a7346489d72208e143908691aa70649"
+      },
+      "issues": [
+        {
+          "number": 48,
+          "title": "Allos.Dynamic.RedactedOperationCanceledException: The operation was canceled.",
+          "url": "https://github.com/TonicAI/condenser/issues/48",
+          "pull_request": false
+        },
+        {
+          "number": 47,
+          "title": "UUID Foreign Key",
+          "url": "https://github.com/TonicAI/condenser/issues/47",
+          "pull_request": false
+        },
+        {
+          "number": 39,
+          "title": "Setup poetry",
+          "url": "https://github.com/TonicAI/condenser/pull/39",
+          "pull_request": true
+        },
+        {
+          "number": 34,
+          "title": "Redundancy between db_name and prefacing every table with the name of the database?",
+          "url": "https://github.com/TonicAI/condenser/issues/34",
+          "pull_request": false
+        },
+        {
+          "number": 30,
+          "title": "Writing subset to SQL file instead of to destination DB",
+          "url": "https://github.com/TonicAI/condenser/issues/30",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "Wisser/Jailer",
+      "url": "https://github.com/Wisser/Jailer",
+      "stars": 3211,
+      "default_branch": "master",
+      "pushed_at": "2026-10-15T11:12:20Z",
+      "updated_at": "2026-10-15T10:41:12Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "description": "Database Subsetting and Relational Data Browsing Tool.",
+      "observed": "2026-10-16T06:07:57.117Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "f0f9db2ae4542e6ba24852bc8c655c3331116b58"
+      },
+      "issues": [],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "fontforge/fontforge",
+      "url": "https://github.com/fontforge/fontforge",
+      "stars": 8024,
+      "default_branch": "master",
+      "pushed_at": "2026-10-13T20:50:40Z",
+      "updated_at": "2026-10-15T16:32:42Z",
+      "archived": false,
+      "license": "NOASSERTION",
+      "description": "Free (libre) font editor for Windows, Mac OS X and GNU+Linux",
+      "observed": "2026-10-16T06:08:19.441Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "dfef1575fed88416ede61f599a4900afa9087e86"
+      },
+      "issues": [
+        {
+          "number": 5917,
+          "title": "splineoverlap: do not crash when a monotonic cannot be found (#5357)",
+          "url": "https://github.com/fontforge/fontforge/pull/5917",
+          "pull_request": true
+        },
+        {
+          "number": 5909,
+          "title": "windows .exe requires admin",
+          "url": "https://github.com/fontforge/fontforge/issues/5909",
+          "pull_request": false
+        },
+        {
+          "number": 5908,
+          "title": "Do not read a CFF charset when the font has no glyphs (#5879)",
+          "url": "https://github.com/fontforge/fontforge/pull/5908",
+          "pull_request": true
+        },
+        {
+          "number": 5905,
+          "title": "Fix signed left-shift overflow when assembling 32-bit values in mem.c (#5881)",
+          "url": "https://github.com/fontforge/fontforge/pull/5905",
+          "pull_request": true
+        },
+        {
+          "number": 5904,
+          "title": "LoadNamelist(\"ybd.nam\") causes syntax error",
+          "url": "https://github.com/fontforge/fontforge/issues/5904",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "fonttools/fontbakery",
+      "url": "https://github.com/fonttools/fontbakery",
+      "stars": 705,
+      "default_branch": "main",
+      "pushed_at": "2025-11-04T18:52:25Z",
+      "updated_at": "2026-10-11T20:42:29Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "description": "\ud83e\uddc1 A font quality assurance tool for everyone ",
+      "observed": "2026-10-16T06:07:57.763Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "152234f3fafbad6aa0a37263548bd0d6f5ea6b6e"
+      },
+      "issues": [
+        {
+          "number": 5061,
+          "title": "[bad-hhea-range] Fail when HHEA is supposedly in range",
+          "url": "https://github.com/fonttools/fontbakery/issues/5061",
+          "pull_request": false
+        },
+        {
+          "number": 5060,
+          "title": "Fix false positive in googlefonts/colorfont_tables for variable fonts with non-varying SVG glyphs",
+          "url": "https://github.com/fonttools/fontbakery/pull/5060",
+          "pull_request": true
+        },
+        {
+          "number": 5059,
+          "title": "Fix `UnboundLocalError` in Markdown report when all checks pass",
+          "url": "https://github.com/fonttools/fontbakery/pull/5059",
+          "pull_request": true
+        },
+        {
+          "number": 5058,
+          "title": "Bug - Markdown report throws error when all checks pass",
+          "url": "https://github.com/fonttools/fontbakery/issues/5058",
+          "pull_request": false
+        },
+        {
+          "number": 5057,
+          "title": "Replace obsolete macos-13 with macos-latest in GH-Actions",
+          "url": "https://github.com/fonttools/fontbakery/pull/5057",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "fonttools/fonttools",
+      "url": "https://github.com/fonttools/fonttools",
+      "stars": 5292,
+      "default_branch": "main",
+      "pushed_at": "2026-10-15T09:24:13Z",
+      "updated_at": "2026-10-15T09:24:21Z",
+      "archived": false,
+      "license": "MIT",
+      "description": "A library to manipulate font files from Python.",
+      "observed": "2026-10-16T06:07:57.902Z",
+      "readme": {
+        "path": "README.rst",
+        "sha": "72a9ee0d0f5d1be190e70b2fcadd53bb799649e2"
+      },
+      "issues": [
+        {
+          "number": 4324,
+          "title": "[cmap] Reject format 2 maps that use a byte both as a single-byte code and as a lead byte",
+          "url": "https://github.com/fonttools/fonttools/pull/4324",
+          "pull_request": true
+        },
+        {
+          "number": 4323,
+          "title": "[cffLib] Preserve nine-digit CIDFontVersion values when serializing",
+          "url": "https://github.com/fonttools/fonttools/pull/4323",
+          "pull_request": true
+        },
+        {
+          "number": 4322,
+          "title": "Version 4.67.0 breaks special characters for TTF fonts in `getDebugName`",
+          "url": "https://github.com/fonttools/fonttools/issues/4322",
+          "pull_request": false
+        },
+        {
+          "number": 4320,
+          "title": "[EBLC/EBDT] Fix compiling tables without strikes loaded from XML",
+          "url": "https://github.com/fonttools/fonttools/pull/4320",
+          "pull_request": true
+        },
+        {
+          "number": 4319,
+          "title": "[ttLib] Fix compiling empty gasp, SVG and COLRv0 tables loaded from XML",
+          "url": "https://github.com/fonttools/fonttools/pull/4319",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "google/or-tools",
+      "url": "https://github.com/google/or-tools",
+      "stars": 14206,
+      "default_branch": "stable",
+      "pushed_at": "2026-10-15T20:41:37Z",
+      "updated_at": "2026-10-16T01:24:54Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "description": "Google's Operations Research tools:",
+      "observed": "2026-10-16T06:07:58.446Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "344dfd9abc4372c20f49e604e9de312e08802230"
+      },
+      "issues": [
+        {
+          "number": 5494,
+          "title": "Internal persolve crash `absl::container_internal::raw_hash_map<>::at`",
+          "url": "https://github.com/google/or-tools/issues/5494",
+          "pull_request": false
+        },
+        {
+          "number": 5492,
+          "title": "WIP: Add MOSEK Support",
+          "url": "https://github.com/google/or-tools/pull/5492",
+          "pull_request": true
+        },
+        {
+          "number": 5489,
+          "title": "Support for python 3.15",
+          "url": "https://github.com/google/or-tools/issues/5489",
+          "pull_request": false
+        },
+        {
+          "number": 5481,
+          "title": "Free MPS export rounds exact integer bounds to six significant digits",
+          "url": "https://github.com/google/or-tools/issues/5481",
+          "pull_request": false
+        },
+        {
+          "number": 5475,
+          "title": "graph: fix false infeasibility in LinearSumAssignment with signed costs",
+          "url": "https://github.com/google/or-tools/pull/5475",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "gpxstudio/gpx.studio",
+      "url": "https://github.com/gpxstudio/gpx.studio",
+      "stars": 1240,
+      "default_branch": "main",
+      "pushed_at": "2026-10-14T06:17:58Z",
+      "updated_at": "2026-10-15T03:47:22Z",
+      "archived": false,
+      "license": "MIT",
+      "description": "the online GPX file editor",
+      "observed": "2026-10-16T06:07:58.349Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "dce2a14f044c01a95741a14ba75d32699a6cf0fa"
+      },
+      "issues": [
+        {
+          "number": 399,
+          "title": "Extension API: allow custom source and layers for overlays",
+          "url": "https://github.com/gpxstudio/gpx.studio/pull/399",
+          "pull_request": true
+        },
+        {
+          "number": 398,
+          "title": "fix a latitude typed past \u00b190 in the waypoint tool",
+          "url": "https://github.com/gpxstudio/gpx.studio/pull/398",
+          "pull_request": true
+        },
+        {
+          "number": 397,
+          "title": "fix a click on the temporary anchor",
+          "url": "https://github.com/gpxstudio/gpx.studio/pull/397",
+          "pull_request": true
+        },
+        {
+          "number": 396,
+          "title": "[Feature Request] Add data summary table to replace elevation chart",
+          "url": "https://github.com/gpxstudio/gpx.studio/issues/396",
+          "pull_request": false
+        },
+        {
+          "number": 395,
+          "title": "Extension API: allow custom source/layer styling for extension overlays",
+          "url": "https://github.com/gpxstudio/gpx.studio/issues/395",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "hildogjr/KiCost",
+      "url": "https://github.com/hildogjr/KiCost",
+      "stars": 627,
+      "default_branch": "master",
+      "pushed_at": "2026-07-08T14:46:35Z",
+      "updated_at": "2026-10-13T06:37:39Z",
+      "archived": false,
+      "license": "MIT",
+      "description": "Build cost spreadsheet for a KiCad project.",
+      "observed": "2026-10-16T06:07:57.104Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "c0935d33174a2419132b1903c4735a4bd013d532"
+      },
+      "issues": [
+        {
+          "number": 586,
+          "title": "complainig about nexar even though it is excluded",
+          "url": "https://github.com/hildogjr/KiCost/issues/586",
+          "pull_request": false
+        },
+        {
+          "number": 584,
+          "title": "Error with digikey# column",
+          "url": "https://github.com/hildogjr/KiCost/issues/584",
+          "pull_request": false
+        },
+        {
+          "number": 578,
+          "title": "Digikey not working anymore (error 401)",
+          "url": "https://github.com/hildogjr/KiCost/issues/578",
+          "pull_request": false
+        },
+        {
+          "number": 576,
+          "title": "Add B\u00fcrklin as a distributor",
+          "url": "https://github.com/hildogjr/KiCost/issues/576",
+          "pull_request": false
+        },
+        {
+          "number": 575,
+          "title": "Add RS Components as a distributor",
+          "url": "https://github.com/hildogjr/KiCost/issues/575",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "inventree/InvenTree",
+      "url": "https://github.com/inventree/InvenTree",
+      "stars": 7717,
+      "default_branch": "master",
+      "pushed_at": "2026-10-16T04:54:37Z",
+      "updated_at": "2026-10-16T04:47:40Z",
+      "archived": false,
+      "license": "MIT",
+      "description": "Open Source Inventory Management System",
+      "observed": "2026-10-16T06:07:57.220Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "5295f4fb9c67cec437a3925487386b76ffca5a36"
+      },
+      "issues": [
+        {
+          "number": 13023,
+          "title": "[bug] Handle length limitation for \"notes\" fields",
+          "url": "https://github.com/inventree/InvenTree/pull/13023",
+          "pull_request": true
+        },
+        {
+          "number": 13020,
+          "title": "fix(frontend): remove jumps in data tables when navigating",
+          "url": "https://github.com/inventree/InvenTree/pull/13020",
+          "pull_request": true
+        },
+        {
+          "number": 13019,
+          "title": "chore(deps): bump the dependencies group across 1 directory with 22 updates",
+          "url": "https://github.com/inventree/InvenTree/pull/13019",
+          "pull_request": true
+        },
+        {
+          "number": 13018,
+          "title": "New Crowdin updates",
+          "url": "https://github.com/inventree/InvenTree/pull/13018",
+          "pull_request": true
+        },
+        {
+          "number": 12996,
+          "title": "add support for python 3.15 and move docker image to it",
+          "url": "https://github.com/inventree/InvenTree/pull/12996",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "networkx/networkx",
+      "url": "https://github.com/networkx/networkx",
+      "stars": 17328,
+      "default_branch": "main",
+      "pushed_at": "2026-10-06T17:42:21Z",
+      "updated_at": "2026-10-16T05:46:28Z",
+      "archived": false,
+      "license": "NOASSERTION",
+      "description": "Network Analysis in Python",
+      "observed": "2026-10-16T06:07:58.268Z",
+      "readme": {
+        "path": "README.rst",
+        "sha": "a18d5ff1dd729e52e8b1746e49ea9623937a4743"
+      },
+      "issues": [
+        {
+          "number": 8958,
+          "title": "ENH: Support hidden edges (weight=None) in Bellman-Ford, Goldberg-Radzik and Johnson",
+          "url": "https://github.com/networkx/networkx/pull/8958",
+          "pull_request": true
+        },
+        {
+          "number": 8956,
+          "title": "BUG: don't pop \"id\" from G.graph in the GraphML writers",
+          "url": "https://github.com/networkx/networkx/pull/8956",
+          "pull_request": true
+        },
+        {
+          "number": 8955,
+          "title": "Fix ZeroDivisionError in percolation_centrality for graphs with <= 2 nodes",
+          "url": "https://github.com/networkx/networkx/pull/8955",
+          "pull_request": true
+        },
+        {
+          "number": 8954,
+          "title": "ZeroDivisionError in percolation_centrality for graphs with <= 2 nodes",
+          "url": "https://github.com/networkx/networkx/issues/8954",
+          "pull_request": false
+        },
+        {
+          "number": 8953,
+          "title": "ENH: Add canonicalization module",
+          "url": "https://github.com/networkx/networkx/pull/8953",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "tkrajina/gpxpy",
+      "url": "https://github.com/tkrajina/gpxpy",
+      "stars": 1108,
+      "default_branch": "dev",
+      "pushed_at": "2026-09-26T11:50:36Z",
+      "updated_at": "2026-10-14T22:26:50Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "description": "gpx-py is a python GPX parser. GPX (GPS eXchange Format) is an XML based file format for GPS tracks.",
+      "observed": "2026-10-16T06:07:57.731Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "5a33dd6b8190ecc31746843e54eeb935d7ca955a"
+      },
+      "issues": [
+        {
+          "number": 315,
+          "title": "Preserve flat elevation points when removing extremes",
+          "url": "https://github.com/tkrajina/gpxpy/pull/315",
+          "pull_request": true
+        },
+        {
+          "number": 314,
+          "title": "Honor an explicit zero stopped-speed threshold",
+          "url": "https://github.com/tkrajina/gpxpy/pull/314",
+          "pull_request": true
+        },
+        {
+          "number": 313,
+          "title": "Handle zero intervals and short tracks when filling timestamps",
+          "url": "https://github.com/tkrajina/gpxpy/pull/313",
+          "pull_request": true
+        },
+        {
+          "number": 312,
+          "title": "Include stationary intervals when averaging point speeds",
+          "url": "https://github.com/tkrajina/gpxpy/pull/312",
+          "pull_request": true
+        },
+        {
+          "number": 311,
+          "title": "Parse GPX files that bind the GPX namespace to a prefix",
+          "url": "https://github.com/tkrajina/gpxpy/pull/311",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    },
+    {
+      "full": "tumic0/GPXSee",
+      "url": "https://github.com/tumic0/GPXSee",
+      "stars": 1251,
+      "default_branch": "master",
+      "pushed_at": "2026-10-15T15:58:53Z",
+      "updated_at": "2026-10-15T15:58:58Z",
+      "archived": false,
+      "license": "GPL-3.0",
+      "description": "GPS log file viewer and analyzer with support for GPX, TCX, KML, FIT, IGC, NMEA, SLF, SML, LOC, GPI, GeoJSON and OziExplorer files.",
+      "observed": "2026-10-16T06:07:59.246Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "f52f5cb5a41d08609b778ee1cc47ffaafbe8530c"
+      },
+      "issues": [
+        {
+          "number": 673,
+          "title": "Add support for bingmaps: URI scheme (protocol)",
+          "url": "https://github.com/tumic0/GPXSee/issues/673",
+          "pull_request": false
+        },
+        {
+          "number": 659,
+          "title": "Android app immediately crashes when opening menu item",
+          "url": "https://github.com/tumic0/GPXSee/issues/659",
+          "pull_request": false
+        },
+        {
+          "number": 656,
+          "title": "Feature request - change font size of position marker info",
+          "url": "https://github.com/tumic0/GPXSee/issues/656",
+          "pull_request": false
+        },
+        {
+          "number": 634,
+          "title": "The current KML parser does not support KML version 2.3",
+          "url": "https://github.com/tumic0/GPXSee/issues/634",
+          "pull_request": false
+        },
+        {
+          "number": 628,
+          "title": "Garmin maps - displaying objects details on tap",
+          "url": "https://github.com/tumic0/GPXSee/issues/628",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Metadata, current README and up to five current issue/PR entries inspected; not exhaustive issue history or a competitor execution benchmark."
+    }
+  ],
+  "code_sources": [
+    {
+      "repo": "inventree/InvenTree",
+      "path": "src/backend/InvenTree/part/test_pricing.py",
+      "sha": "8bdbfc31c40e818d1135c4ccb2d5f821eda08436",
+      "url": "https://github.com/inventree/InvenTree/blob/master/src/backend/InvenTree/part/test_pricing.py"
+    },
+    {
+      "repo": "Wisser/Jailer",
+      "path": "src/main/engine/net/sf/jailer/api/Subsetter.java",
+      "sha": "38c2b346766b85f89dde4ae9b4dd231df7bcda49",
+      "url": "https://github.com/Wisser/Jailer/blob/master/src/main/engine/net/sf/jailer/api/Subsetter.java"
+    },
+    {
+      "repo": "fonttools/fonttools",
+      "path": "Lib/fontTools/ttLib/tables/_c_m_a_p.py",
+      "sha": "d6f9683b5a67cb221ce4c92b6028cab85c69c824",
+      "url": "https://github.com/fonttools/fonttools/blob/main/Lib/fontTools/ttLib/tables/_c_m_a_p.py"
+    },
+    {
+      "repo": "tkrajina/gpxpy",
+      "path": "gpxpy/gpx.py",
+      "sha": "b39a46d809c8504bdf7a5855f598c83242ed2bb0",
+      "url": "https://github.com/tkrajina/gpxpy/blob/dev/gpxpy/gpx.py"
+    },
+    {
+      "repo": "networkx/networkx",
+      "path": "networkx/algorithms/flow/edmondskarp.py",
+      "sha": "a52b24135e26e1195eea45555990ff764bb96744",
+      "url": "https://github.com/networkx/networkx/blob/main/networkx/algorithms/flow/edmondskarp.py"
+    }
+  ],
+  "demand": "Inferred; no verified requests for these products or fabricated adoption.",
+  "performance": "No competitor performance benchmarks or superiority claims.",
+  "reuse": "Original implementation/prose/synthetic fixtures, no competitor code or bundled third-party font assets."
+}
