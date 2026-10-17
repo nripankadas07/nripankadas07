@@ -1,0 +1,4257 @@
+{
+  "coverage": {
+    "owned": 193,
+    "complete_repositories": 191,
+    "unavailable_repositories": [
+      "stringcase",
+      "startup-dashboard"
+    ],
+    "enabled_feeds_clear": 308,
+    "observed_open_alerts_in_completed_feeds": 0,
+    "malware_disabled": 191,
+    "dependabot_disabled": 84,
+    "code_needs_setup": 181,
+    "secret_scanning_enabled": 191
+  },
+  "repositories": [
+    {
+      "repo": "accept-media-witness",
+      "observed": "2026-10-17T06:06:43.690Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/accept-media-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/accept-media-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "agent-framework",
+      "observed": "2026-10-17T06:06:43.693Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/agent-framework/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/agent-framework/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/agent-framework/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "ai-toolkit",
+      "observed": "2026-10-17T06:06:47.697Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/ai-toolkit/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/ai-toolkit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/ai-toolkit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "agent-sbom",
+      "observed": "2026-10-17T06:06:47.578Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/agent-sbom/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/agent-sbom/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/agent-sbom/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/agent-sbom/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "argv-strict",
+      "observed": "2026-10-17T06:06:51.970Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/argv-strict/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/argv-strict/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/argv-strict/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "api-mocker",
+      "observed": "2026-10-17T06:06:51.860Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/api-mocker/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/api-mocker/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/api-mocker/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "backup-chain-audit",
+      "observed": "2026-10-17T06:06:55.104Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/backup-chain-audit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/backup-chain-audit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "argv-zod",
+      "observed": "2026-10-17T06:06:55.129Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/argv-zod/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/argv-zod/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/argv-zod/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "bencode",
+      "observed": "2026-10-17T06:06:58.133Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/bencode/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/bencode/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/bencode/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "base62-ts",
+      "observed": "2026-10-17T06:06:58.243Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/base62-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/base62-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/base62-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "bom-rollup-ledger",
+      "observed": "2026-10-17T06:07:01.494Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/bom-rollup-ledger/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/bom-rollup-ledger/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "bitvec",
+      "observed": "2026-10-17T06:07:01.564Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/bitvec/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/bitvec/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/bitvec/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "cache-header-contract",
+      "observed": "2026-10-17T06:07:04.895Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/cache-header-contract/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/cache-header-contract/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "capacity-cut-report",
+      "observed": "2026-10-17T06:07:04.905Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/capacity-cut-report/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/capacity-cut-report/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "chatmux",
+      "observed": "2026-10-17T06:07:07.656Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/chatmux/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/chatmux/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "carbon-risk-lab",
+      "observed": "2026-10-17T06:07:07.520Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/carbon-risk-lab/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/carbon-risk-lab/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/carbon-risk-lab/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/carbon-risk-lab/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "chunkby",
+      "observed": "2026-10-17T06:07:11.586Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/chunkby/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/chunkby/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/chunkby/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "chronoparse",
+      "observed": "2026-10-17T06:07:11.588Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/chronoparse/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/chronoparse/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/chronoparse/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "cidrcalc",
+      "observed": "2026-10-17T06:07:14.759Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/cidrcalc/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/cidrcalc/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/cidrcalc/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "cli-timer",
+      "observed": "2026-10-17T06:07:14.730Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/cli-timer/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/cli-timer/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/cli-timer/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "clock-quorum-window",
+      "observed": "2026-10-17T06:08:15.190Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/clock-quorum-window/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/clock-quorum-window/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "climate-evidence-bench",
+      "observed": "2026-10-17T06:08:15.306Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/climate-evidence-bench/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/climate-evidence-bench/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/climate-evidence-bench/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/climate-evidence-bench/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "colourdist",
+      "observed": "2026-10-17T06:08:19.423Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/colourdist/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/colourdist/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/colourdist/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "colortool",
+      "observed": "2026-10-17T06:08:19.536Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/colortool/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/colortool/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/colortool/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "context-crucible",
+      "observed": "2026-10-17T06:08:22.548Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/context-crucible/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/context-crucible/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "config-loader",
+      "observed": "2026-10-17T06:08:22.766Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/config-loader/security/dependabot",
+          "state": "CLEAR",
+          "verified_after_loading": "2026-10-17T06:09:38.680Z"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/config-loader/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/config-loader/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "cron-dst-witness",
+      "observed": "2026-10-17T06:08:25.408Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/cron-dst-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/cron-dst-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "cookie-scope-witness",
+      "observed": "2026-10-17T06:08:25.507Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/cookie-scope-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/cookie-scope-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "csp-fallback-diff",
+      "observed": "2026-10-17T06:08:27.760Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/csp-fallback-diff/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/csp-fallback-diff/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "crontab-lite",
+      "observed": "2026-10-17T06:08:27.943Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/crontab-lite/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/crontab-lite/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/crontab-lite/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "csv-explorer",
+      "observed": "2026-10-17T06:08:31.242Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/csv-explorer/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/csv-explorer/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/csv-explorer/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "csvinfer",
+      "observed": "2026-10-17T06:08:31.173Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/csvinfer/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/csvinfer/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/csvinfer/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "csvquote",
+      "observed": "2026-10-17T06:08:35.233Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/csvquote/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/csvquote/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/csvquote/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "csvtable",
+      "observed": "2026-10-17T06:08:35.319Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/csvtable/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/csvtable/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/csvtable/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "csvtail",
+      "observed": "2026-10-17T06:08:38.481Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/csvtail/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/csvtail/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/csvtail/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "decimal-ts",
+      "observed": "2026-10-17T06:08:38.509Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/decimal-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/decimal-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/decimal-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "dep-audit",
+      "observed": "2026-10-17T06:08:41.637Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/dep-audit/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/dep-audit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/dep-audit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "decoder-ts",
+      "observed": "2026-10-17T06:08:41.793Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/decoder-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/decoder-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/decoder-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "diffstat",
+      "observed": "2026-10-17T06:08:44.942Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/diffstat/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/diffstat/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/diffstat/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "digestlite",
+      "observed": "2026-10-17T06:08:44.951Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/digestlite/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/digestlite/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/digestlite/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "dns-serial-quorum",
+      "observed": "2026-10-17T06:08:48.091Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/dns-serial-quorum/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/dns-serial-quorum/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "dnswarden",
+      "observed": "2026-10-17T06:08:48.116Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/dnswarden/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/dnswarden/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "doc-anchor-audit",
+      "observed": "2026-10-17T06:08:50.447Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/doc-anchor-audit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/doc-anchor-audit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "dotenv-mini",
+      "observed": "2026-10-17T06:08:50.501Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/dotenv-mini/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/dotenv-mini/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/dotenv-mini/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "durfmt",
+      "observed": "2026-10-17T06:08:53.744Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/durfmt/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/durfmt/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/durfmt/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "dotpath",
+      "observed": "2026-10-17T06:08:53.621Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/dotpath/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/dotpath/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/dotpath/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "env-vault",
+      "observed": "2026-10-17T06:08:56.889Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/env-vault/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/env-vault/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/env-vault/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "eventbus-ts",
+      "observed": "2026-10-17T06:10:25.668Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/eventbus-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/eventbus-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/eventbus-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "envdiff",
+      "observed": "2026-10-17T06:10:25.708Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/envdiff/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/envdiff/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/envdiff/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "expand",
+      "observed": "2026-10-17T06:10:29.654Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/expand/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/expand/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/expand/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "feature-flags",
+      "observed": "2026-10-17T06:10:29.624Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/feature-flags/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/feature-flags/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/feature-flags/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "font-coverage-plan",
+      "observed": "2026-10-17T06:10:32.821Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/font-coverage-plan/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/font-coverage-plan/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "flatdict",
+      "observed": "2026-10-17T06:10:32.889Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/flatdict/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/flatdict/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/flatdict/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "gettext-contract",
+      "observed": "2026-10-17T06:10:36.038Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/gettext-contract/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/gettext-contract/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "geojson-delivery-contract",
+      "observed": "2026-10-17T06:10:36.183Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/geojson-delivery-contract/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/geojson-delivery-contract/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "git-ref-retention",
+      "observed": "2026-10-17T06:10:38.716Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/git-ref-retention/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/git-ref-retention/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "globmatch",
+      "observed": "2026-10-17T06:10:38.923Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/globmatch/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/globmatch/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/globmatch/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "gpx-dwell-report",
+      "observed": "2026-10-17T06:10:41.756Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/gpx-dwell-report/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/gpx-dwell-report/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "grid-ops-arena",
+      "observed": "2026-10-17T06:10:42.510Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/grid-ops-arena/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/grid-ops-arena/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/grid-ops-arena/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/grid-ops-arena/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "har-budget",
+      "observed": "2026-10-17T06:10:46.466Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/har-budget/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/har-budget/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "hexdump",
+      "observed": "2026-10-17T06:10:46.641Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/hexdump/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/hexdump/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/hexdump/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "hls-window-audit",
+      "observed": "2026-10-17T06:10:49.497Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/hls-window-audit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/hls-window-audit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "hexstr",
+      "observed": "2026-10-17T06:10:49.475Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/hexstr/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/hexstr/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/hexstr/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "http-range-witness",
+      "observed": "2026-10-17T06:10:52.550Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/http-range-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/http-range-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "humanint",
+      "observed": "2026-10-17T06:10:52.656Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/humanint/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/humanint/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/humanint/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "ical-conflict",
+      "observed": "2026-10-17T06:10:55.545Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/ical-conflict/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/ical-conflict/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "iniparse",
+      "observed": "2026-10-17T06:10:55.707Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/iniparse/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/iniparse/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/iniparse/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "invoice-rounding-ledger",
+      "observed": "2026-10-17T06:12:52.796Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/invoice-rounding-ledger/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/invoice-rounding-ledger/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "iso8601",
+      "observed": "2026-10-17T06:12:52.587Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/iso8601/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/iso8601/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/iso8601/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "jsonl-seek",
+      "observed": "2026-10-17T06:12:56.209Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/jsonl-seek/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/jsonl-seek/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "json-differ",
+      "observed": "2026-10-17T06:12:56.382Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/json-differ/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/json-differ/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/json-differ/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "jsonpatch-lite",
+      "observed": "2026-10-17T06:12:59.500Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/jsonpatch-lite/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/jsonpatch-lite/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/jsonpatch-lite/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "jsonptr",
+      "observed": "2026-10-17T06:12:59.482Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/jsonptr/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/jsonptr/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/jsonptr/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "junit-delta",
+      "observed": "2026-10-17T06:13:03.152Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/junit-delta/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/junit-delta/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "kafka-offset-audit",
+      "observed": "2026-10-17T06:13:03.045Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/kafka-offset-audit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/kafka-offset-audit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "lanbeam",
+      "observed": "2026-10-17T06:13:05.714Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/lanbeam/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/lanbeam/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "levendist",
+      "observed": "2026-10-17T06:13:05.562Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/levendist/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/levendist/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/levendist/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "lfs-handoff",
+      "observed": "2026-10-17T06:13:08.626Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/lfs-handoff/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/lfs-handoff/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "log-parser",
+      "observed": "2026-10-17T06:13:09.431Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/log-parser/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/log-parser/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/log-parser/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "mail-dns-topology",
+      "observed": "2026-10-17T06:13:12.782Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/mail-dns-topology/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/mail-dns-topology/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "lru-ts",
+      "observed": "2026-10-17T06:13:13.013Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/lru-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/lru-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/lru-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "masklink-audit",
+      "observed": "2026-10-17T06:13:16.092Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/masklink-audit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/masklink-audit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "markdownlint",
+      "observed": "2026-10-17T06:13:16.321Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/markdownlint/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/markdownlint/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/markdownlint/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "matrix-include-trace",
+      "observed": "2026-10-17T06:13:19.418Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/matrix-include-trace/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/matrix-include-trace/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "mbox-thread-graph",
+      "observed": "2026-10-17T06:13:19.763Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/mbox-thread-graph/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/mbox-thread-graph/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "medialoom",
+      "observed": "2026-10-17T06:13:22.275Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/medialoom/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/medialoom/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "mdtable",
+      "observed": "2026-10-17T06:13:22.463Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/mdtable/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/mdtable/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/mdtable/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "mimedb",
+      "observed": "2026-10-17T06:13:25.728Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/mimedb/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/mimedb/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/mimedb/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "memory-gauntlet",
+      "observed": "2026-10-17T06:13:26.038Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/memory-gauntlet/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/memory-gauntlet/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/memory-gauntlet/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/memory-gauntlet/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "mlproject",
+      "observed": "2026-10-17T06:13:30.151Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/mlproject/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/mlproject/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "mimedet",
+      "observed": "2026-10-17T06:13:29.978Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/mimedet/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/mimedet/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/mimedet/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "notebook-state-check",
+      "observed": "2026-10-17T06:15:03.652Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/notebook-state-check/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/notebook-state-check/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "morse",
+      "observed": "2026-10-17T06:15:03.523Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/morse/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/morse/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/morse/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "npm-export-witness",
+      "observed": "2026-10-17T06:15:07.310Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/npm-export-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/npm-export-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "nripankadas07",
+      "observed": "2026-10-17T06:15:07.345Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/nripankadas07/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/nripankadas07/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/nripankadas07/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "numbertheory",
+      "observed": "2026-10-17T06:15:10.617Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/numbertheory/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/numbertheory/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/numbertheory/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "numfmt",
+      "observed": "2026-10-17T06:15:10.598Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/numfmt/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/numfmt/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/numfmt/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "oci-whiteout-plan",
+      "observed": "2026-10-17T06:15:14.017Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/oci-whiteout-plan/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/oci-whiteout-plan/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "numparse",
+      "observed": "2026-10-17T06:15:14.172Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/numparse/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/numparse/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/numparse/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "otel-span-witness",
+      "observed": "2026-10-17T06:15:17.484Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/otel-span-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/otel-span-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "parseopts-ts",
+      "observed": "2026-10-17T06:15:17.471Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/parseopts-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/parseopts-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/parseopts-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "passhouse",
+      "observed": "2026-10-17T06:15:21.159Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/passhouse/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/passhouse/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "patchgym",
+      "observed": "2026-10-17T06:15:21.219Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/patchgym/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/patchgym/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "pathmask",
+      "observed": "2026-10-17T06:15:23.869Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/pathmask/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/pathmask/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/pathmask/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "path-trie",
+      "observed": "2026-10-17T06:15:24.187Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/path-trie/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/path-trie/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/path-trie/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "pcap-flow-ledger",
+      "observed": "2026-10-17T06:15:27.532Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/pcap-flow-ledger/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/pcap-flow-ledger/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "pathmatch-ts",
+      "observed": "2026-10-17T06:15:27.847Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/pathmatch-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/pathmatch-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/pathmatch-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "pg-lock-witness",
+      "observed": "2026-10-17T06:15:30.692Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/pg-lock-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/pg-lock-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "pdb-drain-witness",
+      "observed": "2026-10-17T06:15:31.000Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/pdb-drain-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/pdb-drain-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "photoflow",
+      "observed": "2026-10-17T06:15:33.234Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/photoflow/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/photoflow/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "phonenumber-mini",
+      "observed": "2026-10-17T06:15:33.366Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/phonenumber-mini/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/phonenumber-mini/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/phonenumber-mini/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "plan-regression",
+      "observed": "2026-10-17T06:15:36.128Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/plan-regression/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/plan-regression/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "pigeon",
+      "observed": "2026-10-17T06:15:36.477Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/pigeon/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/pigeon/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/pigeon/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "png-metadata-scrub",
+      "observed": "2026-10-17T06:15:39.682Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/png-metadata-scrub/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/png-metadata-scrub/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "portable-tree",
+      "observed": "2026-10-17T06:15:39.520Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/portable-tree/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/portable-tree/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "prom-label-budget",
+      "observed": "2026-10-17T06:15:42.218Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/prom-label-budget/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/prom-label-budget/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "posix-acl-explain",
+      "observed": "2026-10-17T06:15:42.248Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/posix-acl-explain/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/posix-acl-explain/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "proofdeck",
+      "observed": "2026-10-17T06:15:45.160Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/proofdeck/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/proofdeck/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "prompt-eval",
+      "observed": "2026-10-17T06:15:45.523Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/prompt-eval/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/prompt-eval/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/prompt-eval/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "querystring",
+      "observed": "2026-10-17T06:15:48.627Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/querystring/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/querystring/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/querystring/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "rag-pipeline",
+      "observed": "2026-10-17T06:15:48.698Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/rag-pipeline/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/rag-pipeline/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/rag-pipeline/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "ragneedle",
+      "observed": "2026-10-17T06:15:51.960Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/ragneedle/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/ragneedle/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "randpick",
+      "observed": "2026-10-17T06:15:52.125Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/randpick/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/randpick/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/randpick/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "rate-limiter",
+      "observed": "2026-10-17T06:17:49.187Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/rate-limiter/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/rate-limiter/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/rate-limiter/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "rangeset",
+      "observed": "2026-10-17T06:17:49.379Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/rangeset/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/rangeset/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/rangeset/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "redirect-graph",
+      "observed": "2026-10-17T06:17:53.103Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/redirect-graph/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/redirect-graph/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "readmine",
+      "observed": "2026-10-17T06:17:53.295Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/readmine/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/readmine/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "release-asset-matrix",
+      "observed": "2026-10-17T06:17:55.704Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/release-asset-matrix/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/release-asset-matrix/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "result-ts",
+      "observed": "2026-10-17T06:17:55.993Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/result-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/result-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/result-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "retryback",
+      "observed": "2026-10-17T06:17:59.208Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/retryback/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/retryback/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/retryback/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "retry-lib",
+      "observed": "2026-10-17T06:17:59.368Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/retry-lib/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/retry-lib/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/retry-lib/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "robots-route-contract",
+      "observed": "2026-10-17T06:18:02.778Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/robots-route-contract/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/robots-route-contract/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "ringbuf",
+      "observed": "2026-10-17T06:18:02.558Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/ringbuf/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/ringbuf/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/ringbuf/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "rssdeck",
+      "observed": "2026-10-17T06:18:05.418Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/rssdeck/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/rssdeck/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "runmirror",
+      "observed": "2026-10-17T06:18:06.214Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/runmirror/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/runmirror/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/runmirror/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/runmirror/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "s3-expiry-witness",
+      "observed": "2026-10-17T06:18:09.866Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/s3-expiry-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/s3-expiry-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "safejson",
+      "observed": "2026-10-17T06:18:10.237Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/safejson/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/safejson/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/safejson/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "sandboxledger",
+      "observed": "2026-10-17T06:18:13.317Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/sandboxledger/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/sandboxledger/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "san-coverage-plan",
+      "observed": "2026-10-17T06:18:13.392Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/san-coverage-plan/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/san-coverage-plan/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "schema-gen",
+      "observed": "2026-10-17T06:18:16.573Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/schema-gen/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/schema-gen/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/schema-gen/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "semverlite",
+      "observed": "2026-10-17T06:18:16.827Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/semverlite/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/semverlite/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/semverlite/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "shellexpand",
+      "observed": "2026-10-17T06:18:20.181Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/shellexpand/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/shellexpand/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/shellexpand/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "shell-quote",
+      "observed": "2026-10-17T06:18:20.556Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/shell-quote/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/shell-quote/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/shell-quote/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "sourcemap-trace",
+      "observed": "2026-10-17T06:18:23.860Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/sourcemap-trace/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/sourcemap-trace/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "slugify-x",
+      "observed": "2026-10-17T06:18:23.973Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/slugify-x/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/slugify-x/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/slugify-x/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "spdx-expression-paths",
+      "observed": "2026-10-17T06:18:26.976Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/spdx-expression-paths/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/spdx-expression-paths/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "specforge",
+      "observed": "2026-10-17T06:18:27.072Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/specforge/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/specforge/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "specmutate",
+      "observed": "2026-10-17T06:18:29.442Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/specmutate/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/specmutate/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "specspan",
+      "observed": "2026-10-17T06:18:29.562Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/specspan/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/specspan/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/specspan/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/specspan/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "sqlite-plan-witness",
+      "observed": "2026-10-17T06:18:33.637Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/sqlite-plan-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/sqlite-plan-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "sqlite-fixture-closure",
+      "observed": "2026-10-17T06:18:33.727Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/sqlite-fixture-closure/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/sqlite-fixture-closure/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "sqlite-rehearsal",
+      "observed": "2026-10-17T06:18:36.424Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/sqlite-rehearsal/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/sqlite-rehearsal/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "ssh-option-witness",
+      "observed": "2026-10-17T06:18:36.688Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/ssh-option-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/ssh-option-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "subtitle-timing-audit",
+      "observed": "2026-10-17T06:23:55.776Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/subtitle-timing-audit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/subtitle-timing-audit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "strtable",
+      "observed": "2026-10-17T06:23:55.914Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/strtable/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/strtable/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/strtable/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "syncplan",
+      "observed": "2026-10-17T06:23:59.234Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/syncplan/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/syncplan/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "systemd-order-audit",
+      "observed": "2026-10-17T06:23:59.165Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/systemd-order-audit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/systemd-order-audit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "table-reconcile",
+      "observed": "2026-10-17T06:24:01.672Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/table-reconcile/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/table-reconcile/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tagged-template-ts",
+      "observed": "2026-10-17T06:24:01.769Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/tagged-template-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tagged-template-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tagged-template-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tar-link-boundary",
+      "observed": "2026-10-17T06:24:05.177Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tar-link-boundary/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tar-link-boundary/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "task-queue",
+      "observed": "2026-10-17T06:24:05.431Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/task-queue/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/task-queue/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/task-queue/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tf-move-witness",
+      "observed": "2026-10-17T06:24:08.182Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tf-move-witness/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tf-move-witness/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "timeago",
+      "observed": "2026-10-17T06:24:08.299Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/timeago/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/timeago/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/timeago/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tinytemplate",
+      "observed": "2026-10-17T06:24:11.387Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/tinytemplate/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tinytemplate/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tinytemplate/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tinycache",
+      "observed": "2026-10-17T06:24:11.406Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/tinycache/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tinycache/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tinycache/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "token-counter",
+      "observed": "2026-10-17T06:24:14.790Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/token-counter/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/token-counter/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/token-counter/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tokenring-ts",
+      "observed": "2026-10-17T06:24:14.928Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/tokenring-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tokenring-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tokenring-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tomlmini",
+      "observed": "2026-10-17T06:24:18.554Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/tomlmini/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tomlmini/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tomlmini/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tooldrill",
+      "observed": "2026-10-17T06:24:18.657Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/tooldrill/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/tooldrill/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tooldrill/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tooldrill/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "traceweave",
+      "observed": "2026-10-17T06:24:22.322Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/traceweave/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/traceweave/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "trie",
+      "observed": "2026-10-17T06:24:22.537Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/trie/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/trie/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/trie/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "trie-ts",
+      "observed": "2026-10-17T06:24:25.681Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/trie-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/trie-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/trie-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "trustline-mcp",
+      "observed": "2026-10-17T06:24:25.583Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/trustline-mcp/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/trustline-mcp/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/trustline-mcp/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/trustline-mcp/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tsmemo",
+      "observed": "2026-10-17T06:24:40.018Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/tsmemo/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tsmemo/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tsmemo/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "tsparser",
+      "observed": "2026-10-17T06:24:40.000Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/tsparser/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/tsparser/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/tsparser/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "uptimelog",
+      "observed": "2026-10-17T06:24:43.406Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/uptimelog/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/uptimelog/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "unitcalc",
+      "observed": "2026-10-17T06:24:43.531Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/unitcalc/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/unitcalc/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/unitcalc/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "urlnorm",
+      "observed": "2026-10-17T06:24:46.581Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/urlnorm/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/urlnorm/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/urlnorm/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "urltemplate",
+      "observed": "2026-10-17T06:24:46.699Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/urltemplate/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/urltemplate/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/urltemplate/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "uuidgen",
+      "observed": "2026-10-17T06:24:50.050Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/uuidgen/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/uuidgen/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/uuidgen/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "value-density-lab",
+      "observed": "2026-10-17T06:24:49.764Z",
+      "dependabot": "Enabled",
+      "code": "Enabled",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/value-density-lab/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "code-scanning",
+          "url": "https://github.com/nripankadas07/value-density-lab/security/code-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/value-density-lab/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/value-density-lab/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "webhook-window-guard",
+      "observed": "2026-10-17T06:24:53.550Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/webhook-window-guard/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/webhook-window-guard/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "wheel-sentinel",
+      "observed": "2026-10-17T06:24:53.581Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/wheel-sentinel/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/wheel-sentinel/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "xml-namespace-contract",
+      "observed": "2026-10-17T06:24:57.027Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/xml-namespace-contract/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/xml-namespace-contract/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "wordwrap",
+      "observed": "2026-10-17T06:24:56.595Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/wordwrap/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/wordwrap/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/wordwrap/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "emitter-ts",
+      "observed": "2026-10-17T06:25:00.055Z",
+      "dependabot": "Enabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "dependabot",
+          "url": "https://github.com/nripankadas07/emitter-ts/security/dependabot",
+          "state": "CLEAR"
+        },
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/emitter-ts/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/emitter-ts/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "stringcase",
+      "observed": "2026-10-17T06:25:10.519Z",
+      "dependabot": "UNKNOWN",
+      "code": "UNKNOWN",
+      "secrets": "UNKNOWN",
+      "feeds": [],
+      "coverage": "UNAVAILABLE",
+      "error": "Bounded security navigation retries ended with net::ERR_BLOCKED_BY_CLIENT; overview and enabled-feed coverage not completed."
+    },
+    {
+      "repo": "startup-dashboard",
+      "observed": "2026-10-17T06:25:10.519Z",
+      "dependabot": "UNKNOWN",
+      "code": "UNKNOWN",
+      "secrets": "UNKNOWN",
+      "feeds": [],
+      "coverage": "UNAVAILABLE",
+      "error": "Bounded security navigation retries ended with net::ERR_BLOCKED_BY_CLIENT; overview and enabled-feed coverage not completed."
+    },
+    {
+      "repo": "vcd-state-ledger",
+      "observed": "2026-10-17T06:36:48.790Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/vcd-state-ledger/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/vcd-state-ledger/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "obj-island-audit",
+      "observed": "2026-10-17T06:36:51.550Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/obj-island-audit/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/obj-island-audit/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "modbus-frame-ledger",
+      "observed": "2026-10-17T06:37:09.663Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/modbus-frame-ledger/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/modbus-frame-ledger/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "cue-sample-plan",
+      "observed": "2026-10-17T06:37:12.217Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/cue-sample-plan/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/cue-sample-plan/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    },
+    {
+      "repo": "pgn-clock-ledger",
+      "observed": "2026-10-17T06:37:14.548Z",
+      "dependabot": "Disabled",
+      "code": "Needs setup",
+      "secrets": "Enabled",
+      "feeds": [
+        {
+          "route": "secret-scanning",
+          "url": "https://github.com/nripankadas07/pgn-clock-ledger/security/secret-scanning",
+          "state": "CLEAR"
+        },
+        {
+          "route": "malware",
+          "url": "https://github.com/nripankadas07/pgn-clock-ledger/security/malware",
+          "state": "DISABLED"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Security access is incomplete on startup-dashboard and stringcase: bounded fresh navigation attempts ended in net::ERR_BLOCKED_BY_CLIENT. Their current overview/enabled alerts were not verified; this is not a sign-in screen, bot challenge or proof of no alerts. Restore ordinary access to those security pages for complete coverage; no credential/cookie changes were attempted.",
+    "Among 191 completed security overviews, Dependabot is disabled on 84, code scanning needs setup on 181 and secret scanning is enabled on 191. Malware feeds are disabled on those 191. Disabled/unconfigured feeds are not clean results; the two unavailable repositories have unknown scanner configuration."
+  ]
+}
