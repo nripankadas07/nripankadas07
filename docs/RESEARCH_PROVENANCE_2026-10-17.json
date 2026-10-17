@@ -1,0 +1,925 @@
+{
+  "observed_date": "2026-10-17",
+  "queries": [
+    {
+      "query": "VCD waveform",
+      "url": "https://github.com/search?q=VCD+waveform&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:55.959Z"
+    },
+    {
+      "query": "mesh analysis",
+      "url": "https://github.com/search?q=mesh%20analysis&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:56.979Z"
+    },
+    {
+      "query": "modbus",
+      "url": "https://github.com/search?q=modbus&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:57.966Z"
+    },
+    {
+      "query": "cue splitter",
+      "url": "https://github.com/search?q=cue%20splitter&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:58.843Z"
+    },
+    {
+      "query": "PGN parser",
+      "url": "https://github.com/search?q=PGN%20parser&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:07:59.739Z"
+    },
+    {
+      "query": "3D data processing",
+      "url": "https://github.com/search?q=3D+data+processing&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:25:19.570Z",
+      "leader": "isl-org/Open3D",
+      "stars": 14098
+    },
+    {
+      "query": "modbus library",
+      "url": "https://github.com/search?q=modbus+library&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:26:25.149Z",
+      "leader": "stephane/libmodbus",
+      "stars": 4268
+    },
+    {
+      "query": "audio CD image",
+      "url": "https://github.com/search?q=audio+CD+image&type=repositories&s=stars&o=desc",
+      "observed": "2026-10-17T06:26:31.848Z",
+      "leader": "flacon/flacon",
+      "stars": 546
+    }
+  ],
+  "briefs": [
+    {
+      "repo": "vcd-state-ledger",
+      "module": "vcd_state_ledger",
+      "units": 20,
+      "capability": "Account for exact 0/1/x/z bit-time and transition evidence in small digital VCD captures.",
+      "user": "RTL verification engineers reviewing a short simulation capture.",
+      "pain": "A plot alone does not provide a reproducible unknown-state duration ledger across aliased signals.",
+      "query": "VCD waveform",
+      "leader": "gtkwave/gtkwave",
+      "comparables": [
+        "gtkwave/gtkwave",
+        "cirosantilli/vcdvcd",
+        "ics-jku/wal"
+      ],
+      "quick": "vcd-state-ledger example.vcd --end-tick 15",
+      "expected": "The example intentionally exits 1: bus unknown bit-time is 10 bit-ticks. Clock 0/1 durations are 10/5 ticks; bus 0/1/x durations are 10/10/10 bit-ticks. Aliases share one signal record.",
+      "contract": "ASCII VCD with one timescale, module scopes and wire/reg/logic variables. Binary and scalar values; widths 1\u2013256. Initial bits are x at tick zero. Initialization x-to-known counts as a value change; known scalar 0-to-1/1-to-0 counts as rising/falling evidence. Same-tick changes count but consume no duration. The last timestamp ends the interval unless --end-tick explicitly extends the final held values. Unknown bit-time includes x and z; all per-bit durations sum to width times end tick.",
+      "limits": "2 MiB, 250,000 tokens, 512 unique IDs, 2,000 names, 100,000 value events and scope depth 32. No real values, EVCD, FST, dump-on/off intervals, analog timing or power inference. This is a deliberately small capture parser, not a waveform viewer.",
+      "acceptance": "Exact duration conservation, aliases, same-tick glitches, scalar edges and x/z propagation; reject undeclared identifiers, invalid widths, incomplete scopes and decreasing timestamps.",
+      "notes": "GTKWave offers interactive waveform inspection and many more formats. vcdvcd exposes timestamps and alias references; WAL provides programmable waveform analysis. WAL issue 46 discusses large-capture memory; that is adjacent demand evidence, not a request for this tool or proof of an unresolved defect. Our bounded JSON accounting does not replace these systems.",
+      "alternatives": "Use GTKWave, script vcdvcd, or write a WAL analysis.",
+      "overlap": "The existing traceweave repository analyzes AI-agent JSONL traces. This project reads hardware Value Change Dump signal state and bit-time; it is not another JSONL trace formatter.",
+      "reference": "cirosantilli/vcdvcd",
+      "topics": [
+        "vcd",
+        "verilog",
+        "digital-design",
+        "python",
+        "waveform"
+      ]
+    },
+    {
+      "repo": "obj-island-audit",
+      "module": "obj_island_audit",
+      "units": 21,
+      "capability": "Explain edge-connected triangle islands and edge defects in a bounded OBJ mesh.",
+      "user": "CAD/export pipeline maintainers inspecting a triangulated OBJ before downstream processing.",
+      "pain": "Disconnected parts, seam duplicates and orientation conflicts need attributable face/edge evidence rather than an unexplained pass/fail.",
+      "query": "3D data processing",
+      "leader": "isl-org/Open3D",
+      "comparables": [
+        "isl-org/Open3D",
+        "cnr-isti-vclab/meshlab",
+        "mikedh/trimesh"
+      ],
+      "quick": "obj-island-audit example.obj",
+      "expected": "The invented OBJ has two separate closed tetrahedral edge surfaces, eight faces and no reported edge defects; exit 0. Multiple closed islands alone are not an error.",
+      "contract": "UTF-8 OBJ triangle faces only. Positive and relative negative indices are validated at the face declaration, including texture/normal references. Exact-coordinate welding always applies. --weld-decimals 0\u20139 adds half-even decimal-grid quantization, not a Euclidean distance tolerance. Degenerate and duplicate faces are reported and excluded before edge incidence and island grouping. Point-touch contacts remain separate edge islands and are reported. Metadata is counted; materials are never loaded.",
+      "limits": "2 MiB, 20,000 vertices and 30,000 triangle faces. Coordinates: zero or absolute magnitude 1e-12 through 1e9, bounded decimal precision. No polygons, freeform curves, repair, self-intersection detection, vertex-manifold certification, solid volume or printability guarantee. closed_edge_surface only means each retained component edge has incidence two; it is not a full watertightness claim. Area is approximate.",
+      "acceptance": "Recover two closed islands, attribute boundary/nonmanifold/orientation/contact defects, validate interleaved relative indices and reject forward/zero references and unsupported polygons.",
+      "notes": "Open3D already clusters connected triangles and computes manifold evidence. Trimesh already offers adjacency, splitting and watertightness operations; MeshLab offers a broad interactive processing workflow. Trimesh PR 2620 discusses interleaved OBJ relative indices. Our explicit small-file evidence report is a narrower interface, not an absent competitor feature.",
+      "alternatives": "Open3D or Trimesh scripts, or interactive MeshLab filters.",
+      "overlap": "No existing owned repository is a triangle OBJ topology inspector. Point-table, GIS and media index tools do not implement OBJ face incidence or coordinate welding.",
+      "reference": "isl-org/Open3D",
+      "topics": [
+        "obj",
+        "mesh",
+        "geometry",
+        "python",
+        "cad"
+      ]
+    },
+    {
+      "repo": "modbus-frame-ledger",
+      "module": "modbus_frame_ledger",
+      "units": 18,
+      "capability": "Decode one captured Modbus RTU register response against an explicit typed CSV map.",
+      "user": "Controls engineers reviewing an offline serial capture with a device register map.",
+      "pain": "A CRC-valid byte sequence still needs explicit address context, byte order, scale and coverage evidence.",
+      "query": "modbus library",
+      "leader": "stephane/libmodbus",
+      "comparables": [
+        "stephane/libmodbus",
+        "pymodbus-dev/pymodbus",
+        "gavinying/modpoll"
+      ],
+      "quick": "modbus-frame-ledger example.hex example.csv --start 0",
+      "expected": "Exit 0, with temperature -10, status 0 and pressure 12.5. All four captured registers are covered.",
+      "contract": "ASCII hexadecimal RTU response, expected unit 1\u2013247 and function 3 or 4, and mandatory zero-based --start supplied from the request. The response does not carry its start address: context is caller asserted. Validate length, even byte count and CRC16/MODBUS; CRC is not authentication. CSV columns exactly name,address,type,order,scale,offset. u16/i16 use AB or BA; u32/i32/f32 use ABCD/BADC/CDAB/DCBA. Byte-order labels describe wire order relative to canonical ABCD. Scale and offset use exact decimal arithmetic; finite binary32 values retain their exact binary value before scaling.",
+      "limits": "One frame of 5\u2013256 bytes and at most 125 registers; CSV 64 KiB and 125 rows. No overlapping mapped spans, serial ports, TCP, polling, device writes, request capture pairing, authentication or device-specific register semantics. Exceptions, unmapped words, map rows outside the response and nonfinite floats produce valid exit-1 evidence. Exact numeric representation is not a claim about sensor measurement precision.",
+      "acceptance": "Verify known CRC vectors, all byte orders, signed values, binary32 scaling, complete map coverage, CRC failure and valid exception/nonfinite/out-of-range findings.",
+      "notes": "libmodbus and Pymodbus provide full client/server protocol implementations. Modpoll already supports CSV-based device configuration. The broad modbus query also returned telemetry and energy platforms; these are broader integrations, while the focused modbus library query placed libmodbus first. No capability-absence claim or device reliability comparison is made.",
+      "alternatives": "Use libmodbus/Pymodbus protocol code or Modpoll with appropriate device configuration.",
+      "overlap": "No existing owned project decodes RTU response frames or typed Modbus register maps. General CSV validation and packet text tools do not provide this protocol contract.",
+      "reference": "stephane/libmodbus",
+      "topics": [
+        "modbus",
+        "rtu",
+        "industrial-automation",
+        "python",
+        "protocol-analysis"
+      ]
+    },
+    {
+      "repo": "cue-sample-plan",
+      "module": "cue_sample_plan",
+      "units": 20,
+      "capability": "Partition local CUE/WAVE source sample frames into track, recorded-pregap and unassigned intervals.",
+      "user": "Audio archivists checking how a CUE sheet would divide an uncompressed disc image.",
+      "pain": "A split plan should explain recorded gaps and account for every source frame before any encoder runs.",
+      "query": "audio CD image",
+      "leader": "flacon/flacon",
+      "comparables": [
+        "flacon/flacon",
+        "ftrvxmtrx/split2flac",
+        "jeanslack/FFcuesplitter"
+      ],
+      "quick": "cue-sample-plan --make-example example-work\n.venv/bin/cue-sample-plan example-work/example.cue",
+      "expected": "The generator writes invented silence into a new directory. The plan exits 0 and covers [0,44100) track 1, [44100,88200) recorded pregap, and [88200,176400) track 2. Planning does not modify source files.",
+      "contract": "UTF-8 CUE with quoted basename-only FILE WAVE, consecutive AUDIO tracks and INDEX 01 plus optional preceding INDEX 00. Actual little-endian RIFF/WAVE PCM or IEEE_FLOAT metadata determines sample rate, frame alignment, data bounds and byte offsets. CUE indices are 75 frames/second and must map to integer sample-frame boundaries exactly. A sample frame contains all channels. Intervals use exclusive ends and cover each source frame exactly once, including explicit unassigned leading audio findings. SHA256 identifies source bytes.",
+      "limits": "CUE 64 KiB, 16 local files, 99 tracks, 64 MiB per WAVE/128 MiB aggregate. No symlinks or path traversal, compressed audio, RF64/RIFX/extensible WAVE, synthetic PREGAP/POSTGAP, extra indices, copying, transcoding, resampling, tags or audio quality assessment. Unknown RIFF chunks are counted. --make-example only creates a new directory and refuses overwrite.",
+      "acceptance": "Prove exact contiguous frame coverage, explicit INDEX00 gaps and leading findings, stereo byte offsets, source-byte preservation, RIFF validation, and rejection of unrepresentable frame boundaries and unsafe paths.",
+      "notes": "Flacon already extracts and tags tracks from disc images. FFcuesplitter supports broader audio formats and text encodings. split2flac is archived and its README points to a replacement; it is a historical alternative, not presented as maintained. Flacon cue.cpp already treats INDEX00 and INDEX01. Our read-only sample accounting intentionally omits splitting and compressed formats.",
+      "alternatives": "Flacon or FFcuesplitter for actual extraction; inspect the CUE manually before choosing an encoder.",
+      "overlap": "The existing medialoom repository catalogs media metadata. This tool reads CUE index semantics and actual RIFF binary data to construct a complete source-frame partition, rather than another catalog.",
+      "reference": "flacon/flacon",
+      "topics": [
+        "cue",
+        "wav",
+        "audio",
+        "python",
+        "digital-preservation"
+      ]
+    },
+    {
+      "repo": "pgn-clock-ledger",
+      "module": "pgn_clock_ledger",
+      "units": 20,
+      "capability": "Reconstruct per-ply clock differences from a bounded annotated PGN mainline without hiding missing evidence.",
+      "user": "Chess study authors auditing recorded clock annotations in a short standard-start game.",
+      "pain": "Missing annotations or an unexplained clock increase should not silently become zero thinking time.",
+      "query": "PGN parser",
+      "leader": "niklasf/python-chess",
+      "comparables": [
+        "niklasf/python-chess",
+        "bhlangonijr/chesslib",
+        "mliebelt/pgn-parser"
+      ],
+      "quick": "pgn-clock-ledger example.pgn",
+      "expected": "Exit 0 with elapsed milliseconds [3000,2000,3000,5000]; known totals are white 6000 and black 7000 under the stated increment convention.",
+      "contract": "One UTF-8 PGN, mandatory simple integer TimeControl base+increment, standard initial position and alternating SAN-like mainline labels. Brace [%clk H:MM:SS[.fff]] annotations are exact milliseconds. Assumption: each annotation is after its move and that move\u2019s increment, including the first captured move. elapsed = previous same-side clock + increment - current clock. Missing evidence invalidates the next same-side difference until a new baseline is captured. An increase exceeding increment is a finding with no elapsed value. Balanced variations, semicolon comments and NAGs do not contribute clock evidence; header/body result agreement is enforced.",
+      "limits": "128 KiB, 64 headers, 10,000 plies, variation depth 32, token length 64; base 1\u201386400 seconds and increment 0\u20133600. No multi-stage/delay controls, FEN starts, variants, multiple games or sub-millisecond clocks. Move labels are not checked for chess legality. No engine, cheating, flag, network lag or actual-thinking-time inference; totals cover only computed evidence.",
+      "acceptance": "Reproduce increment arithmetic, fractional milliseconds, per-side missing-clock resynchronization, ignored variations, and reject duplicate/leading clocks, malformed controls, wrong move numbers and result conflicts.",
+      "notes": "python-chess already supports PGN clock and elapsed annotations and legal move handling. Chesslib offers a broader Java chess model; mliebelt/pgn-parser produces a structured PGN representation. Their broader capabilities are not replaced. Our dependency-free evidence ledger has stricter bounded input and deliberately does not validate legal chess.",
+      "alternatives": "Use python-chess clock accessors, Chesslib or pgn-parser and implement the desired accounting convention.",
+      "overlap": "No existing owned chess/PGN project was found. Other timing tools handle different input domains and do not parse chess mainlines and per-side clock evidence.",
+      "reference": "niklasf/python-chess",
+      "topics": [
+        "pgn",
+        "chess",
+        "python",
+        "clock",
+        "data-validation"
+      ]
+    }
+  ],
+  "comparables": [
+    {
+      "full": "gtkwave/gtkwave",
+      "url": "https://github.com/gtkwave/gtkwave",
+      "stars": 1033,
+      "default_branch": "master",
+      "pushed_at": "2026-10-12T04:06:19Z",
+      "updated_at": "2026-10-15T21:15:13Z",
+      "archived": false,
+      "license": "GPL-2.0",
+      "description": "GTKWave is a fully featured GTK+ based wave viewer for Unix and Win32 which reads LXT, LXT2, VZT, FST, and GHW files as well as standard Verilog VCD/EVCD files and allows their viewing.",
+      "observed": "2026-10-17T06:09:54.318Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "458fd8b6ac6c4fa9aad479a231045c0c359172ba"
+      },
+      "issues": [
+        {
+          "number": 520,
+          "title": "Out-of-bounds array read in bsearch_node()/bsearch_vector() for single-entry signals (aix bsearch fix fallback)",
+          "url": "https://github.com/gtkwave/gtkwave/issues/520",
+          "pull_request": false
+        },
+        {
+          "number": 519,
+          "title": "WCP : Add support for get_cursor, cursor_set event and get_values ",
+          "url": "https://github.com/gtkwave/gtkwave/pull/519",
+          "pull_request": true
+        },
+        {
+          "number": 517,
+          "title": "macOS Homebrew: compilation fails w/ missing 'GObject-2.0.gir'; file",
+          "url": "https://github.com/gtkwave/gtkwave/issues/517",
+          "pull_request": false
+        },
+        {
+          "number": 516,
+          "title": "Build: support older GLib and static libgtkwave builds",
+          "url": "https://github.com/gtkwave/gtkwave/pull/516",
+          "pull_request": true
+        },
+        {
+          "number": 513,
+          "title": "vcd: recover EVCD port direction and drive strength",
+          "url": "https://github.com/gtkwave/gtkwave/pull/513",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "ics-jku/wal",
+      "url": "https://github.com/ics-jku/wal",
+      "stars": 188,
+      "default_branch": "main",
+      "pushed_at": "2026-09-22T11:52:31Z",
+      "updated_at": "2026-10-11T14:18:51Z",
+      "archived": false,
+      "license": "BSD-3-Clause",
+      "description": "WAL enables programmable waveform analysis.",
+      "observed": "2026-10-17T06:09:54.303Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "25d67538710791dd37156518d2c8547fcd94d5c1"
+      },
+      "issues": [
+        {
+          "number": 47,
+          "title": "Where is the source for the documentation?",
+          "url": "https://github.com/ics-jku/wal/issues/47",
+          "pull_request": false
+        },
+        {
+          "number": 46,
+          "title": "VCD parser memory inefficiency for large simulations",
+          "url": "https://github.com/ics-jku/wal/issues/46",
+          "pull_request": false
+        },
+        {
+          "number": 45,
+          "title": "feature/sparse vcd parser",
+          "url": "https://github.com/ics-jku/wal/pull/45",
+          "pull_request": true
+        },
+        {
+          "number": 44,
+          "title": "Fix KeyError in VCD trace parsing for undefined signal IDs",
+          "url": "https://github.com/ics-jku/wal/pull/44",
+          "pull_request": true
+        },
+        {
+          "number": 41,
+          "title": "variable server-start is undefined",
+          "url": "https://github.com/ics-jku/wal/issues/41",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "isl-org/Open3D",
+      "url": "https://github.com/isl-org/Open3D",
+      "stars": 14098,
+      "default_branch": "main",
+      "pushed_at": "2026-09-30T10:06:02Z",
+      "updated_at": "2026-10-17T04:39:38Z",
+      "archived": false,
+      "license": "NOASSERTION",
+      "description": "Open3D: A Modern Library for 3D Data Processing",
+      "observed": "2026-10-17T06:09:54.261Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "ecdce05a71e4d943acebadabc7028940a14a55ec"
+      },
+      "issues": [
+        {
+          "number": 7603,
+          "title": "Forward flags from the centered Window constructors",
+          "url": "https://github.com/isl-org/Open3D/pull/7603",
+          "pull_request": true
+        },
+        {
+          "number": 7602,
+          "title": "Replace global Logging macros with inline functions",
+          "url": "https://github.com/isl-org/Open3D/pull/7602",
+          "pull_request": true
+        },
+        {
+          "number": 7601,
+          "title": "docs: exclude dev_wheels and sycl .in.rst templates from the Sphinx build",
+          "url": "https://github.com/isl-org/Open3D/pull/7601",
+          "pull_request": true
+        },
+        {
+          "number": 7600,
+          "title": "Fix optional union types in generated Python signatures",
+          "url": "https://github.com/isl-org/Open3D/pull/7600",
+          "pull_request": true
+        },
+        {
+          "number": 7599,
+          "title": "docs: list supported point cloud formats",
+          "url": "https://github.com/isl-org/Open3D/pull/7599",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "mikedh/trimesh",
+      "url": "https://github.com/mikedh/trimesh",
+      "stars": 3702,
+      "default_branch": "main",
+      "pushed_at": "2026-10-14T19:23:27Z",
+      "updated_at": "2026-10-15T18:23:07Z",
+      "archived": false,
+      "license": "MIT",
+      "description": "Python library for loading and using triangular meshes.",
+      "observed": "2026-10-17T06:09:54.215Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "a3410dd44b79f08ce1dc31241c733ffe4f87919d"
+      },
+      "issues": [
+        {
+          "number": 2626,
+          "title": "The quickstart example in the README.md causes a crash due to the used GLB file, when memory size is low",
+          "url": "https://github.com/mikedh/trimesh/issues/2626",
+          "pull_request": false
+        },
+        {
+          "number": 2625,
+          "title": "Release: Fix Normals Under Nonuniform Scaling",
+          "url": "https://github.com/mikedh/trimesh/pull/2625",
+          "pull_request": true
+        },
+        {
+          "number": 2622,
+          "title": "Feature request: opt-in export diagnostics for unsupported mesh attributes",
+          "url": "https://github.com/mikedh/trimesh/issues/2622",
+          "pull_request": false
+        },
+        {
+          "number": 2620,
+          "title": "Resolve interleaved OBJ relative indices before grouping",
+          "url": "https://github.com/mikedh/trimesh/pull/2620",
+          "pull_request": true
+        },
+        {
+          "number": 2618,
+          "title": "Fix nonuniform weighted Procrustes rotation",
+          "url": "https://github.com/mikedh/trimesh/pull/2618",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "cnr-isti-vclab/meshlab",
+      "url": "https://github.com/cnr-isti-vclab/meshlab",
+      "stars": 5870,
+      "default_branch": "main",
+      "pushed_at": "2026-08-25T20:38:52Z",
+      "updated_at": "2026-10-17T02:20:16Z",
+      "archived": false,
+      "license": "GPL-3.0",
+      "description": "The open source mesh processing system",
+      "observed": "2026-10-17T06:09:54.299Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "3837b00363df5014b53a9b2ff8ce643eac70994e"
+      },
+      "issues": [
+        {
+          "number": 1670,
+          "title": "Initialize the CheckSurfDist default of isotropic remeshing",
+          "url": "https://github.com/cnr-isti-vclab/meshlab/pull/1670",
+          "pull_request": true
+        },
+        {
+          "number": 1668,
+          "title": "Add a windows postbuild custom command so devs building via MSVC don'\u2026",
+          "url": "https://github.com/cnr-isti-vclab/meshlab/pull/1668",
+          "pull_request": true
+        },
+        {
+          "number": 1663,
+          "title": "Preserve edge topology when exporting PLY meshes",
+          "url": "https://github.com/cnr-isti-vclab/meshlab/pull/1663",
+          "pull_request": true
+        },
+        {
+          "number": 1657,
+          "title": "crashes left and right !",
+          "url": "https://github.com/cnr-isti-vclab/meshlab/issues/1657",
+          "pull_request": false
+        },
+        {
+          "number": 1656,
+          "title": "filter_embree Error",
+          "url": "https://github.com/cnr-isti-vclab/meshlab/issues/1656",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "stephane/libmodbus",
+      "url": "https://github.com/stephane/libmodbus",
+      "stars": 4268,
+      "default_branch": "master",
+      "pushed_at": "2026-07-02T10:16:05Z",
+      "updated_at": "2026-10-16T13:22:34Z",
+      "archived": false,
+      "license": "LGPL-2.1",
+      "description": "A Modbus library for Linux, Mac OS, FreeBSD and Windows",
+      "observed": "2026-10-17T06:09:54.274Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "479da4c63dbc41d4c0cc6a5bc7541a884b1e6dc4"
+      },
+      "issues": [
+        {
+          "number": 883,
+          "title": "modbus_reply() accepts Write Multiple Coils with Byte Count larger than ceil(Quantity/8)",
+          "url": "https://github.com/stephane/libmodbus/issues/883",
+          "pull_request": false
+        },
+        {
+          "number": 882,
+          "title": "_modbus_receive_msg: use a deadline for the receive timeout",
+          "url": "https://github.com/stephane/libmodbus/pull/882",
+          "pull_request": true
+        },
+        {
+          "number": 881,
+          "title": "Frame Modbus TCP messages by their MBAP length",
+          "url": "https://github.com/stephane/libmodbus/pull/881",
+          "pull_request": true
+        },
+        {
+          "number": 880,
+          "title": "modbus_proxy() sends responses on the RTU bus for broadcast requests",
+          "url": "https://github.com/stephane/libmodbus/issues/880",
+          "pull_request": false
+        },
+        {
+          "number": 879,
+          "title": "modbus: export the libmodbus_version_* variables from the DLL",
+          "url": "https://github.com/stephane/libmodbus/pull/879",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "pymodbus-dev/pymodbus",
+      "url": "https://github.com/pymodbus-dev/pymodbus",
+      "stars": 2782,
+      "default_branch": "dev",
+      "pushed_at": "2026-10-16T13:01:44Z",
+      "updated_at": "2026-10-16T13:22:33Z",
+      "archived": false,
+      "license": "NOASSERTION",
+      "description": "A full modbus protocol written in python",
+      "observed": "2026-10-17T06:09:54.342Z",
+      "readme": {
+        "path": "README.rst",
+        "sha": "ac690de7494b229a77167fdc543ae8a8c5d4d610"
+      },
+      "issues": [],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "gavinying/modpoll",
+      "url": "https://github.com/gavinying/modpoll",
+      "stars": 154,
+      "default_branch": "main",
+      "pushed_at": "2026-08-19T02:49:16Z",
+      "updated_at": "2026-10-16T19:15:42Z",
+      "archived": false,
+      "license": "MIT",
+      "description": "A New Command-line Tool for Modbus and MQTT",
+      "observed": "2026-10-17T06:09:54.307Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "58eeac6782098067639ea0eb3d4bd8d61676132c"
+      },
+      "issues": [
+        {
+          "number": 106,
+          "title": "chore(main): release 1.6.1",
+          "url": "https://github.com/gavinying/modpoll/pull/106",
+          "pull_request": true
+        },
+        {
+          "number": 102,
+          "title": "Many warnings when using modpoll",
+          "url": "https://github.com/gavinying/modpoll/issues/102",
+          "pull_request": false
+        },
+        {
+          "number": 100,
+          "title": "How to automatically create a CSV file",
+          "url": "https://github.com/gavinying/modpoll/issues/100",
+          "pull_request": false
+        },
+        {
+          "number": 82,
+          "title": "Can't get modpoll to run in a Compose Setup",
+          "url": "https://github.com/gavinying/modpoll/issues/82",
+          "pull_request": false
+        },
+        {
+          "number": 71,
+          "title": "Multiple devices?",
+          "url": "https://github.com/gavinying/modpoll/issues/71",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "flacon/flacon",
+      "url": "https://github.com/flacon/flacon",
+      "stars": 546,
+      "default_branch": "master",
+      "pushed_at": "2026-10-13T15:50:26Z",
+      "updated_at": "2026-10-07T16:07:33Z",
+      "archived": false,
+      "license": "LGPL-2.1",
+      "description": "Audio File Encoder. Extracts audio tracks from an audio CD image to separate tracks.",
+      "observed": "2026-10-17T06:09:54.426Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "57d484c67686abfa2e4319d89b0ca459d1bcfbbf"
+      },
+      "issues": [
+        {
+          "number": 254,
+          "title": "Changes to the file naming pattern are not taken into account unless the focus is moved to another control.",
+          "url": "https://github.com/flacon/flacon/issues/254",
+          "pull_request": false
+        },
+        {
+          "number": 248,
+          "title": "Support cue in combination with mp3",
+          "url": "https://github.com/flacon/flacon/issues/248",
+          "pull_request": false
+        },
+        {
+          "number": 247,
+          "title": "Add an option to replace spaces/special characters by custom character",
+          "url": "https://github.com/flacon/flacon/issues/247",
+          "pull_request": false
+        },
+        {
+          "number": 231,
+          "title": "Bump actions/download-artifact from 3 to 4.1.7 in /.github/workflows",
+          "url": "https://github.com/flacon/flacon/pull/231",
+          "pull_request": true
+        },
+        {
+          "number": 227,
+          "title": "Dark theme in flacon",
+          "url": "https://github.com/flacon/flacon/issues/227",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "ftrvxmtrx/split2flac",
+      "url": "https://github.com/ftrvxmtrx/split2flac",
+      "stars": 259,
+      "default_branch": "master",
+      "pushed_at": "2020-05-08T20:11:32Z",
+      "updated_at": "2026-07-11T18:19:33Z",
+      "archived": true,
+      "license": "NOASSERTION",
+      "description": "Split flac/ape/wv/wav + cue sheet into separate tracks",
+      "observed": "2026-10-17T06:09:54.316Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "8805a8ddcde9ad532dc571f4aee555b52671373a"
+      },
+      "issues": [
+        {
+          "number": 40,
+          "title": "Support BSD sed and improvements to cuefile handling",
+          "url": "https://github.com/ftrvxmtrx/split2flac/pull/40",
+          "pull_request": true
+        },
+        {
+          "number": 39,
+          "title": "split2flac-bash-completion.sh: Syntax error",
+          "url": "https://github.com/ftrvxmtrx/split2flac/issues/39",
+          "pull_request": false
+        },
+        {
+          "number": 38,
+          "title": "fix Copy Over \"cannot stat\" error",
+          "url": "https://github.com/ftrvxmtrx/split2flac/pull/38",
+          "pull_request": true
+        },
+        {
+          "number": 37,
+          "title": "Use current directory as default if undefined",
+          "url": "https://github.com/ftrvxmtrx/split2flac/pull/37",
+          "pull_request": true
+        },
+        {
+          "number": 36,
+          "title": "Try to detect charset with 'file' command",
+          "url": "https://github.com/ftrvxmtrx/split2flac/pull/36",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "jeanslack/FFcuesplitter",
+      "url": "https://github.com/jeanslack/FFcuesplitter",
+      "stars": 98,
+      "default_branch": "main",
+      "pushed_at": "2026-10-13T07:50:11Z",
+      "updated_at": "2026-10-09T09:53:36Z",
+      "archived": false,
+      "license": "GPL-3.0",
+      "description": "FFmpeg based audio splitter for CDDA images associated with .cue files",
+      "observed": "2026-10-17T06:09:54.221Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "7b9baf4b7f5d5214f2012091e1e47c4dcceb8438"
+      },
+      "issues": [
+        {
+          "number": 52,
+          "title": "Option to disable .ffcuesplitter.log",
+          "url": "https://github.com/jeanslack/FFcuesplitter/issues/52",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "niklasf/python-chess",
+      "url": "https://github.com/niklasf/python-chess",
+      "stars": 2892,
+      "default_branch": "master",
+      "pushed_at": "2026-08-22T13:17:47Z",
+      "updated_at": "2026-10-15T05:46:53Z",
+      "archived": false,
+      "license": "GPL-3.0",
+      "description": "A chess library for Python, with move generation and validation, PGN parsing and writing, Polyglot opening book reading, Gaviota tablebase probing, Syzygy tablebase probing, and UCI/XBoard engine communication",
+      "observed": "2026-10-17T06:09:54.231Z",
+      "readme": {
+        "path": "README.rst",
+        "sha": "e4b2166f33c74039f3afd875c877669f9e7ce227"
+      },
+      "issues": [
+        {
+          "number": 1215,
+          "title": "fix(atomic): validate en passant with variant rules",
+          "url": "https://github.com/niklasf/python-chess/pull/1215",
+          "pull_request": true
+        },
+        {
+          "number": 1214,
+          "title": "AtomicBoard: has_legal_en_passant(), generate_legal_ep() and fen() do not use Atomic legality",
+          "url": "https://github.com/niklasf/python-chess/issues/1214",
+          "pull_request": false
+        },
+        {
+          "number": 1213,
+          "title": "Fix `GameNode.set_eval()` dropping mate 0 scores",
+          "url": "https://github.com/niklasf/python-chess/pull/1213",
+          "pull_request": true
+        },
+        {
+          "number": 1212,
+          "title": "examples: add clocked_perft.py (timed perft, canonical node tables)",
+          "url": "https://github.com/niklasf/python-chess/pull/1212",
+          "pull_request": true
+        },
+        {
+          "number": 1210,
+          "title": "`SQUARES_180` is a misleading name",
+          "url": "https://github.com/niklasf/python-chess/issues/1210",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "bhlangonijr/chesslib",
+      "url": "https://github.com/bhlangonijr/chesslib",
+      "stars": 297,
+      "default_branch": "master",
+      "pushed_at": "2026-07-06T13:53:40Z",
+      "updated_at": "2026-10-12T10:52:35Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "description": "chess library for legal move generation, FEN/PGN parsing and more",
+      "observed": "2026-10-17T06:09:54.251Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "b425328266106057f84c8e9566e5b735af2d8ddd"
+      },
+      "issues": [
+        {
+          "number": 141,
+          "title": "Board.doMove(String) documented as SAN but silently accepts LAN notation",
+          "url": "https://github.com/bhlangonijr/chesslib/issues/141",
+          "pull_request": false
+        },
+        {
+          "number": 131,
+          "title": "Board.doMove/isMoveLegal allows illegal pawn forward capture into occupied square",
+          "url": "https://github.com/bhlangonijr/chesslib/issues/131",
+          "pull_request": false
+        },
+        {
+          "number": 114,
+          "title": "Check if a move is pseudo-legal without generating the list of pseudo-legal moves",
+          "url": "https://github.com/bhlangonijr/chesslib/issues/114",
+          "pull_request": false
+        },
+        {
+          "number": 109,
+          "title": "PGN changes when loading then running game.toPgn",
+          "url": "https://github.com/bhlangonijr/chesslib/issues/109",
+          "pull_request": false
+        },
+        {
+          "number": 94,
+          "title": "Higher coverage of unit tests",
+          "url": "https://github.com/bhlangonijr/chesslib/issues/94",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "mliebelt/pgn-parser",
+      "url": "https://github.com/mliebelt/pgn-parser",
+      "stars": 78,
+      "default_branch": "main",
+      "pushed_at": "2026-10-14T15:29:14Z",
+      "updated_at": "2026-10-14T15:29:10Z",
+      "archived": false,
+      "license": "Apache-2.0",
+      "description": "Javascript library to allow reading of a PGN (Portable Game Notation) chess game notation, and providing the result as JSON.",
+      "observed": "2026-10-17T06:09:54.889Z",
+      "readme": {
+        "path": "README.md",
+        "sha": "bffc807d6fd3e7bce16b7a743aa949af003a4bc6"
+      },
+      "issues": [
+        {
+          "number": 877,
+          "title": "Bump rollup from 4.64.3 to 4.64.5",
+          "url": "https://github.com/mliebelt/pgn-parser/pull/877",
+          "pull_request": true
+        },
+        {
+          "number": 515,
+          "title": "Optional treating of multiple comments as an array rather than concatenating",
+          "url": "https://github.com/mliebelt/pgn-parser/issues/515",
+          "pull_request": false
+        },
+        {
+          "number": 488,
+          "title": "Migrate mocha tests to uvu",
+          "url": "https://github.com/mliebelt/pgn-parser/issues/488",
+          "pull_request": false
+        },
+        {
+          "number": 112,
+          "title": "Allow foreign piece characters used",
+          "url": "https://github.com/mliebelt/pgn-parser/issues/112",
+          "pull_request": false
+        },
+        {
+          "number": 78,
+          "title": "Define better file structure for project",
+          "url": "https://github.com/mliebelt/pgn-parser/issues/78",
+          "pull_request": false
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    },
+    {
+      "full": "cirosantilli/vcdvcd",
+      "url": "https://github.com/cirosantilli/vcdvcd",
+      "stars": 71,
+      "default_branch": "master",
+      "pushed_at": "2025-10-19T19:52:12Z",
+      "updated_at": "2026-09-26T18:11:23Z",
+      "archived": false,
+      "license": "NOASSERTION",
+      "description": "Python Verilog value change dump (VCD) parser library + the nifty vcdcat VCD command line pretty printer.",
+      "observed": "2026-10-17T06:09:54.299Z",
+      "readme": {
+        "path": "README.adoc",
+        "sha": "259fa43f51a61370f264b4ff8898ee25e92ca6c9"
+      },
+      "issues": [
+        {
+          "number": 37,
+          "title": "how to do bit slice on a signal ",
+          "url": "https://github.com/cirosantilli/vcdvcd/issues/37",
+          "pull_request": false
+        },
+        {
+          "number": 36,
+          "title": "vcdcat misses an input signal",
+          "url": "https://github.com/cirosantilli/vcdvcd/issues/36",
+          "pull_request": false
+        },
+        {
+          "number": 30,
+          "title": "Suggestion: Dynamic lookup mode",
+          "url": "https://github.com/cirosantilli/vcdvcd/issues/30",
+          "pull_request": false
+        },
+        {
+          "number": 17,
+          "title": "VCD with timestamps and value changes on the same line fails with \"ValueError: invalid literal for int() with base 10: '0  0! 0\"'\"",
+          "url": "https://github.com/cirosantilli/vcdvcd/issues/17",
+          "pull_request": false
+        },
+        {
+          "number": 8,
+          "title": "Added get_dumps and get_sorted_sig_dump functions",
+          "url": "https://github.com/cirosantilli/vcdvcd/pull/8",
+          "pull_request": true
+        }
+      ],
+      "observation_scope": "Current metadata, README and up to five issue/PR records read; no exhaustive global ranking or competitor execution benchmark."
+    }
+  ],
+  "code_references": [
+    {
+      "repo": "cirosantilli/vcdvcd",
+      "sha": "5b31f12f9d6244e87879d9b12db3602b3c3eecb5",
+      "url": "https://github.com/cirosantilli/vcdvcd/blob/master/vcdvcd/vcdvcd.py",
+      "observed": "2026-10-17T06:25:16.015Z"
+    },
+    {
+      "repo": "isl-org/Open3D",
+      "sha": "058e215ffcdf939e1aba5bd74d2ec8385f617ace",
+      "url": "https://github.com/isl-org/Open3D/blob/main/cpp/open3d/geometry/TriangleMesh.cpp",
+      "observed": "2026-10-17T06:25:16.016Z"
+    },
+    {
+      "repo": "stephane/libmodbus",
+      "sha": "87e08874e6c536fe7191d578294ee90a7441d386",
+      "url": "https://github.com/stephane/libmodbus/blob/master/src/modbus-rtu.c",
+      "observed": "2026-10-17T06:25:16.017Z"
+    },
+    {
+      "repo": "flacon/flacon",
+      "sha": "e0222ba787f58caca2f409190753c8949e26fa05",
+      "url": "https://github.com/flacon/flacon/blob/master/cue.cpp",
+      "observed": "2026-10-17T06:25:16.017Z"
+    },
+    {
+      "repo": "niklasf/python-chess",
+      "sha": "3d4d7e5ff8b4eb3af6c16448007888436b1208f6",
+      "url": "https://github.com/niklasf/python-chess/blob/master/chess/pgn.py",
+      "observed": "2026-10-17T06:25:16.017Z"
+    }
+  ],
+  "demand": "Inferred, not verified requests.",
+  "performance": "No competitor runtime benchmark or superiority claim.",
+  "reuse": "Original implementations/prose/invented fixtures; no competitor code bundled."
+}
