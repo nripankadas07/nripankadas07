@@ -1,8 +1,8 @@
 {
   "state": "PASSED",
-  "head": "6717fce261dedaac5143e30579eece71c8e4960c",
-  "run_id": 39105402800,
-  "job_id": 117610036780,
+  "head": "dc06a769f563488e59887b3df3c86c62ffd26c1e",
+  "run_id": 39105918172,
+  "job_id": 117611608649,
   "summary": {
     "verified_files": 222,
     "npm_scopes": 27,
@@ -121,22 +121,22 @@
   },
   "artifacts": [
     {
-      "id": 12128332124,
+      "id": 12128198462,
       "name": "portfolio-dependency-audit-20261018",
-      "size_in_bytes": 1392313,
-      "url": "https://api.github.com/repos/nripankadas07/nripankadas07/actions/artifacts/12128332124",
-      "archive_download_url": "https://api.github.com/repos/nripankadas07/nripankadas07/actions/artifacts/12128332124/zip",
+      "size_in_bytes": 1392319,
+      "url": "https://api.github.com/repos/nripankadas07/nripankadas07/actions/artifacts/12128198462",
+      "archive_download_url": "https://api.github.com/repos/nripankadas07/nripankadas07/actions/artifacts/12128198462/zip",
       "expired": false,
-      "created_at": "2026-10-18T06:50:44Z",
-      "expires_at": "2027-01-16T06:49:27Z",
-      "updated_at": "2026-10-18T06:50:44Z",
-      "digest": "sha256:53cdc2b889c7535d748fd0aedf69da1b2fff73d1624a06c3e056886e81fb573f",
+      "created_at": "2026-10-18T06:59:41Z",
+      "expires_at": "2027-01-16T06:58:11Z",
+      "updated_at": "2026-10-18T06:59:41Z",
+      "digest": "sha256:e82c05891a5aabdd9a5fa0db724624104526d3b83b809ff29b7e85f12153a2ad",
       "workflow_run": {
-        "id": 39105402800,
+        "id": 39105918172,
         "repository_id": 1194987287,
         "head_repository_id": 1194987287,
         "head_branch": "portfolio/gh-20261018",
-        "head_sha": "6717fce261dedaac5143e30579eece71c8e4960c"
+        "head_sha": "dc06a769f563488e59887b3df3c86c62ffd26c1e"
       }
     }
   ],
@@ -385,9 +385,9 @@
     },
     {
       "repo": "dbf-record-audit",
-      "head": "e9b69f4a669aa3ca73b462ced795ab86cdf6072e",
+      "head": "67fda9c0f0052406d8c9abe55783bfd0bbd7d1e4",
       "path": "pyproject.toml",
-      "sha": "1d58a061beac342135203670000653c3214a26db"
+      "sha": "7f92b1e6db73e3826e66560f518d67270717a9ec"
     },
     {
       "repo": "decimal-ts",
@@ -1476,5 +1476,5 @@
       "sha": "c2bffdb26877d76678c51081a41e86468f9ab33b"
     }
   ],
-  "method": "Current-commit Git blob SHA verified; npm audit with lifecycle scripts ignored; Python build/runtime/optional requirements resolved to pins and pip-audit. No repository discovery/audit scripts executed."
+  "method": "Current-commit Git blob SHA verified; npm audit with lifecycle scripts ignored; Python build/runtime/optional requirements resolved to pins and pip-audit. No repository scripts executed for discovery or advisory auditing."
 }

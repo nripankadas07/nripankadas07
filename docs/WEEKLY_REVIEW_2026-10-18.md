@@ -1,4 +1,4 @@
-# Weekly reliability review —18 October2026
+# Weekly reliability review —18 October 2026
 
 Scope: all35 launches from11–17 October at freshly read current public commits. This is a new Linux/Python 3.12 retest, separate from the historical release CI matrices.
 
