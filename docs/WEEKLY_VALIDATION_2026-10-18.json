@@ -1,0 +1,1662 @@
+[
+  {
+    "repo": "accept-media-witness",
+    "head": "f3ba0c8371aa1de81cf7af44f2dd815d2902ed8b",
+    "observed": "2026-10-18T06:13:47.480289+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 15 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: accept-media-witness\n  Building wheel for accept-media-witness (pyproject.toml): started\n  Building wheel for accept-media-witness (pyproject.toml): finished with status 'done'\n  Created wheel for accept-media-witness: filename=accept_media_witness-0.1.0-py3-none-any.whl size=6188 sha256=78d9c781833dc1f1167505b01163868809a833b556b8b3d8f36d2087d658a9db\n  Stored in directory: /tmp/pip-ephem-wheel-cache-79dmk_b_/wheels/85/94/6c/df879b03fb5c0c9f27c37f3c0c41475a91ade84ebb6c6b8050\nSuccessfully built accept-media-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-9x5oxqy4/wheels/accept_media_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: accept-media-witness\nSuccessfully installed accept-media-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: accept-media-witness [-h] input\n\nOffline bounded accept-media-witness analyzer. No operational writes.\n\npositional arguments:\n  input       JSON input path; - for stdin\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/accept-media-witness/test_installed_cli.py'), PosixPath('/tmp/week18-9x5oxqy4/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed example, malformed input and duplicate JSON rejection passed outside checkout\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "backup-chain-audit",
+    "head": "7ad61fb576c10679a216b90bfa58336ddd07bbbe",
+    "observed": "2026-10-18T06:13:47.480732+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 13 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: backup-chain-audit\n  Building wheel for backup-chain-audit (pyproject.toml): started\n  Building wheel for backup-chain-audit (pyproject.toml): finished with status 'done'\n  Created wheel for backup-chain-audit: filename=backup_chain_audit-0.1.0-py3-none-any.whl size=4044 sha256=a1e6fdd20420c08689d4419506ca749ed0ed2ae48cc098331fb0d99154b692e6\n  Stored in directory: /tmp/pip-ephem-wheel-cache-essxndno/wheels/ab/c9/5f/42a95a4fbbcd38be2d3030dd8f70fb02953c9ae9fc3a0b4b2a\nSuccessfully built backup-chain-audit\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-k0r_ldal/wheels/backup_chain_audit-0.1.0-py3-none-any.whl\nInstalling collected packages: backup-chain-audit\nSuccessfully installed backup-chain-audit-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: backup-chain-audit [-h] snapshot\n\nOffline, bounded captured-input analysis. Original implementation, MIT.\n\npositional arguments:\n  snapshot\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/backup-chain-audit/test_installed_cli.py'), PosixPath('/tmp/week18-k0r_ldal/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed console example, malformed/duplicate/oversized/unknown input and meaningful failure checks passed.\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "bom-rollup-ledger",
+    "head": "e0f55ab13f50f909147a768089fbbc105f70e658",
+    "observed": "2026-10-18T06:13:47.481644+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 19 tests in 0.020s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: bom-rollup-ledger\n  Building wheel for bom-rollup-ledger (pyproject.toml): started\n  Building wheel for bom-rollup-ledger (pyproject.toml): finished with status 'done'\n  Created wheel for bom-rollup-ledger: filename=bom_rollup_ledger-0.1.0-py3-none-any.whl size=4929 sha256=0f6d940dd7a7de74115595919addc5e2fb32e1fc83e4c6d5360f8f8d29644f30\n  Stored in directory: /tmp/pip-ephem-wheel-cache-ssi_2ajv/wheels/f9/65/e7/eebd82025df0c531358b3f9ac261452199b4e3e6c9d92dd0f6\nSuccessfully built bom-rollup-ledger\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-rt4hn3jd/wheels/bom_rollup_ledger-0.1.0-py3-none-any.whl\nInstalling collected packages: bom-rollup-ledger\nSuccessfully installed bom-rollup-ledger-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: bom-rollup-ledger [-h] --root ROOT [--quantity QUANTITY]\n                         [--currency CURRENCY]\n                         bom costs\n\nExact leaf-material rollups for a bounded, explicit CSV BOM.\n\npositional arguments:\n  bom                  CSV: parent,component,quantity\n  costs                CSV: part,unit_cost\n\noptions:\n  -h, --help           show this help message and exit\n  --root ROOT\n  --quantity QUANTITY\n  --currency CURRENCY\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/bom-rollup-ledger/verify_installed.py'), PosixPath('/tmp/week18-rt4hn3jd/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"bom-rollup-ledger\", \"cases\": 6, \"module_bytes_match_source\": true, \"outside_checkout\": true, \"python\": \"Python 3.12.14\"}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "capacity-cut-report",
+    "head": "13fc7e7d13c2ed9832ed64ccc57e8247d7f44c9c",
+    "observed": "2026-10-18T06:13:47.482008+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 14 tests in 0.010s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: capacity-cut-report\n  Building wheel for capacity-cut-report (pyproject.toml): started\n  Building wheel for capacity-cut-report (pyproject.toml): finished with status 'done'\n  Created wheel for capacity-cut-report: filename=capacity_cut_report-0.1.0-py3-none-any.whl size=4739 sha256=1a04519569ab2abd32b01803359fc17c0b623b3fc6cf7d460184e613b8ceb5b1\n  Stored in directory: /tmp/pip-ephem-wheel-cache-7_3at3wu/wheels/87/05/05/be7807089f932bd6fdd7d989cea222b3f9828ab2c21bddc24b\nSuccessfully built capacity-cut-report\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-c1vmexmg/wheels/capacity_cut_report-0.1.0-py3-none-any.whl\nInstalling collected packages: capacity-cut-report\nSuccessfully installed capacity-cut-report-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: capacity-cut-report [-h] input\n\nAllocate fungible integer capacity and expose a max-flow/min-cut certificate.\n\npositional arguments:\n  input       explicit pools/tasks/links JSON\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/capacity-cut-report/verify_installed.py'), PosixPath('/tmp/week18-c1vmexmg/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"capacity-cut-report\", \"cases\": 8, \"module_bytes_match_source\": true, \"outside_checkout\": true, \"python\": \"Python 3.12.14\"}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "clock-quorum-window",
+    "head": "35552da4863cc420666f3226336eb1af6c60bed6",
+    "observed": "2026-10-18T06:13:57.137967+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 14 tests in 0.101s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: clock-quorum-window\n  Building wheel for clock-quorum-window (pyproject.toml): started\n  Building wheel for clock-quorum-window (pyproject.toml): finished with status 'done'\n  Created wheel for clock-quorum-window: filename=clock_quorum_window-0.1.0-py3-none-any.whl size=3974 sha256=6ad272976299380fe988e4e54758124acba5189bac27c553f36437b964b8abfc\n  Stored in directory: /tmp/pip-ephem-wheel-cache-lqx7pv_f/wheels/6a/c7/c4/ea2375a9459735fb96338c584c9b86debea3aab8975702557c\nSuccessfully built clock-quorum-window\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-mjdm34m_/wheels/clock_quorum_window-0.1.0-py3-none-any.whl\nInstalling collected packages: clock-quorum-window\nSuccessfully installed clock-quorum-window-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: clock-quorum-window [-h] input\n\nOffline normalized-input explainer; see README limits\n\npositional arguments:\n  input\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/clock-quorum-window/example.json')]",
+        "exit": 0,
+        "stdout": "{\"ambiguous\": true, \"quorum\": 2, \"trace\": [{\"kind\": \"point\", \"lower\": 0, \"sources\": [\"a\"], \"upper\": 0}, {\"kind\": \"open_interval\", \"lower\": 0, \"sources\": [\"a\"], \"upper\": 2}, {\"kind\": \"point\", \"lower\": 2, \"sources\": [\"a\", \"b\"], \"upper\": 2}, {\"kind\": \"open_interval\", \"lower\": 2, \"sources\": [\"a\", \"b\"], \"upper\": 4}, {\"kind\": \"point\", \"lower\": 4, \"sources\": [\"a\", \"b\"], \"upper\": 4}, {\"kind\": \"open_interval\", \"lower\": 4, \"sources\": [\"a\"], \"upper\": 6}, {\"kind\": \"point\", \"lower\": 6, \"sources\": [\"a\", \"c\"], \"upper\": 6}, {\"kind\": \"open_interval\", \"lower\": 6, \"sources\": [\"a\", \"c\"], \"upper\": 8}, {\"kind\": \"point\", \"lower\": 8, \"sources\": [\"a\", \"c\"], \"upper\": 8}, {\"kind\": \"open_interval\", \"lower\": 8, \"sources\": [\"a\"], \"upper\": 10}, {\"kind\": \"point\", \"lower\": 10, \"sources\": [\"a\"], \"upper\": 10}], \"windows\": [[2, 4], [6, 8]]}\n",
+        "stderr": ""
+      },
+      {
+        "step": "installed example and malformed input",
+        "exit": 0
+      }
+    ]
+  },
+  {
+    "repo": "cookie-scope-witness",
+    "head": "8a020e25d9e385324f4ca4376a7ad41b88a20364",
+    "observed": "2026-10-18T06:13:57.283385+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 16 tests in 0.004s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: cookie-scope-witness\n  Building wheel for cookie-scope-witness (pyproject.toml): started\n  Building wheel for cookie-scope-witness (pyproject.toml): finished with status 'done'\n  Created wheel for cookie-scope-witness: filename=cookie_scope_witness-0.1.0-py3-none-any.whl size=4961 sha256=26458a3d3cd8fef12102b7bdf1ef7b942bf9732120d22d824651def7a246ae56\n  Stored in directory: /tmp/pip-ephem-wheel-cache-i57j_89e/wheels/08/ab/e4/89f5b52aa4d8e6c6516f06353cad67bc6d39b72d4df6d4a7c4\nSuccessfully built cookie-scope-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-kk6il9ed/wheels/cookie_scope_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: cookie-scope-witness\nSuccessfully installed cookie-scope-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: cookie-scope-witness [-h] snapshot\n\nOffline host/path/secure cookie routing witnesses; no browser access.\n\npositional arguments:\n  snapshot\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "published installed-console smoke cases",
+        "exit": 0,
+        "cases": 2
+      }
+    ]
+  },
+  {
+    "repo": "cron-dst-witness",
+    "head": "ef0e0516fdb8d5f855ade9eaebb33535cbc5d7fb",
+    "observed": "2026-10-18T06:13:57.451467+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 12 tests in 0.028s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: cron-dst-witness\n  Building wheel for cron-dst-witness (pyproject.toml): started\n  Building wheel for cron-dst-witness (pyproject.toml): finished with status 'done'\n  Created wheel for cron-dst-witness: filename=cron_dst_witness-0.1.0-py3-none-any.whl size=4333 sha256=b6d5c65fb3d4c04b8ca272b17fd7ac80a730f2513949e2b0d1613b1eba980a10\n  Stored in directory: /tmp/pip-ephem-wheel-cache-7d9y9ow9/wheels/a1/6c/f8/990b8e6c82a913bcc697155b16e7f450523d2905fd33daaea7\nSuccessfully built cron-dst-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-4p7fwrue/wheels/cron_dst_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: cron-dst-witness\nSuccessfully installed cron-dst-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: cron-dst-witness [-h] input\n\nEnumerate zero/one/two UTC witnesses for bounded wall-clock cron slots.\n\npositional arguments:\n  input\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/cron-dst-witness/test_installed_cli.py'), PosixPath('/tmp/week18-4p7fwrue/env/bin/python')]",
+        "exit": 0,
+        "stdout": "installed example and malformed-input failure verified\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "cue-sample-plan",
+    "head": "094762d93f180656f4aac9d7b50e99938a4b058f",
+    "observed": "2026-10-18T06:13:57.526529+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 20 tests in 0.044s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: cue-sample-plan\n  Building wheel for cue-sample-plan (pyproject.toml): started\n  Building wheel for cue-sample-plan (pyproject.toml): finished with status 'done'\n  Created wheel for cue-sample-plan: filename=cue_sample_plan-0.1.0-py3-none-any.whl size=5931 sha256=b882505d9fe4739838d04d58bc2e7675e441c8ccfef5ef73d47ace6690ea4227\n  Stored in directory: /tmp/pip-ephem-wheel-cache-7jrw72c0/wheels/75/cf/f5/e0bc33b1c5067554332037e1ef0d0d6febd9e6e27c50fdd7e9\nSuccessfully built cue-sample-plan\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-as47m1py/wheels/cue_sample_plan-0.1.0-py3-none-any.whl\nInstalling collected packages: cue-sample-plan\nSuccessfully installed cue-sample-plan-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: cue-sample-plan [-h] [--make-example NEW_DIRECTORY] [cue]\n\nPartition captured CUE/WAVE audio into exact sample-frame track and gap\nranges.\n\npositional arguments:\n  cue\n\noptions:\n  -h, --help            show this help message and exit\n  --make-example NEW_DIRECTORY\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/cue-sample-plan/verify_installed.py'), PosixPath('/tmp/week18-as47m1py/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"cue-sample-plan\", \"outside_checkout\": true, \"source_identity_matched\": true, \"contract_checks\": \"passed\"}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "dns-serial-quorum",
+    "head": "434e9e0d2ca15b8852959a0241982b46633906b6",
+    "observed": "2026-10-18T06:14:05.575511+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 16 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: dns-serial-quorum\n  Building wheel for dns-serial-quorum (pyproject.toml): started\n  Building wheel for dns-serial-quorum (pyproject.toml): finished with status 'done'\n  Created wheel for dns-serial-quorum: filename=dns_serial_quorum-0.1.0-py3-none-any.whl size=4601 sha256=14e7c653eab96e87fe1a78b3f302b1bc5b6f77c41c9573e0e9ec415302725e8d\n  Stored in directory: /tmp/pip-ephem-wheel-cache-rvwo8jx6/wheels/c4/dc/75/6ab7c7a4fbd436bc9dbf254bb6c5f4825a3c85fb9fffe9a847\nSuccessfully built dns-serial-quorum\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-o0sddwpj/wheels/dns_serial_quorum-0.1.0-py3-none-any.whl\nInstalling collected packages: dns-serial-quorum\nSuccessfully installed dns-serial-quorum-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: dns-serial-quorum [-h] snapshot\n\nEvaluate supplied authoritative SOA observations with RFC 1982 arithmetic.\n\npositional arguments:\n  snapshot\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "published installed-console smoke cases",
+        "exit": 0,
+        "cases": 2
+      }
+    ]
+  },
+  {
+    "repo": "font-coverage-plan",
+    "head": "e00b83b259386c3f135093f00ae0a415b65de808",
+    "observed": "2026-10-18T06:14:05.589268+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 16 tests in 0.003s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: font-coverage-plan\n  Building wheel for font-coverage-plan (pyproject.toml): started\n  Building wheel for font-coverage-plan (pyproject.toml): finished with status 'done'\n  Created wheel for font-coverage-plan: filename=font_coverage_plan-0.1.0-py3-none-any.whl size=5771 sha256=482e66b4bb96767823b3dd168846225eabf42e52f4dde07c2edfec28ccb97096\n  Stored in directory: /tmp/pip-ephem-wheel-cache-zklq9q89/wheels/3c/86/8d/4dfe09838d2f31e71d44d3e06481a753d051c196701fdfdf80\nSuccessfully built font-coverage-plan\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-elpuueut/wheels/font_coverage_plan-0.1.0-py3-none-any.whl\nInstalling collected packages: font-coverage-plan\nSuccessfully installed font-coverage-plan-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: font-coverage-plan [-h] [--corpus CORPUS]\n                          [--make-example NEW_DIRECTORY]\n                          [fonts ...]\n\nInspect SFNT cmap coverage and build a deterministic greedy font fallback\nplan.\n\npositional arguments:\n  fonts\n\noptions:\n  -h, --help            show this help message and exit\n  --corpus CORPUS\n  --make-example NEW_DIRECTORY\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/font-coverage-plan/verify_installed.py'), PosixPath('/tmp/week18-elpuueut/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"font-coverage-plan\", \"cases\": 8, \"module_bytes_match_source\": true, \"outside_checkout\": true, \"python\": \"Python 3.12.14\"}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "git-ref-retention",
+    "head": "ecc37b6102263670c1c5ea9ed9806d80067e0b6e",
+    "observed": "2026-10-18T06:14:05.937323+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 12 tests in 1.122s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: git-ref-retention\n  Building wheel for git-ref-retention (pyproject.toml): started\n  Building wheel for git-ref-retention (pyproject.toml): finished with status 'done'\n  Created wheel for git-ref-retention: filename=git_ref_retention-0.1.0-py3-none-any.whl size=4634 sha256=445f7b9f1e4fcd3e33d6e04235c103627bf644bdbd7902a6333ac3b928276911\n  Stored in directory: /tmp/pip-ephem-wheel-cache-73v2hndx/wheels/81/92/90/ade29e04105e732b03cd28d581b7dc33873bf52369837515d1\nSuccessfully built git-ref-retention\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-0qtgenme/wheels/git_ref_retention-0.1.0-py3-none-any.whl\nInstalling collected packages: git-ref-retention\nSuccessfully installed git-ref-retention-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: git-ref-retention [-h] [--drop DROP] [--min-bytes MIN_BYTES] repository\n\nRead-only large-object retention witnesses for an explicit Git ref-drop plan.\n\npositional arguments:\n  repository\n\noptions:\n  -h, --help            show this help message and exit\n  --drop DROP\n  --min-bytes MIN_BYTES\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/git-ref-retention/test_installed_cli.py'), PosixPath('/tmp/week18-0qtgenme/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\n  \"captured_refs\": {\n    \"HEAD\": \"1752bfd75038f291b38f3ea0740385349b61380b\",\n    \"refs/heads/archive\": \"3fe18f40a4b5302c349772178ba25d7312f69790\",\n    \"refs/heads/main\": \"1752bfd75038f291b38f3ea0740385349b61380b\",\n    \"refs/tags/archive-tag\": \"3fe18f40a4b5302c349772178ba25d7312f69790\"\n  },\n  \"drop\": [\n    \"refs/heads/archive\"\n  ],\n  \"large_blobs\": [\n    {\n      \"bytes\": 2048,\n      \"oid\": \"1e1744b1e5f114cdd5604229ec085e6457014df6\",\n      \"reachable_from\": [\n        \"refs/heads/archive\",\n        \"refs/tags/archive-tag\"\n      ],\n      \"retained_by\": [\n        \"refs/tags/archive-tag\"\n      ],\n      \"would_lose_named_roots\": false\n    }\n  ],\n  \"limits\": \"No refs or objects changed. HEAD retained. Reflogs, alternates, unreachable objects, compressed/delta pack savings and remote server roots are not modeled. Losing named roots is not immediate disk reclamation.\",\n  \"logical_bytes_without_named_roots\": 0,\n  \"min_bytes\": 1024,\n  \"schema\": \"git-ref-retention/v1\"\n}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "gpx-dwell-report",
+    "head": "ecc29385b74f3bf547fb2e6d5337dcef77425f29",
+    "observed": "2026-10-18T06:14:06.211356+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 18 tests in 0.009s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: gpx-dwell-report\n  Building wheel for gpx-dwell-report (pyproject.toml): started\n  Building wheel for gpx-dwell-report (pyproject.toml): finished with status 'done'\n  Created wheel for gpx-dwell-report: filename=gpx_dwell_report-0.1.0-py3-none-any.whl size=5116 sha256=abf86c2ad0ae6f771c3ac117869e223433173bb0e0723647c4a0a6dd64d92a0f\n  Stored in directory: /tmp/pip-ephem-wheel-cache-f6d3fcog/wheels/6d/a6/2b/f6322484773e31ceb7272af1d8cc6d99a8db241693cf3bf4f3\nSuccessfully built gpx-dwell-report\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-u6j8mtx6/wheels/gpx_dwell_report-0.1.0-py3-none-any.whl\nInstalling collected packages: gpx-dwell-report\nSuccessfully installed gpx-dwell-report-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: gpx-dwell-report [-h] [--radius-m RADIUS_M] [--dwell-s DWELL_S]\n                        [--max-gap-s MAX_GAP_S]\n                        [--max-speed-mps MAX_SPEED_MPS]\n                        input\n\nExplain anchored dwell windows without bridging GPX segments, gaps or speed\njumps.\n\npositional arguments:\n  input                 UTF-8 GPX1.1 file\n\noptions:\n  -h, --help            show this help message and exit\n  --radius-m RADIUS_M\n  --dwell-s DWELL_S\n  --max-gap-s MAX_GAP_S\n  --max-speed-mps MAX_SPEED_MPS\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/gpx-dwell-report/verify_installed.py'), PosixPath('/tmp/week18-u6j8mtx6/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"gpx-dwell-report\", \"cases\": 9, \"module_bytes_match_source\": true, \"outside_checkout\": true, \"python\": \"Python 3.12.14\"}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "http-range-witness",
+    "head": "36fbb1da74db1dc338f4baf56213caaab20a4e38",
+    "observed": "2026-10-18T06:14:10.417846+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 15 tests in 0.115s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: http-range-witness\n  Building wheel for http-range-witness (pyproject.toml): started\n  Building wheel for http-range-witness (pyproject.toml): finished with status 'done'\n  Created wheel for http-range-witness: filename=http_range_witness-0.1.0-py3-none-any.whl size=4067 sha256=029d1b8e7bf08c40584c7c38f76afb4e28d1ccda0d1cc7fae9dedd4743fbe0a0\n  Stored in directory: /tmp/pip-ephem-wheel-cache-gga4ewoz/wheels/d9/33/68/84664fba1a5a4c5233b832afad0819d100f59ef2f53fc67b7e\nSuccessfully built http-range-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-0zi738lp/wheels/http_range_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: http-range-witness\nSuccessfully installed http-range-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: http-range-witness [-h] input\n\nOffline normalized-input explainer; see README limits\n\npositional arguments:\n  input\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/http-range-witness/example.json')]",
+        "exit": 0,
+        "stdout": "{\"coverage\": [[0, 14], [95, 99]], \"repeated_bytes\": 5, \"requested_bytes\": 25, \"requests\": [{\"end\": 9, \"field\": \"0-9\", \"reason\": null, \"start\": 0}, {\"end\": 14, \"field\": \"5-14\", \"reason\": null, \"start\": 5}, {\"end\": 99, \"field\": \"-5\", \"reason\": null, \"start\": 95}, {\"end\": null, \"field\": \"150-\", \"reason\": \"starts_beyond_representation\", \"start\": null}], \"satisfiable\": true, \"unique_bytes\": 20}\n",
+        "stderr": ""
+      },
+      {
+        "step": "installed example and malformed input",
+        "exit": 0
+      }
+    ]
+  },
+  {
+    "repo": "invoice-rounding-ledger",
+    "head": "e2abf8c90a77b894ba6c33da0b22789e89db27ce",
+    "observed": "2026-10-18T06:14:10.859681+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 15 tests in 0.003s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: invoice-rounding-ledger\n  Building wheel for invoice-rounding-ledger (pyproject.toml): started\n  Building wheel for invoice-rounding-ledger (pyproject.toml): finished with status 'done'\n  Created wheel for invoice-rounding-ledger: filename=invoice_rounding_ledger-0.1.0-py3-none-any.whl size=4491 sha256=edde47e1ab8ab946aa8511a0111f14ffb20fe1c6ec13ef044ba197331c99f2a9\n  Stored in directory: /tmp/pip-ephem-wheel-cache-mzi4__fn/wheels/43/5d/40/0fedc7684866b4adea73a959faf7896043c67e5e838cf0f692\nSuccessfully built invoice-rounding-ledger\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-ca1_179u/wheels/invoice_rounding_ledger-0.1.0-py3-none-any.whl\nInstalling collected packages: invoice-rounding-ledger\nSuccessfully installed invoice-rounding-ledger-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: invoice-rounding-ledger [-h] snapshot\n\nOffline, bounded captured-input analysis. Original implementation, MIT.\n\npositional arguments:\n  snapshot\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/invoice-rounding-ledger/test_installed_cli.py'), PosixPath('/tmp/week18-ca1_179u/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed console example, malformed/duplicate/oversized/unknown input and meaningful failure checks passed.\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "kafka-offset-audit",
+    "head": "418d391468ee02fe6a12d0732557ecc76e51f94f",
+    "observed": "2026-10-18T06:14:11.657556+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 14 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: kafka-offset-audit\n  Building wheel for kafka-offset-audit (pyproject.toml): started\n  Building wheel for kafka-offset-audit (pyproject.toml): finished with status 'done'\n  Created wheel for kafka-offset-audit: filename=kafka_offset_audit-0.1.0-py3-none-any.whl size=4044 sha256=3191b033c6da6ffc09bccb09e50441cdd38f42605620066b902e081c273b6a08\n  Stored in directory: /tmp/pip-ephem-wheel-cache-yo3tws_u/wheels/ef/e6/71/4203869f48426d210acfbab6a995fe68d8b66ae6109b2468ad\nSuccessfully built kafka-offset-audit\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-fq3s50x2/wheels/kafka_offset_audit-0.1.0-py3-none-any.whl\nInstalling collected packages: kafka-offset-audit\nSuccessfully installed kafka-offset-audit-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: kafka-offset-audit [-h] snapshot\n\nOffline, bounded captured-input analysis. Original implementation, MIT.\n\npositional arguments:\n  snapshot\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/kafka-offset-audit/test_installed_cli.py'), PosixPath('/tmp/week18-fq3s50x2/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed console example, malformed/duplicate/oversized/unknown input and meaningful failure checks passed.\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "matrix-include-trace",
+    "head": "ce5c54435ff3f26a6ccd533e1e0d36c26dd134df",
+    "observed": "2026-10-18T06:14:11.713954+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 16 tests in 0.003s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: matrix-include-trace\n  Building wheel for matrix-include-trace (pyproject.toml): started\n  Building wheel for matrix-include-trace (pyproject.toml): finished with status 'done'\n  Created wheel for matrix-include-trace: filename=matrix_include_trace-0.1.0-py3-none-any.whl size=4362 sha256=9a8db598dcfeec4f8be7f9bf6fc91efddfeed63baf39a506f36c33a20c735066\n  Stored in directory: /tmp/pip-ephem-wheel-cache-do5sr5cx/wheels/ce/f7/04/d7622eef9bd72edfeb8aaef48a3a9a944575c809e33a28ee3b\nSuccessfully built matrix-include-trace\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-6r53it0_/wheels/matrix_include_trace-0.1.0-py3-none-any.whl\nInstalling collected packages: matrix-include-trace\nSuccessfully installed matrix-include-trace-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: matrix-include-trace [-h] snapshot\n\nOffline, bounded captured-input analysis. Original implementation, MIT.\n\npositional arguments:\n  snapshot\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/matrix-include-trace/test_installed_cli.py'), PosixPath('/tmp/week18-6r53it0_/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed console example, malformed/duplicate/oversized/unknown input and meaningful failure checks passed.\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "modbus-frame-ledger",
+    "head": "19cf250a7c17cbfa84ef440b7e6842de39be209a",
+    "observed": "2026-10-18T06:14:15.267611+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 18 tests in 0.003s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: modbus-frame-ledger\n  Building wheel for modbus-frame-ledger (pyproject.toml): started\n  Building wheel for modbus-frame-ledger (pyproject.toml): finished with status 'done'\n  Created wheel for modbus-frame-ledger: filename=modbus_frame_ledger-0.1.0-py3-none-any.whl size=5307 sha256=be8fe19f863714ce5fda4d234f39be4e3647d9e925cffcb1926f3f9fde14235e\n  Stored in directory: /tmp/pip-ephem-wheel-cache-18mx_tq7/wheels/e0/b8/ee/daa05c1f8a1c29996a2a4ca43a73fed246662feb245761e9e5\nSuccessfully built modbus-frame-ledger\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-8wzp24h4/wheels/modbus_frame_ledger-0.1.0-py3-none-any.whl\nInstalling collected packages: modbus-frame-ledger\nSuccessfully installed modbus-frame-ledger-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: modbus-frame-ledger [-h] --start START [--unit UNIT] [--function {3,4}]\n                           frame map\n\nDecode one captured RTU register response against an explicit engineering CSV\nmap.\n\npositional arguments:\n  frame\n  map\n\noptions:\n  -h, --help        show this help message and exit\n  --start START\n  --unit UNIT\n  --function {3,4}\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/modbus-frame-ledger/verify_installed.py'), PosixPath('/tmp/week18-8wzp24h4/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"modbus-frame-ledger\", \"outside_checkout\": true, \"source_identity_matched\": true, \"contract_checks\": \"passed\"}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "npm-export-witness",
+    "head": "300de90f6731ca65d1801e47c58bcfff7981ef67",
+    "observed": "2026-10-18T06:14:15.984021+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 13 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: npm-export-witness\n  Building wheel for npm-export-witness (pyproject.toml): started\n  Building wheel for npm-export-witness (pyproject.toml): finished with status 'done'\n  Created wheel for npm-export-witness: filename=npm_export_witness-0.1.0-py3-none-any.whl size=5859 sha256=f5b5f72746953953f2c4d645e5b21446d8685d462f13064908c5a2fbb33bb7c3\n  Stored in directory: /tmp/pip-ephem-wheel-cache-knuao27m/wheels/72/ba/b9/75dc2b0fd37dd819e16ceed0036e136ff34b271cd69fb25b6a\nSuccessfully built npm-export-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-08ha_i9g/wheels/npm_export_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: npm-export-witness\nSuccessfully installed npm-export-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: npm-export-witness [-h] input\n\nOffline bounded npm-export-witness analyzer. No operational writes.\n\npositional arguments:\n  input       JSON input path; - for stdin\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/npm-export-witness/test_installed_cli.py'), PosixPath('/tmp/week18-08ha_i9g/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed example, malformed input and duplicate JSON rejection passed outside checkout\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "obj-island-audit",
+    "head": "6932a0807879693cad77e5e4f31d177bbdd631d4",
+    "observed": "2026-10-18T06:14:16.743344+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 21 tests in 0.043s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: obj-island-audit\n  Building wheel for obj-island-audit (pyproject.toml): started\n  Building wheel for obj-island-audit (pyproject.toml): finished with status 'done'\n  Created wheel for obj-island-audit: filename=obj_island_audit-0.1.0-py3-none-any.whl size=5125 sha256=50fecbff6ecfc25f450bcc498a5dbc06059454da88d8b4574af97f48194fb108\n  Stored in directory: /tmp/pip-ephem-wheel-cache-g88z8p7p/wheels/ea/e6/b0/d979a2c20cd9230130be880ebd34cf89c3a168634e83dfd72a\nSuccessfully built obj-island-audit\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-t8w_gaav/wheels/obj_island_audit-0.1.0-py3-none-any.whl\nInstalling collected packages: obj-island-audit\nSuccessfully installed obj-island-audit-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: obj-island-audit [-h] [--weld-decimals WELD_DECIMALS] input\n\nInspect edge-connected OBJ triangle islands and explicit topology defects.\n\npositional arguments:\n  input\n\noptions:\n  -h, --help            show this help message and exit\n  --weld-decimals WELD_DECIMALS\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/obj-island-audit/verify_installed.py'), PosixPath('/tmp/week18-t8w_gaav/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"obj-island-audit\", \"outside_checkout\": true, \"source_identity_matched\": true, \"contract_checks\": \"passed\"}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "oci-whiteout-plan",
+    "head": "0b0dc8442b6b88531b2fc1dc5e36bdfb37519cf1",
+    "observed": "2026-10-18T06:14:17.446433+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 14 tests in 0.111s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: oci-whiteout-plan\n  Building wheel for oci-whiteout-plan (pyproject.toml): started\n  Building wheel for oci-whiteout-plan (pyproject.toml): finished with status 'done'\n  Created wheel for oci-whiteout-plan: filename=oci_whiteout_plan-0.1.0-py3-none-any.whl size=4347 sha256=805ff207c24a7ebeb678e73850985a5b44263d9bbdcb14a8be7aa7b1d9e1eedb\n  Stored in directory: /tmp/pip-ephem-wheel-cache-haux_b7n/wheels/1c/50/47/c9333bc0deed2f500ef3782f8169e9d23401dba77b0ecd5451\nSuccessfully built oci-whiteout-plan\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-69xpfv9c/wheels/oci_whiteout_plan-0.1.0-py3-none-any.whl\nInstalling collected packages: oci-whiteout-plan\nSuccessfully installed oci-whiteout-plan-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: oci-whiteout-plan [-h] input\n\nOffline normalized-input explainer; see README limits\n\npositional arguments:\n  input\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/oci-whiteout-plan/example.json')]",
+        "exit": 0,
+        "stdout": "{\"paths\": {\"etc\": {\"implicit\": true, \"kind\": \"dir\", \"layer\": 0}, \"etc/new\": {\"implicit\": false, \"kind\": \"file\", \"layer\": 1}}, \"whiteouts\": [{\"layer\": 1, \"marker\": \"etc/.wh..wh..opq\", \"removed\": [\"etc/keep\", \"etc/old\"]}]}\n",
+        "stderr": ""
+      },
+      {
+        "step": "installed example and malformed input",
+        "exit": 0
+      }
+    ]
+  },
+  {
+    "repo": "otel-span-witness",
+    "head": "bb995f7a934dcfa6f8a00398e6fd98cead249458",
+    "observed": "2026-10-18T06:14:21.107642+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 13 tests in 0.002s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: otel-span-witness\n  Building wheel for otel-span-witness (pyproject.toml): started\n  Building wheel for otel-span-witness (pyproject.toml): finished with status 'done'\n  Created wheel for otel-span-witness: filename=otel_span_witness-0.1.0-py3-none-any.whl size=4378 sha256=f4d7e6f4c1415111edeb1e11a0dd6542863e927e143d48cc1887c1a50f4a0c6e\n  Stored in directory: /tmp/pip-ephem-wheel-cache-08yz0jpf/wheels/8f/b9/89/481f3ce8850fff6e6b71fb5f78426db05e9fccd515b158bc27\nSuccessfully built otel-span-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-glh3uqvk/wheels/otel_span_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: otel-span-witness\nSuccessfully installed otel-span-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: otel-span-witness [-h] snapshot\n\nOffline, bounded captured-input analysis. Original implementation, MIT.\n\npositional arguments:\n  snapshot\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/otel-span-witness/test_installed_cli.py'), PosixPath('/tmp/week18-glh3uqvk/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed console example, malformed/duplicate/oversized/unknown input and meaningful failure checks passed.\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "pcap-flow-ledger",
+    "head": "8c8f095355323d35a5a133133748f6e82740a12c",
+    "observed": "2026-10-18T06:14:21.249655+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 16 tests in 0.003s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: pcap-flow-ledger\n  Building wheel for pcap-flow-ledger (pyproject.toml): started\n  Building wheel for pcap-flow-ledger (pyproject.toml): finished with status 'done'\n  Created wheel for pcap-flow-ledger: filename=pcap_flow_ledger-0.1.0-py3-none-any.whl size=5213 sha256=c27db1f51ba78657730d6a42482899b169ee126af505eeaeee237c592652ae51\n  Stored in directory: /tmp/pip-ephem-wheel-cache-k4ne4umh/wheels/6a/f1/cd/7362ba79b219c44b92800f505a47e375050eb11e02a8fcaae8\nSuccessfully built pcap-flow-ledger\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-kmz62j5v/wheels/pcap_flow_ledger-0.1.0-py3-none-any.whl\nInstalling collected packages: pcap-flow-ledger\nSuccessfully installed pcap-flow-ledger-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: pcap-flow-ledger [-h] capture\n\nBounded classic Ethernet/IPv4 TCP capture accounting without payload output.\n\npositional arguments:\n  capture\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "published installed-console smoke cases",
+        "exit": 0,
+        "cases": 2
+      }
+    ]
+  },
+  {
+    "repo": "pdb-drain-witness",
+    "head": "477f3f1dfc5b866ab39e286e360aa91fc0e39f30",
+    "observed": "2026-10-18T06:14:22.254190+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 12 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: pdb-drain-witness\n  Building wheel for pdb-drain-witness (pyproject.toml): started\n  Building wheel for pdb-drain-witness (pyproject.toml): finished with status 'done'\n  Created wheel for pdb-drain-witness: filename=pdb_drain_witness-0.1.0-py3-none-any.whl size=4738 sha256=cfc5158adbfabc8a4aa5347bf3c2f3728929a255da8a88e118069f54d44447f0\n  Stored in directory: /tmp/pip-ephem-wheel-cache-0llegig1/wheels/79/6f/5c/820345dd1249e4ba76edd3b4c6cf4236f7751bde666d75326f\nSuccessfully built pdb-drain-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-2mmkg794/wheels/pdb_drain_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: pdb-drain-witness\nSuccessfully installed pdb-drain-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: pdb-drain-witness [-h] snapshot\n\nRead-only witnesses for a Ready-pod disruption wave from captured API JSON.\n\npositional arguments:\n  snapshot\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/pdb-drain-witness/test_installed_cli.py'), PosixPath('/tmp/week18-2mmkg794/env/bin/python')]",
+        "exit": 0,
+        "stdout": "installed example and malformed-input failure verified\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "pg-lock-witness",
+    "head": "c3d5fe6e4f4c835af797001c04b90b08d6b24098",
+    "observed": "2026-10-18T06:14:23.906540+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 12 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: pg-lock-witness\n  Building wheel for pg-lock-witness (pyproject.toml): started\n  Building wheel for pg-lock-witness (pyproject.toml): finished with status 'done'\n  Created wheel for pg-lock-witness: filename=pg_lock_witness-0.1.0-py3-none-any.whl size=5465 sha256=2feac07105118bc868196c8ca86efb704f5810e05da085ac7fd3a48ffe408225\n  Stored in directory: /tmp/pip-ephem-wheel-cache-42rru3hp/wheels/1c/d0/c6/dd838e5b0140b596cbc293634c93d747f53561c4579b3d1dc8\nSuccessfully built pg-lock-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-xu5q1d3k/wheels/pg_lock_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: pg-lock-witness\nSuccessfully installed pg-lock-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: pg-lock-witness [-h] input\n\nOffline bounded pg-lock-witness analyzer. No operational writes.\n\npositional arguments:\n  input       JSON input path; - for stdin\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/pg-lock-witness/test_installed_cli.py'), PosixPath('/tmp/week18-xu5q1d3k/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed example, malformed input and duplicate JSON rejection passed outside checkout\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "pgn-clock-ledger",
+    "head": "76fffed24a0495e241770ab9cee8110b699c416e",
+    "observed": "2026-10-18T06:14:26.493267+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 20 tests in 0.002s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: pgn-clock-ledger\n  Building wheel for pgn-clock-ledger (pyproject.toml): started\n  Building wheel for pgn-clock-ledger (pyproject.toml): finished with status 'done'\n  Created wheel for pgn-clock-ledger: filename=pgn_clock_ledger-0.1.0-py3-none-any.whl size=5142 sha256=62bbbe7473acfcb37df819e822823c00a8f17aab9e4a598fd81c9dec08a8d8b5\n  Stored in directory: /tmp/pip-ephem-wheel-cache-w53mowa4/wheels/71/1d/77/4192ee607f7cc2f763a2d6964a9a720590d0cc4abe5642a2f7\nSuccessfully built pgn-clock-ledger\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-85ielt6g/wheels/pgn_clock_ledger-0.1.0-py3-none-any.whl\nInstalling collected packages: pgn-clock-ledger\nSuccessfully installed pgn-clock-ledger-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: pgn-clock-ledger [-h] input\n\nExplain mainline PGN clock evidence under a simple after-move increment\nconvention.\n\npositional arguments:\n  input\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/pgn-clock-ledger/verify_installed.py'), PosixPath('/tmp/week18-85ielt6g/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"pgn-clock-ledger\", \"outside_checkout\": true, \"source_identity_matched\": true, \"contract_checks\": \"passed\"}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "prom-label-budget",
+    "head": "9ffc56b0b79332be980ab68330137d4143b86bc0",
+    "observed": "2026-10-18T06:14:27.076138+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 14 tests in 0.082s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: prom-label-budget\n  Building wheel for prom-label-budget (pyproject.toml): started\n  Building wheel for prom-label-budget (pyproject.toml): finished with status 'done'\n  Created wheel for prom-label-budget: filename=prom_label_budget-0.1.0-py3-none-any.whl size=4004 sha256=e4478b8f0ab5baf82f0ddd1b79ca5cff28ab62c58a53c4af6e5b779db80785f9\n  Stored in directory: /tmp/pip-ephem-wheel-cache-oekpbqra/wheels/62/a6/44/324411b2c00726972f5131114b9fafc41414c34622f5a25205\nSuccessfully built prom-label-budget\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-zjilege_/wheels/prom_label_budget-0.1.0-py3-none-any.whl\nInstalling collected packages: prom-label-budget\nSuccessfully installed prom-label-budget-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: prom-label-budget [-h] input\n\nOffline normalized-input explainer; see README limits\n\npositional arguments:\n  input\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/prom-label-budget/example.json')]",
+        "exit": 0,
+        "stdout": "{\"collision_group_sizes\": [2], \"duplicates\": 0, \"input_rows\": 2, \"label_cardinality\": {\"__name__\": 1, \"code\": 1, \"user\": 2}, \"lost_identity_count\": 1, \"metrics\": {\"requests_total\": 2}, \"projected_series\": 1, \"unique_series\": 2}\n",
+        "stderr": ""
+      },
+      {
+        "step": "installed example and malformed input",
+        "exit": 0
+      }
+    ]
+  },
+  {
+    "repo": "s3-expiry-witness",
+    "head": "7f1c4f85cbe1612e9966fc0c475f6acf512c26c6",
+    "observed": "2026-10-18T06:14:28.000303+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 15 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: s3-expiry-witness\n  Building wheel for s3-expiry-witness (pyproject.toml): started\n  Building wheel for s3-expiry-witness (pyproject.toml): finished with status 'done'\n  Created wheel for s3-expiry-witness: filename=s3_expiry_witness-0.1.0-py3-none-any.whl size=6442 sha256=145521b6ad4cb4cc1f078bbcb7c29971b01539d3d6d87a5a279fbf3b262d22d3\n  Stored in directory: /tmp/pip-ephem-wheel-cache-16sztvn0/wheels/fd/ff/aa/8302cfdeafdfb1f80bdfe50285554ae8e99aa0a17249228dee\nSuccessfully built s3-expiry-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-jjyojgm7/wheels/s3_expiry_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: s3-expiry-witness\nSuccessfully installed s3-expiry-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: s3-expiry-witness [-h] input\n\nOffline bounded s3-expiry-witness analyzer. No operational writes.\n\npositional arguments:\n  input       JSON input path; - for stdin\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/s3-expiry-witness/test_installed_cli.py'), PosixPath('/tmp/week18-jjyojgm7/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed example, malformed input and duplicate JSON rejection passed outside checkout\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "san-coverage-plan",
+    "head": "81059d79eb63df95d3ce7f03088ab18d3e084bb6",
+    "observed": "2026-10-18T06:14:30.174449+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 12 tests in 0.002s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: san-coverage-plan\n  Building wheel for san-coverage-plan (pyproject.toml): started\n  Building wheel for san-coverage-plan (pyproject.toml): finished with status 'done'\n  Created wheel for san-coverage-plan: filename=san_coverage_plan-0.1.0-py3-none-any.whl size=4406 sha256=9163552f70f3e4c8ce841da226d6e06e6100a0e5ff6d2f7f76bbe2e80e249536\n  Stored in directory: /tmp/pip-ephem-wheel-cache-d6v6vhdm/wheels/41/fa/dc/5a75a4e82af3f640286978475f08ff82021a871f6548ae0b58\nSuccessfully built san-coverage-plan\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-itkhb7tp/wheels/san_coverage_plan-0.1.0-py3-none-any.whl\nInstalling collected packages: san-coverage-plan\nSuccessfully installed san-coverage-plan-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: san-coverage-plan [-h] input\n\nExplain declared DNS/IP SAN coverage and a bounded exact certificate plan.\n\npositional arguments:\n  input\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/san-coverage-plan/test_installed_cli.py'), PosixPath('/tmp/week18-itkhb7tp/env/bin/python')]",
+        "exit": 0,
+        "stdout": "installed example and malformed-input failure verified\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "spdx-expression-paths",
+    "head": "35d2b8607e2db1314d308dfaf2377df797fa11a1",
+    "observed": "2026-10-18T06:14:31.193372+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 16 tests in 0.009s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: spdx-expression-paths\n  Building wheel for spdx-expression-paths (pyproject.toml): started\n  Building wheel for spdx-expression-paths (pyproject.toml): finished with status 'done'\n  Created wheel for spdx-expression-paths: filename=spdx_expression_paths-0.1.0-py3-none-any.whl size=4810 sha256=a8b7ba8707213ed63834bcb24916f96b3512016432f96fc0bacc58e3b38d5dd1\n  Stored in directory: /tmp/pip-ephem-wheel-cache-8qbmuul_/wheels/86/f4/5a/346b896f04dd16d965fb5581f6fea8551ab4b94e92b0583382\nSuccessfully built spdx-expression-paths\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-o4u514e1/wheels/spdx_expression_paths-0.1.0-py3-none-any.whl\nInstalling collected packages: spdx-expression-paths\nSuccessfully installed spdx-expression-paths-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: spdx-expression-paths [-h] [--limit LIMIT] expression\n\nEnumerate bounded syntactic choices in SPDX-style license expressions.\n\npositional arguments:\n  expression\n\noptions:\n  -h, --help     show this help message and exit\n  --limit LIMIT\n",
+        "stderr": ""
+      },
+      {
+        "step": "published installed-console smoke cases",
+        "exit": 0,
+        "cases": 2
+      }
+    ]
+  },
+  {
+    "repo": "sqlite-fixture-closure",
+    "head": "c01bdff6da64db6e5083a450849887eb23cb6c68",
+    "observed": "2026-10-18T06:14:31.937798+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 17 tests in 0.255s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: sqlite-fixture-closure\n  Building wheel for sqlite-fixture-closure (pyproject.toml): started\n  Building wheel for sqlite-fixture-closure (pyproject.toml): finished with status 'done'\n  Created wheel for sqlite-fixture-closure: filename=sqlite_fixture_closure-0.1.0-py3-none-any.whl size=6458 sha256=46de19fb04f32bd3e9257954cc10b52b1c53e1d9724a76166a3128d094eef6f9\n  Stored in directory: /tmp/pip-ephem-wheel-cache-k44j3yl6/wheels/a8/5e/9c/a8f6b2dd08ef10ea0dffce7616cecb7008e92aa49babd3dd8a\nSuccessfully built sqlite-fixture-closure\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-u7kgf09t/wheels/sqlite_fixture_closure-0.1.0-py3-none-any.whl\nInstalling collected packages: sqlite-fixture-closure\nSuccessfully installed sqlite-fixture-closure-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: sqlite-fixture-closure [-h] [--table TABLE] [--keys KEYS]\n                              [--format {json,sql}] [--max-rows MAX_ROWS]\n                              [--make-example NEW_DIRECTORY]\n                              [source]\n\nRead-only SQLite parent closure with row-level inclusion evidence and INSERT\nSQL.\n\npositional arguments:\n  source\n\noptions:\n  -h, --help            show this help message and exit\n  --table TABLE\n  --keys KEYS           JSON file containing primary-key arrays\n  --format {json,sql}\n  --max-rows MAX_ROWS\n  --make-example NEW_DIRECTORY\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/sqlite-fixture-closure/verify_installed.py'), PosixPath('/tmp/week18-u7kgf09t/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"sqlite-fixture-closure\", \"cases\": 9, \"module_bytes_match_source\": true, \"outside_checkout\": true, \"python\": \"Python 3.12.14\"}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "ssh-option-witness",
+    "head": "1609713c44acfd8844dd21bcba204545864c4213",
+    "observed": "2026-10-18T06:14:33.187861+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 14 tests in 0.113s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: ssh-option-witness\n  Building wheel for ssh-option-witness (pyproject.toml): started\n  Building wheel for ssh-option-witness (pyproject.toml): finished with status 'done'\n  Created wheel for ssh-option-witness: filename=ssh_option_witness-0.1.0-py3-none-any.whl size=4232 sha256=3ac8d1a5ea2b0c296d54b52d361b8778ca235b2cad34ace8f06a1d7202a7d067\n  Stored in directory: /tmp/pip-ephem-wheel-cache-1x0_f7wr/wheels/94/5a/f3/e8d62ba5a73236f891ed443832debd1c3dc6ef29f325b44a73\nSuccessfully built ssh-option-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-bl4hhupr/wheels/ssh_option_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: ssh-option-witness\nSuccessfully installed ssh-option-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: ssh-option-witness [-h] input\n\nOffline normalized-input explainer; see README limits\n\npositional arguments:\n  input\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/ssh-option-witness/example.json')]",
+        "exit": 0,
+        "stdout": "{\"host\": \"demo.dev\", \"trace\": [{\"keyword\": \"host\", \"line\": 1, \"matched\": true}, {\"keyword\": \"user\", \"line\": 2, \"reason\": \"selected\"}, {\"keyword\": \"port\", \"line\": 3, \"reason\": \"selected\"}, {\"keyword\": \"identityfile\", \"line\": 4, \"reason\": \"appended\"}, {\"keyword\": \"host\", \"line\": 5, \"matched\": true}, {\"keyword\": \"user\", \"line\": 6, \"reason\": \"earlier_value_wins\"}, {\"keyword\": \"identityfile\", \"line\": 7, \"reason\": \"appended\"}], \"values\": {\"identityfile\": [\"example-a\", \"example-b\"], \"port\": \"2222\", \"user\": \"synthetic\"}}\n",
+        "stderr": ""
+      },
+      {
+        "step": "installed example and malformed input",
+        "exit": 0
+      }
+    ]
+  },
+  {
+    "repo": "systemd-order-audit",
+    "head": "1ed90152f8cb3abf0876493b6d1623d7474c0401",
+    "observed": "2026-10-18T06:14:35.517779+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 16 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: systemd-order-audit\n  Building wheel for systemd-order-audit (pyproject.toml): started\n  Building wheel for systemd-order-audit (pyproject.toml): finished with status 'done'\n  Created wheel for systemd-order-audit: filename=systemd_order_audit-0.1.0-py3-none-any.whl size=5164 sha256=dfc5433e3b4be6b1c6b01d6fdfea3caa7fe80127cc1b8a11461002a6fdc2fe8c\n  Stored in directory: /tmp/pip-ephem-wheel-cache-0w09jw7p/wheels/8f/78/a5/dbc18b6dd627e537c9bf50025a75c206e2aabffa24fd152286\nSuccessfully built systemd-order-audit\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-8l9z9jg6/wheels/systemd_order_audit-0.1.0-py3-none-any.whl\nInstalling collected packages: systemd-order-audit\nSuccessfully installed systemd-order-audit-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: systemd-order-audit [-h] snapshot\n\nInspect explicit ordering and pull-in relations in a normalized unit snapshot.\n\npositional arguments:\n  snapshot\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "published installed-console smoke cases",
+        "exit": 0,
+        "cases": 2
+      }
+    ]
+  },
+  {
+    "repo": "tar-link-boundary",
+    "head": "51463a9cbb348fb78e55411b938e1de6b9c8ad59",
+    "observed": "2026-10-18T06:14:36.201792+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 13 tests in 0.003s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: tar-link-boundary\n  Building wheel for tar-link-boundary (pyproject.toml): started\n  Building wheel for tar-link-boundary (pyproject.toml): finished with status 'done'\n  Created wheel for tar-link-boundary: filename=tar_link_boundary-0.1.0-py3-none-any.whl size=4522 sha256=48ad7a538fa088cdb1cb13a05914854d69c19fa36a586969e72572dc3b019592\n  Stored in directory: /tmp/pip-ephem-wheel-cache-8el110tl/wheels/52/ca/1e/0c26e356d7bb8016883912638d174362a1376ce07c88a80df7\nSuccessfully built tar-link-boundary\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-57x61kol/wheels/tar_link_boundary-0.1.0-py3-none-any.whl\nInstalling collected packages: tar-link-boundary\nSuccessfully installed tar-link-boundary-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: tar-link-boundary [-h] tar\n\nOrdered virtual path witnesses for an uncompressed TAR; never extract.\n\npositional arguments:\n  tar\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/tar-link-boundary/test_installed_cli.py'), PosixPath('/tmp/week18-57x61kol/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\n  \"archive_sha256\": \"c1a4462eaa85bf8781634c92cf6e9cb1a869b0478785ca9c53d92ece93dcc506\",\n  \"hazards\": 2,\n  \"limits\": \"Virtual empty POSIX root, ordered links, no extraction; conservative duplicate/special-member rejection. Not a proof for any extractor, existing destination, permissions, race, Windows, sparse or compressed archive.\",\n  \"members\": [\n    {\n      \"destination\": \"link\",\n      \"index\": 0,\n      \"kind\": \"symlink\",\n      \"member\": \"link\",\n      \"reason\": \"parent-escapes-root\",\n      \"state\": \"hazard\",\n      \"trace\": []\n    },\n    {\n      \"destination\": null,\n      \"index\": 1,\n      \"kind\": \"file\",\n      \"member\": \"link/outside\",\n      \"reason\": \"parent-escapes-root\",\n      \"state\": \"hazard\",\n      \"trace\": [\n        {\n          \"kind\": \"symlink\",\n          \"link\": \"link\",\n          \"target\": \"..\"\n        }\n      ]\n    }\n  ],\n  \"schema\": \"tar-link-boundary/v1\"\n}\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "tf-move-witness",
+    "head": "cf3340a60e33d8bf48b55a23e18679250d53d9cb",
+    "observed": "2026-10-18T06:14:38.134278+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 13 tests in 0.001s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: tf-move-witness\n  Building wheel for tf-move-witness (pyproject.toml): started\n  Building wheel for tf-move-witness (pyproject.toml): finished with status 'done'\n  Created wheel for tf-move-witness: filename=tf_move_witness-0.1.0-py3-none-any.whl size=5873 sha256=90aaa1e6231fea39f37fbd890e21eb51f6f8ed04eb50501bc8e22df381293df1\n  Stored in directory: /tmp/pip-ephem-wheel-cache-i33vxbca/wheels/c0/bf/00/218de9b786b0804f97f5a1186be7867c98cf5127a852ae137e\nSuccessfully built tf-move-witness\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-kla_ueij/wheels/tf_move_witness-0.1.0-py3-none-any.whl\nInstalling collected packages: tf-move-witness\nSuccessfully installed tf-move-witness-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: tf-move-witness [-h] input\n\nOffline bounded tf-move-witness analyzer. No operational writes.\n\npositional arguments:\n  input       JSON input path; - for stdin\n\noptions:\n  -h, --help  show this help message and exit\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/tf-move-witness/test_installed_cli.py'), PosixPath('/tmp/week18-kla_ueij/env/bin/python')]",
+        "exit": 0,
+        "stdout": "Installed example, malformed input and duplicate JSON rejection passed outside checkout\n",
+        "stderr": ""
+      }
+    ]
+  },
+  {
+    "repo": "vcd-state-ledger",
+    "head": "17ee488c96d35063e6f042c2d61ec6ebfbd8b4e4",
+    "observed": "2026-10-18T06:14:38.373908+00:00",
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "linux",
+    "scope": "Fresh Linux Python3.12 source/wheel/installed CLI; other platforms and production data untested.",
+    "state": "PASSED",
+    "checks": [
+      {
+        "step": "['-m', 'unittest', 'discover']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": "----------------------------------------------------------------------\nRan 20 tests in 0.004s\n\nOK\n"
+      },
+      {
+        "step": "['-m', 'compileall', '-q']",
+        "exit": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'wheel']",
+        "exit": 0,
+        "stdout": "Processing ./.\n  Preparing metadata (pyproject.toml): started\n  Preparing metadata (pyproject.toml): finished with status 'done'\nBuilding wheels for collected packages: vcd-state-ledger\n  Building wheel for vcd-state-ledger (pyproject.toml): started\n  Building wheel for vcd-state-ledger (pyproject.toml): finished with status 'done'\n  Created wheel for vcd-state-ledger: filename=vcd_state_ledger-0.1.0-py3-none-any.whl size=4878 sha256=111f6dbf9dcbed3e091555b359787d13eb523f4a99411ec72a24e4683dc64e98\n  Stored in directory: /tmp/pip-ephem-wheel-cache-wqvkyqkj/wheels/5a/79/97/91a3300f5d67ab123926d390570d469724d3c2d7b4908e93ad\nSuccessfully built vcd-state-ledger\n",
+        "stderr": ""
+      },
+      {
+        "step": "['-m', 'pip', 'install']",
+        "exit": 0,
+        "stdout": "Processing /tmp/week18-ufsd_h52/wheels/vcd_state_ledger-0.1.0-py3-none-any.whl\nInstalling collected packages: vcd-state-ledger\nSuccessfully installed vcd-state-ledger-0.1.0\n",
+        "stderr": ""
+      },
+      {
+        "step": "['--help']",
+        "exit": 0,
+        "stdout": "usage: vcd-state-ledger [-h] [--end-tick END_TICK] input\n\nAccount for captured VCD bit-state time and delta value changes without a\nviewer.\n\npositional arguments:\n  input\n\noptions:\n  -h, --help           show this help message and exit\n  --end-tick END_TICK\n",
+        "stderr": ""
+      },
+      {
+        "step": "[PosixPath('/workspace/scratch/5d784ffbbfd3/audit-oct18/weekly-source/vcd-state-ledger/verify_installed.py'), PosixPath('/tmp/week18-ufsd_h52/env/bin/python')]",
+        "exit": 0,
+        "stdout": "{\"installed_command\": \"vcd-state-ledger\", \"outside_checkout\": true, \"source_identity_matched\": true, \"contract_checks\": \"passed\"}\n",
+        "stderr": ""
+      }
+    ]
+  }
+]

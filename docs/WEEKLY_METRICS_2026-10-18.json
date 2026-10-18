@@ -1,0 +1,317 @@
+[
+  {
+    "repo": "cookie-scope-witness",
+    "observed": "2026-10-18T06:17:07.450Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-11T06:30:20Z"
+  },
+  {
+    "repo": "dns-serial-quorum",
+    "observed": "2026-10-18T06:17:07.457Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-11T06:30:21Z"
+  },
+  {
+    "repo": "spdx-expression-paths",
+    "observed": "2026-10-18T06:17:07.441Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-11T06:30:22Z"
+  },
+  {
+    "repo": "systemd-order-audit",
+    "observed": "2026-10-18T06:17:07.665Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-11T06:30:23Z"
+  },
+  {
+    "repo": "pcap-flow-ledger",
+    "observed": "2026-10-18T06:17:07.455Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-11T06:30:24Z"
+  },
+  {
+    "repo": "oci-whiteout-plan",
+    "observed": "2026-10-18T06:17:07.475Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-12T08:21:05Z"
+  },
+  {
+    "repo": "prom-label-budget",
+    "observed": "2026-10-18T06:17:07.626Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-12T08:16:51Z"
+  },
+  {
+    "repo": "http-range-witness",
+    "observed": "2026-10-18T06:17:07.462Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-12T10:09:53Z"
+  },
+  {
+    "repo": "ssh-option-witness",
+    "observed": "2026-10-18T06:17:07.505Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-12T08:18:38Z"
+  },
+  {
+    "repo": "clock-quorum-window",
+    "observed": "2026-10-18T06:17:07.450Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-12T08:19:56Z"
+  },
+  {
+    "repo": "pdb-drain-witness",
+    "observed": "2026-10-18T06:17:07.483Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-13T07:13:39Z"
+  },
+  {
+    "repo": "cron-dst-witness",
+    "observed": "2026-10-18T06:17:07.469Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-13T07:33:40Z"
+  },
+  {
+    "repo": "tar-link-boundary",
+    "observed": "2026-10-18T06:17:07.463Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-13T07:43:21Z"
+  },
+  {
+    "repo": "san-coverage-plan",
+    "observed": "2026-10-18T06:17:07.455Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-13T07:48:40Z"
+  },
+  {
+    "repo": "git-ref-retention",
+    "observed": "2026-10-18T06:17:07.484Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-13T07:50:54Z"
+  },
+  {
+    "repo": "pg-lock-witness",
+    "observed": "2026-10-18T06:17:07.698Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-14T06:42:00Z"
+  },
+  {
+    "repo": "npm-export-witness",
+    "observed": "2026-10-18T06:17:07.779Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-14T06:46:50Z"
+  },
+  {
+    "repo": "tf-move-witness",
+    "observed": "2026-10-18T06:17:07.441Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-14T06:54:07Z"
+  },
+  {
+    "repo": "accept-media-witness",
+    "observed": "2026-10-18T06:17:07.746Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-14T06:58:08Z"
+  },
+  {
+    "repo": "s3-expiry-witness",
+    "observed": "2026-10-18T06:17:07.469Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-14T06:58:09Z"
+  },
+  {
+    "repo": "backup-chain-audit",
+    "observed": "2026-10-18T06:17:07.483Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-15T07:04:20Z"
+  },
+  {
+    "repo": "kafka-offset-audit",
+    "observed": "2026-10-18T06:17:07.511Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-15T07:15:50Z"
+  },
+  {
+    "repo": "invoice-rounding-ledger",
+    "observed": "2026-10-18T06:17:07.510Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-15T07:43:06Z"
+  },
+  {
+    "repo": "otel-span-witness",
+    "observed": "2026-10-18T06:17:07.787Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-15T07:21:08Z"
+  },
+  {
+    "repo": "matrix-include-trace",
+    "observed": "2026-10-18T06:17:07.701Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-15T07:29:41Z"
+  },
+  {
+    "repo": "bom-rollup-ledger",
+    "observed": "2026-10-18T06:17:07.485Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-16T06:48:16Z"
+  },
+  {
+    "repo": "sqlite-fixture-closure",
+    "observed": "2026-10-18T06:17:07.596Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-16T06:53:17Z"
+  },
+  {
+    "repo": "font-coverage-plan",
+    "observed": "2026-10-18T06:17:07.516Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-16T06:55:07Z"
+  },
+  {
+    "repo": "gpx-dwell-report",
+    "observed": "2026-10-18T06:17:07.505Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-16T06:57:12Z"
+  },
+  {
+    "repo": "capacity-cut-report",
+    "observed": "2026-10-18T06:17:07.461Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-16T07:00:41Z"
+  },
+  {
+    "repo": "vcd-state-ledger",
+    "observed": "2026-10-18T06:17:07.566Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-17T06:31:21Z"
+  },
+  {
+    "repo": "obj-island-audit",
+    "observed": "2026-10-18T06:17:07.583Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-17T06:34:21Z"
+  },
+  {
+    "repo": "modbus-frame-ledger",
+    "observed": "2026-10-18T06:17:07.560Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-17T06:36:03Z"
+  },
+  {
+    "repo": "cue-sample-plan",
+    "observed": "2026-10-18T06:17:07.561Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-17T06:36:34Z"
+  },
+  {
+    "repo": "pgn-clock-ledger",
+    "observed": "2026-10-18T06:17:07.589Z",
+    "stars": 0,
+    "forks": 0,
+    "subscribers": 0,
+    "open_issues": 0,
+    "pushed_at": "2026-10-17T06:38:24Z"
+  }
+]
