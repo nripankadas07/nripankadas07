@@ -1,0 +1,1617 @@
+{
+  "observed_date": "2026-10-19",
+  "projects": [
+    {
+      "brief": {
+        "repo": "fits-hdu-map",
+        "units": 11,
+        "capability": "Map FITS primary/IMAGE header, data and padding byte ranges without loading arrays.",
+        "user": "Astronomy archive ingestion maintainers.",
+        "pain": "A rejected small FITS needs physical HDU boundaries and padding evidence before array interpretation.",
+        "comparables": [
+          "astropy/astropy",
+          "ATTron/astroz",
+          "esheldon/fitsio",
+          "heasarc/cfitsio"
+        ],
+        "leader": "astropy/astropy",
+        "query": "FITS astronomy; Astropy",
+        "contract": "80-byte printable ASCII cards, complete 2880-byte blocks, ordered primary SIMPLE/BITPIX/NAXIS and consecutive NAXISn, IMAGE extensions with EXTEND=T and PCOUNT=0/GCOUNT=1. Dimensions0..4, axis sizes0..1000000, BITPIX8/16/32/64/-32/-64. END and space header padding are required. Nonzero data padding is an exit1 finding. Byte ranges use exclusive ends; no arrays are allocated.",
+        "limits": "8 MiB,32 HDUs,144 cards per header. No tables, random groups, compressed extensions, pixel interpretation, scaling, WCS, repair or complete FITS conformance validation. CHECKSUM/DATASUM are explicitly unverified. Nonstructural card values are not semantically validated.",
+        "acceptance": "Correct two-HDU layout, zero dimensions, float64 data extent, quoted slash handling, malformed card order/duplicates, truncation and nonzero padding.",
+        "notes": "Astropy and CFITSIO already provide much broader FITS IO and verification; fitsio exposes CFITSIO-backed table/image access. Astroz is a terminal astronomy workflow. No missing HDU-inspection capability is claimed. The precise ranges and strict subset are our interface choice.",
+        "overlap": "No FITS HDU mapper was found among all198 owned repositories. Existing media inspectors do not implement astronomical block/card semantics.",
+        "topics": [
+          "fits",
+          "astronomy",
+          "python",
+          "data-validation"
+        ],
+        "standard": "https://fits.gsfc.nasa.gov/fits_standard.html",
+        "expected": "Exit0: primary data is empty at byte2880; IMAGE data occupies bytes5760..5764 and padding ends at8640.",
+        "module": "fits_hdu_map"
+      },
+      "evidence": {
+        "comparables": [
+          {
+            "full": "astropy/astropy",
+            "url": "https://github.com/astropy/astropy",
+            "stars": 5350,
+            "pushed_at": "2026-10-18T21:02:13Z",
+            "archived": false,
+            "license": "BSD-3-Clause",
+            "branch": "main",
+            "observed": "2026-10-19T06:23:16.613Z",
+            "issues": [
+              {
+                "number": 20639,
+                "url": "https://github.com/astropy/astropy/issues/20639",
+                "title": "read_table_parquet raises KeyError when a column is absent from the stored astropy table_meta_yaml"
+              },
+              {
+                "number": 20638,
+                "url": "https://github.com/astropy/astropy/pull/20638",
+                "title": "Backport PR #20464 on branch v7.2.x (BUG: fix fast ASCII reader corrupting comments found after the header line)"
+              },
+              {
+                "number": 20637,
+                "url": "https://github.com/astropy/astropy/pull/20637",
+                "title": "Backport PR #20464 on branch v8.0.x (BUG: fix fast ASCII reader corrupting comments found after the header line)"
+              },
+              {
+                "number": 20636,
+                "url": "https://github.com/astropy/astropy/pull/20636",
+                "title": "Deprecate leap-second sources other than the ERFA table"
+              },
+              {
+                "number": 20632,
+                "url": "https://github.com/astropy/astropy/issues/20632",
+                "title": "Astropy rejects leap-second tables that do not expire"
+              }
+            ]
+          },
+          {
+            "full": "ATTron/astroz",
+            "url": "https://github.com/ATTron/astroz",
+            "stars": 276,
+            "pushed_at": "2026-10-16T18:39:23Z",
+            "archived": false,
+            "license": "MIT",
+            "branch": "main",
+            "observed": "2026-10-19T06:23:16.615Z",
+            "issues": [
+              {
+                "number": 109,
+                "url": "https://github.com/ATTron/astroz/pull/109",
+                "title": "rabbit-hole: wasm+npm"
+              },
+              {
+                "number": 88,
+                "url": "https://github.com/ATTron/astroz/pull/88",
+                "title": "feat: uslp ccsds standard"
+              },
+              {
+                "number": 73,
+                "url": "https://github.com/ATTron/astroz/issues/73",
+                "title": "Can't install / build on windows"
+              }
+            ]
+          },
+          {
+            "full": "esheldon/fitsio",
+            "url": "https://github.com/esheldon/fitsio",
+            "stars": 150,
+            "pushed_at": "2026-10-17T17:24:30Z",
+            "archived": false,
+            "license": "GPL-2.0",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.382Z",
+            "issues": [
+              {
+                "number": 523,
+                "url": "https://github.com/esheldon/fitsio/pull/523",
+                "title": "feat: add support for rsfitsio as backend"
+              },
+              {
+                "number": 522,
+                "url": "https://github.com/esheldon/fitsio/issues/522",
+                "title": "drop support for compiling against external libraries"
+              },
+              {
+                "number": 468,
+                "url": "https://github.com/esheldon/fitsio/issues/468",
+                "title": "fitsio 2 planning & ideas"
+              },
+              {
+                "number": 435,
+                "url": "https://github.com/esheldon/fitsio/pull/435",
+                "title": "Fix potential free of null pointer in stringlist_delete"
+              },
+              {
+                "number": 433,
+                "url": "https://github.com/esheldon/fitsio/issues/433",
+                "title": "Perform null check before free"
+              }
+            ]
+          },
+          {
+            "full": "heasarc/cfitsio",
+            "url": "https://github.com/heasarc/cfitsio",
+            "stars": 71,
+            "pushed_at": "2026-10-06T02:09:09Z",
+            "archived": false,
+            "license": "UNCLASSIFIED",
+            "branch": "develop",
+            "observed": "2026-10-19T06:23:16.357Z",
+            "issues": [
+              {
+                "number": 192,
+                "url": "https://github.com/heasarc/cfitsio/pull/192",
+                "title": "Fix 2^63/2^64 edge in integer keyword readers"
+              },
+              {
+                "number": 191,
+                "url": "https://github.com/heasarc/cfitsio/pull/191",
+                "title": "Fix 2^63 edge in double/float to LONGLONG conversions"
+              },
+              {
+                "number": 190,
+                "url": "https://github.com/heasarc/cfitsio/pull/190",
+                "title": "Fix variable-length bit columns in tile-compressed tables"
+              },
+              {
+                "number": 189,
+                "url": "https://github.com/heasarc/cfitsio/pull/189",
+                "title": "Reject repeated '.' and honour D exponents in expression real constants"
+              },
+              {
+                "number": 188,
+                "url": "https://github.com/heasarc/cfitsio/pull/188",
+                "title": "Fix fffi2u8 signed bounds and 2^64 edge in ULONGLONG read converters"
+              }
+            ]
+          }
+        ],
+        "readmes": [
+          {
+            "repo": "astropy/astropy",
+            "path": "README.rst",
+            "sha": "48f27ec0d4640dbd96ab0a5334361cc3879971b6"
+          },
+          {
+            "repo": "esheldon/fitsio",
+            "path": "README.md",
+            "sha": "e5f3998349a846da6af1572164fe3895675602c9"
+          },
+          {
+            "repo": "heasarc/cfitsio",
+            "path": "README.md",
+            "sha": "31ae7e5e4dc593b9563369d7accd9c8da9bec261"
+          },
+          {
+            "repo": "ATTron/astroz",
+            "path": "README.md",
+            "sha": "591a6c191fae4dd0a09ee95f1a800ff09b46a754"
+          }
+        ],
+        "source_references": [
+          {
+            "repo": "astropy/astropy",
+            "path": "astropy/io/fits/hdu/base.py",
+            "sha": "1d1dc87bad19711a973d83644a9920771bc3c1f8",
+            "observed": "2026-10-19T06:24:10.492Z"
+          }
+        ],
+        "queries": [
+          {
+            "query": "FITS astronomy",
+            "url": "https://github.com/search?q=FITS%20astronomy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:32.368Z",
+            "sort": "Most stars",
+            "results": [
+              "ATTron/astroz",
+              "sherpa/sherpa",
+              "esheldon/fitsio",
+              "TheCyberBrick/FITS-Rating-Tool",
+              "danieljprice/splash",
+              "Hrishikesh332/Astronomy_Analysis",
+              "nom-tam-fits/nom-tam-fits",
+              "onekiloparsec/QLFits",
+              "astroclubiitk/Computational-Astrophysics-2021",
+              "JuliaAstro/FITSIO.jl"
+            ]
+          },
+          {
+            "query": "ELF parser",
+            "url": "https://github.com/search?q=ELF%20parser&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:33.523Z",
+            "sort": "Most stars",
+            "results": [
+              "lief-project/LIEF",
+              "eliben/pyelftools",
+              "m4b/goblin",
+              "elfmaster/libelfmaster",
+              "zszszszsz/.config",
+              "aclements/libelfin",
+              "cole14/rust-elf",
+              "finixbit/elf-parser",
+              "aep/elfkit",
+              "fornwall/jelf"
+            ]
+          },
+          {
+            "query": "TIFF image",
+            "url": "https://github.com/search?q=TIFF%20image&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:34.587Z",
+            "sort": "Most stars",
+            "results": [
+              "lovell/sharp",
+              "libvips/libvips",
+              "SixLabors/ImageSharp",
+              "Lymphatus/caesium-image-compressor",
+              "sylikc/jpegview",
+              "drewnoakes/metadata-extractor",
+              "JimBobSquarePants/ImageProcessor",
+              "woelper/oculante",
+              "davidbyttow/govips",
+              "Tom94/tev"
+            ]
+          },
+          {
+            "query": "bin packing",
+            "url": "https://github.com/search?q=bin%20packing&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:35.685Z",
+            "sort": "Most stars",
+            "results": [
+              "cfig/Android_boot_image_editor",
+              "alexfrom0815/Online-3D-BPP-PCT",
+              "juj/RectangleBinPack",
+              "alexfrom0815/Online-3D-BPP-DRL",
+              "jakesgordon/bin-packing",
+              "dvdoug/BoxPacker",
+              "skjolber/3d-bin-container-packing",
+              "enzoruiz/3dbinpacking",
+              "jerry800416/3D-bin-packing",
+              "Flamethr0wer/polygon-packer"
+            ]
+          },
+          {
+            "query": "DRAT proof",
+            "url": "https://github.com/search?q=DRAT%20proof&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:36.716Z",
+            "sort": "Most stars",
+            "results": [
+              "marijnheule/drat-trim",
+              "digama0/frat",
+              "krobelus/rate",
+              "jesse-michael-han/neurocuber-public",
+              "marijnheule/pr2drat",
+              "jingchaochen/abcdSAT_Rat",
+              "benjaminkiesl/drat2er",
+              "cmu-transparency/verified_rup",
+              "prateekkumarweb/sat-verifier",
+              "jjasferreira/maxsat-core-bench"
+            ]
+          },
+          {
+            "query": "cutting stock",
+            "url": "https://github.com/search?q=cutting%20stock&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:22.814Z",
+            "sort": "Most stars",
+            "results": [
+              "danderfer/Comp_Sci_Sem_2",
+              "bozokopic/opcut",
+              "emadehsan/csp",
+              "kaiT2en/KaiT2en-Fedora",
+              "fabiofdsantos/2d-cutting-stock-problem",
+              "shivamim/Finance_AgenticAI",
+              "Jimmymugendi/Realtime-Data-Pipeline-for-Stock-Market-Analysis",
+              "AlexanderMorozovDesign/Linear_Cutting",
+              "MasumBhuiyan/2D-Irregular-Cutting-Stock-Algorithm",
+              "ccorcos/stock-cutting"
+            ]
+          },
+          {
+            "query": "Astropy",
+            "url": "https://github.com/search?q=Astropy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:24.018Z",
+            "sort": "Most stars",
+            "results": [
+              "astropy/astropy",
+              "sunpy/sunpy",
+              "astropy/astroquery",
+              "asdf-format/asdf",
+              "astropy-learn/astropy-tutorials",
+              "astropy/photutils",
+              "gammapy/gammapy",
+              "astropy/specutils",
+              "astropy/astropy-workshop",
+              "astropy/ccd-reduction-and-photometry-guide"
+            ]
+          },
+          {
+            "query": "DRUP",
+            "url": "https://github.com/search?q=DRUP&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:25.128Z",
+            "sort": "Most stars",
+            "results": [
+              "drupal/drupal",
+              "drupal-composer/drupal-project",
+              "fossasia/phimpme-drupal",
+              "geerlingguy/drupal-vm",
+              "wodby/docker4drupal",
+              "hechoendrupal/drupal-console",
+              "perusio/drupal-with-nginx",
+              "chapter-three/next-drupal",
+              "immunIT/drupwn",
+              "dreadlocked/Drupalgeddon2"
+            ]
+          }
+        ],
+        "primary_reference": "https://fits.gsfc.nasa.gov/fits_standard.html"
+      }
+    },
+    {
+      "brief": {
+        "repo": "elf-page-permissions",
+        "units": 8,
+        "capability": "Explain ELF LOAD ranges, zero-fill and declared page-permission unions without executing a binary.",
+        "user": "Build and release engineers reviewing a small ELF handoff.",
+        "pain": "Individual segment flags do not explain shared-page permission unions or overlapping virtual mappings.",
+        "comparables": [
+          "lief-project/LIEF",
+          "eliben/pyelftools",
+          "m4b/goblin"
+        ],
+        "leader": "lief-project/LIEF",
+        "query": "ELF parser",
+        "contract": "ELF32/64, little/big endian, identification/version1, EXEC/DYN, standard header/program-entry sizes and1..128 program headers. LOAD validates file/memory sizes, class address limits, known R/W/X flags and p_align congruence. Report backed/zero-fill intervals, overlap ambiguity, entry outside executable LOAD, W+X segments/stack and W+X page flag unions. Page-offset incongruence is a finding. Page size is a declared power of two512..65536, default4096; interval sweep avoids enumeration of huge virtual ranges. PT_INTERP is read as bounded ASCII but never opened/executed.",
+        "limits": "8 MiB. Other program-header kinds are ignored, section headers/relocations/ABI-specific semantics unverified. No loader simulation, ASLR, dynamic linking, DWARF, exploitation assessment or safety certificate. Missing GNU_STACK is unknown information, not a healthy-stack claim. Page union is a declared model; actual OS loading/permissions can differ.",
+        "acceptance": "Both classes/endians, shared-page union, BSS, virtual overlap, entry failure, file/align rejection and huge virtual intervals without page allocation.",
+        "notes": "LIEF parses and modifies broad executable formats; pyelftools and Goblin already expose ELF segments/flags and much more. Our evidence report is a narrow read-only workflow, not proof of an absent feature or a safer parser.",
+        "overlap": "Filesystem POSIX ACL tooling and binary media tools do not model ELF virtual LOAD intervals. No owned ELF page-union inspector was found.",
+        "topics": [
+          "elf",
+          "binary-analysis",
+          "python",
+          "program-headers"
+        ],
+        "standard": "https://ccoutant.github.io/gabi-stage/elf/07-pheader.html",
+        "expected": "Exit1 intentionally: separate RX/RW LOAD byte ranges share a4096-byte page, whose declared flag union is RWX; zero-fill ranges remain explicit.",
+        "module": "elf_page_permissions"
+      },
+      "evidence": {
+        "comparables": [
+          {
+            "full": "lief-project/LIEF",
+            "url": "https://github.com/lief-project/LIEF",
+            "stars": 5598,
+            "pushed_at": "2026-10-18T17:31:50Z",
+            "archived": false,
+            "license": "Apache-2.0",
+            "branch": "main",
+            "observed": "2026-10-19T06:23:16.437Z",
+            "issues": [
+              {
+                "number": 1393,
+                "url": "https://github.com/lief-project/LIEF/pull/1393",
+                "title": "macho: do not warn on an empty LC_SYMTAB"
+              },
+              {
+                "number": 1392,
+                "url": "https://github.com/lief-project/LIEF/pull/1392",
+                "title": "MachO: handle empty LC_SYMTAB"
+              },
+              {
+                "number": 1391,
+                "url": "https://github.com/lief-project/LIEF/issues/1391",
+                "title": "LIEF-rs 1.0.0: underaligned prebuilt releases for target aarch64-linux-android"
+              },
+              {
+                "number": 1369,
+                "url": "https://github.com/lief-project/LIEF/pull/1369",
+                "title": "MachO: adjust __init_offsets when add_section shifts __TEXT"
+              },
+              {
+                "number": 1325,
+                "url": "https://github.com/lief-project/LIEF/issues/1325",
+                "title": "Mach-O LC_SYMTAB parsing emits \"Weird\" messages for empty tables"
+              }
+            ]
+          },
+          {
+            "full": "eliben/pyelftools",
+            "url": "https://github.com/eliben/pyelftools",
+            "stars": 2288,
+            "pushed_at": "2026-10-08T12:12:44Z",
+            "archived": false,
+            "license": "NOASSERTION",
+            "branch": "main",
+            "observed": "2026-10-19T06:23:16.371Z",
+            "issues": [
+              {
+                "number": 680,
+                "url": "https://github.com/eliben/pyelftools/pull/680",
+                "title": "Preserve GNU hash chain offsets across symbol lookups"
+              },
+              {
+                "number": 675,
+                "url": "https://github.com/eliben/pyelftools/pull/675",
+                "title": "add architecture-specific powerpc dynamic tags"
+              },
+              {
+                "number": 672,
+                "url": "https://github.com/eliben/pyelftools/pull/672",
+                "title": "Use CU address sizes when resolving DWARF lists"
+              },
+              {
+                "number": 665,
+                "url": "https://github.com/eliben/pyelftools/pull/665",
+                "title": "Fix iter_notes crash on GNU build-ID notes in core dumps"
+              },
+              {
+                "number": 656,
+                "url": "https://github.com/eliben/pyelftools/issues/656",
+                "title": "Crash in iter_notes() when parsing NT_GNU_BUILD_ID notes inside ET_CORE files (type-3 note collision)"
+              }
+            ]
+          },
+          {
+            "full": "m4b/goblin",
+            "url": "https://github.com/m4b/goblin",
+            "stars": 1556,
+            "pushed_at": "2026-08-30T17:40:25Z",
+            "archived": false,
+            "license": "MIT",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.410Z",
+            "issues": [
+              {
+                "number": 548,
+                "url": "https://github.com/m4b/goblin/issues/548",
+                "title": "Add support for the arm64e.x1 architecture variant"
+              },
+              {
+                "number": 545,
+                "url": "https://github.com/m4b/goblin/pull/545",
+                "title": "Avoid panic on invalid Mach-O bind segment"
+              },
+              {
+                "number": 544,
+                "url": "https://github.com/m4b/goblin/pull/544",
+                "title": "fix file_version"
+              },
+              {
+                "number": 542,
+                "url": "https://github.com/m4b/goblin/issues/542",
+                "title": "DoS via unchecked `nsyms` in `symbols()`, and OOB panic in `imports()`"
+              },
+              {
+                "number": 541,
+                "url": "https://github.com/m4b/goblin/pull/541",
+                "title": "pe: skip raw writes for virtual-only sections"
+              }
+            ]
+          }
+        ],
+        "readmes": [
+          {
+            "repo": "lief-project/LIEF",
+            "path": "README.md",
+            "sha": "b4fb91f2314c614a579999b35cb26d56ffcbdf25"
+          },
+          {
+            "repo": "eliben/pyelftools",
+            "path": "README.md",
+            "sha": "ee3bbd952ea0b89e86172581ec78572c35e0f95b"
+          },
+          {
+            "repo": "m4b/goblin",
+            "path": "README.md",
+            "sha": "4205fa1107189daa62dc81b00fcbfd5f8561bcdd"
+          }
+        ],
+        "source_references": [
+          {
+            "repo": "eliben/pyelftools",
+            "path": "elftools/elf/segments.py",
+            "sha": "624f6758d8e1f2e3a36d763e9226fc9583b1d178",
+            "observed": "2026-10-19T06:24:10.209Z"
+          }
+        ],
+        "queries": [
+          {
+            "query": "FITS astronomy",
+            "url": "https://github.com/search?q=FITS%20astronomy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:32.368Z",
+            "sort": "Most stars",
+            "results": [
+              "ATTron/astroz",
+              "sherpa/sherpa",
+              "esheldon/fitsio",
+              "TheCyberBrick/FITS-Rating-Tool",
+              "danieljprice/splash",
+              "Hrishikesh332/Astronomy_Analysis",
+              "nom-tam-fits/nom-tam-fits",
+              "onekiloparsec/QLFits",
+              "astroclubiitk/Computational-Astrophysics-2021",
+              "JuliaAstro/FITSIO.jl"
+            ]
+          },
+          {
+            "query": "ELF parser",
+            "url": "https://github.com/search?q=ELF%20parser&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:33.523Z",
+            "sort": "Most stars",
+            "results": [
+              "lief-project/LIEF",
+              "eliben/pyelftools",
+              "m4b/goblin",
+              "elfmaster/libelfmaster",
+              "zszszszsz/.config",
+              "aclements/libelfin",
+              "cole14/rust-elf",
+              "finixbit/elf-parser",
+              "aep/elfkit",
+              "fornwall/jelf"
+            ]
+          },
+          {
+            "query": "TIFF image",
+            "url": "https://github.com/search?q=TIFF%20image&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:34.587Z",
+            "sort": "Most stars",
+            "results": [
+              "lovell/sharp",
+              "libvips/libvips",
+              "SixLabors/ImageSharp",
+              "Lymphatus/caesium-image-compressor",
+              "sylikc/jpegview",
+              "drewnoakes/metadata-extractor",
+              "JimBobSquarePants/ImageProcessor",
+              "woelper/oculante",
+              "davidbyttow/govips",
+              "Tom94/tev"
+            ]
+          },
+          {
+            "query": "bin packing",
+            "url": "https://github.com/search?q=bin%20packing&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:35.685Z",
+            "sort": "Most stars",
+            "results": [
+              "cfig/Android_boot_image_editor",
+              "alexfrom0815/Online-3D-BPP-PCT",
+              "juj/RectangleBinPack",
+              "alexfrom0815/Online-3D-BPP-DRL",
+              "jakesgordon/bin-packing",
+              "dvdoug/BoxPacker",
+              "skjolber/3d-bin-container-packing",
+              "enzoruiz/3dbinpacking",
+              "jerry800416/3D-bin-packing",
+              "Flamethr0wer/polygon-packer"
+            ]
+          },
+          {
+            "query": "DRAT proof",
+            "url": "https://github.com/search?q=DRAT%20proof&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:36.716Z",
+            "sort": "Most stars",
+            "results": [
+              "marijnheule/drat-trim",
+              "digama0/frat",
+              "krobelus/rate",
+              "jesse-michael-han/neurocuber-public",
+              "marijnheule/pr2drat",
+              "jingchaochen/abcdSAT_Rat",
+              "benjaminkiesl/drat2er",
+              "cmu-transparency/verified_rup",
+              "prateekkumarweb/sat-verifier",
+              "jjasferreira/maxsat-core-bench"
+            ]
+          },
+          {
+            "query": "cutting stock",
+            "url": "https://github.com/search?q=cutting%20stock&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:22.814Z",
+            "sort": "Most stars",
+            "results": [
+              "danderfer/Comp_Sci_Sem_2",
+              "bozokopic/opcut",
+              "emadehsan/csp",
+              "kaiT2en/KaiT2en-Fedora",
+              "fabiofdsantos/2d-cutting-stock-problem",
+              "shivamim/Finance_AgenticAI",
+              "Jimmymugendi/Realtime-Data-Pipeline-for-Stock-Market-Analysis",
+              "AlexanderMorozovDesign/Linear_Cutting",
+              "MasumBhuiyan/2D-Irregular-Cutting-Stock-Algorithm",
+              "ccorcos/stock-cutting"
+            ]
+          },
+          {
+            "query": "Astropy",
+            "url": "https://github.com/search?q=Astropy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:24.018Z",
+            "sort": "Most stars",
+            "results": [
+              "astropy/astropy",
+              "sunpy/sunpy",
+              "astropy/astroquery",
+              "asdf-format/asdf",
+              "astropy-learn/astropy-tutorials",
+              "astropy/photutils",
+              "gammapy/gammapy",
+              "astropy/specutils",
+              "astropy/astropy-workshop",
+              "astropy/ccd-reduction-and-photometry-guide"
+            ]
+          },
+          {
+            "query": "DRUP",
+            "url": "https://github.com/search?q=DRUP&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:25.128Z",
+            "sort": "Most stars",
+            "results": [
+              "drupal/drupal",
+              "drupal-composer/drupal-project",
+              "fossasia/phimpme-drupal",
+              "geerlingguy/drupal-vm",
+              "wodby/docker4drupal",
+              "hechoendrupal/drupal-console",
+              "perusio/drupal-with-nginx",
+              "chapter-three/next-drupal",
+              "immunIT/drupwn",
+              "dreadlocked/Drupalgeddon2"
+            ]
+          }
+        ],
+        "primary_reference": "https://ccoutant.github.io/gabi-stage/elf/07-pheader.html"
+      }
+    },
+    {
+      "brief": {
+        "repo": "tiff-strip-map",
+        "units": 9,
+        "capability": "Map classic TIFF IFD metadata and grayscale strip ownership, including aliases and out-of-file evidence.",
+        "user": "Image ingestion maintainers investigating a small grayscale TIFF.",
+        "pain": "Offset/count arrays and inline fields can conceal metadata/strip collisions before pixel decoding.",
+        "comparables": [
+          "lovell/sharp",
+          "libvips/libvips",
+          "cgohlke/tifffile"
+        ],
+        "leader": "lovell/sharp",
+        "query": "TIFF image",
+        "contract": "Classic TIFF II/MM version42. At most32 acyclic word-aligned IFDs,128 fields per IFD; known field types1..12 have bounded payload extents and inline values up to4 bytes. Width/height, explicit8-bit samples, compression1, grayscale photometric0/1, one sample and contiguous planar layout. Explicit rows-per-strip and exact offset/count array sizes, including final partial strip. Expected raw bytes equal width times strip rows. Strip/strip and strip/metadata overlaps are exit1 findings with no winner policy; exact aliases remain visible.",
+        "limits": "8 MiB, width/height/rows1..1000000,4096 decoded values per interpreted tag,4096 strips total, first256 overlaps retained plus omitted count. No BigTIFF, compression, tiles, SubIFDs, color images, pixel decoding, orientation transforms, GeoTIFF/OME interpretation, metadata cleanup or full baseline TIFF conformance validation. Metadata/metadata aliases are not classified.",
+        "acceptance": "Both endians, inline/out-of-line arrays, partial strips, exact aliases, metadata collisions, IFD cycles, bad counts/bounds and explicit unsupported format refusal.",
+        "notes": "Sharp and libvips are broader processing/conversion libraries. Tifffile already exposes data offsets/bytecounts and supports far more TIFF variants. Issue333 about inline ASCII offsets informed careful field storage tests; it is adjacent evidence, not verified demand or a claim that current alternatives lack this capability.",
+        "overlap": "Owned png-metadata-scrub edits PNG ancillary chunks. This TIFF project reads IFD/strip ownership under a different binary contract and does not edit files.",
+        "topics": [
+          "tiff",
+          "image-processing",
+          "python",
+          "data-validation"
+        ],
+        "standard": "https://www.itu.int/itudoc/itu-t/com16/tiff-fx/docs/tiff6.pdf",
+        "expected": "Exit0: a2x2 invented image has one strip at bytes122..126 with no ownership overlaps.",
+        "module": "tiff_strip_map"
+      },
+      "evidence": {
+        "comparables": [
+          {
+            "full": "lovell/sharp",
+            "url": "https://github.com/lovell/sharp",
+            "stars": 32775,
+            "pushed_at": "2026-10-15T07:10:34Z",
+            "archived": false,
+            "license": "Apache-2.0",
+            "branch": "main",
+            "observed": "2026-10-19T06:23:16.474Z",
+            "issues": [
+              {
+                "number": 4629,
+                "url": "https://github.com/lovell/sharp/issues/4629",
+                "title": "Defective `is.object(null)` Validation Causing Unhandled `TypeError` Crashes"
+              },
+              {
+                "number": 4621,
+                "url": "https://github.com/lovell/sharp/issues/4621",
+                "title": "heif() with compression 'hevc' fails with 'Invalid parameter value (5.2006)' due to default tune 'auto'"
+              },
+              {
+                "number": 4620,
+                "url": "https://github.com/lovell/sharp/issues/4620",
+                "title": "Copied ICC profile leaks when processing rejects before ownership transfer"
+              },
+              {
+                "number": 4619,
+                "url": "https://github.com/lovell/sharp/issues/4619",
+                "title": "Enhancement: CICP interpretation and conversion"
+              },
+              {
+                "number": 4614,
+                "url": "https://github.com/lovell/sharp/pull/4614",
+                "title": "Document resize kernels with a side-by-side comparison"
+              }
+            ]
+          },
+          {
+            "full": "libvips/libvips",
+            "url": "https://github.com/libvips/libvips",
+            "stars": 11744,
+            "pushed_at": "2026-10-18T10:12:35Z",
+            "archived": false,
+            "license": "LGPL-2.1",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.378Z",
+            "issues": [
+              {
+                "number": 5257,
+                "url": "https://github.com/libvips/libvips/pull/5257",
+                "title": "tiffload: limit total image height"
+              },
+              {
+                "number": 5238,
+                "url": "https://github.com/libvips/libvips/issues/5238",
+                "title": "The road to libvips 8.19"
+              },
+              {
+                "number": 5237,
+                "url": "https://github.com/libvips/libvips/issues/5237",
+                "title": "jxlsave fails with invalid color profiles"
+              },
+              {
+                "number": 5229,
+                "url": "https://github.com/libvips/libvips/pull/5229",
+                "title": "Use actual sRGB gamma by default"
+              },
+              {
+                "number": 5225,
+                "url": "https://github.com/libvips/libvips/issues/5225",
+                "title": "alignment of >8-bit types in ppmload"
+              }
+            ]
+          },
+          {
+            "full": "cgohlke/tifffile",
+            "url": "https://github.com/cgohlke/tifffile",
+            "stars": 671,
+            "pushed_at": "2026-10-16T00:33:22Z",
+            "archived": false,
+            "license": "BSD-3-Clause",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.348Z",
+            "issues": [
+              {
+                "number": 335,
+                "url": "https://github.com/cgohlke/tifffile/issues/335",
+                "title": "Feature request: Option for multiscale images opened with aszarr to be valid OME-Zarr"
+              },
+              {
+                "number": 333,
+                "url": "https://github.com/cgohlke/tifffile/issues/333",
+                "title": "NDPI: ASCII tag values that fit in the 4-byte value field are read as file offsets"
+              }
+            ]
+          }
+        ],
+        "readmes": [
+          {
+            "repo": "lovell/sharp",
+            "path": "README.md",
+            "sha": "7db7edda0c1c3ef47956a1c77a92994b0664f102"
+          },
+          {
+            "repo": "libvips/libvips",
+            "path": "README.md",
+            "sha": "10a2edcf95ba94bd5141ac8c1ac9624ced0b6077"
+          },
+          {
+            "repo": "cgohlke/tifffile",
+            "path": "README.rst",
+            "sha": "b42f3695ded36c10c8615b99ed9ea6a0caf29560"
+          }
+        ],
+        "source_references": [
+          {
+            "repo": "cgohlke/tifffile",
+            "path": "tifffile/tifffile.py",
+            "sha": "5d019593860d78cdd14efdc487b36f62c0989a33",
+            "observed": "2026-10-19T06:24:10.437Z"
+          }
+        ],
+        "queries": [
+          {
+            "query": "FITS astronomy",
+            "url": "https://github.com/search?q=FITS%20astronomy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:32.368Z",
+            "sort": "Most stars",
+            "results": [
+              "ATTron/astroz",
+              "sherpa/sherpa",
+              "esheldon/fitsio",
+              "TheCyberBrick/FITS-Rating-Tool",
+              "danieljprice/splash",
+              "Hrishikesh332/Astronomy_Analysis",
+              "nom-tam-fits/nom-tam-fits",
+              "onekiloparsec/QLFits",
+              "astroclubiitk/Computational-Astrophysics-2021",
+              "JuliaAstro/FITSIO.jl"
+            ]
+          },
+          {
+            "query": "ELF parser",
+            "url": "https://github.com/search?q=ELF%20parser&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:33.523Z",
+            "sort": "Most stars",
+            "results": [
+              "lief-project/LIEF",
+              "eliben/pyelftools",
+              "m4b/goblin",
+              "elfmaster/libelfmaster",
+              "zszszszsz/.config",
+              "aclements/libelfin",
+              "cole14/rust-elf",
+              "finixbit/elf-parser",
+              "aep/elfkit",
+              "fornwall/jelf"
+            ]
+          },
+          {
+            "query": "TIFF image",
+            "url": "https://github.com/search?q=TIFF%20image&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:34.587Z",
+            "sort": "Most stars",
+            "results": [
+              "lovell/sharp",
+              "libvips/libvips",
+              "SixLabors/ImageSharp",
+              "Lymphatus/caesium-image-compressor",
+              "sylikc/jpegview",
+              "drewnoakes/metadata-extractor",
+              "JimBobSquarePants/ImageProcessor",
+              "woelper/oculante",
+              "davidbyttow/govips",
+              "Tom94/tev"
+            ]
+          },
+          {
+            "query": "bin packing",
+            "url": "https://github.com/search?q=bin%20packing&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:35.685Z",
+            "sort": "Most stars",
+            "results": [
+              "cfig/Android_boot_image_editor",
+              "alexfrom0815/Online-3D-BPP-PCT",
+              "juj/RectangleBinPack",
+              "alexfrom0815/Online-3D-BPP-DRL",
+              "jakesgordon/bin-packing",
+              "dvdoug/BoxPacker",
+              "skjolber/3d-bin-container-packing",
+              "enzoruiz/3dbinpacking",
+              "jerry800416/3D-bin-packing",
+              "Flamethr0wer/polygon-packer"
+            ]
+          },
+          {
+            "query": "DRAT proof",
+            "url": "https://github.com/search?q=DRAT%20proof&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:36.716Z",
+            "sort": "Most stars",
+            "results": [
+              "marijnheule/drat-trim",
+              "digama0/frat",
+              "krobelus/rate",
+              "jesse-michael-han/neurocuber-public",
+              "marijnheule/pr2drat",
+              "jingchaochen/abcdSAT_Rat",
+              "benjaminkiesl/drat2er",
+              "cmu-transparency/verified_rup",
+              "prateekkumarweb/sat-verifier",
+              "jjasferreira/maxsat-core-bench"
+            ]
+          },
+          {
+            "query": "cutting stock",
+            "url": "https://github.com/search?q=cutting%20stock&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:22.814Z",
+            "sort": "Most stars",
+            "results": [
+              "danderfer/Comp_Sci_Sem_2",
+              "bozokopic/opcut",
+              "emadehsan/csp",
+              "kaiT2en/KaiT2en-Fedora",
+              "fabiofdsantos/2d-cutting-stock-problem",
+              "shivamim/Finance_AgenticAI",
+              "Jimmymugendi/Realtime-Data-Pipeline-for-Stock-Market-Analysis",
+              "AlexanderMorozovDesign/Linear_Cutting",
+              "MasumBhuiyan/2D-Irregular-Cutting-Stock-Algorithm",
+              "ccorcos/stock-cutting"
+            ]
+          },
+          {
+            "query": "Astropy",
+            "url": "https://github.com/search?q=Astropy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:24.018Z",
+            "sort": "Most stars",
+            "results": [
+              "astropy/astropy",
+              "sunpy/sunpy",
+              "astropy/astroquery",
+              "asdf-format/asdf",
+              "astropy-learn/astropy-tutorials",
+              "astropy/photutils",
+              "gammapy/gammapy",
+              "astropy/specutils",
+              "astropy/astropy-workshop",
+              "astropy/ccd-reduction-and-photometry-guide"
+            ]
+          },
+          {
+            "query": "DRUP",
+            "url": "https://github.com/search?q=DRUP&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:25.128Z",
+            "sort": "Most stars",
+            "results": [
+              "drupal/drupal",
+              "drupal-composer/drupal-project",
+              "fossasia/phimpme-drupal",
+              "geerlingguy/drupal-vm",
+              "wodby/docker4drupal",
+              "hechoendrupal/drupal-console",
+              "perusio/drupal-with-nginx",
+              "chapter-three/next-drupal",
+              "immunIT/drupwn",
+              "dreadlocked/Drupalgeddon2"
+            ]
+          }
+        ],
+        "primary_reference": "https://www.itu.int/itudoc/itu-t/com16/tiff-fx/docs/tiff6.pdf"
+      }
+    },
+    {
+      "brief": {
+        "repo": "cut-stock-proof",
+        "units": 8,
+        "capability": "Prove a bounded minimum-bar plan with explicit between-piece kerf and a search budget.",
+        "user": "Small workshop material planners.",
+        "pain": "Greedy allocation can waste a board, while a search cutoff must not be presented as proven optimal.",
+        "comparables": [
+          "google/or-tools",
+          "bozokopic/opcut",
+          "emadehsan/csp",
+          "ccorcos/stock-cutting"
+        ],
+        "leader": "google/or-tools",
+        "query": "bin packing; cutting stock; official OR-Tools reference follow",
+        "contract": "Strict JSON stock_length, kerf, pieces. Integer lengths1..1000000, kerf0..1000000;1..24 expanded pieces with unique printable IDs and optional quantity. Unlimited identical stock lengths. Kerf is charged only between adjacent pieces, never at ends. Transform length+kerf into bins of stock+kerf; first-fit decreasing upper bound, valid total-capacity lower bound and exhaustive branch search with equal-free-space symmetry pruning. An optimal claim requires reaching the lower bound or completing search. Oversized pieces return infeasible/exit1; budget exhaustion returns exit2 without a plan or optimality claim.",
+        "limits": "64 KiB JSON,250000 search nodes maximum. One stock length, no stock availability/cost objective,2D layouts, end trim, grain, saw sequencing or machine control. The mathematical kerf convention must match the intended planning task; this is not manufacturing certification.",
+        "acceptance": "Greedy3 versus proven2 counterexample; independent brute-force oracle across small multisets and kerfs; every piece exactly once; conservation, quantities, infeasible inputs and budget refusal.",
+        "notes": "OR-Tools provides much broader optimization and was found by following its official bin-packing example, not as the top cutting-stock query hit. Opcut is adjacent2D guillotine cutting; csp and stock-cutting are material-planning alternatives. We do not claim faster search, better industrial plans or missing competitor optimality.",
+        "overlap": "Owned bom-rollup-ledger totals material demand; capacity-cut-report is a network min-cut. Neither solves integer board packing with kerf and an explicit optimality condition.",
+        "topics": [
+          "cutting-stock",
+          "bin-packing",
+          "python",
+          "optimization"
+        ],
+        "standard": "https://developers.google.com/optimization/pack/bin_packing",
+        "expected": "Exit0: six pieces6,5,3,2,2,2 in stock10 need two bars; the reported first-fit upper bound is three.",
+        "module": "cut_stock_proof"
+      },
+      "evidence": {
+        "comparables": [
+          {
+            "full": "google/or-tools",
+            "url": "https://github.com/google/or-tools",
+            "stars": 14229,
+            "pushed_at": "2026-10-17T13:22:14Z",
+            "archived": false,
+            "license": "Apache-2.0",
+            "branch": "stable",
+            "observed": "2026-10-19T06:23:16.482Z",
+            "issues": [
+              {
+                "number": 5501,
+                "url": "https://github.com/google/or-tools/pull/5501",
+                "title": "Preserve precision in MPS model export"
+              },
+              {
+                "number": 5500,
+                "url": "https://github.com/google/or-tools/pull/5500",
+                "title": "Preserve precision in MPS numeric values"
+              },
+              {
+                "number": 5498,
+                "url": "https://github.com/google/or-tools/issues/5498",
+                "title": "CP-SAT: `fixed` worker returns an infeasible \"OPTIMAL\" from its hint search after importing a shared objective bound; final checker LOG(FATAL)s (`Infeasible solution! source: 'fixed [hint]'`)"
+              },
+              {
+                "number": 5494,
+                "url": "https://github.com/google/or-tools/issues/5494",
+                "title": "Internal persolve crash `absl::container_internal::raw_hash_map<>::at`"
+              },
+              {
+                "number": 5492,
+                "url": "https://github.com/google/or-tools/pull/5492",
+                "title": "WIP: Add MOSEK Support"
+              }
+            ]
+          },
+          {
+            "full": "bozokopic/opcut",
+            "url": "https://github.com/bozokopic/opcut",
+            "stars": 186,
+            "pushed_at": "2025-03-23T17:55:10Z",
+            "archived": false,
+            "license": "GPL-3.0",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.472Z",
+            "issues": [
+              {
+                "number": 36,
+                "url": "https://github.com/bozokopic/opcut/issues/36",
+                "title": "PDF Export Dosn't Show Meaurements"
+              },
+              {
+                "number": 35,
+                "url": "https://github.com/bozokopic/opcut/pull/35",
+                "title": "Add PDF dimensions and rotate text in output"
+              },
+              {
+                "number": 34,
+                "url": "https://github.com/bozokopic/opcut/issues/34",
+                "title": "Error of the optimal set"
+              },
+              {
+                "number": 27,
+                "url": "https://github.com/bozokopic/opcut/issues/27",
+                "title": "Algorithms Encounter Lengthy Processing Times with Large Stock Inventories"
+              },
+              {
+                "number": 17,
+                "url": "https://github.com/bozokopic/opcut/issues/17",
+                "title": "Development cycle/workflow doc"
+              }
+            ]
+          },
+          {
+            "full": "emadehsan/csp",
+            "url": "https://github.com/emadehsan/csp",
+            "stars": 156,
+            "pushed_at": "2024-01-10T18:22:46Z",
+            "archived": false,
+            "license": "MIT",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.585Z",
+            "issues": [
+              {
+                "number": 37,
+                "url": "https://github.com/emadehsan/csp/issues/37",
+                "title": "CSP 2D"
+              },
+              {
+                "number": 36,
+                "url": "https://github.com/emadehsan/csp/issues/36",
+                "title": "Add 2 or more stock measures possible"
+              },
+              {
+                "number": 34,
+                "url": "https://github.com/emadehsan/csp/issues/34",
+                "title": "going into infinite loop for this test case"
+              },
+              {
+                "number": 33,
+                "url": "https://github.com/emadehsan/csp/issues/33",
+                "title": "Getting slow response form google OR tools"
+              },
+              {
+                "number": 32,
+                "url": "https://github.com/emadehsan/csp/issues/32",
+                "title": "different  length in stock"
+              }
+            ]
+          },
+          {
+            "full": "ccorcos/stock-cutting",
+            "url": "https://github.com/ccorcos/stock-cutting",
+            "stars": 23,
+            "pushed_at": "2025-04-07T04:34:56Z",
+            "archived": false,
+            "license": "UNCLASSIFIED",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.616Z",
+            "issues": [
+              {
+                "number": 3,
+                "url": "https://github.com/ccorcos/stock-cutting/issues/3",
+                "title": "data entry in millimeters"
+              },
+              {
+                "number": 2,
+                "url": "https://github.com/ccorcos/stock-cutting/pull/2",
+                "title": "Update import on example"
+              },
+              {
+                "number": 1,
+                "url": "https://github.com/ccorcos/stock-cutting/issues/1",
+                "title": "Wrong result?"
+              }
+            ]
+          }
+        ],
+        "readmes": [
+          {
+            "repo": "google/or-tools",
+            "path": "README.md",
+            "sha": "344dfd9abc4372c20f49e604e9de312e08802230"
+          },
+          {
+            "repo": "bozokopic/opcut",
+            "path": "README.rst",
+            "sha": "282a7e751dc5166283dfc55c350fbaabc19bb8cc"
+          },
+          {
+            "repo": "emadehsan/csp",
+            "path": "README.md",
+            "sha": "8c5498b105d6d2997bc4fb1a6c0ebb78cca939e3"
+          },
+          {
+            "repo": "ccorcos/stock-cutting",
+            "path": "README.md",
+            "sha": "64894670c60f10320a7ed95d675033d2120d0994"
+          }
+        ],
+        "source_references": [],
+        "queries": [
+          {
+            "query": "FITS astronomy",
+            "url": "https://github.com/search?q=FITS%20astronomy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:32.368Z",
+            "sort": "Most stars",
+            "results": [
+              "ATTron/astroz",
+              "sherpa/sherpa",
+              "esheldon/fitsio",
+              "TheCyberBrick/FITS-Rating-Tool",
+              "danieljprice/splash",
+              "Hrishikesh332/Astronomy_Analysis",
+              "nom-tam-fits/nom-tam-fits",
+              "onekiloparsec/QLFits",
+              "astroclubiitk/Computational-Astrophysics-2021",
+              "JuliaAstro/FITSIO.jl"
+            ]
+          },
+          {
+            "query": "ELF parser",
+            "url": "https://github.com/search?q=ELF%20parser&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:33.523Z",
+            "sort": "Most stars",
+            "results": [
+              "lief-project/LIEF",
+              "eliben/pyelftools",
+              "m4b/goblin",
+              "elfmaster/libelfmaster",
+              "zszszszsz/.config",
+              "aclements/libelfin",
+              "cole14/rust-elf",
+              "finixbit/elf-parser",
+              "aep/elfkit",
+              "fornwall/jelf"
+            ]
+          },
+          {
+            "query": "TIFF image",
+            "url": "https://github.com/search?q=TIFF%20image&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:34.587Z",
+            "sort": "Most stars",
+            "results": [
+              "lovell/sharp",
+              "libvips/libvips",
+              "SixLabors/ImageSharp",
+              "Lymphatus/caesium-image-compressor",
+              "sylikc/jpegview",
+              "drewnoakes/metadata-extractor",
+              "JimBobSquarePants/ImageProcessor",
+              "woelper/oculante",
+              "davidbyttow/govips",
+              "Tom94/tev"
+            ]
+          },
+          {
+            "query": "bin packing",
+            "url": "https://github.com/search?q=bin%20packing&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:35.685Z",
+            "sort": "Most stars",
+            "results": [
+              "cfig/Android_boot_image_editor",
+              "alexfrom0815/Online-3D-BPP-PCT",
+              "juj/RectangleBinPack",
+              "alexfrom0815/Online-3D-BPP-DRL",
+              "jakesgordon/bin-packing",
+              "dvdoug/BoxPacker",
+              "skjolber/3d-bin-container-packing",
+              "enzoruiz/3dbinpacking",
+              "jerry800416/3D-bin-packing",
+              "Flamethr0wer/polygon-packer"
+            ]
+          },
+          {
+            "query": "DRAT proof",
+            "url": "https://github.com/search?q=DRAT%20proof&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:36.716Z",
+            "sort": "Most stars",
+            "results": [
+              "marijnheule/drat-trim",
+              "digama0/frat",
+              "krobelus/rate",
+              "jesse-michael-han/neurocuber-public",
+              "marijnheule/pr2drat",
+              "jingchaochen/abcdSAT_Rat",
+              "benjaminkiesl/drat2er",
+              "cmu-transparency/verified_rup",
+              "prateekkumarweb/sat-verifier",
+              "jjasferreira/maxsat-core-bench"
+            ]
+          },
+          {
+            "query": "cutting stock",
+            "url": "https://github.com/search?q=cutting%20stock&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:22.814Z",
+            "sort": "Most stars",
+            "results": [
+              "danderfer/Comp_Sci_Sem_2",
+              "bozokopic/opcut",
+              "emadehsan/csp",
+              "kaiT2en/KaiT2en-Fedora",
+              "fabiofdsantos/2d-cutting-stock-problem",
+              "shivamim/Finance_AgenticAI",
+              "Jimmymugendi/Realtime-Data-Pipeline-for-Stock-Market-Analysis",
+              "AlexanderMorozovDesign/Linear_Cutting",
+              "MasumBhuiyan/2D-Irregular-Cutting-Stock-Algorithm",
+              "ccorcos/stock-cutting"
+            ]
+          },
+          {
+            "query": "Astropy",
+            "url": "https://github.com/search?q=Astropy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:24.018Z",
+            "sort": "Most stars",
+            "results": [
+              "astropy/astropy",
+              "sunpy/sunpy",
+              "astropy/astroquery",
+              "asdf-format/asdf",
+              "astropy-learn/astropy-tutorials",
+              "astropy/photutils",
+              "gammapy/gammapy",
+              "astropy/specutils",
+              "astropy/astropy-workshop",
+              "astropy/ccd-reduction-and-photometry-guide"
+            ]
+          },
+          {
+            "query": "DRUP",
+            "url": "https://github.com/search?q=DRUP&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:25.128Z",
+            "sort": "Most stars",
+            "results": [
+              "drupal/drupal",
+              "drupal-composer/drupal-project",
+              "fossasia/phimpme-drupal",
+              "geerlingguy/drupal-vm",
+              "wodby/docker4drupal",
+              "hechoendrupal/drupal-console",
+              "perusio/drupal-with-nginx",
+              "chapter-three/next-drupal",
+              "immunIT/drupwn",
+              "dreadlocked/Drupalgeddon2"
+            ]
+          }
+        ],
+        "primary_reference": "https://developers.google.com/optimization/pack/bin_packing"
+      }
+    },
+    {
+      "brief": {
+        "repo": "rup-proof-trace",
+        "units": 13,
+        "capability": "Explain small RUP additions with assumptions, unit reasons and an explicit final-empty-clause requirement.",
+        "user": "SAT experiment authors debugging small unsatisfiability certificates.",
+        "pain": "A partial or rejected trace needs clause-level reasons; successful intermediate additions do not prove the complete certificate.",
+        "comparables": [
+          "marijnheule/drat-trim",
+          "digama0/frat",
+          "krobelus/rate"
+        ],
+        "leader": "marijnheule/drat-trim",
+        "query": "DRAT proof; DRUP (unrelated Drupal matches excluded)",
+        "contract": "ASCII DIMACS p cnf header with exact clause count and0 termination;0..64 variables,0..256 initial clauses. Text proof has one addition or d-prefixed deletion per noncomment line. Canonical clauses retain duplicate-clause identities; deletion removes exactly one matching active clause, including units, and absent deletions fail. For each addition assume its negation and perform deterministic unit propagation; report assumptions, implied literals with clause IDs, and conflict. Only an accepted empty clause as the final noncomment step yields verified/exit0. Non-RUP additions and incomplete traces exit1, not a SAT counterexample.",
+        "limits": "Combined inputs1 MiB,512 steps,2million literal visits. Existing variables only. No RAT, fresh variables, binary DRAT, FRAT or LRAT. Strict unit-deletion application differs from some DRAT-trim modes; no broad compatibility certification. Educational bounded checker, not formally verified or production assurance. Proof comments start with c on their own lines.",
+        "acceptance": "Clause-reason traces, full/incomplete/rejected proof, contradictory assumptions, initial empty clause, duplicate multiset and unit deletions, final-empty enforcement, DIMACS bounds and visit-budget failure.",
+        "notes": "DRAT-trim implements much broader DRAT checking and proof output; FRAT carries annotated proof evidence; rate addresses RAT elimination. Their historical research repositories remain useful comparisons even with older push dates. DRAT-trim LRAT issue42/PR43 is a different checker path, not evidence of a defect in RUP or demand for this tool. Existing algorithms are not claimed as new.",
+        "overlap": "No owned CNF proof checker was found among198 repositories. Numeric and bit-vector tools do not validate clause-addition proofs.",
+        "topics": [
+          "sat",
+          "rup",
+          "proof-checking",
+          "python"
+        ],
+        "standard": "https://www.cs.utexas.edu/~marijn/drat-trim/",
+        "expected": "Exit0: addition1 has a unit conflict under assumption-1; the final empty clause is accepted after adding1.",
+        "module": "rup_proof_trace"
+      },
+      "evidence": {
+        "comparables": [
+          {
+            "full": "marijnheule/drat-trim",
+            "url": "https://github.com/marijnheule/drat-trim",
+            "stars": 72,
+            "pushed_at": "2024-11-25T15:20:29Z",
+            "archived": false,
+            "license": "MIT",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.729Z",
+            "issues": [
+              {
+                "number": 43,
+                "url": "https://github.com/marijnheule/drat-trim/pull/43",
+                "title": "lrat-check: reject an empty lemma that does not end in a conflict"
+              },
+              {
+                "number": 42,
+                "url": "https://github.com/marijnheule/drat-trim/issues/42",
+                "title": "`lrat-check` says \"VERIFIED\" for a proof that proves nothing (regression #31)"
+              },
+              {
+                "number": 41,
+                "url": "https://github.com/marijnheule/drat-trim/issues/41",
+                "title": "Comment not properly ignored in the PROOF file (and -I option ignored)"
+              },
+              {
+                "number": 40,
+                "url": "https://github.com/marijnheule/drat-trim/pull/40",
+                "title": "drat-trim.c, decompress.c: fix `gcc-14` build"
+              },
+              {
+                "number": 39,
+                "url": "https://github.com/marijnheule/drat-trim/issues/39",
+                "title": "Comments not properly ignored in the INPUT file"
+              }
+            ]
+          },
+          {
+            "full": "digama0/frat",
+            "url": "https://github.com/digama0/frat",
+            "stars": 16,
+            "pushed_at": "2023-04-08T06:55:38Z",
+            "archived": false,
+            "license": "UNCLASSIFIED",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.685Z",
+            "issues": [
+              {
+                "number": 18,
+                "url": "https://github.com/digama0/frat/issues/18",
+                "title": "Behavior difference between -ss and -s"
+              }
+            ]
+          },
+          {
+            "full": "krobelus/rate",
+            "url": "https://github.com/krobelus/rate",
+            "stars": 10,
+            "pushed_at": "2022-02-12T05:44:34Z",
+            "archived": false,
+            "license": "MIT",
+            "branch": "master",
+            "observed": "2026-10-19T06:23:16.842Z",
+            "issues": [
+              {
+                "number": 104,
+                "url": "https://github.com/krobelus/rate/issues/104",
+                "title": "Something probably wrong..."
+              },
+              {
+                "number": 103,
+                "url": "https://github.com/krobelus/rate/pull/103",
+                "title": "Bump zstd from 0.5.1+zstd.1.4.4 to 0.6.0+zstd.1.4.8"
+              },
+              {
+                "number": 102,
+                "url": "https://github.com/krobelus/rate/pull/102",
+                "title": "Bump serde from 1.0.104 to 1.0.118"
+              },
+              {
+                "number": 101,
+                "url": "https://github.com/krobelus/rate/pull/101",
+                "title": "Bump toml from 0.5.5 to 0.5.8"
+              },
+              {
+                "number": 100,
+                "url": "https://github.com/krobelus/rate/pull/100",
+                "title": "Bump quote from 1.0.2 to 1.0.8"
+              }
+            ]
+          }
+        ],
+        "readmes": [
+          {
+            "repo": "marijnheule/drat-trim",
+            "path": "README.md",
+            "sha": "eb6ffcc4a85ff1c74a5995b6caae4372381dcd47"
+          },
+          {
+            "repo": "digama0/frat",
+            "path": "README.md",
+            "sha": "0864ba034d50dbacfb1835c24d108e93d0a8bad9"
+          },
+          {
+            "repo": "krobelus/rate",
+            "path": "README.md",
+            "sha": "7595e8eab4f273f2ff92c62869f7604991cf909d"
+          }
+        ],
+        "source_references": [
+          {
+            "repo": "marijnheule/drat-trim",
+            "path": "drat-trim.c",
+            "sha": "cf8a676ffcc7ef5a47124bbafc9b680a2df333e0",
+            "observed": "2026-10-19T06:24:10.299Z"
+          }
+        ],
+        "queries": [
+          {
+            "query": "FITS astronomy",
+            "url": "https://github.com/search?q=FITS%20astronomy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:32.368Z",
+            "sort": "Most stars",
+            "results": [
+              "ATTron/astroz",
+              "sherpa/sherpa",
+              "esheldon/fitsio",
+              "TheCyberBrick/FITS-Rating-Tool",
+              "danieljprice/splash",
+              "Hrishikesh332/Astronomy_Analysis",
+              "nom-tam-fits/nom-tam-fits",
+              "onekiloparsec/QLFits",
+              "astroclubiitk/Computational-Astrophysics-2021",
+              "JuliaAstro/FITSIO.jl"
+            ]
+          },
+          {
+            "query": "ELF parser",
+            "url": "https://github.com/search?q=ELF%20parser&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:33.523Z",
+            "sort": "Most stars",
+            "results": [
+              "lief-project/LIEF",
+              "eliben/pyelftools",
+              "m4b/goblin",
+              "elfmaster/libelfmaster",
+              "zszszszsz/.config",
+              "aclements/libelfin",
+              "cole14/rust-elf",
+              "finixbit/elf-parser",
+              "aep/elfkit",
+              "fornwall/jelf"
+            ]
+          },
+          {
+            "query": "TIFF image",
+            "url": "https://github.com/search?q=TIFF%20image&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:34.587Z",
+            "sort": "Most stars",
+            "results": [
+              "lovell/sharp",
+              "libvips/libvips",
+              "SixLabors/ImageSharp",
+              "Lymphatus/caesium-image-compressor",
+              "sylikc/jpegview",
+              "drewnoakes/metadata-extractor",
+              "JimBobSquarePants/ImageProcessor",
+              "woelper/oculante",
+              "davidbyttow/govips",
+              "Tom94/tev"
+            ]
+          },
+          {
+            "query": "bin packing",
+            "url": "https://github.com/search?q=bin%20packing&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:35.685Z",
+            "sort": "Most stars",
+            "results": [
+              "cfig/Android_boot_image_editor",
+              "alexfrom0815/Online-3D-BPP-PCT",
+              "juj/RectangleBinPack",
+              "alexfrom0815/Online-3D-BPP-DRL",
+              "jakesgordon/bin-packing",
+              "dvdoug/BoxPacker",
+              "skjolber/3d-bin-container-packing",
+              "enzoruiz/3dbinpacking",
+              "jerry800416/3D-bin-packing",
+              "Flamethr0wer/polygon-packer"
+            ]
+          },
+          {
+            "query": "DRAT proof",
+            "url": "https://github.com/search?q=DRAT%20proof&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:20:36.716Z",
+            "sort": "Most stars",
+            "results": [
+              "marijnheule/drat-trim",
+              "digama0/frat",
+              "krobelus/rate",
+              "jesse-michael-han/neurocuber-public",
+              "marijnheule/pr2drat",
+              "jingchaochen/abcdSAT_Rat",
+              "benjaminkiesl/drat2er",
+              "cmu-transparency/verified_rup",
+              "prateekkumarweb/sat-verifier",
+              "jjasferreira/maxsat-core-bench"
+            ]
+          },
+          {
+            "query": "cutting stock",
+            "url": "https://github.com/search?q=cutting%20stock&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:22.814Z",
+            "sort": "Most stars",
+            "results": [
+              "danderfer/Comp_Sci_Sem_2",
+              "bozokopic/opcut",
+              "emadehsan/csp",
+              "kaiT2en/KaiT2en-Fedora",
+              "fabiofdsantos/2d-cutting-stock-problem",
+              "shivamim/Finance_AgenticAI",
+              "Jimmymugendi/Realtime-Data-Pipeline-for-Stock-Market-Analysis",
+              "AlexanderMorozovDesign/Linear_Cutting",
+              "MasumBhuiyan/2D-Irregular-Cutting-Stock-Algorithm",
+              "ccorcos/stock-cutting"
+            ]
+          },
+          {
+            "query": "Astropy",
+            "url": "https://github.com/search?q=Astropy&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:24.018Z",
+            "sort": "Most stars",
+            "results": [
+              "astropy/astropy",
+              "sunpy/sunpy",
+              "astropy/astroquery",
+              "asdf-format/asdf",
+              "astropy-learn/astropy-tutorials",
+              "astropy/photutils",
+              "gammapy/gammapy",
+              "astropy/specutils",
+              "astropy/astropy-workshop",
+              "astropy/ccd-reduction-and-photometry-guide"
+            ]
+          },
+          {
+            "query": "DRUP",
+            "url": "https://github.com/search?q=DRUP&type=repositories&s=stars&o=desc",
+            "observed": "2026-10-19T06:22:25.128Z",
+            "sort": "Most stars",
+            "results": [
+              "drupal/drupal",
+              "drupal-composer/drupal-project",
+              "fossasia/phimpme-drupal",
+              "geerlingguy/drupal-vm",
+              "wodby/docker4drupal",
+              "hechoendrupal/drupal-console",
+              "perusio/drupal-with-nginx",
+              "chapter-three/next-drupal",
+              "immunIT/drupwn",
+              "dreadlocked/Drupalgeddon2"
+            ]
+          }
+        ],
+        "primary_reference": "https://www.cs.utexas.edu/~marijn/drat-trim/"
+      }
+    }
+  ],
+  "distinction": "Astronomical FITS HDU blocks, ELF virtual program segments, TIFF grayscale strip ownership, exact integer stock packing and SAT clause proofs serve distinct users/contracts. Shared offline packaging is infrastructure, not subdivision of one product. Existing198 repository inventory was compared in each brief.",
+  "demand": "inferred, not verified requests",
+  "benchmark": "Competitor installability/time-to-first-result/reliability/support-response/performance not measured; no feature-absence or superiority claim."
+}
