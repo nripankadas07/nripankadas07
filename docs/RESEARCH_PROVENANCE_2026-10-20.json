@@ -1,0 +1,693 @@
+{
+  "date": "2026-10-20",
+  "projects": [
+    {
+      "brief": {
+        "repo": "sql-null-witness",
+        "user": "Analysts debugging why nullable rows disappear from a WHERE clause.",
+        "pain": "A NOT IN list containing NULL can produce UNKNOWN, whose rows WHERE discards; a true/false-only mental model hides the cause.",
+        "capability": "Parse a strict SQL predicate subset and explain TRUE/FALSE/UNKNOWN results and retained row indexes with an AST and postorder trace.",
+        "alternatives": [
+          "tobymao/sqlglot",
+          "andialbrecht/sqlparse",
+          "macbre/sql-metadata"
+        ],
+        "query": "sql parser language:Python",
+        "highest": "tobymao/sqlglot",
+        "topics": [
+          "sql",
+          "null",
+          "debugging",
+          "python"
+        ],
+        "expected": "Invented example retains only row2; the other two rows are UNKNOWN.",
+        "limits": "Only one predicate: integer/text/NULL values, = <> != < <= > >=, IS [NOT] NULL, nonempty literal [NOT] IN lists, NOT/AND/OR and predicate parentheses. TRUE/FALSE/NULL may stand alone. No SELECT, joins, functions, arithmetic, quoted names, floating point, coercion, collation or database access. Column names match JSON keys exactly and are case sensitive. Comparisons require the same nonboolean integer/text type unless NULL. No short-circuit evaluation guarantee; every trace node is evaluated. Empty IN lists reject. Up to256 tokens/4096 predicate characters,1000 rows,100 keys per row; integers within \u00b110^15.",
+        "distinct": "Existing sqlite-plan-witness inspects plans, sqlite-fixture-closure extracts parent rows, sqlite-rehearsal rehearses SQL, and json tools compare structure. This explains nullable predicate semantics without connecting to or running a user database.",
+        "checks": "SQLite truth-table and row-expression oracle, precedence, escaped text, missing columns and deliberate rejection of coercion/full SQL."
+      },
+      "evidence": {
+        "date": "2026-10-20",
+        "comparables": [
+          {
+            "full_name": "tobymao/sqlglot",
+            "html_url": "https://github.com/tobymao/sqlglot",
+            "stargazers_count": 9699,
+            "pushed_at": "2026-10-19T21:40:15Z",
+            "default_branch": "main",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            },
+            "description": "Python SQL Parser and Transpiler",
+            "observed": "2026-10-20T06:13:34.123Z",
+            "recent_open_items": [
+              {
+                "number": 8685,
+                "title": "MySQL bitwise operator tiers are mis-grouped during translation",
+                "url": "https://github.com/tobymao/sqlglot/issues/8685",
+                "is_pr": false
+              },
+              {
+                "number": 8684,
+                "title": "MySQL XOR is parsed at AND precedence and optimizer folds a true expression to false",
+                "url": "https://github.com/tobymao/sqlglot/issues/8684",
+                "is_pr": false
+              },
+              {
+                "number": 8683,
+                "title": "MySQL ! is emitted as lower-precedence NOT without preserving grouping",
+                "url": "https://github.com/tobymao/sqlglot/issues/8683",
+                "is_pr": false
+              }
+            ]
+          },
+          {
+            "full_name": "andialbrecht/sqlparse",
+            "html_url": "https://github.com/andialbrecht/sqlparse",
+            "stargazers_count": 4023,
+            "pushed_at": "2026-08-13T19:17:19Z",
+            "default_branch": "master",
+            "license": {
+              "key": "bsd-3-clause",
+              "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+              "spdx_id": "BSD-3-Clause",
+              "url": "https://api.github.com/licenses/bsd-3-clause",
+              "node_id": "MDc6TGljZW5zZTU="
+            },
+            "description": "A non-validating SQL parser module for Python",
+            "observed": "2026-10-20T06:13:34.298Z",
+            "recent_open_items": [
+              {
+                "number": 936,
+                "title": "Fix statement splitting after whitespace-varied compound closers",
+                "url": "https://github.com/andialbrecht/sqlparse/pull/936",
+                "is_pr": true
+              },
+              {
+                "number": 935,
+                "title": "Preserve quoted newlines following backslashes",
+                "url": "https://github.com/andialbrecht/sqlparse/pull/935",
+                "is_pr": true
+              },
+              {
+                "number": 934,
+                "title": "Keep normalized whitespace in sync after filtering",
+                "url": "https://github.com/andialbrecht/sqlparse/pull/934",
+                "is_pr": true
+              }
+            ]
+          },
+          {
+            "full_name": "macbre/sql-metadata",
+            "html_url": "https://github.com/macbre/sql-metadata",
+            "stargazers_count": 889,
+            "pushed_at": "2026-10-19T02:47:12Z",
+            "default_branch": "master",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            },
+            "description": "Uses tokenized query returned by python-sqlparse and generates query metadata",
+            "observed": "2026-10-20T06:14:40.686Z",
+            "recent_open_items": []
+          }
+        ],
+        "query": {
+          "query": "sql parser language:Python",
+          "url": "https://github.com/search?q=sql+parser+language%3APython&type=repositories&s=stars&o=desc",
+          "observed": "2026-10-20T06:13:46.167Z"
+        },
+        "highest_star_relevant_found": "tobymao/sqlglot",
+        "limits": "Most-stars site search is scoped and keyword dependent, not an exhaustive global ranking. Also read manually found established comparables. Some leading keyword results are adjacent or irrelevant. Competitors not installed/timed/stress tested. No absence, reliability, superiority or performance claim. Issues/PRs are small current samples, not evidence of an unresolved competitor-wide defect.",
+        "read_sources": "Current repository READMEs, metadata and sampled issues; relevant implementations/fixtures for SQLGlot simplify, NetworkX DAG, criticalpath, PM4Py/SNAKES Petri semantics, OSRM restrictions and automata/brics inclusion. No source copied."
+      }
+    },
+    {
+      "brief": {
+        "repo": "activity-slack-report",
+        "user": "Release coordinators reviewing a small dependency schedule before setting a deadline.",
+        "pain": "A list of durations hides which predecessor sets the finish and which tasks can move without delaying the project.",
+        "capability": "Compute earliest/latest task times, total/free slack, binding predecessor evidence and one longest-chain witness with explicit finish-to-start lags.",
+        "alternatives": [
+          "networkx/networkx",
+          "taskjuggler/TaskJuggler",
+          "chrisspen/criticalpath"
+        ],
+        "query": "critical path",
+        "highest": "networkx/networkx",
+        "topics": [
+          "scheduling",
+          "critical-path",
+          "project-management",
+          "python"
+        ],
+        "expected": "Invented example finishes at10; design has4 slack and buy\u2192build\u2192review is the longest chain.",
+        "limits": "Acyclic activity-on-node finish-to-start model; integer durations/lags from0..10^9, unlimited parallel resources, project starts at0. Optional deadline0..10^15 sets backward pass; a too-early deadline yields negative slack, not an invalid graph. No calendars, resource leveling, start-to-start links, negative lags or estimates of real completion. Up to200 tasks and2000 distinct links. A cycle rejects without a partial schedule. The longest chain relates to minimum finish, while deadline slack may differ.",
+        "distinct": "capacity-cut-report allocates pool capacity by max flow, task-queue runs asynchronous work, and systemd-order-audit checks ordering. This computes time and deadline slack, with no execution or resource assignment.",
+        "checks": "Independent enumeration of all paths in64 four-task DAGs; lag, negative slack, disconnected milestones, cycles and invalid links."
+      },
+      "evidence": {
+        "date": "2026-10-20",
+        "comparables": [
+          {
+            "full_name": "networkx/networkx",
+            "html_url": "https://github.com/networkx/networkx",
+            "stargazers_count": 17341,
+            "pushed_at": "2026-10-16T22:01:28Z",
+            "default_branch": "main",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            },
+            "description": "Network Analysis in Python",
+            "observed": "2026-10-20T06:13:34.370Z",
+            "recent_open_items": [
+              {
+                "number": 8967,
+                "title": "Fix false-positive failure in spanning arborescence algorithms (#8964)",
+                "url": "https://github.com/networkx/networkx/pull/8967",
+                "is_pr": true
+              },
+              {
+                "number": 8966,
+                "title": "Fix weight shifts in spanning arborescence functions",
+                "url": "https://github.com/networkx/networkx/pull/8966",
+                "is_pr": true
+              },
+              {
+                "number": 8965,
+                "title": "Speed up Graph/MultiGraph copy() by not iterating undirected edges twice",
+                "url": "https://github.com/networkx/networkx/pull/8965",
+                "is_pr": true
+              }
+            ]
+          },
+          {
+            "full_name": "taskjuggler/TaskJuggler",
+            "html_url": "https://github.com/taskjuggler/TaskJuggler",
+            "stargazers_count": 817,
+            "pushed_at": "2025-07-28T18:41:08Z",
+            "default_branch": "master",
+            "license": {
+              "key": "gpl-2.0",
+              "name": "GNU General Public License v2.0",
+              "spdx_id": "GPL-2.0",
+              "url": "https://api.github.com/licenses/gpl-2.0",
+              "node_id": "MDc6TGljZW5zZTg="
+            },
+            "description": "TaskJuggler - Project Management beyond Gantt chart drawing",
+            "observed": "2026-10-20T06:13:34.205Z",
+            "recent_open_items": [
+              {
+                "number": 322,
+                "title": "Fix `tj3d --webserver`",
+                "url": "https://github.com/taskjuggler/TaskJuggler/pull/322",
+                "is_pr": true
+              },
+              {
+                "number": 321,
+                "title": "Bug Fix: Check to avoid partial bookings of multiple persistent mandatory resources with alternatives",
+                "url": "https://github.com/taskjuggler/TaskJuggler/pull/321",
+                "is_pr": true
+              },
+              {
+                "number": 320,
+                "title": "is direct HTML format supported instead of Rich-Text Attribute Syntax ?",
+                "url": "https://github.com/taskjuggler/TaskJuggler/issues/320",
+                "is_pr": false
+              }
+            ]
+          },
+          {
+            "full_name": "chrisspen/criticalpath",
+            "html_url": "https://github.com/chrisspen/criticalpath",
+            "stargazers_count": 27,
+            "pushed_at": "2018-07-01T10:57:55Z",
+            "default_branch": "master",
+            "license": null,
+            "description": "Calculates the critical path of a task network.",
+            "observed": "2026-10-20T06:13:34.113Z",
+            "recent_open_items": [
+              {
+                "number": 5,
+                "title": "update_bacward is not working",
+                "url": "https://github.com/chrisspen/criticalpath/issues/5",
+                "is_pr": false
+              },
+              {
+                "number": 4,
+                "title": "how to change Node's duration?",
+                "url": "https://github.com/chrisspen/criticalpath/issues/4",
+                "is_pr": false
+              }
+            ]
+          }
+        ],
+        "query": {
+          "query": "critical path",
+          "url": "https://github.com/search?q=critical+path&type=repositories&s=stars&o=desc",
+          "observed": "2026-10-20T06:14:54.570Z"
+        },
+        "highest_star_relevant_found": "networkx/networkx",
+        "limits": "Most-stars site search is scoped and keyword dependent, not an exhaustive global ranking. Also read manually found established comparables. Some leading keyword results are adjacent or irrelevant. Competitors not installed/timed/stress tested. No absence, reliability, superiority or performance claim. Issues/PRs are small current samples, not evidence of an unresolved competitor-wide defect.",
+        "read_sources": "Current repository READMEs, metadata and sampled issues; relevant implementations/fixtures for SQLGlot simplify, NetworkX DAG, criticalpath, PM4Py/SNAKES Petri semantics, OSRM restrictions and automata/brics inclusion. No source copied."
+      }
+    },
+    {
+      "brief": {
+        "repo": "petri-deadlock-witness",
+        "user": "Workflow designers testing small token-based synchronization models before implementation.",
+        "pain": "A drawn workflow may consume a token without a restoring path; bounded exploration can be mistakenly presented as a complete safety result.",
+        "capability": "Explore ordinary weighted place-transition nets and return a shortest unexpected deadlock firing sequence, explored-state count and explicit cutoff/unknown status.",
+        "alternatives": [
+          "process-intelligence-solutions/pm4py",
+          "sarahtattersall/PIPE",
+          "fpom/snakes"
+        ],
+        "query": "petri net",
+        "highest": "process-intelligence-solutions/pm4py",
+        "topics": [
+          "petri-net",
+          "deadlock",
+          "model-checking",
+          "python"
+        ],
+        "expected": "Invented acquire-only example reaches a deadlock after acquire; declaring that exact marking terminal makes it expected.",
+        "limits": "Ordinary nonnegative integer weighted arcs only; no colored/timed/inhibitor/reset arcs, priorities, PNML import, fairness or liveness proof. Supplied token_limit is an exploration bound, not net capacity: an enabled over-bound transition causes UNKNOWN, never a false deadlock. state_limit bounds discovered states at1..10000; at most32 places/100 transitions/100 terminal markings. token_limit1..10^6; arc/initial values0..10^9, initial within bound. All terminal markings name every place. Only the first shortest deadlock is materialized; deadlock_count counts distinct unexpected deadlock markings among explored states. never_enabled_in_explored_states is an observation and not an unreachability proof if incomplete.",
+        "distinct": "pg-lock-witness analyzes captured process wait edges and systemd-order-audit analyzes static dependency order. This explores changing token markings and possible synchronization deadlocks in a user-declared model.",
+        "checks": "Weighted arc consumption, shortest path, terminal exemption, bounded growth/state UNKNOWN, complete two-state cycle, initial deadlock and bad arc rejection."
+      },
+      "evidence": {
+        "date": "2026-10-20",
+        "comparables": [
+          {
+            "full_name": "process-intelligence-solutions/pm4py",
+            "html_url": "https://github.com/process-intelligence-solutions/pm4py",
+            "stargazers_count": 1065,
+            "pushed_at": "2026-10-19T06:24:38Z",
+            "default_branch": "release",
+            "license": {
+              "key": "agpl-3.0",
+              "name": "GNU Affero General Public License v3.0",
+              "spdx_id": "AGPL-3.0",
+              "url": "https://api.github.com/licenses/agpl-3.0",
+              "node_id": "MDc6TGljZW5zZTE="
+            },
+            "description": "Official public repository for PM4Py (Process Mining for Python) \u2014 an open-source library for exploring, analyzing, and optimizing business processes with Python.",
+            "observed": "2026-10-20T06:13:34.445Z",
+            "recent_open_items": [
+              {
+                "number": 576,
+                "title": "fix: run DFG playout example with current APIs",
+                "url": "https://github.com/process-intelligence-solutions/pm4py/pull/576",
+                "is_pr": true
+              },
+              {
+                "number": 575,
+                "title": "fix: render titles in basic POWL diagrams",
+                "url": "https://github.com/process-intelligence-solutions/pm4py/pull/575",
+                "is_pr": true
+              },
+              {
+                "number": 574,
+                "title": "Remove redundant trace-count comparison",
+                "url": "https://github.com/process-intelligence-solutions/pm4py/pull/574",
+                "is_pr": true
+              }
+            ]
+          },
+          {
+            "full_name": "sarahtattersall/PIPE",
+            "html_url": "https://github.com/sarahtattersall/PIPE",
+            "stargazers_count": 250,
+            "pushed_at": "2022-06-28T15:04:05Z",
+            "default_branch": "master",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            },
+            "description": "PIPE - Platform Independent Petri Net Editor",
+            "observed": "2026-10-20",
+            "recent_open_items": [
+              {
+                "number": 140,
+                "title": "On MacOS the latest version of PIPE didn't run",
+                "url": "https://github.com/sarahtattersall/PIPE/issues/140",
+                "is_pr": false
+              },
+              {
+                "number": 139,
+                "title": "Named items: places, transitions, arcs",
+                "url": "https://github.com/sarahtattersall/PIPE/issues/139",
+                "is_pr": false
+              },
+              {
+                "number": 138,
+                "title": "Apple Sillicon Support  (M1 & M3 Pro)",
+                "url": "https://github.com/sarahtattersall/PIPE/issues/138",
+                "is_pr": false
+              }
+            ]
+          },
+          {
+            "full_name": "fpom/snakes",
+            "html_url": "https://github.com/fpom/snakes",
+            "stargazers_count": 102,
+            "pushed_at": "2024-06-03T10:56:55Z",
+            "default_branch": "master",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            },
+            "description": "Moved to Codeberg",
+            "observed": "2026-10-20T06:13:34.095Z",
+            "recent_open_items": [
+              {
+                "number": 20,
+                "title": "Inhibitor arc is throwing exception",
+                "url": "https://github.com/fpom/snakes/issues/20",
+                "is_pr": false
+              }
+            ]
+          }
+        ],
+        "query": {
+          "query": "petri net",
+          "url": "https://github.com/search?q=petri+net&type=repositories&s=stars&o=desc",
+          "observed": "2026-10-20T06:16:26.697Z"
+        },
+        "highest_star_relevant_found": "process-intelligence-solutions/pm4py",
+        "limits": "Most-stars site search is scoped and keyword dependent, not an exhaustive global ranking. Also read manually found established comparables. Some leading keyword results are adjacent or irrelevant. Competitors not installed/timed/stress tested. No absence, reliability, superiority or performance claim. Issues/PRs are small current samples, not evidence of an unresolved competitor-wide defect.",
+        "read_sources": "Current repository READMEs, metadata and sampled issues; relevant implementations/fixtures for SQLGlot simplify, NetworkX DAG, criticalpath, PM4Py/SNAKES Petri semantics, OSRM restrictions and automata/brics inclusion. No source copied."
+      }
+    },
+    {
+      "brief": {
+        "repo": "turn-route-witness",
+        "user": "Routing developers reproducing a turn-restriction bug on a small extracted directed graph.",
+        "pain": "Keeping only the cheapest arrival at a junction can discard the incoming edge needed to take a legal next turn.",
+        "capability": "Find minimum integer-cost routes over incoming-edge states with exact forbidden consecutive-edge pairs and compare an unrestricted baseline.",
+        "alternatives": [
+          "Project-OSRM/osrm-backend",
+          "graphhopper/graphhopper",
+          "valhalla/valhalla"
+        ],
+        "query": "turn restrictions routing",
+        "highest": "Project-OSRM/osrm-backend",
+        "topics": [
+          "routing",
+          "shortest-path",
+          "turn-restrictions",
+          "python"
+        ],
+        "expected": "Invented example takes ad,db,bc at cost4 instead of the blocked cost2 ab,bc route. A legal zero-cost loop can change the incoming edge and permit an exit.",
+        "limits": "Normalized directed graph only; at most200 nodes/1000 edges/5000 distinct forbidden pairs; edge costs0..10^9. Pair IDs must refer to consecutive edges. No OSM/coordinates/geocoding, multi-edge/conditional/only-turn restrictions, travel-time prediction, turn penalties or vehicle safety instructions. All unlisted pairs including U-turns are allowed. Zero-cost loops are permitted. Ties deterministic for fixed IDs; no claim of globally lexicographically smallest route. Unreachable is a finding, not malformed input.",
+        "distinct": "gpx-dwell-report analyzes recorded motion, redirect-graph checks web redirects and capacity-cut-report solves allocation flow. This is a route feasibility/cost witness for incoming-edge restrictions, not a map service.",
+        "checks": "100 fixed-seed graphs checked against exhaustive edge-state path enumeration, incoming-state counterexample, unreachable/identity route, zero cycle, invalid turns and negative-cost rejection."
+      },
+      "evidence": {
+        "date": "2026-10-20",
+        "comparables": [
+          {
+            "full_name": "Project-OSRM/osrm-backend",
+            "html_url": "https://github.com/Project-OSRM/osrm-backend",
+            "stargazers_count": 8155,
+            "pushed_at": "2026-10-17T18:33:22Z",
+            "default_branch": "master",
+            "license": {
+              "key": "bsd-2-clause",
+              "name": "BSD 2-Clause \"Simplified\" License",
+              "spdx_id": "BSD-2-Clause",
+              "url": "https://api.github.com/licenses/bsd-2-clause",
+              "node_id": "MDc6TGljZW5zZTQ="
+            },
+            "description": "Open Source Routing Machine - C++ backend",
+            "observed": "2026-10-20T06:13:34.315Z",
+            "recent_open_items": [
+              {
+                "number": 7749,
+                "title": "chore(deps): bump pypa/cibuildwheel from 4.3.0 to 4.3.1",
+                "url": "https://github.com/Project-OSRM/osrm-backend/pull/7749",
+                "is_pr": true
+              },
+              {
+                "number": 7748,
+                "title": "Possible typo in bicycle profile: concrete_lanes instead of concrete:lanes",
+                "url": "https://github.com/Project-OSRM/osrm-backend/issues/7748",
+                "is_pr": false
+              },
+              {
+                "number": 7747,
+                "title": "Work with 16 exclusion classes rather than 8",
+                "url": "https://github.com/Project-OSRM/osrm-backend/issues/7747",
+                "is_pr": false
+              }
+            ]
+          },
+          {
+            "full_name": "graphhopper/graphhopper",
+            "html_url": "https://github.com/graphhopper/graphhopper",
+            "stargazers_count": 6737,
+            "pushed_at": "2026-10-19T15:12:43Z",
+            "default_branch": "master",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            },
+            "description": "Open source routing engine for OpenStreetMap. Use it as Java library or standalone web server.",
+            "observed": "2026-10-20T06:13:34.337Z",
+            "recent_open_items": [
+              {
+                "number": 3417,
+                "title": "bike: \"steps\" avoidance should be stronger",
+                "url": "https://github.com/graphhopper/graphhopper/issues/3417",
+                "is_pr": false
+              },
+              {
+                "number": 3413,
+                "title": "Fix typos in docs, comments and an exception message",
+                "url": "https://github.com/graphhopper/graphhopper/pull/3413",
+                "is_pr": true
+              },
+              {
+                "number": 3411,
+                "title": "Throw as early as possible during import if referenced nodes are missing",
+                "url": "https://github.com/graphhopper/graphhopper/pull/3411",
+                "is_pr": true
+              }
+            ]
+          },
+          {
+            "full_name": "valhalla/valhalla",
+            "html_url": "https://github.com/valhalla/valhalla",
+            "stargazers_count": 6342,
+            "pushed_at": "2026-10-19T19:20:21Z",
+            "default_branch": "master",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            },
+            "description": "Open Source Routing Engine for OpenStreetMap",
+            "observed": "2026-10-20T06:13:34.283Z",
+            "recent_open_items": [
+              {
+                "number": 6431,
+                "title": "Allow pedestrian routing throuh `highway=ladder`",
+                "url": "https://github.com/valhalla/valhalla/issues/6431",
+                "is_pr": false
+              },
+              {
+                "number": 6430,
+                "title": "Expose tile IDs for multiple hierarchy levels",
+                "url": "https://github.com/valhalla/valhalla/pull/6430",
+                "is_pr": true
+              },
+              {
+                "number": 6428,
+                "title": "feat: add configuration JSON schema",
+                "url": "https://github.com/valhalla/valhalla/pull/6428",
+                "is_pr": true
+              }
+            ]
+          }
+        ],
+        "query": {
+          "query": "turn restrictions routing",
+          "url": "https://github.com/search?q=turn+restrictions+routing&type=repositories&s=stars&o=desc",
+          "observed": "2026-10-20T06:18:40.954Z"
+        },
+        "highest_star_relevant_found": "Project-OSRM/osrm-backend",
+        "limits": "Most-stars site search is scoped and keyword dependent, not an exhaustive global ranking. Also read manually found established comparables. Some leading keyword results are adjacent or irrelevant. Competitors not installed/timed/stress tested. No absence, reliability, superiority or performance claim. Issues/PRs are small current samples, not evidence of an unresolved competitor-wide defect.",
+        "read_sources": "Current repository READMEs, metadata and sampled issues; relevant implementations/fixtures for SQLGlot simplify, NetworkX DAG, criticalpath, PM4Py/SNAKES Petri semantics, OSRM restrictions and automata/brics inclusion. No source copied."
+      }
+    },
+    {
+      "brief": {
+        "repo": "dfa-inclusion-witness",
+        "user": "Parser/protocol engineers checking that an explicit finite recognizer change preserves accepted token sequences.",
+        "pain": "A failing inclusion comparison needs a small reproducible sequence and both state traces; a finite test corpus cannot establish language inclusion.",
+        "capability": "Explore the finite DFA product to prove left-language inclusion or return a shortest token counterexample with both state traces.",
+        "alternatives": [
+          "rust-lang/regex",
+          "caleb531/automata",
+          "cs-au-dk/dk.brics.automaton"
+        ],
+        "query": "finite automata",
+        "highest": "rust-lang/regex",
+        "topics": [
+          "automata",
+          "dfa",
+          "counterexample",
+          "python"
+        ],
+        "expected": "Invented example returns tokens[a,b]; left accepts while right enters its implicit rejecting sink.",
+        "limits": "Explicit deterministic finite automata only; at most100 states and5000 transitions per machine and32 alphabet tokens. Tokens are nonempty named symbols, not characters to concatenate; the empty-word witness is[]. Missing transitions go to an implicit absorbing rejecting sink represented by null. No regex parser, epsilon/NFA, pushdown/B\u00fcchi automata, minimization or equivalence claim from one-way inclusion. Reverse the inputs for the other direction. Sorted tokens resolve shortest-witness ties. At most10201 reachable product pairs.",
+        "distinct": "rup-proof-trace checks clause proof steps and spdx-expression-paths enumerates license alternatives. This checks inclusion of finite token languages and produces a counterexample, not SAT or grammar parsing.",
+        "checks": "640 small complete DFA pairs checked against exhaustive words through length3 (four product states imply shortest witness\u22643), partial sinks, empty word, empty alphabet and nondeterministic transition rejection."
+      },
+      "evidence": {
+        "date": "2026-10-20",
+        "comparables": [
+          {
+            "full_name": "rust-lang/regex",
+            "html_url": "https://github.com/rust-lang/regex",
+            "stargazers_count": 4044,
+            "pushed_at": "2026-10-19T17:59:23Z",
+            "default_branch": "master",
+            "license": {
+              "key": "apache-2.0",
+              "name": "Apache License 2.0",
+              "spdx_id": "Apache-2.0",
+              "url": "https://api.github.com/licenses/apache-2.0",
+              "node_id": "MDc6TGljZW5zZTI="
+            },
+            "description": "An implementation of regular expressions for Rust. This implementation uses finite automata and guarantees linear time matching on all inputs.",
+            "observed": "2026-10-20",
+            "recent_open_items": [
+              {
+                "number": 1401,
+                "title": "syntax: don't lift alternation prefixes that can match more than one way",
+                "url": "https://github.com/rust-lang/regex/pull/1401",
+                "is_pr": true
+              },
+              {
+                "number": 1400,
+                "title": "wrong leftmost-first match when alternation branches start with the same repetition",
+                "url": "https://github.com/rust-lang/regex/issues/1400",
+                "is_pr": false
+              },
+              {
+                "number": 1399,
+                "title": "syntax: fix class negation across the surrogate gap",
+                "url": "https://github.com/rust-lang/regex/pull/1399",
+                "is_pr": true
+              }
+            ]
+          },
+          {
+            "full_name": "caleb531/automata",
+            "html_url": "https://github.com/caleb531/automata",
+            "stargazers_count": 412,
+            "pushed_at": "2026-06-25T19:41:27Z",
+            "default_branch": "main",
+            "license": {
+              "key": "mit",
+              "name": "MIT License",
+              "spdx_id": "MIT",
+              "url": "https://api.github.com/licenses/mit",
+              "node_id": "MDc6TGljZW5zZTEz"
+            },
+            "description": "A Python library for simulating finite automata, pushdown automata, and Turing machines",
+            "observed": "2026-10-20T06:13:34.168Z",
+            "recent_open_items": [
+              {
+                "number": 287,
+                "title": "Allowing NFAs to have multiple initial states",
+                "url": "https://github.com/caleb531/automata/issues/287",
+                "is_pr": false
+              },
+              {
+                "number": 285,
+                "title": "Adjust types (and interface) such that automatons work with arbitrary python objects",
+                "url": "https://github.com/caleb531/automata/issues/285",
+                "is_pr": false
+              },
+              {
+                "number": 267,
+                "title": "Split up tests across multiple files",
+                "url": "https://github.com/caleb531/automata/issues/267",
+                "is_pr": false
+              }
+            ]
+          },
+          {
+            "full_name": "cs-au-dk/dk.brics.automaton",
+            "html_url": "https://github.com/cs-au-dk/dk.brics.automaton",
+            "stargazers_count": 248,
+            "pushed_at": "2025-09-14T11:53:41Z",
+            "default_branch": "master",
+            "license": {
+              "key": "other",
+              "name": "Other",
+              "spdx_id": "NOASSERTION",
+              "url": null,
+              "node_id": "MDc6TGljZW5zZTA="
+            },
+            "description": "dk.brics.automaton - finite-state automata and regular expressions for Java",
+            "observed": "2026-10-20",
+            "recent_open_items": [
+              {
+                "number": 53,
+                "title": "Fix some edge cases with RegExp parsing",
+                "url": "https://github.com/cs-au-dk/dk.brics.automaton/pull/53",
+                "is_pr": true
+              },
+              {
+                "number": 52,
+                "title": "RegExp parsing edge cases",
+                "url": "https://github.com/cs-au-dk/dk.brics.automaton/issues/52",
+                "is_pr": false
+              },
+              {
+                "number": 44,
+                "title": "Add support for JPMS modules",
+                "url": "https://github.com/cs-au-dk/dk.brics.automaton/issues/44",
+                "is_pr": false
+              }
+            ]
+          }
+        ],
+        "query": {
+          "query": "finite automata",
+          "url": "https://github.com/search?q=finite+automata&type=repositories&s=stars&o=desc",
+          "observed": "2026-10-20T06:20:50.071Z"
+        },
+        "highest_star_relevant_found": "rust-lang/regex",
+        "limits": "Most-stars site search is scoped and keyword dependent, not an exhaustive global ranking. Also read manually found established comparables. Some leading keyword results are adjacent or irrelevant. Competitors not installed/timed/stress tested. No absence, reliability, superiority or performance claim. Issues/PRs are small current samples, not evidence of an unresolved competitor-wide defect.",
+        "read_sources": "Current repository READMEs, metadata and sampled issues; relevant implementations/fixtures for SQLGlot simplify, NetworkX DAG, criticalpath, PM4Py/SNAKES Petri semantics, OSRM restrictions and automata/brics inclusion. No source copied."
+      }
+    }
+  ],
+  "comparison": "203 existing repositories and all five candidates compared for overlap. Distinct nullable query, schedule, synchronization, routing and finite-language tasks; shared packaging is infrastructure. Demand inferred; competitors not installed/timed/stress-tested; no absence/superiority/adoption claim."
+}
