@@ -1,0 +1,16 @@
+{
+  "state": "PASS",
+  "run": 39740698335,
+  "attempt": 3,
+  "head": "24e1964cce47263a782b3720a5a46fc949aa7ae0",
+  "job": 119706191169,
+  "verified_files": 242,
+  "applicable_repositories": 217,
+  "npm_scopes": 27,
+  "python_pins": 113,
+  "artifact": {
+    "id": 12409664953,
+    "digest": "sha256:56bf3c456b180147c38d54a09825f59ceaa7b0b6ddf8b6ef725ed78da5ac53c4",
+    "created_at": "2026-10-22T07:53:08Z"
+  }
+}
