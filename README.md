@@ -1,92 +1,79 @@
-# Reliable AI for high-stakes decisions
+# Dr. Nripanka Das
 
-**Nripanka Das — AI product leader working across agent systems, energy,
-climate, and product outcomes.**
+I’m a product leader working on AI, energy and supply chain systems. I build
+tools to test an idea, see where it fails, and make the results easy to check.
 
-I turn questions about safety, reliability, and user value into working tools
-with decisions that can be replayed, inspected, and challenged.
+This is my independent project lab. The demos use synthetic data and show
+software behavior, without claiming customer adoption or production results.
 
-## Three projects to start with
+## Start here
 
-These independent projects show the problem, the design choices, and the proof.
-Their demos use synthetic inputs; the results below demonstrate software
-behavior, not customer adoption or production impact.
+### Trustline MCP
 
-**Help shape the next release:** [try a short task and give feedback](docs/USER_PILOT.md).
-Critical reviews and blocked attempts are welcome.
+An agent can complete a task and still make a tool call it should have refused.
+Trustline lets me test rules for allowing calls, denying them or asking for
+review, then check the resulting audit trail.
 
-### Trustline MCP · Make agent tool decisions inspectable
+The synthetic 11-entry fixture produces four allowed calls, five denials,
+one approval requirement and one protocol error. Its audit chain verifies.
+This is an experimental policy simulator with local MCP transports. It does
+not execute upstream tools or authenticate approvals.
 
-**Problem:** a successful agent demo does not explain which tool calls should
-be denied, require review, or leave an audit record.
+[Case study](docs/case-studies/trustline-mcp.md) ·
+[Demo](https://nripankadas07.github.io/trustline-mcp/) ·
+[Code](https://github.com/nripankadas07/trustline-mcp)
 
-**Built:** a policy simulator with deny-overrides rules, explicit approval
-states, secret redaction, and a verifiable audit chain.
+### Grid Ops Arena
 
-**Demonstrated:** an 11-entry attack fixture produces four allowed calls, five
-denials, one approval requirement, and one protocol error; its audit verifies.
-Experimental policy lab with local MCP transports; it does not execute upstream
-tools or authenticate approvals.
+A low-cost dispatch plan is not much use if it leaves demand unmet or asks
+equipment to exceed its limits. Grid Ops Arena replays a microgrid policy and
+shows the requested actions, feasible actions, cost, emissions and safety results.
 
-[Read the case study](docs/case-studies/trustline-mcp.md) ·
-[Open the demo](https://nripankadas07.github.io/trustline-mcp/) ·
-[Explore the code](https://github.com/nripankadas07/trustline-mcp)
+In the synthetic 48-hour example, it serves 98.72% of demand, with 34.49 kWh
+unserved and two constraint violations. Those failures stay visible in the
+trace. This is an educational simulator.
 
-### Grid Ops Arena · Expose the tradeoffs in energy decisions
+[Case study](docs/case-studies/grid-ops-arena.md) ·
+[Demo](https://nripankadas07.github.io/grid-ops-arena/) ·
+[Code](https://github.com/nripankadas07/grid-ops-arena)
 
-**Problem:** a dispatch policy can look efficient while leaving demand unmet
-or requesting actions beyond equipment limits.
+### Value Density Lab
 
-**Built:** a replayable microgrid simulator that records requested and feasible
-actions, then reports reliability, cost, emissions, and safety together.
+More time in a product can mean that a task has become harder. This project
+implements my Value Density framework to examine outcomes alongside time,
+friction, regret and harm.
 
-**Demonstrated:** the 48-hour synthetic scenario serves 98.72% of demand while
-exposing 34.49 kWh of unserved energy and two constraint violations. The trace
-makes those shortcomings visible. This is an educational simulator.
+The demo compares two flows using 16 synthetic invoice sessions. It shows the
+score components, completion rates and uncertainty. It illustrates a measurement
+method; it does not establish a causal effect on real users.
 
-[Read the case study](docs/case-studies/grid-ops-arena.md) ·
-[Open the demo](https://nripankadas07.github.io/grid-ops-arena/) ·
-[Explore the code](https://github.com/nripankadas07/grid-ops-arena)
+[Case study](docs/case-studies/value-density-lab.md) ·
+[Demo](https://nripankadas07.github.io/value-density-lab/) ·
+[Code](https://github.com/nripankadas07/value-density-lab)
 
-### Value Density Lab · Measure outcomes against user cost
-
-**Problem:** time spent in a product can rise because a workflow is confusing.
-
-**Built:** an executable reference for my Value Density framework, combining
-outcome quality, time, friction, regret, and harm in an auditable report.
-
-**Demonstrated:** 16 synthetic invoice sessions compare two flows while keeping
-completion rates, scoring components, uncertainty, and guardrails visible.
-The comparison illustrates the measurement method; it establishes no causal
-effect on real users.
-
-[Read the case study](docs/case-studies/value-density-lab.md) ·
-[Open the demo](https://nripankadas07.github.io/value-density-lab/) ·
-[Explore the code](https://github.com/nripankadas07/value-density-lab)
-
-## More work
+## Other projects
 
 [PatchGym](https://github.com/nripankadas07/patchgym) turns Git history into
-coding-agent tasks; [RunMirror](https://github.com/nripankadas07/runmirror)
-records and replays agent behavior;
+coding-agent tasks. [RunMirror](https://github.com/nripankadas07/runmirror)
+records and replays agent behavior.
 [Climate Evidence Bench](https://github.com/nripankadas07/climate-evidence-bench)
 checks quantitative climate answers.
 
-[Browse the project index](docs/PROJECT_INDEX.md) ·
-[Current health review](docs/HEALTH_REVIEW_2026-10-21.md) ·
+[Project index](docs/PROJECT_INDEX.md) ·
+[Current health review](docs/HEALTH_REVIEW_2026-10-22.md) ·
 [Release and validation history](docs/RELIABLE_AI_RELEASE.md)
 
-## About
+## A little more about me
 
-I work across AI product leadership, energy, and supply chain. This is an
-independent lab with no employer branding or implied endorsement. Development
-uses AI assistance, disclosed in each featured repository.
+My work spans AI product leadership, energy and supply chain. These projects
+are independent, with no employer branding or implied endorsement. I use AI
+tools during development and disclose that use in each featured repository.
 
-My working principles: preserve human takeover, leave inspectable evidence,
-expose the components of a score, and state the limits of a benchmark.
+I want people to be able to take over when needed, inspect a decision and
+understand what a benchmark can and cannot tell them.
 
-[Professional context and writing on LinkedIn](https://www.linkedin.com/in/nripankadas/).
-For a reproducible bug or a useful integration, open an issue in the relevant
-repository.
+If you try a project, [a short task and your feedback](docs/USER_PILOT.md)
+would help. Bug reports, failed attempts and critical reviews are welcome in
+the relevant repository.
 
-
+[Find me on LinkedIn](https://www.linkedin.com/in/nripankadas/).
