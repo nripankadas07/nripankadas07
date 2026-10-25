@@ -60,7 +60,7 @@ records and replays agent behavior.
 checks quantitative climate answers.
 
 [Project index](docs/PROJECT_INDEX.md) ·
-[Current health review](docs/HEALTH_REVIEW_2026-10-24.md) ·
+[Current health review](docs/HEALTH_REVIEW_2026-10-25.md) ·
 [Release and validation history](docs/RELIABLE_AI_RELEASE.md)
 
 ## A little more about me
